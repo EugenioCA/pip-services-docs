@@ -1,0 +1,1052 @@
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Pip.Services Docs – Run</title>
+    <link>/toolkit_api/golang/commons/run/</link>
+    <description>Recent content in Run on Pip.Services Docs</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    
+	  <atom:link href="/toolkit_api/golang/commons/run/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+      
+        
+      
+    
+    
+    <item>
+      <title>Toolkit_api: Cleaner</title>
+      <link>/toolkit_api/golang/commons/run/cleaner/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/toolkit_api/golang/commons/run/cleaner/</guid>
+      <description>
+        
+        
+        &lt;h3 id=&#34;description&#34;&gt;Description&lt;/h3&gt;
+&lt;p&gt;The Cleaner class allows you to clear the state of components.&lt;/p&gt;
+&lt;h3 id=&#34;methods&#34;&gt;Methods&lt;/h3&gt;
+&lt;h4 id=&#34;clear&#34;&gt;Clear&lt;/h4&gt;
+&lt;p&gt;Clears state of multiple components.&lt;/p&gt;
+&lt;p&gt;To be cleaned, state components must implement the &lt;a href=&#34;../icleanable&#34;&gt;ICleanable&lt;/a&gt; interface.
+If they don&amp;rsquo;t, the call to this method has no effect.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;(c *TCleaner) Clear(ctx context.Context, correlationId string, components []any) error&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;ctx&lt;/strong&gt;: context.Context - operation context.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;correlationId&lt;/strong&gt;: string - (optional) transaction id used to trace execution through the call chain.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;components&lt;/strong&gt;: []any - list of components that are to be cleaned.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;returns&lt;/strong&gt;: error - return error if not cleared&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id=&#34;clearone&#34;&gt;ClearOne&lt;/h4&gt;
+&lt;p&gt;Clears state of specific component.
+To be cleaned, state components must implement the &lt;a href=&#34;../icleanable&#34;&gt;ICleanable&lt;/a&gt; interface.
+If they don&amp;rsquo;t the call to this method has no effect.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;(c *TCleaner) ClearOne(ctx context.Context, correlationId string, component any) error&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;ctx&lt;/strong&gt;: context.Context - operation context.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;correlationId&lt;/strong&gt;: string - (optional) transaction id used to trace execution through the call chain.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;component&lt;/strong&gt;: any - component that is to be cleaned.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;returns&lt;/strong&gt;: error - return error if not cleared&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;see-also&#34;&gt;See also&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;h4 id=&#34;icleanableicleanable&#34;&gt;&lt;a href=&#34;../icleanable&#34;&gt;ICleanable&lt;/a&gt;&lt;/h4&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+
+      </description>
+    </item>
+    
+    <item>
+      <title>Toolkit_api: Closer</title>
+      <link>/toolkit_api/golang/commons/run/closer/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/toolkit_api/golang/commons/run/closer/</guid>
+      <description>
+        
+        
+        &lt;h3 id=&#34;description&#34;&gt;Description&lt;/h3&gt;
+&lt;p&gt;The Closer class allows you to close one or multiple components at the same time.&lt;/p&gt;
+&lt;h3 id=&#34;methods&#34;&gt;Methods&lt;/h3&gt;
+&lt;h4 id=&#34;close&#34;&gt;Close&lt;/h4&gt;
+&lt;p&gt;Closes multiple components.&lt;/p&gt;
+&lt;p&gt;To be closed components must implement &lt;a href=&#34;../iclosable&#34;&gt;IClosable&lt;/a&gt; interface.
+If they don&amp;rsquo;t the call to this method has no effect.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Close(ctx context.Context, correlationId string, components []any) error&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;ctx&lt;/strong&gt;: context.Context - operation context.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;correlationId&lt;/strong&gt;: string - (optional) transaction id used to trace execution through the call chain.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;components&lt;/strong&gt;: []any - list of components that are to be closed.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;returns&lt;/strong&gt;: error - return error if not closed&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id=&#34;closeone&#34;&gt;CloseOne&lt;/h4&gt;
+&lt;p&gt;Closes specific component.
+The components to be closed must implement the &lt;a href=&#34;../iclosable&#34;&gt;IClosable&lt;/a&gt; interface.
+If they don&amp;rsquo;t the call to this method has no effect.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;CloseOne(ctx context.Context, correlationId string, component any) error&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;ctx&lt;/strong&gt;: context.Context - operation context.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;correlationId&lt;/strong&gt;: string - (optional) transaction id used to trace execution through the call chain.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;component&lt;/strong&gt;: any - component that is to be closed.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;returns&lt;/strong&gt;: error - return error if not closed&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;see-also&#34;&gt;See also&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;h4 id=&#34;iclosableiclosable&#34;&gt;&lt;a href=&#34;../iclosable&#34;&gt;IClosable&lt;/a&gt;&lt;/h4&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+
+      </description>
+    </item>
+    
+    <item>
+      <title>Toolkit_api: Context</title>
+      <link>/toolkit_api/golang/commons/run/context/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/toolkit_api/golang/commons/run/context/</guid>
+      <description>
+        
+        
+        &lt;h3 id=&#34;types&#34;&gt;Types&lt;/h3&gt;
+&lt;h4 id=&#34;contextshutdownchan&#34;&gt;ContextShutdownChan&lt;/h4&gt;
+&lt;p&gt;ContextShutdownChan a channel to send default context feedback&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;type ContextShutdownChan chan int8&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h4 id=&#34;contextshutdownwitherrorchan&#34;&gt;ContextShutdownWithErrorChan&lt;/h4&gt;
+&lt;p&gt;ContextShutdownWithErrorChan a channel to send context feedback with error&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;type ContextShutdownWithErrorChan chan error&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h4 id=&#34;contextfeedbackwithcustomdatachan&#34;&gt;ContextFeedbackWithCustomDataChan&lt;/h4&gt;
+&lt;p&gt;ContextFeedbackWithCustomDataChan a channel to send context feedback with specific data.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;type ContextFeedbackWithCustomDataChan[T any] chan T&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h4 id=&#34;contextvaluetype&#34;&gt;ContextValueType&lt;/h4&gt;
+&lt;p&gt;ContextValueType an enum to describe specific context feedback channel
+Possible values:
+- ContextShutdownChanType
+- ContextShutdownWithErrorChanType
+- ContextFeedbackChanWithCustomDataType&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;type ContextValueType string&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h3 id=&#34;methods&#34;&gt;Methods&lt;/h3&gt;
+&lt;h4 id=&#34;addshutdownchantocontext&#34;&gt;AddShutdownChanToContext&lt;/h4&gt;
+&lt;p&gt;AddShutdownChanToContext wrap context with ContextFeedbackChan&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;AddShutdownChanToContext(ctx context.Context, channel &lt;a href=&#34;#contextshutdownchan&#34;&gt;ContextShutdownChan&lt;/a&gt;) (context.Context, bool)&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;ctx&lt;/strong&gt;: context.Context - parent context.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;channel&lt;/strong&gt;: ContextShutdownChan - channel to put into context.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;returns&lt;/strong&gt;: (context.Context, bool) - a context with value and bool value true if channel is not nil or false&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id=&#34;adderrshutdownchantocontext&#34;&gt;AddErrShutdownChanToContext&lt;/h4&gt;
+&lt;p&gt;AddErrShutdownChanToContext wrap context with ContextFeedbackChanWithError&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;AddErrShutdownChanToContext(ctx context.Context, channel &lt;a href=&#34;#contextshutdownwitherrorchan&#34;&gt;ContextShutdownWithErrorChan&lt;/a&gt;) (context.Context, bool)&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;ctx&lt;/strong&gt;: context.Context - parent context.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;channel&lt;/strong&gt;: &lt;a href=&#34;#contextshutdownwitherrorchan&#34;&gt;ContextShutdownWithErrorChan&lt;/a&gt; - channel to put into context.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;returns&lt;/strong&gt;: (context.Context, bool) - is a context with value and bool value true if channel is not nil or false.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id=&#34;addcustomdatachantocontext&#34;&gt;AddCustomDataChanToContext&lt;/h4&gt;
+&lt;p&gt;AddCustomDataChanToContext wrap context with ContextFeedbackChanWithCustomData
+T is a custom data type&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;AddCustomDataChanToContext[T any](ctx context.Context, channel &lt;a href=&#34;#contextfeedbackwithcustomdatachan&#34;&gt;ContextFeedbackWithCustomDataChan&lt;/a&gt;[T]) (context.Context, bool)&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;ctx&lt;/strong&gt;: context.Context - parent context.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;channel&lt;/strong&gt;: &lt;a href=&#34;#contextfeedbackwithcustomdatachan&#34;&gt;ContextFeedbackWithCustomDataChan&lt;/a&gt;[T] - channel to put into context.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;returns&lt;/strong&gt;: (context.Context, bool) - bool true if channel is not nil or false.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id=&#34;sendshutdownsignal&#34;&gt;SendShutdownSignal&lt;/h4&gt;
+&lt;p&gt;SendShutdownSignal sends interrupt signal up to the context owner&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;SendShutdownSignal(ctx context.Context) bool&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;ctx&lt;/strong&gt;: context.Context - parent context.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;returns&lt;/strong&gt;: bool - true if signal sends successful or false&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id=&#34;sendshutdownsignalwitherr&#34;&gt;SendShutdownSignalWithErr&lt;/h4&gt;
+&lt;p&gt;SendShutdownSignalWithErr sends error and interrupt signal up to the context owner&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;SendShutdownSignalWithErr(ctx context.Context, err error) bool&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;ctx&lt;/strong&gt;: context.Context - parent context.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;returns&lt;/strong&gt;: bool - true if signal sends successful or false.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id=&#34;sendsignalwithcustomdata&#34;&gt;SendSignalWithCustomData&lt;/h4&gt;
+&lt;p&gt;SendSignalWithCustomData sends custom data and interrupt signal up to the context owner.
+T custom data&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;SendSignalWithCustomData[T any](ctx context.Context, data T) bool&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;ctx&lt;/strong&gt;: context.Context - is a current context.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;returns&lt;/strong&gt;: bool - bool true if signal sends successful or false.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id=&#34;defaulterrorhandlerwithshutdown&#34;&gt;DefaultErrorHandlerWithShutdown&lt;/h4&gt;
+&lt;p&gt;DefaultErrorHandlerWithShutdown is a default error handler method which catch panic,
+parse error and send shutdown signal to main container.&lt;/p&gt;
+&lt;p&gt;Example:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-go&#34; data-lang=&#34;go&#34;&gt;&lt;span style=&#34;color:#00a8c8&#34;&gt;func&lt;/span&gt; &lt;span style=&#34;color:#75af00&#34;&gt;MyFunc&lt;/span&gt;&lt;span style=&#34;color:#111&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color:#75af00&#34;&gt;ctx&lt;/span&gt; &lt;span style=&#34;color:#75af00&#34;&gt;context&lt;/span&gt;&lt;span style=&#34;color:#111&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#75af00&#34;&gt;Context&lt;/span&gt;&lt;span style=&#34;color:#111&#34;&gt;)&lt;/span&gt; &lt;span style=&#34;color:#111&#34;&gt;{&lt;/span&gt;
+	&lt;span style=&#34;color:#00a8c8&#34;&gt;defer&lt;/span&gt; &lt;span style=&#34;color:#75af00&#34;&gt;DefaultErrorHandlerWithShutdown&lt;/span&gt;&lt;span style=&#34;color:#111&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color:#75af00&#34;&gt;ctx&lt;/span&gt;&lt;span style=&#34;color:#111&#34;&gt;)&lt;/span&gt;
+	&lt;span style=&#34;color:#f92672&#34;&gt;...&lt;/span&gt;
+	&lt;span style=&#34;color:#111&#34;&gt;panic&lt;/span&gt;&lt;span style=&#34;color:#111&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color:#d88200&#34;&gt;&amp;#34;some error&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#111&#34;&gt;)&lt;/span&gt;
+&lt;span style=&#34;color:#111&#34;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;blockquote&gt;
+&lt;p&gt;DefaultErrorHandlerWithShutdown(ctx context.Context)&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;ctx&lt;/strong&gt;: context.Context - is a current context.&lt;/li&gt;
+&lt;/ul&gt;
+
+      </description>
+    </item>
+    
+    <item>
+      <title>Toolkit_api: Executor</title>
+      <link>/toolkit_api/golang/commons/run/executor/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/toolkit_api/golang/commons/run/executor/</guid>
+      <description>
+        
+        
+        &lt;h3 id=&#34;description&#34;&gt;Description&lt;/h3&gt;
+&lt;p&gt;The Executor class allows you to execute one or more components.&lt;/p&gt;
+&lt;h3 id=&#34;methods&#34;&gt;Methods&lt;/h3&gt;
+&lt;h4 id=&#34;execute&#34;&gt;Execute&lt;/h4&gt;
+&lt;p&gt;Executes multiple components.&lt;/p&gt;
+&lt;p&gt;To be executed components must implement the &lt;a href=&#34;../iexecutable&#34;&gt;IExecutable&lt;/a&gt; interface.
+If they don&amp;rsquo;t, the call to this method has no effect.&lt;br&gt;
+See &lt;a href=&#34;../iexecutable&#34;&gt;IExecutable&lt;/a&gt;, &lt;a href=&#34;../parameters&#34;&gt;Parameters&lt;/a&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Execute(context.Context, correlationId string, components []any, args &lt;a href=&#34;../parameters&#34;&gt;*Parameters&lt;/a&gt;) ([]any, error)&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;ctx&lt;/strong&gt;: context.Context - operation context.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;correlationId&lt;/strong&gt;: string - (optional) transaction id used to trace execution through the call chain.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;components&lt;/strong&gt;: []any - list of components that are to be executed.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;args&lt;/strong&gt;: &lt;a href=&#34;../parameters&#34;&gt;*Parameters&lt;/a&gt; - execution arguments.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;returns&lt;/strong&gt;:  ([]any, error) - execution result&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id=&#34;executeone&#34;&gt;ExecuteOne&lt;/h4&gt;
+&lt;p&gt;Executes a specific component.&lt;/p&gt;
+&lt;p&gt;To be executed a component must implement the &lt;a href=&#34;../iexecutable&#34;&gt;IExecutable&lt;/a&gt; interface.
+If they don&amp;rsquo;t, the call to this method has no effect.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;ExecuteOne(ctx context.Context, correlationId string, component any, args &lt;a href=&#34;../parameters&#34;&gt;*Parameters&lt;/a&gt;) (any, error)&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;ctx&lt;/strong&gt;: context.Context - operation context.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;correlationId&lt;/strong&gt;: string - (optional) transaction id used to trace execution through the call chain.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;component&lt;/strong&gt;: any - component that is to be executed.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;args&lt;/strong&gt;: &lt;a href=&#34;../parameters&#34;&gt;*Parameters&lt;/a&gt; - execution arguments.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;returns&lt;/strong&gt;:  (any, error) - execution result.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;see-also&#34;&gt;See also&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;h4 id=&#34;iexecutableiexecutable&#34;&gt;&lt;a href=&#34;../iexecutable&#34;&gt;IExecutable&lt;/a&gt;&lt;/h4&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+
+      </description>
+    </item>
+    
+    <item>
+      <title>Toolkit_api: FixedRateTimer</title>
+      <link>/toolkit_api/golang/commons/run/fixed_rate_timer/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/toolkit_api/golang/commons/run/fixed_rate_timer/</guid>
+      <description>
+        
+        
+        &lt;h3 id=&#34;description&#34;&gt;Description&lt;/h3&gt;
+&lt;p&gt;The FixerRateTimer class represents a timer that is triggered in equal time intervals.&lt;/p&gt;
+&lt;p&gt;Important points&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;It has a symmetric cross-language implementation and is often used by the Pip.Services toolkit to perform periodic processing and cleanup in microservices.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;constructors&#34;&gt;Constructors&lt;/h3&gt;
+&lt;h4 id=&#34;newfixedratetimerfromcallback&#34;&gt;NewFixedRateTimerFromCallback&lt;/h4&gt;
+&lt;p&gt;Creates new instance of the timer and sets its values.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;NewFixedRateTimerFromCallback(callback func(ctx context.Context), interval int, delay int, workerCount int) &lt;a href=&#34;&#34;&gt;*FixedRateTimer&lt;/a&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;callback&lt;/strong&gt;: func(ctx context.Context) - (optional) Notifiable object or callback function to call when timer is triggered.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;interval&lt;/strong&gt;: int - (optional) interval to trigger the timer in milliseconds.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;delay&lt;/strong&gt;: int - (optional) delay before the first triggering in milliseconds.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;workerCount&lt;/strong&gt;: int - int a count of parallel running workers.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id=&#34;newfixedratetimerfromtask&#34;&gt;NewFixedRateTimerFromTask&lt;/h4&gt;
+&lt;p&gt;Creates new instance of the timer and sets its values.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;NewFixedRateTimerFromTask(task &lt;a href=&#34;../inotifiable&#34;&gt;INotifiable&lt;/a&gt;, interval int, delay int, workerCount int) &lt;a href=&#34;&#34;&gt;*FixedRateTimer&lt;/a&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;task&lt;/strong&gt;: &lt;a href=&#34;../inotifiable&#34;&gt;INotifiable&lt;/a&gt; - Notifiable object used to call when the timer is triggered.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;interval&lt;/strong&gt;: int - (optional) interval used to trigger the timer in milliseconds.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;delay&lt;/strong&gt;: int - (optional) delay before the first triggering in milliseconds.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;workerCount&lt;/strong&gt;: int - int a count of parallel running workers.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id=&#34;newfixedratetimer&#34;&gt;NewFixedRateTimer&lt;/h4&gt;
+&lt;p&gt;Creates new instance of the timer and sets its values.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;NewFixedRateTimer() &lt;a href=&#34;&#34;&gt;*FixedRateTimer&lt;/a&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h3 id=&#34;methods&#34;&gt;Methods&lt;/h3&gt;
+&lt;h4 id=&#34;close&#34;&gt;Close&lt;/h4&gt;
+&lt;p&gt;Closes the timer.&lt;/p&gt;
+&lt;p&gt;This is required by &lt;a href=&#34;../iclosable&#34;&gt;IClosable&lt;/a&gt; interface,
+but besides that, it is identical to &lt;a href=&#34;#stop&#34;&gt;Stop()&lt;/a&gt;.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;(c &lt;a href=&#34;&#34;&gt;*FixedRateTimer&lt;/a&gt;) Close(ctx context.Context, correlationId string) error&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;ctx&lt;/strong&gt;: context.Context - operation context.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;correlationId&lt;/strong&gt;: string - (optional) transaction id used to trace execution through the call chain.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id=&#34;callback&#34;&gt;Callback&lt;/h4&gt;
+&lt;p&gt;Gets the callback function that is called when this timer is triggered.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;(c &lt;a href=&#34;&#34;&gt;*FixedRateTimer&lt;/a&gt;) Callback() func(ctx context.Context)&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;returns&lt;/strong&gt;: func(ctx context.Context) - callback function or nil if it is not set.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id=&#34;delay&#34;&gt;Delay&lt;/h4&gt;
+&lt;p&gt;Gets the initial delay before the timer is triggered for the first time.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;(c &lt;a href=&#34;&#34;&gt;*FixedRateTimer&lt;/a&gt;) Delay() int&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;returns&lt;/strong&gt;: int - delay in milliseconds.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id=&#34;interval&#34;&gt;Interval&lt;/h4&gt;
+&lt;p&gt;Gets the periodic timer&amp;rsquo;s triggering interval.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;(c &lt;a href=&#34;&#34;&gt;*FixedRateTimer&lt;/a&gt;) Interval() int&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;returns&lt;/strong&gt;: int - interval in milliseconds&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id=&#34;task&#34;&gt;Task&lt;/h4&gt;
+&lt;p&gt;Gets the INotifiable object that receives notifications from this timer.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;(c &lt;a href=&#34;&#34;&gt;*FixedRateTimer&lt;/a&gt;) Task() &lt;a href=&#34;../inotifiable&#34;&gt;INotifiable&lt;/a&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;returns&lt;/strong&gt;: &lt;a href=&#34;../inotifiable&#34;&gt;INotifiable&lt;/a&gt; - INotifiable object or nil if it is not set.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id=&#34;settask&#34;&gt;SetTask&lt;/h4&gt;
+&lt;p&gt;Sets a new INotifiable object to receive notifications from this timer.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;(c &lt;a href=&#34;&#34;&gt;*FixedRateTimer&lt;/a&gt;) SetTask(value &lt;a href=&#34;../inotifiable&#34;&gt;INotifiable&lt;/a&gt;)&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;value&lt;/strong&gt;: &lt;a href=&#34;../inotifiable&#34;&gt;INotifiable&lt;/a&gt; - INotifiable object to be triggered.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id=&#34;isstarted&#34;&gt;IsStarted&lt;/h4&gt;
+&lt;p&gt;Checks if the timer is started.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;(c &lt;a href=&#34;&#34;&gt;*FixedRateTimer&lt;/a&gt;) IsStarted() bool&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;returns&lt;/strong&gt;: bool - true if the timer is started and false if it is stopped.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id=&#34;setcallback&#34;&gt;SetCallback&lt;/h4&gt;
+&lt;p&gt;Sets the callback function that is called when this timer is triggered.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;(c &lt;a href=&#34;&#34;&gt;*FixedRateTimer&lt;/a&gt;) SetCallback(value func(ctx context.Context))&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;value&lt;/strong&gt;: func(ctx context.Context) - callback function to be called.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id=&#34;setdelay&#34;&gt;SetDelay&lt;/h4&gt;
+&lt;p&gt;Sets initial delay before the timer is triggered for the first time.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;(c &lt;a href=&#34;&#34;&gt;*FixedRateTimer&lt;/a&gt;) SetDelay(value int)&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;value&lt;/strong&gt;: int - delay in milliseconds.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id=&#34;setinterval&#34;&gt;SetInterval&lt;/h4&gt;
+&lt;p&gt;Sets periodic timer triggering interval.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;(c &lt;a href=&#34;&#34;&gt;*FixedRateTimer&lt;/a&gt;) SetInterval(value int)&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;value&lt;/strong&gt;: int - interval in milliseconds.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id=&#34;start&#34;&gt;Start&lt;/h4&gt;
+&lt;p&gt;Starts the timer.&lt;/p&gt;
+&lt;p&gt;Initially the timer is triggered after a delay.
+After that, it is triggered after the interval until it is stopped.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;(c &lt;a href=&#34;&#34;&gt;*FixedRateTimer&lt;/a&gt;) Start(ctx context.Context)&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;ctx&lt;/strong&gt;: context.Context - operation context&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id=&#34;stop&#34;&gt;Stop&lt;/h4&gt;
+&lt;p&gt;Stops the timer.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;(c &lt;a href=&#34;&#34;&gt;*FixedRateTimer&lt;/a&gt;) Stop(ctx context.Context)&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;ctx&lt;/strong&gt;: context.Context - operation context&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;examples&#34;&gt;Examples&lt;/h3&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-go&#34; data-lang=&#34;go&#34;&gt;&lt;span style=&#34;color:#00a8c8&#34;&gt;type&lt;/span&gt; &lt;span style=&#34;color:#75af00&#34;&gt;MyComponent&lt;/span&gt; &lt;span style=&#34;color:#111&#34;&gt;{&lt;/span&gt;
+    &lt;span style=&#34;color:#75af00&#34;&gt;timer&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;*&lt;/span&gt;&lt;span style=&#34;color:#75af00&#34;&gt;FixedRateTimer&lt;/span&gt;
+&lt;span style=&#34;color:#111&#34;&gt;}&lt;/span&gt;
+
+&lt;span style=&#34;color:#f92672&#34;&gt;...&lt;/span&gt;
+
+&lt;span style=&#34;color:#00a8c8&#34;&gt;func&lt;/span&gt; &lt;span style=&#34;color:#111&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color:#75af00&#34;&gt;mc&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;*&lt;/span&gt; &lt;span style=&#34;color:#75af00&#34;&gt;MyComponent&lt;/span&gt;&lt;span style=&#34;color:#111&#34;&gt;)&lt;/span&gt; &lt;span style=&#34;color:#75af00&#34;&gt;Open&lt;/span&gt;&lt;span style=&#34;color:#111&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color:#75af00&#34;&gt;ctx&lt;/span&gt;&lt;span style=&#34;color:#111&#34;&gt;,&lt;/span&gt; &lt;span style=&#34;color:#75af00&#34;&gt;context&lt;/span&gt;&lt;span style=&#34;color:#111&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#75af00&#34;&gt;Context&lt;/span&gt;&lt;span style=&#34;color:#111&#34;&gt;,&lt;/span&gt; &lt;span style=&#34;color:#75af00&#34;&gt;correlationId&lt;/span&gt; &lt;span style=&#34;color:#00a8c8&#34;&gt;string&lt;/span&gt;&lt;span style=&#34;color:#111&#34;&gt;)&lt;/span&gt; &lt;span style=&#34;color:#111&#34;&gt;{&lt;/span&gt;
+	&lt;span style=&#34;color:#f92672&#34;&gt;...&lt;/span&gt;
+	&lt;span style=&#34;color:#75af00&#34;&gt;mc&lt;/span&gt;&lt;span style=&#34;color:#111&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#75af00&#34;&gt;timer&lt;/span&gt; &lt;span style=&#34;color:#111&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#75af00&#34;&gt;NewFixedRateTimerFromCallback&lt;/span&gt;&lt;span style=&#34;color:#111&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color:#00a8c8&#34;&gt;func&lt;/span&gt;&lt;span style=&#34;color:#111&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color:#75af00&#34;&gt;ctx&lt;/span&gt; &lt;span style=&#34;color:#75af00&#34;&gt;context&lt;/span&gt;&lt;span style=&#34;color:#111&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#75af00&#34;&gt;Context&lt;/span&gt;&lt;span style=&#34;color:#111&#34;&gt;){&lt;/span&gt; &lt;span style=&#34;color:#75af00&#34;&gt;this&lt;/span&gt;&lt;span style=&#34;color:#111&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#75af00&#34;&gt;cleanup&lt;/span&gt; &lt;span style=&#34;color:#111&#34;&gt;},&lt;/span&gt; &lt;span style=&#34;color:#ae81ff&#34;&gt;60000&lt;/span&gt;&lt;span style=&#34;color:#111&#34;&gt;,&lt;/span&gt; &lt;span style=&#34;color:#ae81ff&#34;&gt;0&lt;/span&gt;&lt;span style=&#34;color:#111&#34;&gt;,&lt;/span&gt; &lt;span style=&#34;color:#ae81ff&#34;&gt;5&lt;/span&gt;&lt;span style=&#34;color:#111&#34;&gt;);&lt;/span&gt;
+	&lt;span style=&#34;color:#75af00&#34;&gt;mc&lt;/span&gt;&lt;span style=&#34;color:#111&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#75af00&#34;&gt;timer&lt;/span&gt;&lt;span style=&#34;color:#111&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#75af00&#34;&gt;Start&lt;/span&gt;&lt;span style=&#34;color:#111&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color:#75af00&#34;&gt;ctx&lt;/span&gt;&lt;span style=&#34;color:#111&#34;&gt;);&lt;/span&gt;
+	&lt;span style=&#34;color:#f92672&#34;&gt;...&lt;/span&gt;
+&lt;span style=&#34;color:#111&#34;&gt;}&lt;/span&gt;
+
+&lt;span style=&#34;color:#00a8c8&#34;&gt;func&lt;/span&gt; &lt;span style=&#34;color:#111&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color:#75af00&#34;&gt;mc&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;*&lt;/span&gt; &lt;span style=&#34;color:#75af00&#34;&gt;MyComponent&lt;/span&gt;&lt;span style=&#34;color:#111&#34;&gt;)&lt;/span&gt; &lt;span style=&#34;color:#75af00&#34;&gt;Close&lt;/span&gt;&lt;span style=&#34;color:#111&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color:#75af00&#34;&gt;ctx&lt;/span&gt; &lt;span style=&#34;color:#75af00&#34;&gt;context&lt;/span&gt;&lt;span style=&#34;color:#111&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#75af00&#34;&gt;Context&lt;/span&gt;&lt;span style=&#34;color:#111&#34;&gt;,&lt;/span&gt; &lt;span style=&#34;color:#75af00&#34;&gt;correlationId&lt;/span&gt;&lt;span style=&#34;color:#111&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#00a8c8&#34;&gt;string&lt;/span&gt;&lt;span style=&#34;color:#111&#34;&gt;){&lt;/span&gt;
+	&lt;span style=&#34;color:#f92672&#34;&gt;...&lt;/span&gt;
+	&lt;span style=&#34;color:#75af00&#34;&gt;mc&lt;/span&gt;&lt;span style=&#34;color:#111&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#75af00&#34;&gt;timer&lt;/span&gt;&lt;span style=&#34;color:#111&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#75af00&#34;&gt;Stop&lt;/span&gt;&lt;span style=&#34;color:#111&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color:#75af00&#34;&gt;ctx&lt;/span&gt;&lt;span style=&#34;color:#111&#34;&gt;);&lt;/span&gt;
+	&lt;span style=&#34;color:#f92672&#34;&gt;...&lt;/span&gt;
+&lt;span style=&#34;color:#111&#34;&gt;}&lt;/span&gt;
+
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id=&#34;see-also&#34;&gt;See also&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;h4 id=&#34;inotifiableinotifiable&#34;&gt;&lt;a href=&#34;../inotifiable&#34;&gt;INotifiable&lt;/a&gt;&lt;/h4&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+
+      </description>
+    </item>
+    
+    <item>
+      <title>Toolkit_api: ICleanable</title>
+      <link>/toolkit_api/golang/commons/run/icleanable/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/toolkit_api/golang/commons/run/icleanable/</guid>
+      <description>
+        
+        
+        &lt;h3 id=&#34;description&#34;&gt;Description&lt;/h3&gt;
+&lt;p&gt;The ICleanable interface allows you to create components with a method to clean their states.&lt;/p&gt;
+&lt;h3 id=&#34;methods&#34;&gt;Methods&lt;/h3&gt;
+&lt;h4 id=&#34;clear&#34;&gt;Clear&lt;/h4&gt;
+&lt;p&gt;Clears a component&amp;rsquo;s state.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Clear(ctx context.Context, correlationId string) error&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;ctx&lt;/strong&gt;: context.Context - operation context.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;correlationId&lt;/strong&gt;: string - (optional) transaction id used to trace execution through the call chain.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;returns&lt;/strong&gt;: error - returns error if not cleared&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;examples&#34;&gt;Examples&lt;/h3&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-go&#34; data-lang=&#34;go&#34;&gt;&lt;span style=&#34;color:#00a8c8&#34;&gt;type&lt;/span&gt; &lt;span style=&#34;color:#75af00&#34;&gt;MyObjectWithState&lt;/span&gt; &lt;span style=&#34;color:#111&#34;&gt;{&lt;/span&gt;
+ 	&lt;span style=&#34;color:#75af00&#34;&gt;_state&lt;/span&gt; &lt;span style=&#34;color:#00a8c8&#34;&gt;interface&lt;/span&gt;&lt;span style=&#34;color:#111&#34;&gt;{}&lt;/span&gt;
+&lt;span style=&#34;color:#111&#34;&gt;}&lt;/span&gt;
+&lt;span style=&#34;color:#f92672&#34;&gt;...&lt;/span&gt;
+&lt;span style=&#34;color:#00a8c8&#34;&gt;func&lt;/span&gt; &lt;span style=&#34;color:#111&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color:#75af00&#34;&gt;mo&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;*&lt;/span&gt;&lt;span style=&#34;color:#75af00&#34;&gt;MyObjectWithState&lt;/span&gt; &lt;span style=&#34;color:#111&#34;&gt;)&lt;/span&gt; &lt;span style=&#34;color:#75af00&#34;&gt;Clear&lt;/span&gt;&lt;span style=&#34;color:#111&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color:#75af00&#34;&gt;ctx&lt;/span&gt; &lt;span style=&#34;color:#75af00&#34;&gt;context&lt;/span&gt;&lt;span style=&#34;color:#111&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#75af00&#34;&gt;Context&lt;/span&gt;&lt;span style=&#34;color:#111&#34;&gt;,&lt;/span&gt; &lt;span style=&#34;color:#75af00&#34;&gt;correlationId&lt;/span&gt; &lt;span style=&#34;color:#00a8c8&#34;&gt;string&lt;/span&gt;&lt;span style=&#34;color:#111&#34;&gt;)&lt;/span&gt; &lt;span style=&#34;color:#111&#34;&gt;{&lt;/span&gt;
+    &lt;span style=&#34;color:#75af00&#34;&gt;mo&lt;/span&gt;&lt;span style=&#34;color:#111&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#75af00&#34;&gt;_state&lt;/span&gt; &lt;span style=&#34;color:#111&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#00a8c8&#34;&gt;interface&lt;/span&gt;&lt;span style=&#34;color:#111&#34;&gt;{}&lt;/span&gt;
+&lt;span style=&#34;color:#111&#34;&gt;}&lt;/span&gt;
+
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id=&#34;see-also&#34;&gt;See also&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;h4 id=&#34;cleanercleaner&#34;&gt;&lt;a href=&#34;../cleaner&#34;&gt;Cleaner&lt;/a&gt;&lt;/h4&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+
+      </description>
+    </item>
+    
+    <item>
+      <title>Toolkit_api: IClosable</title>
+      <link>/toolkit_api/golang/commons/run/iclosable/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/toolkit_api/golang/commons/run/iclosable/</guid>
+      <description>
+        
+        
+        &lt;h3 id=&#34;description&#34;&gt;Description&lt;/h3&gt;
+&lt;p&gt;The IClosable interface allows you to create a component with a method that closes it and frees the used resources.&lt;/p&gt;
+&lt;h3 id=&#34;methods&#34;&gt;Methods&lt;/h3&gt;
+&lt;h4 id=&#34;close&#34;&gt;Close&lt;/h4&gt;
+&lt;p&gt;Closes a component and frees the used resources.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Close(ctx context.Context, correlationId string) error&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;ctx&lt;/strong&gt;: context.Context - operation context.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;correlationId&lt;/strong&gt;: string - (optional) transaction id used to trace execution through the call chain.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;returns&lt;/strong&gt;: error - returns an error if not cleared&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;examples&#34;&gt;Examples&lt;/h3&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-go&#34; data-lang=&#34;go&#34;&gt;&lt;span style=&#34;color:#00a8c8&#34;&gt;type&lt;/span&gt; &lt;span style=&#34;color:#75af00&#34;&gt;MyConnector&lt;/span&gt; &lt;span style=&#34;color:#111&#34;&gt;{&lt;/span&gt;
+    &lt;span style=&#34;color:#75af00&#34;&gt;_client&lt;/span&gt; &lt;span style=&#34;color:#00a8c8&#34;&gt;interface&lt;/span&gt;&lt;span style=&#34;color:#111&#34;&gt;{}&lt;/span&gt;
+&lt;span style=&#34;color:#111&#34;&gt;}&lt;/span&gt;
+
+&lt;span style=&#34;color:#f92672&#34;&gt;...&lt;/span&gt; &lt;span style=&#34;color:#75715e&#34;&gt;// The _client can be lazy created
+&lt;/span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;&lt;/span&gt; 
+&lt;span style=&#34;color:#00a8c8&#34;&gt;func&lt;/span&gt; &lt;span style=&#34;color:#111&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color:#75af00&#34;&gt;mc&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;*&lt;/span&gt;&lt;span style=&#34;color:#75af00&#34;&gt;MyConnector&lt;/span&gt;&lt;span style=&#34;color:#111&#34;&gt;)&lt;/span&gt; &lt;span style=&#34;color:#75af00&#34;&gt;Close&lt;/span&gt;&lt;span style=&#34;color:#111&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color:#75af00&#34;&gt;ctx&lt;/span&gt; &lt;span style=&#34;color:#75af00&#34;&gt;context&lt;/span&gt;&lt;span style=&#34;color:#111&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#75af00&#34;&gt;Context&lt;/span&gt;&lt;span style=&#34;color:#111&#34;&gt;,&lt;/span&gt; &lt;span style=&#34;color:#75af00&#34;&gt;correlationId&lt;/span&gt; &lt;span style=&#34;color:#00a8c8&#34;&gt;string&lt;/span&gt;&lt;span style=&#34;color:#111&#34;&gt;)&lt;/span&gt; &lt;span style=&#34;color:#00a8c8&#34;&gt;error&lt;/span&gt; &lt;span style=&#34;color:#111&#34;&gt;{&lt;/span&gt;
+    &lt;span style=&#34;color:#00a8c8&#34;&gt;if&lt;/span&gt; &lt;span style=&#34;color:#111&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color:#75af00&#34;&gt;mc&lt;/span&gt;&lt;span style=&#34;color:#111&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#75af00&#34;&gt;_client&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;!=&lt;/span&gt; &lt;span style=&#34;color:#00a8c8&#34;&gt;nil&lt;/span&gt;&lt;span style=&#34;color:#111&#34;&gt;)&lt;/span&gt; &lt;span style=&#34;color:#111&#34;&gt;{&lt;/span&gt;
+        &lt;span style=&#34;color:#75af00&#34;&gt;mc&lt;/span&gt;&lt;span style=&#34;color:#111&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#75af00&#34;&gt;_client&lt;/span&gt;&lt;span style=&#34;color:#111&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#75af00&#34;&gt;Close&lt;/span&gt;&lt;span style=&#34;color:#111&#34;&gt;()&lt;/span&gt;
+		&lt;span style=&#34;color:#75af00&#34;&gt;mc&lt;/span&gt;&lt;span style=&#34;color:#111&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#75af00&#34;&gt;_client&lt;/span&gt; &lt;span style=&#34;color:#111&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#00a8c8&#34;&gt;nil&lt;/span&gt;
+		&lt;span style=&#34;color:#00a8c8&#34;&gt;return&lt;/span&gt; &lt;span style=&#34;color:#00a8c8&#34;&gt;nil&lt;/span&gt;
+	&lt;span style=&#34;color:#111&#34;&gt;}&lt;/span&gt;
+&lt;span style=&#34;color:#111&#34;&gt;}&lt;/span&gt;
+
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id=&#34;see-also&#34;&gt;See also&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;h4 id=&#34;iopenableiopenable&#34;&gt;&lt;a href=&#34;../iopenable&#34;&gt;IOpenable&lt;/a&gt;&lt;/h4&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;h4 id=&#34;closercloser&#34;&gt;&lt;a href=&#34;../closer&#34;&gt;Closer&lt;/a&gt;&lt;/h4&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+
+      </description>
+    </item>
+    
+    <item>
+      <title>Toolkit_api: IExecutable</title>
+      <link>/toolkit_api/golang/commons/run/iexecutable/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/toolkit_api/golang/commons/run/iexecutable/</guid>
+      <description>
+        
+        
+        &lt;h3 id=&#34;description&#34;&gt;Description&lt;/h3&gt;
+&lt;p&gt;The IExecutable interface allows you to create a component that can be called to execute work.&lt;/p&gt;
+&lt;h3 id=&#34;methods&#34;&gt;Methods&lt;/h3&gt;
+&lt;h4 id=&#34;execute&#34;&gt;Execute&lt;/h4&gt;
+&lt;p&gt;Executes a component with arguments and receives the execution result.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Execute(ctx context.Context, correlationId string, args &lt;a href=&#34;../parameters&#34;&gt;*Parameters&lt;/a&gt;) (result any, err error)&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;ctx&lt;/strong&gt;: context.Context - operation context.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;correlationId&lt;/strong&gt;: string - (optional) transaction id used to trace execution through the call chain.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;args&lt;/strong&gt;: &lt;a href=&#34;../parameters&#34;&gt;*Parameters&lt;/a&gt; - execution arguments.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;returns&lt;/strong&gt;: (result any, err error) - execution result.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;examples&#34;&gt;Examples&lt;/h3&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-go&#34; data-lang=&#34;go&#34;&gt;&lt;span style=&#34;color:#00a8c8&#34;&gt;type&lt;/span&gt; &lt;span style=&#34;color:#75af00&#34;&gt;EchoComponent&lt;/span&gt; &lt;span style=&#34;color:#00a8c8&#34;&gt;struct&lt;/span&gt; &lt;span style=&#34;color:#111&#34;&gt;{}&lt;/span&gt;
+&lt;span style=&#34;color:#f92672&#34;&gt;...&lt;/span&gt;
+&lt;span style=&#34;color:#00a8c8&#34;&gt;func&lt;/span&gt;  &lt;span style=&#34;color:#111&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color:#75af00&#34;&gt;ec&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;*&lt;/span&gt; &lt;span style=&#34;color:#75af00&#34;&gt;EchoComponent&lt;/span&gt;&lt;span style=&#34;color:#111&#34;&gt;)&lt;/span&gt; &lt;span style=&#34;color:#75af00&#34;&gt;Execute&lt;/span&gt;&lt;span style=&#34;color:#111&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color:#75af00&#34;&gt;ctx&lt;/span&gt; &lt;span style=&#34;color:#75af00&#34;&gt;context&lt;/span&gt;&lt;span style=&#34;color:#111&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#75af00&#34;&gt;Context&lt;/span&gt;&lt;span style=&#34;color:#111&#34;&gt;,&lt;/span&gt; &lt;span style=&#34;color:#75af00&#34;&gt;correlationId&lt;/span&gt; &lt;span style=&#34;color:#00a8c8&#34;&gt;string&lt;/span&gt;&lt;span style=&#34;color:#111&#34;&gt;,&lt;/span&gt; &lt;span style=&#34;color:#75af00&#34;&gt;args&lt;/span&gt; &lt;span style=&#34;color:#75af00&#34;&gt;Parameters&lt;/span&gt;&lt;span style=&#34;color:#111&#34;&gt;)&lt;/span&gt; &lt;span style=&#34;color:#111&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color:#75af00&#34;&gt;result&lt;/span&gt; &lt;span style=&#34;color:#75af00&#34;&gt;any&lt;/span&gt;&lt;span style=&#34;color:#111&#34;&gt;,&lt;/span&gt; &lt;span style=&#34;color:#75af00&#34;&gt;err&lt;/span&gt; &lt;span style=&#34;color:#00a8c8&#34;&gt;error&lt;/span&gt;&lt;span style=&#34;color:#111&#34;&gt;)&lt;/span&gt; &lt;span style=&#34;color:#111&#34;&gt;{&lt;/span&gt;
+    &lt;span style=&#34;color:#00a8c8&#34;&gt;return&lt;/span&gt; &lt;span style=&#34;color:#00a8c8&#34;&gt;nil&lt;/span&gt;&lt;span style=&#34;color:#111&#34;&gt;,&lt;/span&gt; &lt;span style=&#34;color:#75af00&#34;&gt;result&lt;/span&gt; &lt;span style=&#34;color:#111&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#75af00&#34;&gt;args&lt;/span&gt;&lt;span style=&#34;color:#111&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#75af00&#34;&gt;getAsObject&lt;/span&gt;&lt;span style=&#34;color:#111&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color:#d88200&#34;&gt;&amp;#34;message&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#111&#34;&gt;)&lt;/span&gt;
+&lt;span style=&#34;color:#111&#34;&gt;}&lt;/span&gt;
+ 
+&lt;span style=&#34;color:#75af00&#34;&gt;echo&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;:=&lt;/span&gt; &lt;span style=&#34;color:#75af00&#34;&gt;EchoComponent&lt;/span&gt;&lt;span style=&#34;color:#111&#34;&gt;{};&lt;/span&gt;
+&lt;span style=&#34;color:#75af00&#34;&gt;message&lt;/span&gt; &lt;span style=&#34;color:#111&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#d88200&#34;&gt;&amp;#34;Test&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#111&#34;&gt;;&lt;/span&gt;
+&lt;span style=&#34;color:#75af00&#34;&gt;res&lt;/span&gt;&lt;span style=&#34;color:#111&#34;&gt;,&lt;/span&gt; &lt;span style=&#34;color:#75af00&#34;&gt;err&lt;/span&gt; &lt;span style=&#34;color:#111&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#75af00&#34;&gt;echo&lt;/span&gt;&lt;span style=&#34;color:#111&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#75af00&#34;&gt;Execute&lt;/span&gt;&lt;span style=&#34;color:#111&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color:#d88200&#34;&gt;&amp;#34;123&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#111&#34;&gt;,&lt;/span&gt; &lt;span style=&#34;color:#75af00&#34;&gt;NewParametersFromTuples&lt;/span&gt;&lt;span style=&#34;color:#111&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color:#d88200&#34;&gt;&amp;#34;message&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#111&#34;&gt;,&lt;/span&gt; &lt;span style=&#34;color:#75af00&#34;&gt;message&lt;/span&gt;&lt;span style=&#34;color:#111&#34;&gt;));&lt;/span&gt;
+&lt;span style=&#34;color:#75af00&#34;&gt;fmt&lt;/span&gt;&lt;span style=&#34;color:#111&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#75af00&#34;&gt;Println&lt;/span&gt;&lt;span style=&#34;color:#111&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color:#75af00&#34;&gt;res&lt;/span&gt;&lt;span style=&#34;color:#111&#34;&gt;);&lt;/span&gt;
+
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id=&#34;see-also&#34;&gt;See also&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;h4 id=&#34;executorexecutor&#34;&gt;&lt;a href=&#34;../executor&#34;&gt;Executor&lt;/a&gt;&lt;/h4&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;h4 id=&#34;inotifiableinotifiable&#34;&gt;&lt;a href=&#34;../inotifiable&#34;&gt;INotifiable&lt;/a&gt;&lt;/h4&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;h4 id=&#34;parametersparameters&#34;&gt;&lt;a href=&#34;../parameters&#34;&gt;Parameters&lt;/a&gt;&lt;/h4&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+
+      </description>
+    </item>
+    
+    <item>
+      <title>Toolkit_api: INotifiable</title>
+      <link>/toolkit_api/golang/commons/run/inotifiable/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/toolkit_api/golang/commons/run/inotifiable/</guid>
+      <description>
+        
+        
+        &lt;h3 id=&#34;description&#34;&gt;Description&lt;/h3&gt;
+&lt;p&gt;The INotifiable interface allows you to create components that can be asynchronously notified.&lt;/p&gt;
+&lt;p&gt;Important points&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;The notification can include an optional argument that describes an occurred event.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;methods&#34;&gt;Methods&lt;/h3&gt;
+&lt;h4 id=&#34;notify&#34;&gt;Notify&lt;/h4&gt;
+&lt;p&gt;Notifies the component about an occured event.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Notify(ctx context.Context, correlationId string, args &lt;a href=&#34;../parameters&#34;&gt;*Parameters&lt;/a&gt;)&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;ctx&lt;/strong&gt;: context.Context - operation context.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;correlationId&lt;/strong&gt;: string - (optional) transaction id used to trace execution through the call chain.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;args&lt;/strong&gt;: &lt;a href=&#34;../parameters&#34;&gt;*Parameters&lt;/a&gt; - notification arguments.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;examples&#34;&gt;Examples&lt;/h3&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-go&#34; data-lang=&#34;go&#34;&gt;&lt;span style=&#34;color:#00a8c8&#34;&gt;type&lt;/span&gt; &lt;span style=&#34;color:#75af00&#34;&gt;MyComponent&lt;/span&gt; &lt;span style=&#34;color:#00a8c8&#34;&gt;struct&lt;/span&gt; &lt;span style=&#34;color:#111&#34;&gt;{&lt;/span&gt;
+
+&lt;span style=&#34;color:#111&#34;&gt;}&lt;/span&gt;
+&lt;span style=&#34;color:#f92672&#34;&gt;...&lt;/span&gt;
+&lt;span style=&#34;color:#00a8c8&#34;&gt;func&lt;/span&gt; &lt;span style=&#34;color:#111&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color:#75af00&#34;&gt;mc&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;*&lt;/span&gt;&lt;span style=&#34;color:#75af00&#34;&gt;MyComponent&lt;/span&gt;&lt;span style=&#34;color:#111&#34;&gt;)&lt;/span&gt; &lt;span style=&#34;color:#75af00&#34;&gt;Notify&lt;/span&gt;&lt;span style=&#34;color:#111&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color:#75af00&#34;&gt;ctx&lt;/span&gt; &lt;span style=&#34;color:#75af00&#34;&gt;context&lt;/span&gt;&lt;span style=&#34;color:#111&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#75af00&#34;&gt;Context&lt;/span&gt;&lt;span style=&#34;color:#111&#34;&gt;,&lt;/span&gt; &lt;span style=&#34;color:#75af00&#34;&gt;correlationId&lt;/span&gt; &lt;span style=&#34;color:#00a8c8&#34;&gt;string&lt;/span&gt;&lt;span style=&#34;color:#111&#34;&gt;,&lt;/span&gt; &lt;span style=&#34;color:#75af00&#34;&gt;args&lt;/span&gt; &lt;span style=&#34;color:#75af00&#34;&gt;Parameters&lt;/span&gt;&lt;span style=&#34;color:#111&#34;&gt;){&lt;/span&gt;
+	&lt;span style=&#34;color:#75af00&#34;&gt;fmt&lt;/span&gt;&lt;span style=&#34;color:#111&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#75af00&#34;&gt;Println&lt;/span&gt;&lt;span style=&#34;color:#111&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color:#d88200&#34;&gt;&amp;#34;Occured event &amp;#34;&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;+&lt;/span&gt; &lt;span style=&#34;color:#75af00&#34;&gt;args&lt;/span&gt;&lt;span style=&#34;color:#111&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#75af00&#34;&gt;GetAsString&lt;/span&gt;&lt;span style=&#34;color:#111&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color:#d88200&#34;&gt;&amp;#34;event&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#111&#34;&gt;));&lt;/span&gt;
+&lt;span style=&#34;color:#111&#34;&gt;}&lt;/span&gt;
+
+&lt;span style=&#34;color:#75af00&#34;&gt;myComponent&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;:=&lt;/span&gt; &lt;span style=&#34;color:#75af00&#34;&gt;MyComponent&lt;/span&gt;&lt;span style=&#34;color:#111&#34;&gt;{};&lt;/span&gt;
+&lt;span style=&#34;color:#75af00&#34;&gt;myComponent&lt;/span&gt;&lt;span style=&#34;color:#111&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#75af00&#34;&gt;Notify&lt;/span&gt;&lt;span style=&#34;color:#111&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color:#d88200&#34;&gt;&amp;#34;123&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#111&#34;&gt;,&lt;/span&gt; &lt;span style=&#34;color:#75af00&#34;&gt;NewParametersFromTuples&lt;/span&gt;&lt;span style=&#34;color:#111&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color:#d88200&#34;&gt;&amp;#34;event&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#111&#34;&gt;,&lt;/span&gt; &lt;span style=&#34;color:#d88200&#34;&gt;&amp;#34;Test Event&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#111&#34;&gt;));&lt;/span&gt;
+
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id=&#34;see-also&#34;&gt;See also&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;h4 id=&#34;notifiernotifier&#34;&gt;&lt;a href=&#34;../notifier&#34;&gt;Notifier&lt;/a&gt;&lt;/h4&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;h4 id=&#34;iexecutableiexecutable&#34;&gt;&lt;a href=&#34;../iexecutable&#34;&gt;IExecutable&lt;/a&gt;&lt;/h4&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+
+      </description>
+    </item>
+    
+    <item>
+      <title>Toolkit_api: IOpenable</title>
+      <link>/toolkit_api/golang/commons/run/iopenable/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/toolkit_api/golang/commons/run/iopenable/</guid>
+      <description>
+        
+        
+        &lt;p&gt;&lt;strong&gt;Impements:&lt;/strong&gt; &lt;a href=&#34;../iclosable&#34;&gt;IClosable&lt;/a&gt;&lt;/p&gt;
+&lt;h3 id=&#34;description&#34;&gt;Description&lt;/h3&gt;
+&lt;p&gt;The IOpenable interface allows you to create components with explicit opening and closing.&lt;/p&gt;
+&lt;p&gt;Important points&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;For components that perform opening on demand consider using &lt;a href=&#34;../iclosable&#34;&gt;IClosable&lt;/a&gt; interface instead.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;methods&#34;&gt;Methods&lt;/h3&gt;
+&lt;h4 id=&#34;isopen&#34;&gt;IsOpen&lt;/h4&gt;
+&lt;p&gt;Checks if the component is opened.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;IsOpen() bool&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;returns&lt;/strong&gt;: bool - true if the component has been opened and false otherwise.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id=&#34;open&#34;&gt;open&lt;/h4&gt;
+&lt;p&gt;Opens the component.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Open(ctx context.Context, correlationId string) error&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;ctx&lt;/strong&gt;: context.Context - operation context.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;correlationId&lt;/strong&gt;: string - (optional) transaction id used to trace execution through the call chain.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;returns&lt;/strong&gt;: error - error returned if not opened&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;examples&#34;&gt;Examples&lt;/h3&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-go&#34; data-lang=&#34;go&#34;&gt;&lt;span style=&#34;color:#00a8c8&#34;&gt;type&lt;/span&gt; &lt;span style=&#34;color:#75af00&#34;&gt;MyPersistence&lt;/span&gt; &lt;span style=&#34;color:#111&#34;&gt;{&lt;/span&gt;
+	&lt;span style=&#34;color:#75af00&#34;&gt;_client&lt;/span&gt; &lt;span style=&#34;color:#75af00&#34;&gt;any&lt;/span&gt;
+&lt;span style=&#34;color:#111&#34;&gt;}&lt;/span&gt;
+
+&lt;span style=&#34;color:#00a8c8&#34;&gt;func&lt;/span&gt; &lt;span style=&#34;color:#111&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color:#75af00&#34;&gt;mp&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;*&lt;/span&gt; &lt;span style=&#34;color:#75af00&#34;&gt;MyPersistence&lt;/span&gt;&lt;span style=&#34;color:#111&#34;&gt;)&lt;/span&gt;&lt;span style=&#34;color:#75af00&#34;&gt;IsOpen&lt;/span&gt;&lt;span style=&#34;color:#111&#34;&gt;()&lt;/span&gt; &lt;span style=&#34;color:#00a8c8&#34;&gt;bool&lt;/span&gt; &lt;span style=&#34;color:#111&#34;&gt;{&lt;/span&gt;
+	&lt;span style=&#34;color:#00a8c8&#34;&gt;return&lt;/span&gt; &lt;span style=&#34;color:#75af00&#34;&gt;mp&lt;/span&gt;&lt;span style=&#34;color:#111&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#75af00&#34;&gt;_client&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;!=&lt;/span&gt; &lt;span style=&#34;color:#00a8c8&#34;&gt;nil&lt;/span&gt;&lt;span style=&#34;color:#111&#34;&gt;;&lt;/span&gt;
+&lt;span style=&#34;color:#111&#34;&gt;}&lt;/span&gt;
+
+&lt;span style=&#34;color:#00a8c8&#34;&gt;func&lt;/span&gt; &lt;span style=&#34;color:#111&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color:#75af00&#34;&gt;mp&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;*&lt;/span&gt; &lt;span style=&#34;color:#75af00&#34;&gt;MyPersistence&lt;/span&gt;&lt;span style=&#34;color:#111&#34;&gt;)&lt;/span&gt; &lt;span style=&#34;color:#75af00&#34;&gt;Open&lt;/span&gt;&lt;span style=&#34;color:#111&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color:#75af00&#34;&gt;ctx&lt;/span&gt; &lt;span style=&#34;color:#75af00&#34;&gt;context&lt;/span&gt;&lt;span style=&#34;color:#111&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#75af00&#34;&gt;Context&lt;/span&gt;&lt;span style=&#34;color:#111&#34;&gt;,&lt;/span&gt; &lt;span style=&#34;color:#75af00&#34;&gt;correlationId&lt;/span&gt; &lt;span style=&#34;color:#00a8c8&#34;&gt;string&lt;/span&gt;&lt;span style=&#34;color:#111&#34;&gt;)&lt;/span&gt; &lt;span style=&#34;color:#00a8c8&#34;&gt;error&lt;/span&gt; &lt;span style=&#34;color:#111&#34;&gt;{&lt;/span&gt;
+	&lt;span style=&#34;color:#00a8c8&#34;&gt;if&lt;/span&gt; &lt;span style=&#34;color:#111&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color:#75af00&#34;&gt;mp&lt;/span&gt;&lt;span style=&#34;color:#111&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#75af00&#34;&gt;isOpen&lt;/span&gt;&lt;span style=&#34;color:#111&#34;&gt;())&lt;/span&gt; &lt;span style=&#34;color:#111&#34;&gt;{&lt;/span&gt;
+		&lt;span style=&#34;color:#00a8c8&#34;&gt;return&lt;/span&gt; &lt;span style=&#34;color:#00a8c8&#34;&gt;nil&lt;/span&gt;&lt;span style=&#34;color:#111&#34;&gt;;&lt;/span&gt;
+	&lt;span style=&#34;color:#111&#34;&gt;}&lt;/span&gt;
+&lt;span style=&#34;color:#111&#34;&gt;}&lt;/span&gt;
+
+&lt;span style=&#34;color:#00a8c8&#34;&gt;func&lt;/span&gt; &lt;span style=&#34;color:#111&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color:#75af00&#34;&gt;mp&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;*&lt;/span&gt; &lt;span style=&#34;color:#75af00&#34;&gt;MyPersistence&lt;/span&gt;&lt;span style=&#34;color:#111&#34;&gt;)&lt;/span&gt; &lt;span style=&#34;color:#75af00&#34;&gt;Close&lt;/span&gt;&lt;span style=&#34;color:#111&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color:#75af00&#34;&gt;ctx&lt;/span&gt; &lt;span style=&#34;color:#75af00&#34;&gt;context&lt;/span&gt;&lt;span style=&#34;color:#111&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#75af00&#34;&gt;Context&lt;/span&gt;&lt;span style=&#34;color:#111&#34;&gt;,&lt;/span&gt;  &lt;span style=&#34;color:#75af00&#34;&gt;correlationId&lt;/span&gt; &lt;span style=&#34;color:#00a8c8&#34;&gt;string&lt;/span&gt;&lt;span style=&#34;color:#111&#34;&gt;)&lt;/span&gt; &lt;span style=&#34;color:#111&#34;&gt;{&lt;/span&gt;
+	&lt;span style=&#34;color:#00a8c8&#34;&gt;if&lt;/span&gt; &lt;span style=&#34;color:#111&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color:#75af00&#34;&gt;mp&lt;/span&gt;&lt;span style=&#34;color:#111&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#75af00&#34;&gt;_client&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;!=&lt;/span&gt; &lt;span style=&#34;color:#00a8c8&#34;&gt;nil&lt;/span&gt;&lt;span style=&#34;color:#111&#34;&gt;)&lt;/span&gt; &lt;span style=&#34;color:#111&#34;&gt;{&lt;/span&gt;
+		&lt;span style=&#34;color:#75af00&#34;&gt;mp&lt;/span&gt;&lt;span style=&#34;color:#111&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#75af00&#34;&gt;_client&lt;/span&gt;&lt;span style=&#34;color:#111&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#111&#34;&gt;close&lt;/span&gt;&lt;span style=&#34;color:#111&#34;&gt;();&lt;/span&gt;
+		&lt;span style=&#34;color:#75af00&#34;&gt;mp&lt;/span&gt;&lt;span style=&#34;color:#111&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#75af00&#34;&gt;_client&lt;/span&gt; &lt;span style=&#34;color:#111&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#00a8c8&#34;&gt;nil&lt;/span&gt;&lt;span style=&#34;color:#111&#34;&gt;;&lt;/span&gt;
+	&lt;span style=&#34;color:#111&#34;&gt;}&lt;/span&gt;
+&lt;span style=&#34;color:#111&#34;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id=&#34;see-also&#34;&gt;See also&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;h4 id=&#34;iopenableiopenable&#34;&gt;&lt;a href=&#34;../iopenable&#34;&gt;IOpenable&lt;/a&gt;&lt;/h4&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;h4 id=&#34;openeropener&#34;&gt;&lt;a href=&#34;../opener&#34;&gt;Opener&lt;/a&gt;&lt;/h4&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+
+      </description>
+    </item>
+    
+    <item>
+      <title>Toolkit_api: IParameterized</title>
+      <link>/toolkit_api/golang/commons/run/iparameterized/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/toolkit_api/golang/commons/run/iparameterized/</guid>
+      <description>
+        
+        
+        &lt;h3 id=&#34;description&#34;&gt;Description&lt;/h3&gt;
+&lt;p&gt;The IParameterized interface allows you to create components with execution parameters.&lt;/p&gt;
+&lt;h3 id=&#34;methods&#34;&gt;Methods&lt;/h3&gt;
+&lt;h4 id=&#34;setparameters&#34;&gt;SetParameters&lt;/h4&gt;
+&lt;p&gt;Sets execution parameters.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;SetParameters(ctx context.Context, parameters &lt;a href=&#34;../parameters&#34;&gt;*Parameters&lt;/a&gt;)&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;ctx&lt;/strong&gt;: context.Context - operation context.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;parameters&lt;/strong&gt;: &lt;a href=&#34;../parameters&#34;&gt;*Parameters&lt;/a&gt; - execution parameters.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;see-also&#34;&gt;See also&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;h4 id=&#34;iconfigurableconfigiconfigurable&#34;&gt;&lt;a href=&#34;../../config/iconfigurable&#34;&gt;IConfigurable&lt;/a&gt;&lt;/h4&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+
+      </description>
+    </item>
+    
+    <item>
+      <title>Toolkit_api: Notifier</title>
+      <link>/toolkit_api/golang/commons/run/notifier/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/toolkit_api/golang/commons/run/notifier/</guid>
+      <description>
+        
+        
+        &lt;h3 id=&#34;description&#34;&gt;Description&lt;/h3&gt;
+&lt;p&gt;The Notifier class is a helper class that can be used to notify one or more components.&lt;/p&gt;
+&lt;h3 id=&#34;methods&#34;&gt;Methods&lt;/h3&gt;
+&lt;h4 id=&#34;notify&#34;&gt;Notify&lt;/h4&gt;
+&lt;p&gt;Sets execution parameters.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Notify(correlationId string, components []any, args &lt;a href=&#34;../parameters&#34;&gt;*Parameters&lt;/a&gt;)&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;correlationId&lt;/strong&gt;: string - (optional) transaction id used to trace execution through the call chain.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;components&lt;/strong&gt;: []any - list of components that are to be notified.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;args&lt;/strong&gt;: &lt;a href=&#34;../parameters&#34;&gt;*Parameters&lt;/a&gt; - notification arguments.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id=&#34;notifyone&#34;&gt;NotifyOne&lt;/h4&gt;
+&lt;p&gt;Notifies specific component.&lt;/p&gt;
+&lt;p&gt;To be notiied components must implement &lt;a href=&#34;../inotifiable&#34;&gt;INotifiable&lt;/a&gt; interface.
+If they don&amp;rsquo;t the call to this method has no effect.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;NotifyOne(correlationId string, component any, args &lt;a href=&#34;../parameters&#34;&gt;*Parameters&lt;/a&gt;)&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;correlationId&lt;/strong&gt;: string - (optional) transaction id used to trace execution through the call chain.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;component&lt;/strong&gt;: any - component that is to be notified.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;args&lt;/strong&gt;: &lt;a href=&#34;../parameters&#34;&gt;Parameters&lt;/a&gt; - notification arguments.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;see-also&#34;&gt;See also&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;h4 id=&#34;inotifiableinotifiable&#34;&gt;&lt;a href=&#34;../inotifiable&#34;&gt;INotifiable&lt;/a&gt;&lt;/h4&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+
+      </description>
+    </item>
+    
+    <item>
+      <title>Toolkit_api: Opener</title>
+      <link>/toolkit_api/golang/commons/run/opener/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/toolkit_api/golang/commons/run/opener/</guid>
+      <description>
+        
+        
+        &lt;h3 id=&#34;description&#34;&gt;Description&lt;/h3&gt;
+&lt;p&gt;The Opener class can be used to check whether all components are opened or not, a component is opened or not, and to open one or more components.&lt;/p&gt;
+&lt;h3 id=&#34;methods&#34;&gt;Methods&lt;/h3&gt;
+&lt;h4 id=&#34;isopen&#34;&gt;IsOpen&lt;/h4&gt;
+&lt;p&gt;Checks if all components are opened.&lt;/p&gt;
+&lt;p&gt;To be checked components must implement the &lt;a href=&#34;../iopenable&#34;&gt;IOpenable&lt;/a&gt; interface.
+If they don&amp;rsquo;t, the call to this method returns true.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;IsOpen(components []interface{}) bool&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;components&lt;/strong&gt;: []interface{} - list of components that are to be checked.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;returns&lt;/strong&gt;: bool - true if all components are opened and false if at least one component is closed.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id=&#34;isopenone&#34;&gt;IsOpenOne&lt;/h4&gt;
+&lt;p&gt;Checks if a specified component is opened.
+To be checked components must implement the &lt;a href=&#34;../iopenable&#34;&gt;IOpenable&lt;/a&gt; interface.
+If they don&amp;rsquo;t, the call to this method returns true.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;IsOpenOne(component interface{}) bool&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;component&lt;/strong&gt;: interface{} - component that is to be checked.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;returns&lt;/strong&gt;: bool - true if component is opened and false otherwise.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id=&#34;open&#34;&gt;Open&lt;/h4&gt;
+&lt;p&gt;Opens multiple components.
+To be opened components must implement the &lt;a href=&#34;../iopenable&#34;&gt;IOpenable&lt;/a&gt; interface.
+If they don&amp;rsquo;t, the call to this method has no effect.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Open(ctx context.Context, correlationId string, components []interface{}) error&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;ctx&lt;/strong&gt;: context.Context - operation context.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;correlationId&lt;/strong&gt;: string - (optional) transaction id used to trace execution through the call chain.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;components&lt;/strong&gt;: []interface{} - list of components that are to be closed.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;returns&lt;/strong&gt;: error - return error if not opened&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id=&#34;openone&#34;&gt;OpenOne&lt;/h4&gt;
+&lt;p&gt;Opens a specific component.
+To be opened components must implement the &lt;a href=&#34;../iopenable&#34;&gt;IOpenable&lt;/a&gt; interface.
+If they don&amp;rsquo;t, the call to this method has no effect.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;OpenOne(ctx context.Context, correlationId string, component interface{}) error&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;ctx&lt;/strong&gt;: context.Context - operation context.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;correlationId&lt;/strong&gt;: string - (optional) transaction id used to trace execution through the call chain.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;component&lt;/strong&gt;: interface{} - component that is to be opened.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;returns&lt;/strong&gt;: error - error returned if not opened&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;see-also&#34;&gt;See also&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;h4 id=&#34;iopenableiopenable&#34;&gt;&lt;a href=&#34;../iopenable&#34;&gt;IOpenable&lt;/a&gt;&lt;/h4&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+
+      </description>
+    </item>
+    
+    <item>
+      <title>Toolkit_api: Parameters</title>
+      <link>/toolkit_api/golang/commons/run/parameters/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/toolkit_api/golang/commons/run/parameters/</guid>
+      <description>
+        
+        
+        &lt;p&gt;&lt;strong&gt;Implements:&lt;/strong&gt; &lt;a href=&#34;../../data/any_value_map&#34;&gt;AnyValueMap&lt;/a&gt;&lt;/p&gt;
+&lt;h3 id=&#34;description&#34;&gt;Description&lt;/h3&gt;
+&lt;p&gt;The Parameters class contains a map with execution paramters.&lt;/p&gt;
+&lt;p&gt;Important points&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;In general, this map may contain non-serializable values.&lt;/li&gt;
+&lt;li&gt;In contrast with other maps, its getters and setters support dot notation and are able to access properties in the entire object graph.&lt;/li&gt;
+&lt;li&gt;This class is often used to pass execution and notification arguments, and parameterize classes before execution.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;constructors&#34;&gt;Constructors&lt;/h3&gt;
+&lt;h4 id=&#34;newparameters&#34;&gt;NewParameters&lt;/h4&gt;
+&lt;p&gt;Creates a new instance of the map and assigns its value.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;NewParameters(values map[string]any) &lt;a href=&#34;&#34;&gt;*Parameters&lt;/a&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;map&lt;/strong&gt;: map[string]any - (optional) values to initialize this map.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id=&#34;newparametersfromconfig&#34;&gt;NewParametersFromConfig&lt;/h4&gt;
+&lt;p&gt;Creates a new Parameters object from a ConfigMap object.
+See &lt;a href=&#34;../../config/config_params&#34;&gt;ConfigParams&lt;/a&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;NewParametersFromConfig(config &lt;a href=&#34;../../config/config_params&#34;&gt;*config.ConfigParams&lt;/a&gt;) &lt;a href=&#34;&#34;&gt;*Parameters&lt;/a&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;config&lt;/strong&gt;: &lt;a href=&#34;../../config/config_params&#34;&gt;*config.ConfigParams&lt;/a&gt; - ConfigParams object that contains parameters.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;returns&lt;/strong&gt;: &lt;a href=&#34;../parameters&#34;&gt;*Parameters&lt;/a&gt; - new Parameters object.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id=&#34;newparametersfrommaps&#34;&gt;NewParametersFromMaps&lt;/h4&gt;
+&lt;p&gt;Creates a new Parameters by merging two or more maps. Maps defined later in the list override values from previously defined maps.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;NewParametersFromMaps(maps &amp;hellip;map[string]any) &lt;a href=&#34;&#34;&gt;*Parameters&lt;/a&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;maps&lt;/strong&gt;: &amp;hellip;map[string]any - array of maps to be merged&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;returns&lt;/strong&gt;: &lt;a href=&#34;../parameters&#34;&gt;Parameters&lt;/a&gt; - new Parameters object.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id=&#34;newparametersfromtuples&#34;&gt;NewParametersFromTuples&lt;/h4&gt;
+&lt;p&gt;Creates a new Parameters object filled with provided key-value pairs called tuples.
+Tuples parameters contain a sequence of &lt;em&gt;key1, value1, key2, value2, &amp;hellip;&lt;/em&gt; pairs.&lt;/p&gt;
+&lt;p&gt;See &lt;a href=&#34;../../data/any_value_map/#newanyvaluemapfromtuplesarray&#34;&gt;AnyValueMap.NewAnyValueMapFromTuplesArray&lt;/a&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;NewParametersFromTuples(tuples &amp;hellip;any) &lt;a href=&#34;&#34;&gt;*Parameters&lt;/a&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;tuples&lt;/strong&gt;: &amp;hellip;any - ConfigParams object that contains parameters.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;returns&lt;/strong&gt;: &lt;a href=&#34;../parameters&#34;&gt;*Parameters&lt;/a&gt; - new Parameters object.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id=&#34;newparametersfromvalue&#34;&gt;NewParametersFromValue&lt;/h4&gt;
+&lt;p&gt;Creates a new Parameters object filled with key-value pairs from a specified object.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;NewParametersFromValue(value any) &lt;a href=&#34;&#34;&gt;*Parameters&lt;/a&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;value&lt;/strong&gt;: any - object with key-value pairs used to initialize a new Parameters.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;returns&lt;/strong&gt;: &lt;a href=&#34;../parameters&#34;&gt;Parameters&lt;/a&gt; - new Parameters object.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id=&#34;newemptyparameters&#34;&gt;NewEmptyParameters&lt;/h4&gt;
+&lt;p&gt;Creates a new instance of the map and assigns its value.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;NewEmptyParameters() &lt;a href=&#34;&#34;&gt;*Parameters&lt;/a&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h3 id=&#34;methods&#34;&gt;Methods&lt;/h3&gt;
+&lt;h4 id=&#34;assignto&#34;&gt;AssignTo&lt;/h4&gt;
+&lt;p&gt;Assigns (copies over) properties from the specified value to this map.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;(c &lt;a href=&#34;&#34;&gt;*Parameters&lt;/a&gt;) AssignTo(value any)&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;value&lt;/strong&gt;: any - value whose properties shall be copied over.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id=&#34;contains&#34;&gt;Contains&lt;/h4&gt;
+&lt;p&gt;Checks if the map contains an element with a specified key.&lt;/p&gt;
+&lt;p&gt;The key can be defined using dot notation
+and allows to recursively access elements of elements.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;(c &lt;a href=&#34;&#34;&gt;*Parameters&lt;/a&gt;) Contains(key string) bool&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;key&lt;/strong&gt;: string - key to be checked&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;returns&lt;/strong&gt;: bool - true if this map contains the key or false otherwise.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id=&#34;get&#34;&gt;Get&lt;/h4&gt;
+&lt;p&gt;Gets a map&amp;rsquo;s element specified by its key.
+The key can be defined using dot notation
+and allows to recursively access elements of elements.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;(c &lt;a href=&#34;&#34;&gt;*Parameters&lt;/a&gt;) Get(key string) (any, bool)&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;key&lt;/strong&gt;: string - key of the element to get.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;returns&lt;/strong&gt;: (any, bool) - value of the map&amp;rsquo;s element.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id=&#34;getasnullableparameters&#34;&gt;GetAsNullableParameters&lt;/h4&gt;
+&lt;p&gt;Converts a map&amp;rsquo;s element into an Parameters object or returns nil if the conversion is not possible.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;(c &lt;a href=&#34;&#34;&gt;*Parameters&lt;/a&gt;) GetAsNullableParameters(key string) (&lt;a href=&#34;../parameters&#34;&gt;*Parameters&lt;/a&gt;, bool)&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;key&lt;/strong&gt;: string - key of element to get.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;returns&lt;/strong&gt;: (&lt;a href=&#34;../parameters&#34;&gt;*Parameters&lt;/a&gt;, bool) - Parameters value of the element or nil if the conversion is not supported.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id=&#34;getasparameters&#34;&gt;GetAsParameters&lt;/h4&gt;
+&lt;p&gt;Converts map element into an Parameters or returns empty Parameters if the conversion is not possible.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;(c &lt;a href=&#34;&#34;&gt;*Parameters&lt;/a&gt;) GetAsParameters(key string) &lt;a href=&#34;&#34;&gt;*Parameters&lt;/a&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;key&lt;/strong&gt;: string - key of element to get.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;returns&lt;/strong&gt;: &lt;a href=&#34;&#34;&gt;*Parameters&lt;/a&gt; - Parameters value of the element or empty Parameters if the conversion is not supported.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id=&#34;getasparameterswithdefault&#34;&gt;GetAsParametersWithDefault&lt;/h4&gt;
+&lt;p&gt;Converts a map&amp;rsquo;s element into a Parameters object or returns a default value if the conversion is not possible.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;(c &lt;a href=&#34;&#34;&gt;*Parameters&lt;/a&gt;) GetAsParametersWithDefault(key string, defaultValue &lt;a href=&#34;&#34;&gt;*Parameters&lt;/a&gt;) &lt;a href=&#34;&#34;&gt;*Parameters&lt;/a&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;key&lt;/strong&gt;: string - key of element to get.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;defaultValue&lt;/strong&gt;: &lt;a href=&#34;../parameters&#34;&gt;*Parameters&lt;/a&gt; - default value&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;returns&lt;/strong&gt;: &lt;a href=&#34;../parameters&#34;&gt;*Parameters&lt;/a&gt; - Parameters value of the element or default value if the conversion is not supported.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id=&#34;omit&#34;&gt;Omit&lt;/h4&gt;
+&lt;p&gt;Omits selected parameters from the Parameters object and returns the rest as a new Parameters object.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;(c &lt;a href=&#34;&#34;&gt;*Parameters&lt;/a&gt;) Omit(paths &amp;hellip;string) &lt;a href=&#34;&#34;&gt;*Parameters&lt;/a&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;paths&lt;/strong&gt;: string[] - keys to be omitted from copying over to a new &lt;a href=&#34;../parameters&#34;&gt;Parameters&lt;/a&gt;.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;returns&lt;/strong&gt;: &lt;a href=&#34;../parameters&#34;&gt;*Parameters&lt;/a&gt; - new &lt;a href=&#34;../parameters&#34;&gt;*Parameters&lt;/a&gt; object.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id=&#34;override&#34;&gt;Override&lt;/h4&gt;
+&lt;p&gt;Overrides parameters with new values from specified &lt;a href=&#34;../parameters&#34;&gt;Parameters&lt;/a&gt; and returns a new &lt;a href=&#34;../parameters&#34;&gt;Parameters&lt;/a&gt; object.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;(c &lt;a href=&#34;&#34;&gt;*Parameters&lt;/a&gt;) Override(parameters &lt;a href=&#34;&#34;&gt;*Parameters&lt;/a&gt;, recursive bool) &lt;a href=&#34;&#34;&gt;*Parameters&lt;/a&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;parameters&lt;/strong&gt;: &lt;a href=&#34;../parameters&#34;&gt;*Parameters&lt;/a&gt; - Parameters with parameters to override the current values.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;recursive&lt;/strong&gt;: bool - (optional) true to perform deep copy, and false for shallow copy. Default: false&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;returns&lt;/strong&gt;: &lt;a href=&#34;../parameters&#34;&gt;*Parameters&lt;/a&gt; - new Parameters object.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id=&#34;pick&#34;&gt;Pick&lt;/h4&gt;
+&lt;p&gt;Picks select parameters from the Parameters object and returns them as a new Parameters object.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;(c &lt;a href=&#34;&#34;&gt;*Parameters&lt;/a&gt;) Pick(paths &amp;hellip;string) &lt;a href=&#34;&#34;&gt;*Parameters&lt;/a&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;paths&lt;/strong&gt;: string[] - keys to be picked and copied over to the new Parameters object.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;returns&lt;/strong&gt;: &lt;a href=&#34;../parameters&#34;&gt;*Parameters&lt;/a&gt; - new Parameters object.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id=&#34;put&#34;&gt;Put&lt;/h4&gt;
+&lt;p&gt;Puts a new value into a map element specified by its key.
+The key can be defined using dot notation
+and allows to recursively access elements of elements.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;(c *Parameters) Put(key string, value any)&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;key&lt;/strong&gt;: string - key of the element to put.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;value&lt;/strong&gt;: any - new value for the map element.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id=&#34;setdefaults&#34;&gt;SetDefaults&lt;/h4&gt;
+&lt;p&gt;Set default values from specified Parameters and returns a new Parameters object.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;(c &lt;a href=&#34;&#34;&gt;*Parameters&lt;/a&gt;) SetDefaults(defaultParameters &lt;a href=&#34;&#34;&gt;*Parameters&lt;/a&gt;, recursive bool) &lt;a href=&#34;&#34;&gt;*Parameters&lt;/a&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;defaultParameters&lt;/strong&gt;: &lt;a href=&#34;../parameters&#34;&gt;*Parameters&lt;/a&gt; - Parameters object with default parameter values.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;recursive&lt;/strong&gt;: bool - (optional) true to perform deep copy, and false for shallow copy. Default: false&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;returns&lt;/strong&gt;: &lt;a href=&#34;../parameters&#34;&gt;*Parameters&lt;/a&gt; - new Parameters object.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;see-also&#34;&gt;See also&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;h4 id=&#34;iparameterizediparameterized&#34;&gt;&lt;a href=&#34;../iparameterized&#34;&gt;IParameterized&lt;/a&gt;&lt;/h4&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;h4 id=&#34;anyvaluemapdataany_value_map&#34;&gt;&lt;a href=&#34;../../data/any_value_map&#34;&gt;AnyValueMap&lt;/a&gt;&lt;/h4&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+
+      </description>
+    </item>
+    
+  </channel>
+</rss>

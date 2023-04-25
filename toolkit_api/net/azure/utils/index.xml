@@ -1,0 +1,167 @@
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Pip.Services Docs – Utils</title>
+    <link>/toolkit_api/net/azure/utils/</link>
+    <description>Recent content in Utils on Pip.Services Docs</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    
+	  <atom:link href="/toolkit_api/net/azure/utils/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+      
+        
+      
+    
+    
+    <item>
+      <title>Toolkit_api: AzureFunctionrequestHelper</title>
+      <link>/toolkit_api/net/azure/utils/azure_function_context_helper/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/toolkit_api/net/azure/utils/azure_function_context_helper/</guid>
+      <description>
+        
+        
+        &lt;h3 id=&#34;description&#34;&gt;Description&lt;/h3&gt;
+&lt;p&gt;The AzureFunctionrequestHelper class contains methods used to get correlationIds, commands and bodies from the Azure Function request.&lt;/p&gt;
+&lt;h3 id=&#34;static-methods&#34;&gt;Static methods&lt;/h3&gt;
+&lt;h4 id=&#34;extractfromquery&#34;&gt;ExtractFromQuery&lt;/h4&gt;
+&lt;p&gt;Extracts parameter from query by name&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;code&gt;public static&lt;/code&gt; string ExtractFromQuery(string parameter, HttpRequest request)&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;parameter&lt;/strong&gt;: string - parameter name.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;request&lt;/strong&gt;: HttpRequest - Azure Function request.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;returns&lt;/strong&gt;: string - returned correlationId from request.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id=&#34;readbody&#34;&gt;ReadBody&lt;/h4&gt;
+&lt;p&gt;Read body from request&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;code&gt;public static&lt;/code&gt; string ReadBody(HttpRequest request)&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;request&lt;/strong&gt;: HttpRequest - Azure Function request.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;returns&lt;/strong&gt;: string - body represents as string.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id=&#34;getbodyasparameters&#34;&gt;GetBodyAsParameters&lt;/h4&gt;
+&lt;p&gt;Get body as Parameters object from request&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;code&gt;public static&lt;/code&gt; &lt;a href=&#34;../../../commons/run/parameters&#34;&gt;Parameters&lt;/a&gt; GetBodyAsParameters(HttpRequest request)&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;request&lt;/strong&gt;: HttpRequest - Azure Function request.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;returns&lt;/strong&gt;: &lt;a href=&#34;../../../commons/run/parameters&#34;&gt;Parameters&lt;/a&gt; - returned body from request.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id=&#34;getcorrelationid&#34;&gt;GetCorrelationId&lt;/h4&gt;
+&lt;p&gt;Returns a correlationId from the Azure Function request.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;code&gt;public static&lt;/code&gt; string GetCorrelationId(HttpRequest request)&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;request&lt;/strong&gt;: HttpRequest - Azure Function request.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;returns&lt;/strong&gt;: string - returned correlationId from request.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id=&#34;getcommand&#34;&gt;GetCommand&lt;/h4&gt;
+&lt;p&gt;Returns a command from the Azure Function request.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;code&gt;public static&lt;/code&gt; GetCommand(HttpRequest request): string&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;request&lt;/strong&gt;: HttpRequest - Azure Function request.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;returns&lt;/strong&gt;: string - returned command from request.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id=&#34;getparameters&#34;&gt;GetParameters&lt;/h4&gt;
+&lt;p&gt;Returns a body from the Azure Function request http request.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;code&gt;public static&lt;/code&gt; &lt;a href=&#34;../../../commons/run/parameters&#34;&gt;Parameters&lt;/a&gt; GetBodyAsParameters(HttpRequest request)&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;request&lt;/strong&gt;: HttpRequest - Azure Function request.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;returns&lt;/strong&gt;: &lt;a href=&#34;../../../commons/run/parameters&#34;&gt;Parameters&lt;/a&gt; - returned body from request.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id=&#34;getpropertybyname&#34;&gt;GetPropertyByName&lt;/h4&gt;
+&lt;p&gt;Extract property from request by name&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;code&gt;public static&lt;/code&gt; string GetPropertyByName(HttpRequest request, string name)&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;request&lt;/strong&gt;: HttpRequest - Azure Function request object.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;name&lt;/strong&gt;: string - parameter name.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;returns&lt;/strong&gt;: &lt;a href=&#34;../../../commons/run/parameters&#34;&gt;Parameters&lt;/a&gt; - returned body from request.&lt;/li&gt;
+&lt;/ul&gt;
+
+      </description>
+    </item>
+    
+    <item>
+      <title>Toolkit_api: AzureFunctionResponseSender</title>
+      <link>/toolkit_api/net/azure/utils/azure_function_response_sender/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/toolkit_api/net/azure/utils/azure_function_response_sender/</guid>
+      <description>
+        
+        
+        &lt;h3 id=&#34;description&#34;&gt;Description&lt;/h3&gt;
+&lt;p&gt;The AzureFunctionResponseSender class contains methods used to get correlationIds, commands and bodies from the Azure Function request.&lt;/p&gt;
+&lt;h3 id=&#34;static-methods&#34;&gt;Static methods&lt;/h3&gt;
+&lt;h4 id=&#34;senderrorasync&#34;&gt;SendErrorAsync&lt;/h4&gt;
+&lt;p&gt;Extracts parameter from query by name&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;code&gt;public static&lt;/code&gt; IActionResult SendErrorAsync(Exception ex)&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;ex&lt;/strong&gt;: Exception - the error being sent.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;returns&lt;/strong&gt;: IActionResult - result of send operation.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id=&#34;sendresultasync&#34;&gt;SendResultAsync&lt;/h4&gt;
+&lt;p&gt;Read body from request&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;code&gt;public static&lt;/code&gt; IActionResult SendResultAsync(object result)&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;result&lt;/strong&gt;: object - a body object to result.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;returns&lt;/strong&gt;: IActionResult - result of send operation.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id=&#34;sendemptyresultasync&#34;&gt;SendEmptyResultAsync&lt;/h4&gt;
+&lt;p&gt;Sends an empty result with 204 status code.
+If error occur it sends ErrorDescription with approproate status code.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;code&gt;public static&lt;/code&gt; IActionResult SendEmptyResultAsync(object result)&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;result&lt;/strong&gt;: object - a body object to result.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;returns&lt;/strong&gt;: IActionResult - result of send operation.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id=&#34;sendcreatedresultasync&#34;&gt;SendCreatedResultAsync&lt;/h4&gt;
+&lt;p&gt;Sends newly created object as JSON.
+That be called directly or passed as a parameter to business logic components.&lt;/p&gt;
+&lt;p&gt;If object is not null it returns 201 status code. For null results it returns
+204 status code. If error occur it sends ErrorDescription with approproate status code.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;code&gt;public static&lt;/code&gt; IActionResult SendCreatedResultAsync(object result)&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;result&lt;/strong&gt;: object - a body object to created result.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;returns&lt;/strong&gt;: IActionResult - result of send operation.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id=&#34;senddeletedresultasync&#34;&gt;SendDeletedResultAsync&lt;/h4&gt;
+&lt;p&gt;Creates a callback function that sends deleted object as JSON. That callack
+function call be called directly or passed as a parameter to business logic components.&lt;/p&gt;
+&lt;p&gt;If object is not null it returns 200 status code. For null results it returns
+204 status code. If error occur it sends ErrorDescription with approproate status code.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;code&gt;public static&lt;/code&gt; IActionResult SendDeletedResultAsync(object result)&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;result&lt;/strong&gt;: object - a body object to deleted result.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;returns&lt;/strong&gt;: IActionResult - result of send operation.&lt;/li&gt;
+&lt;/ul&gt;
+
+      </description>
+    </item>
+    
+  </channel>
+</rss>

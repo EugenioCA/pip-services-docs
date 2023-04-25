@@ -1,0 +1,79 @@
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Pip.Services Docs – Cassandra module</title>
+    <link>/toolkit_api/node/cassandra/</link>
+    <description>Recent content in Cassandra module on Pip.Services Docs</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    
+	  <atom:link href="/toolkit_api/node/cassandra/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+      
+        
+      
+    
+    
+    <item>
+      <title>Toolkit_api: Build</title>
+      <link>/toolkit_api/node/cassandra/build/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/toolkit_api/node/cassandra/build/</guid>
+      <description>
+        
+        
+        &lt;hr&gt;
+&lt;div class=&#34;module-body&#34;&gt; 
+&lt;h3 id=&#34;classes&#34;&gt;Classes&lt;/h3&gt;
+&lt;h4 id=&#34;defaultcassandrafactorydefault_cassandra_factory&#34;&gt;&lt;a href=&#34;default_cassandra_factory&#34;&gt;DefaultCassandraFactory&lt;/a&gt;&lt;/h4&gt;
+&lt;p&gt;Creates Cassandra components by their descriptors.&lt;/p&gt;
+&lt;/div&gt;
+
+      </description>
+    </item>
+    
+    <item>
+      <title>Toolkit_api: Connect</title>
+      <link>/toolkit_api/node/cassandra/connect/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/toolkit_api/node/cassandra/connect/</guid>
+      <description>
+        
+        
+        &lt;hr&gt;
+&lt;div class=&#34;module-body&#34;&gt; 
+&lt;h3 id=&#34;classes&#34;&gt;Classes&lt;/h3&gt;
+&lt;h4 id=&#34;cassandraconnectioncassandra_connection&#34;&gt;&lt;a href=&#34;cassandra_connection&#34;&gt;CassandraConnection&lt;/a&gt;&lt;/h4&gt;
+&lt;p&gt;Cassandra connection using plain driver.&lt;/p&gt;
+&lt;h4 id=&#34;cassandraconnectionresolvercassandra_connection_resolver&#34;&gt;&lt;a href=&#34;cassandra_connection_resolver&#34;&gt;CassandraConnectionResolver&lt;/a&gt;&lt;/h4&gt;
+&lt;p&gt;Helper class that resolves Cassandra connection and credential parameters, validates them and generates a connection URI.&lt;/p&gt;
+&lt;/div&gt;
+
+      </description>
+    </item>
+    
+    <item>
+      <title>Toolkit_api: Persistence</title>
+      <link>/toolkit_api/node/cassandra/persistence/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/toolkit_api/node/cassandra/persistence/</guid>
+      <description>
+        
+        
+        &lt;hr&gt;
+&lt;div class=&#34;module-body&#34;&gt; 
+&lt;h3 id=&#34;classes&#34;&gt;Classes&lt;/h3&gt;
+&lt;h4 id=&#34;identifiablecassandrapersistenceidentifiable_cassandra_persistence&#34;&gt;&lt;a href=&#34;identifiable_cassandra_persistence&#34;&gt;IdentifiableCassandraPersistence&lt;/a&gt;&lt;/h4&gt;
+&lt;p&gt;Abstract persistence component that stores data in Cassandra and implements a number of CRUD operations over data items with unique ids.&lt;/p&gt;
+&lt;h4 id=&#34;cassandrapersistencecassandra_persistence&#34;&gt;&lt;a href=&#34;cassandra_persistence&#34;&gt;CassandraPersistence&lt;/a&gt;&lt;/h4&gt;
+&lt;p&gt;Abstract persistence component that stores data in Cassandra using the default driver.&lt;/p&gt;
+&lt;/div&gt;
+
+      </description>
+    </item>
+    
+  </channel>
+</rss>

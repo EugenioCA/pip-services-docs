@@ -1,0 +1,733 @@
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Pip.Services Docs – Reflect</title>
+    <link>/toolkit_api/golang/commons/reflect/</link>
+    <description>Recent content in Reflect on Pip.Services Docs</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    
+	  <atom:link href="/toolkit_api/golang/commons/reflect/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+      
+        
+      
+    
+    
+    <item>
+      <title>Toolkit_api: MethodReflector</title>
+      <link>/toolkit_api/golang/commons/reflect/method_reflector/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/toolkit_api/golang/commons/reflect/method_reflector/</guid>
+      <description>
+        
+        
+        &lt;h3 id=&#34;description&#34;&gt;Description&lt;/h3&gt;
+&lt;p&gt;The MethodReflector class allows you to examine an object&amp;rsquo;s methods (method instrospection) and to invoke them dynamically.&lt;/p&gt;
+&lt;p&gt;Important points&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;This class has symmetric implementation across all languages supported by the Pip.Services toolkit and it is used to support dynamic data processing. Moreover, because all languages have different casing and case sensitivity rules, this class treats all method names as case insensitive.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;methods&#34;&gt;Methods&lt;/h3&gt;
+&lt;h4 id=&#34;getmethodnames&#34;&gt;GetMethodNames&lt;/h4&gt;
+&lt;p&gt;Gets the names of all methods implemented in specified object.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;GetMethodNames(obj any) []string&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;obj&lt;/strong&gt;: any - objec to introspect.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;returns&lt;/strong&gt;: []string - list with method names.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id=&#34;hasmethod&#34;&gt;HasMethod&lt;/h4&gt;
+&lt;p&gt;Checks if an object has a method with a specified name..&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;HasMethod(obj any, name string) bool&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;obj&lt;/strong&gt;: any - object to introspect.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;name&lt;/strong&gt;: string - name of the method to check.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;returns&lt;/strong&gt;: bool - true if the object has the method and false if it doesn&amp;rsquo;t.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id=&#34;invokemethod&#34;&gt;InvokeMethod&lt;/h4&gt;
+&lt;p&gt;Invokes an object method by its name with specified parameters.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;InvokeMethod(obj any, name string, args &amp;hellip;any) any&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;obj&lt;/strong&gt;: any - object to invoke.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;name&lt;/strong&gt;: string - name of the method to invoke.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;args&lt;/strong&gt;: &amp;hellip;any - list of method arguments.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;returns&lt;/strong&gt;: any - result of the method invocation or nil if the method returns void.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;examples&#34;&gt;Examples&lt;/h3&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-go&#34; data-lang=&#34;go&#34;&gt;&lt;span style=&#34;color:#75af00&#34;&gt;myObj&lt;/span&gt; &lt;span style=&#34;color:#111&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#75af00&#34;&gt;MyObject&lt;/span&gt;&lt;span style=&#34;color:#111&#34;&gt;();&lt;/span&gt;
+
+&lt;span style=&#34;color:#75af00&#34;&gt;methods&lt;/span&gt; &lt;span style=&#34;color:#111&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#75af00&#34;&gt;MethodReflector&lt;/span&gt;&lt;span style=&#34;color:#111&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#75af00&#34;&gt;GetMethodNames&lt;/span&gt;&lt;span style=&#34;color:#111&#34;&gt;();&lt;/span&gt;
+&lt;span style=&#34;color:#75af00&#34;&gt;MethodReflector&lt;/span&gt;&lt;span style=&#34;color:#111&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#75af00&#34;&gt;HasMethod&lt;/span&gt;&lt;span style=&#34;color:#111&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color:#75af00&#34;&gt;myObj&lt;/span&gt;&lt;span style=&#34;color:#111&#34;&gt;,&lt;/span&gt; &lt;span style=&#34;color:#d88200&#34;&gt;&amp;#34;myMethod&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#111&#34;&gt;);&lt;/span&gt;
+&lt;span style=&#34;color:#75af00&#34;&gt;MethodReflector&lt;/span&gt;&lt;span style=&#34;color:#111&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#75af00&#34;&gt;InvokeMethod&lt;/span&gt;&lt;span style=&#34;color:#111&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color:#75af00&#34;&gt;myObj&lt;/span&gt;&lt;span style=&#34;color:#111&#34;&gt;,&lt;/span&gt; &lt;span style=&#34;color:#d88200&#34;&gt;&amp;#34;myMethod&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#111&#34;&gt;,&lt;/span&gt; &lt;span style=&#34;color:#ae81ff&#34;&gt;123&lt;/span&gt;&lt;span style=&#34;color:#111&#34;&gt;);&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+      </description>
+    </item>
+    
+    <item>
+      <title>Toolkit_api: ObjectReader</title>
+      <link>/toolkit_api/golang/commons/reflect/object_reader/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/toolkit_api/golang/commons/reflect/object_reader/</guid>
+      <description>
+        
+        
+        &lt;h3 id=&#34;description&#34;&gt;Description&lt;/h3&gt;
+&lt;p&gt;The ObjectReader class allows you to examine the properties of an object (property instrospection) and to dynamically read them.&lt;/p&gt;
+&lt;p&gt;Important points&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;In contrast to &lt;a href=&#34;../property_reflector&#34;&gt;PropertyReflector&lt;/a&gt; which only introspects regular objects, this ObjectReader is also able to handle maps and arrays.&lt;/li&gt;
+&lt;li&gt;For maps, properties are key-pairs identified by string keys.&lt;/li&gt;
+&lt;li&gt;For arrays, properties are elements identified by an integer index.&lt;/li&gt;
+&lt;li&gt;This class has a symmetric implementation across all languages supported by the Pip.Services toolkit and it is used to support dynamic data processing.&lt;/li&gt;
+&lt;li&gt;Because all languages have different casing and case sensitivity rules, this ObjectReader treats all property names as case insensitive.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;methods&#34;&gt;Methods&lt;/h3&gt;
+&lt;h4 id=&#34;getproperties&#34;&gt;GetProperties&lt;/h4&gt;
+&lt;p&gt;Get values of all properties in a specified object
+and returns them as a map.&lt;/p&gt;
+&lt;p&gt;The object can be a user defined object, map or array.
+Returned properties correspondently are object properties,
+map key-pairs or array elements with their indexes.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;GetProperties(obj any) map[string]any&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;obj&lt;/strong&gt;: any - object to get properties from.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;returns&lt;/strong&gt;: map[string]any - map, containing the names of the object&amp;rsquo;s properties and their values.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id=&#34;getproperty&#34;&gt;GetProperty&lt;/h4&gt;
+&lt;p&gt;Gets value of object property specified by its name.&lt;/p&gt;
+&lt;p&gt;The object can be a user defined object, map or array.
+The property name correspondently must be an object property,
+map key or array index.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;GetProperty(obj any, name string) any&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;obj&lt;/strong&gt;: any - object to read a property from.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;name&lt;/strong&gt;: string - name of the property to get.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;returns&lt;/strong&gt;: any - property value or nil if property doesn&amp;rsquo;t exist or introspection failed.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id=&#34;getpropertynames&#34;&gt;GetPropertyNames&lt;/h4&gt;
+&lt;p&gt;Gets the names of all properties implemented in a specified object.&lt;/p&gt;
+&lt;p&gt;The object can be a user defined object, map or array.
+Returned property name correspondently are object properties,
+map keys or array indexes.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;GetPropertyNames(obj any) []string&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;obj&lt;/strong&gt;: any - objec to introspect.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;returns&lt;/strong&gt;: []string - list with property names.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id=&#34;getvalue&#34;&gt;GetValue&lt;/h4&gt;
+&lt;p&gt;Gets a real object value.
+If object is a wrapper, it unwraps the value behind it.
+Otherwise it returns the same object value.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;GetValue(obj any) any&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;obj&lt;/strong&gt;: any - object to unwrap..&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;returns&lt;/strong&gt;: any - actual (unwrapped) object value.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id=&#34;hasproperty&#34;&gt;HasProperty&lt;/h4&gt;
+&lt;p&gt;Checks if object has a property with a specified name.&lt;/p&gt;
+&lt;p&gt;The object can be a user defined object, map or array.
+The property name correspondently must be an object property,
+map key or array index.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;HasProperty(obj any, name string) bool&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;obj&lt;/strong&gt;: any - object to introspect.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;name&lt;/strong&gt;: string - name of the property to check.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;returns&lt;/strong&gt;: bool - true if the object has the property and false if it doesn&amp;rsquo;t.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;examples&#34;&gt;Examples&lt;/h3&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-go&#34; data-lang=&#34;go&#34;&gt;&lt;span style=&#34;color:#75af00&#34;&gt;myObj&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;:=&lt;/span&gt; &lt;span style=&#34;color:#75af00&#34;&gt;MyObject&lt;/span&gt;&lt;span style=&#34;color:#111&#34;&gt;{}&lt;/span&gt;
+
+&lt;span style=&#34;color:#75af00&#34;&gt;properties&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;:=&lt;/span&gt; &lt;span style=&#34;color:#75af00&#34;&gt;ObjectReader&lt;/span&gt;&lt;span style=&#34;color:#111&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#75af00&#34;&gt;GetPropertyNames&lt;/span&gt;&lt;span style=&#34;color:#111&#34;&gt;()&lt;/span&gt;
+&lt;span style=&#34;color:#75af00&#34;&gt;ObjectReader&lt;/span&gt;&lt;span style=&#34;color:#111&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#75af00&#34;&gt;HasProperty&lt;/span&gt;&lt;span style=&#34;color:#111&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color:#75af00&#34;&gt;myObj&lt;/span&gt;&lt;span style=&#34;color:#111&#34;&gt;,&lt;/span&gt; &lt;span style=&#34;color:#d88200&#34;&gt;&amp;#34;myProperty&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#111&#34;&gt;)&lt;/span&gt;
+&lt;span style=&#34;color:#75af00&#34;&gt;value&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;:=&lt;/span&gt; &lt;span style=&#34;color:#75af00&#34;&gt;PropertyReflector&lt;/span&gt;&lt;span style=&#34;color:#111&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#75af00&#34;&gt;GetProperty&lt;/span&gt;&lt;span style=&#34;color:#111&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color:#75af00&#34;&gt;myObj&lt;/span&gt;&lt;span style=&#34;color:#111&#34;&gt;,&lt;/span&gt; &lt;span style=&#34;color:#d88200&#34;&gt;&amp;#34;myProperty&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#111&#34;&gt;)&lt;/span&gt;
+
+&lt;span style=&#34;color:#75af00&#34;&gt;myMap&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;:=&lt;/span&gt; &lt;span style=&#34;color:#111&#34;&gt;{&lt;/span&gt; &lt;span style=&#34;color:#75af00&#34;&gt;key1&lt;/span&gt;&lt;span style=&#34;color:#111&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#ae81ff&#34;&gt;123&lt;/span&gt;&lt;span style=&#34;color:#111&#34;&gt;,&lt;/span&gt; &lt;span style=&#34;color:#75af00&#34;&gt;key2&lt;/span&gt;&lt;span style=&#34;color:#111&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#d88200&#34;&gt;&amp;#34;ABC&amp;#34;&lt;/span&gt; &lt;span style=&#34;color:#111&#34;&gt;}&lt;/span&gt;
+&lt;span style=&#34;color:#75af00&#34;&gt;ObjectReader&lt;/span&gt;&lt;span style=&#34;color:#111&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#75af00&#34;&gt;HasProperty&lt;/span&gt;&lt;span style=&#34;color:#111&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color:#75af00&#34;&gt;myMap&lt;/span&gt;&lt;span style=&#34;color:#111&#34;&gt;,&lt;/span&gt; &lt;span style=&#34;color:#d88200&#34;&gt;&amp;#34;key1&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#111&#34;&gt;)&lt;/span&gt;
+&lt;span style=&#34;color:#75af00&#34;&gt;value&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;:=&lt;/span&gt; &lt;span style=&#34;color:#75af00&#34;&gt;ObjectReader&lt;/span&gt;&lt;span style=&#34;color:#111&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#75af00&#34;&gt;GetProperty&lt;/span&gt;&lt;span style=&#34;color:#111&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color:#75af00&#34;&gt;myMap&lt;/span&gt;&lt;span style=&#34;color:#111&#34;&gt;,&lt;/span&gt; &lt;span style=&#34;color:#d88200&#34;&gt;&amp;#34;key1&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#111&#34;&gt;)&lt;/span&gt;
+
+&lt;span style=&#34;color:#75af00&#34;&gt;myArray&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;:=&lt;/span&gt; &lt;span style=&#34;color:#111&#34;&gt;[&lt;/span&gt;&lt;span style=&#34;color:#ae81ff&#34;&gt;1&lt;/span&gt;&lt;span style=&#34;color:#111&#34;&gt;,&lt;/span&gt; &lt;span style=&#34;color:#ae81ff&#34;&gt;2&lt;/span&gt;&lt;span style=&#34;color:#111&#34;&gt;,&lt;/span&gt; &lt;span style=&#34;color:#ae81ff&#34;&gt;3&lt;/span&gt;&lt;span style=&#34;color:#111&#34;&gt;]&lt;/span&gt;
+&lt;span style=&#34;color:#75af00&#34;&gt;ObjectReader&lt;/span&gt;&lt;span style=&#34;color:#111&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#75af00&#34;&gt;HasProperty&lt;/span&gt;&lt;span style=&#34;color:#111&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color:#75af00&#34;&gt;myArrat&lt;/span&gt;&lt;span style=&#34;color:#111&#34;&gt;,&lt;/span&gt; &lt;span style=&#34;color:#d88200&#34;&gt;&amp;#34;0&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#111&#34;&gt;)&lt;/span&gt;
+&lt;span style=&#34;color:#75af00&#34;&gt;value&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;:=&lt;/span&gt; &lt;span style=&#34;color:#75af00&#34;&gt;ObjectReader&lt;/span&gt;&lt;span style=&#34;color:#111&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#75af00&#34;&gt;GetProperty&lt;/span&gt;&lt;span style=&#34;color:#111&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color:#75af00&#34;&gt;myArray&lt;/span&gt;&lt;span style=&#34;color:#111&#34;&gt;,&lt;/span&gt; &lt;span style=&#34;color:#d88200&#34;&gt;&amp;#34;0&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#111&#34;&gt;)&lt;/span&gt;
+
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id=&#34;see-also&#34;&gt;See also&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;h4 id=&#34;propertyreflectorproperty_reflector&#34;&gt;&lt;a href=&#34;../property_reflector&#34;&gt;PropertyReflector&lt;/a&gt;&lt;/h4&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+
+      </description>
+    </item>
+    
+    <item>
+      <title>Toolkit_api: ObjectWriter</title>
+      <link>/toolkit_api/golang/commons/reflect/object_writer/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/toolkit_api/golang/commons/reflect/object_writer/</guid>
+      <description>
+        
+        
+        &lt;h3 id=&#34;description&#34;&gt;Description&lt;/h3&gt;
+&lt;p&gt;The ObjectWriter class allows you to dynamically set the properties of an object.&lt;/p&gt;
+&lt;p&gt;Important points&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;In contrast to &lt;a href=&#34;../property_reflector&#34;&gt;PropertyReflector&lt;/a&gt; which only introspects regular objects, the ObjectWriter class is also able to handle maps and arrays.&lt;/li&gt;
+&lt;li&gt;For maps, properties are key-pairs identified by string keys,&lt;/li&gt;
+&lt;li&gt;For arrays, properties are elements identified by integer index.&lt;/li&gt;
+&lt;li&gt;This class has symmetric implementation across all languages supported by the Pip.Services toolkit and it is used to support dynamic data processing.&lt;/li&gt;
+&lt;li&gt;Because all languages have different casing and case sensitivity rules, the ObjectWriter class treats all property names as case insensitive.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;methods&#34;&gt;Methods&lt;/h3&gt;
+&lt;h4 id=&#34;setproperties&#34;&gt;SetProperties&lt;/h4&gt;
+&lt;p&gt;Sets values of some (all) object properties.&lt;/p&gt;
+&lt;p&gt;The object can be a user defined object, map or array.
+Property values correspondently are object properties,
+map key-pairs or array elements with their indexes.&lt;/p&gt;
+&lt;p&gt;If some properties do not exist or introspection fails
+they are just silently skipped and no errors thrown.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;(c *TObjectWriter) SetProperties(obj any, values map[string]any)&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;obj&lt;/strong&gt;: any - object to write properties to.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;values&lt;/strong&gt;: map[string]any - map, containing property names and their values.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id=&#34;setproperty&#34;&gt;SetProperty&lt;/h4&gt;
+&lt;p&gt;Sets value of an object property specified by its name.&lt;/p&gt;
+&lt;p&gt;The object can be a user defined object, map or array.
+The property name correspondently must be an object property,
+map key or array index.&lt;/p&gt;
+&lt;p&gt;If the property does not exist or introspection fails
+this method doesn&amp;rsquo;t do anything and doesn&amp;rsquo;t any throw errors.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;(c *TObjectWriter) SetProperty(obj any, name string, value any)&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;obj&lt;/strong&gt;: any - object to write property to.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;name&lt;/strong&gt;: string - name of the property to set.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;value&lt;/strong&gt;: any - new value for the property to set.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;examples&#34;&gt;Examples&lt;/h3&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-go&#34; data-lang=&#34;go&#34;&gt;&lt;span style=&#34;color:#75af00&#34;&gt;myObj&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;:=&lt;/span&gt; &lt;span style=&#34;color:#75af00&#34;&gt;MyObject&lt;/span&gt;&lt;span style=&#34;color:#111&#34;&gt;{}&lt;/span&gt;
+&lt;span style=&#34;color:#75af00&#34;&gt;ObjectWriter&lt;/span&gt;&lt;span style=&#34;color:#111&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#75af00&#34;&gt;SetProperty&lt;/span&gt;&lt;span style=&#34;color:#111&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color:#75af00&#34;&gt;myObj&lt;/span&gt;&lt;span style=&#34;color:#111&#34;&gt;,&lt;/span&gt; &lt;span style=&#34;color:#d88200&#34;&gt;&amp;#34;myProperty&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#111&#34;&gt;,&lt;/span&gt; &lt;span style=&#34;color:#ae81ff&#34;&gt;123&lt;/span&gt;&lt;span style=&#34;color:#111&#34;&gt;)&lt;/span&gt;
+
+&lt;span style=&#34;color:#75af00&#34;&gt;myMap&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;:=&lt;/span&gt; &lt;span style=&#34;color:#111&#34;&gt;{&lt;/span&gt; &lt;span style=&#34;color:#75af00&#34;&gt;key1&lt;/span&gt;&lt;span style=&#34;color:#111&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#ae81ff&#34;&gt;123&lt;/span&gt;&lt;span style=&#34;color:#111&#34;&gt;,&lt;/span&gt; &lt;span style=&#34;color:#75af00&#34;&gt;key2&lt;/span&gt;&lt;span style=&#34;color:#111&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#d88200&#34;&gt;&amp;#34;ABC&amp;#34;&lt;/span&gt; &lt;span style=&#34;color:#111&#34;&gt;}&lt;/span&gt;
+&lt;span style=&#34;color:#75af00&#34;&gt;ObjectWriter&lt;/span&gt;&lt;span style=&#34;color:#111&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#75af00&#34;&gt;SetProperty&lt;/span&gt;&lt;span style=&#34;color:#111&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color:#75af00&#34;&gt;myMap&lt;/span&gt;&lt;span style=&#34;color:#111&#34;&gt;,&lt;/span&gt; &lt;span style=&#34;color:#d88200&#34;&gt;&amp;#34;key1&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#111&#34;&gt;,&lt;/span&gt; &lt;span style=&#34;color:#d88200&#34;&gt;&amp;#34;XYZ&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#111&#34;&gt;)&lt;/span&gt;
+
+&lt;span style=&#34;color:#75af00&#34;&gt;myArray&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;:=&lt;/span&gt; &lt;span style=&#34;color:#111&#34;&gt;[&lt;/span&gt;&lt;span style=&#34;color:#ae81ff&#34;&gt;1&lt;/span&gt;&lt;span style=&#34;color:#111&#34;&gt;,&lt;/span&gt; &lt;span style=&#34;color:#ae81ff&#34;&gt;2&lt;/span&gt;&lt;span style=&#34;color:#111&#34;&gt;,&lt;/span&gt; &lt;span style=&#34;color:#ae81ff&#34;&gt;3&lt;/span&gt;&lt;span style=&#34;color:#111&#34;&gt;]&lt;/span&gt;
+&lt;span style=&#34;color:#75af00&#34;&gt;ObjectWriter&lt;/span&gt;&lt;span style=&#34;color:#111&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#75af00&#34;&gt;SetProperty&lt;/span&gt;&lt;span style=&#34;color:#111&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color:#75af00&#34;&gt;myArray&lt;/span&gt;&lt;span style=&#34;color:#111&#34;&gt;,&lt;/span&gt; &lt;span style=&#34;color:#d88200&#34;&gt;&amp;#34;0&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#111&#34;&gt;,&lt;/span&gt; &lt;span style=&#34;color:#ae81ff&#34;&gt;123&lt;/span&gt;&lt;span style=&#34;color:#111&#34;&gt;)&lt;/span&gt;
+
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id=&#34;see-also&#34;&gt;See also&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;h4 id=&#34;propertyreflectorproperty_reflector&#34;&gt;&lt;a href=&#34;../property_reflector&#34;&gt;PropertyReflector&lt;/a&gt;&lt;/h4&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+
+      </description>
+    </item>
+    
+    <item>
+      <title>Toolkit_api: PropertyReflector</title>
+      <link>/toolkit_api/golang/commons/reflect/property_reflector/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/toolkit_api/golang/commons/reflect/property_reflector/</guid>
+      <description>
+        
+        
+        &lt;h3 id=&#34;description&#34;&gt;Description&lt;/h3&gt;
+&lt;p&gt;The PropertyReflector class allows you to examine an object&amp;rsquo;s properties and to dynamically get and set their values.&lt;/p&gt;
+&lt;p&gt;Important points&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;This class has symmetric implementation across all languages supported by the Pip.Services toolkit and it is used to support dynamic data processing.&lt;/li&gt;
+&lt;li&gt;Because all languages have different casing and case sensitivity rules, the PropertyReflector class treats all property names as case insensitive.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;methods&#34;&gt;Methods&lt;/h3&gt;
+&lt;h4 id=&#34;getproperties&#34;&gt;GetProperties&lt;/h4&gt;
+&lt;p&gt;Get values of all properties in a specified object
+and returns them as a map.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;GetProperties(obj any) map[string]any&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;obj&lt;/strong&gt;: any - object to get properties from.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;returns&lt;/strong&gt;: map[string]any - map, containing the names of the object&amp;rsquo;s properties and their values.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id=&#34;getproperty&#34;&gt;GetProperty&lt;/h4&gt;
+&lt;p&gt;Gets the value of an object&amp;rsquo;s property specified by its name.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;GetProperty(obj any, name string) any&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;obj&lt;/strong&gt;: any - object to read property from.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;name&lt;/strong&gt;: string - name of the property to get.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;returns&lt;/strong&gt;: any - property value or nil if property doesn&amp;rsquo;t exist or introspection failed.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id=&#34;getpropertynames&#34;&gt;GetPropertyNames&lt;/h4&gt;
+&lt;p&gt;Gets the names of all properties implemented in a specified object.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;GetPropertyNames(obj any) []string&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;obj&lt;/strong&gt;:anyany - object to introspect.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;returns&lt;/strong&gt;: []string - list with property names.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id=&#34;hasproperty&#34;&gt;HasProperty&lt;/h4&gt;
+&lt;p&gt;Checks if an object has a property with a specified name.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;HasProperty(obj any, name string) bool&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;obj&lt;/strong&gt;: any - object to introspect.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;name&lt;/strong&gt;: string - name of the property to check.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;returns&lt;/strong&gt;: bool - true if the object has the property and false if it doesn&amp;rsquo;t.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id=&#34;setproperties&#34;&gt;SetProperties&lt;/h4&gt;
+&lt;p&gt;Sets values of some (all) object properties.&lt;/p&gt;
+&lt;p&gt;If some properties do not exist or introspection fails
+they are just silently skipped and no errors thrown.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;SetProperties(obj any, values map[string]any)&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;obj&lt;/strong&gt;: any - object to write properties to.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;values&lt;/strong&gt;: map[string]any - map, containing property names and their values.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id=&#34;setproperty&#34;&gt;SetProperty&lt;/h4&gt;
+&lt;p&gt;Sets the value of an object&amp;rsquo;s property specified by its name.&lt;/p&gt;
+&lt;p&gt;If the property does not exist or introspection fails
+this method doesn&amp;rsquo;t do anything and doesn&amp;rsquo;t throw any errors.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;SetProperty(obj any, name string, value any)&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;obj&lt;/strong&gt;: any - object to write property to.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;name&lt;/strong&gt;: string - name of the property to set.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;value&lt;/strong&gt;: any - new value for the property to set.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;examples&#34;&gt;Examples&lt;/h3&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-go&#34; data-lang=&#34;go&#34;&gt;&lt;span style=&#34;color:#75af00&#34;&gt;myObj&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;:=&lt;/span&gt; &lt;span style=&#34;color:#75af00&#34;&gt;MyObject&lt;/span&gt;&lt;span style=&#34;color:#111&#34;&gt;{}&lt;/span&gt;
+
+&lt;span style=&#34;color:#75af00&#34;&gt;properties&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;:=&lt;/span&gt; &lt;span style=&#34;color:#75af00&#34;&gt;PropertyReflector&lt;/span&gt;&lt;span style=&#34;color:#111&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#75af00&#34;&gt;GetPropertyNames&lt;/span&gt;&lt;span style=&#34;color:#111&#34;&gt;()&lt;/span&gt;
+&lt;span style=&#34;color:#75af00&#34;&gt;PropertyReflector&lt;/span&gt;&lt;span style=&#34;color:#111&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#75af00&#34;&gt;HasProperty&lt;/span&gt;&lt;span style=&#34;color:#111&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color:#75af00&#34;&gt;myObj&lt;/span&gt;&lt;span style=&#34;color:#111&#34;&gt;,&lt;/span&gt; &lt;span style=&#34;color:#d88200&#34;&gt;&amp;#34;myProperty&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#111&#34;&gt;)&lt;/span&gt;
+&lt;span style=&#34;color:#75af00&#34;&gt;value&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;:=&lt;/span&gt; &lt;span style=&#34;color:#75af00&#34;&gt;PropertyReflector&lt;/span&gt;&lt;span style=&#34;color:#111&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#75af00&#34;&gt;GetProperty&lt;/span&gt;&lt;span style=&#34;color:#111&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color:#75af00&#34;&gt;myObj&lt;/span&gt;&lt;span style=&#34;color:#111&#34;&gt;,&lt;/span&gt; &lt;span style=&#34;color:#d88200&#34;&gt;&amp;#34;myProperty&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#111&#34;&gt;)&lt;/span&gt;
+&lt;span style=&#34;color:#75af00&#34;&gt;PropertyReflector&lt;/span&gt;&lt;span style=&#34;color:#111&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#75af00&#34;&gt;SetProperty&lt;/span&gt;&lt;span style=&#34;color:#111&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color:#75af00&#34;&gt;myObj&lt;/span&gt;&lt;span style=&#34;color:#111&#34;&gt;,&lt;/span&gt; &lt;span style=&#34;color:#d88200&#34;&gt;&amp;#34;myProperty&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#111&#34;&gt;,&lt;/span&gt; &lt;span style=&#34;color:#ae81ff&#34;&gt;123&lt;/span&gt;&lt;span style=&#34;color:#111&#34;&gt;)&lt;/span&gt;
+
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+      </description>
+    </item>
+    
+    <item>
+      <title>Toolkit_api: RecursiveObjectReader</title>
+      <link>/toolkit_api/golang/commons/reflect/recursive_object_reader/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/toolkit_api/golang/commons/reflect/recursive_object_reader/</guid>
+      <description>
+        
+        
+        &lt;h3 id=&#34;description&#34;&gt;Description&lt;/h3&gt;
+&lt;p&gt;The RecursiveObjectReader class allows you to examine the properties of an object (property instrospection) and to dynamically read them recursively using &amp;ldquo;dot&amp;rdquo; notation (e.g property.property.method).&lt;/p&gt;
+&lt;p&gt;Important points&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;It is similar to &lt;a href=&#34;../object_reader&#34;&gt;ObjectReader&lt;/a&gt; but reads properties recursively through the entire object graph.&lt;/li&gt;
+&lt;li&gt;Nested property names are defined using dot notation as &amp;ldquo;object.subobject.property&amp;rdquo;.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;methods&#34;&gt;Methods&lt;/h3&gt;
+&lt;h4 id=&#34;getproperties&#34;&gt;GetProperties&lt;/h4&gt;
+&lt;p&gt;Get values of all properties in specified object and its subobjects
+and returns them as a map.&lt;/p&gt;
+&lt;p&gt;The object can be a user defined object, map or array.
+Returned properties correspondently are object properties,
+map key-pairs or array elements with their indexes.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;GetProperties(obj any) map[string]any&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;obj&lt;/strong&gt;: any - object to get properties from.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;returns&lt;/strong&gt;: map[string]any - map, containing the names of the object&amp;rsquo;s properties and their values.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id=&#34;getproperty&#34;&gt;GetProperty&lt;/h4&gt;
+&lt;p&gt;Recursively gets value of an object&amp;rsquo;s or its subobjects&#39; property specified by its name.&lt;/p&gt;
+&lt;p&gt;The object can be a user defined object, map or array.
+The property name correspondently must be an object&amp;rsquo;s property,
+map key or array index.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;GetProperty(obj any, name string) any&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;obj&lt;/strong&gt;: any - object to read a property from.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;name&lt;/strong&gt;: string - name of the property to get.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;returns&lt;/strong&gt;: any - property value or nil if property doesn&amp;rsquo;t exist or introspection failed.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id=&#34;getpropertynames&#34;&gt;GetPropertyNames&lt;/h4&gt;
+&lt;p&gt;Recursively gets the names of all properties implemented in specified object and its subobjects.&lt;/p&gt;
+&lt;p&gt;The object can be a user defined object, map or array.
+Returned property&amp;rsquo;s names correspondently are object properties,
+map keys or array indexes.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;GetPropertyNames(obj any) []string&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;obj&lt;/strong&gt;: any - objec to introspect.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;returns&lt;/strong&gt;: []string - list with property names.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id=&#34;hasproperty&#34;&gt;HasProperty&lt;/h4&gt;
+&lt;blockquote&gt;
+&lt;p&gt;HasProperty(obj any, name string) bool&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;obj&lt;/strong&gt;: any - object to introspect.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;name&lt;/strong&gt;: string - name of the property to check.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;returns&lt;/strong&gt;: bool - true if the object has the property and false if it doesn&amp;rsquo;t.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;see-also&#34;&gt;See also&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;h4 id=&#34;propertyreflectorproperty_reflector&#34;&gt;&lt;a href=&#34;../property_reflector&#34;&gt;PropertyReflector&lt;/a&gt;&lt;/h4&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;h4 id=&#34;objectreaderobject_reader&#34;&gt;&lt;a href=&#34;../object_reader&#34;&gt;ObjectReader&lt;/a&gt;&lt;/h4&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+
+      </description>
+    </item>
+    
+    <item>
+      <title>Toolkit_api: RecursiveObjectWriter</title>
+      <link>/toolkit_api/golang/commons/reflect/recursive_object_writer/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/toolkit_api/golang/commons/reflect/recursive_object_writer/</guid>
+      <description>
+        
+        
+        &lt;h3 id=&#34;description&#34;&gt;Description&lt;/h3&gt;
+&lt;p&gt;The RecursiveObjectWriter class allows you to dynamically set the properties of an object and to copy them to another object recursively using dot notation.&lt;/p&gt;
+&lt;p&gt;Important points&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;It is similar to &lt;a href=&#34;../object_writer&#34;&gt;ObjectWriter&lt;/a&gt; but writes properties recursively through the entire object graph.&lt;/li&gt;
+&lt;li&gt;Nested property names are defined using dot notation as &amp;ldquo;object.subobject.property&amp;rdquo;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;methods&#34;&gt;Methods&lt;/h3&gt;
+&lt;h4 id=&#34;copyproperties&#34;&gt;CopyProperties&lt;/h4&gt;
+&lt;p&gt;Copies content of one object to another object
+by recursively reading all properties from a source object
+and then recursively writing them to a destination object.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;CopyProperties(dest any, src any)&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;dest&lt;/strong&gt;: any - destination object to write properties to.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;src&lt;/strong&gt;: any - source object to read properties from&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id=&#34;setproperties&#34;&gt;SetProperties&lt;/h4&gt;
+&lt;p&gt;Recursively sets values of some (all) object&amp;rsquo;s and its subobjects&#39; properties.&lt;/p&gt;
+&lt;p&gt;The object can be a user defined object, map or array.
+Property values correspondently are object properties,
+map key-pairs or array elements with their indexes.&lt;/p&gt;
+&lt;p&gt;If some properties do not exist or introspection fails
+they are just silently skipped and no errors thrown.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;SetProperties(obj any, values map[string]any)&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;obj&lt;/strong&gt;: any - object to write properties to.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;values&lt;/strong&gt;: map[string]any - map containing property names and their values.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id=&#34;setproperty&#34;&gt;SetProperty&lt;/h4&gt;
+&lt;p&gt;Recursively sets value of an object&amp;rsquo;s and its subobjects&#39; property specified by its name.&lt;/p&gt;
+&lt;p&gt;The object can be a user defined object, map or array.
+The property name correspondently must be an object property,
+map key or array index.&lt;/p&gt;
+&lt;p&gt;If the property does not exist or introspection fails
+this method doesn&amp;rsquo;t do anything and doesn&amp;rsquo;t throw any errors.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;SetProperty(obj any, name string, value any)&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;obj&lt;/strong&gt;: any - object to write a property to.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;name&lt;/strong&gt;: string - name of the property to set.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;value&lt;/strong&gt;: any - new value for the property to set.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;see-also&#34;&gt;See also&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;h4 id=&#34;propertyreflectorproperty_reflector&#34;&gt;&lt;a href=&#34;../property_reflector&#34;&gt;PropertyReflector&lt;/a&gt;&lt;/h4&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;h4 id=&#34;objectwriterobject_writer&#34;&gt;&lt;a href=&#34;../object_writer&#34;&gt;ObjectWriter&lt;/a&gt;&lt;/h4&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+
+      </description>
+    </item>
+    
+    <item>
+      <title>Toolkit_api: TypeDescriptor</title>
+      <link>/toolkit_api/golang/commons/reflect/type_descriptor/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/toolkit_api/golang/commons/reflect/type_descriptor/</guid>
+      <description>
+        
+        
+        &lt;h3 id=&#34;description&#34;&gt;Description&lt;/h3&gt;
+&lt;p&gt;The TypeDescriptor class stores a reference to a type represented by the type name and library (module) where the type is defined.&lt;/p&gt;
+&lt;p&gt;Important points&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;This class has symmetric implementation across all languages supported by the Pip.Services toolkit and it is used to support dynamic data processing.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;constructors&#34;&gt;Constructors&lt;/h3&gt;
+&lt;h4 id=&#34;newtypedescriptor&#34;&gt;NewTypeDescriptor&lt;/h4&gt;
+&lt;p&gt;Creates a new instance of the type descriptor and sets its values.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;NewTypeDescriptor(name string, pkg string) &lt;a href=&#34;&#34;&gt;*TypeDescriptor&lt;/a&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;name&lt;/strong&gt;: string - name of the object type.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;pkg&lt;/strong&gt;: string - library or module where this object type is implemented.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;methods&#34;&gt;Methods&lt;/h3&gt;
+&lt;h4 id=&#34;equals&#34;&gt;Equals&lt;/h4&gt;
+&lt;p&gt;Compares this descriptor to a value.
+If the value is also a &lt;a href=&#34;&#34;&gt;TypeDescriptor&lt;/a&gt; it compares their name and library fields.
+Otherwise this method returns false.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;(c &lt;a href=&#34;&#34;&gt;*TypeDescriptor&lt;/a&gt;) Equals(obj any) bool&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;obj&lt;/strong&gt;: any - value to compare.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;returns&lt;/strong&gt;: bool - true if value is identical TypeDescriptor and false otherwise.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id=&#34;package&#34;&gt;Package&lt;/h4&gt;
+&lt;p&gt;Gets the name of the library or module where the object type is defined.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;(c &lt;a href=&#34;&#34;&gt;*TypeDescriptor&lt;/a&gt;) Package() string&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;returns&lt;/strong&gt;: string - name of the library or module.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id=&#34;name&#34;&gt;Name&lt;/h4&gt;
+&lt;p&gt;Get the name of the object type.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;(c &lt;a href=&#34;&#34;&gt;*TypeDescriptor&lt;/a&gt;) Name() string&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;returns&lt;/strong&gt;: string - name of the object type.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id=&#34;parsetypedescriptorfromstring&#34;&gt;ParseTypeDescriptorFromString&lt;/h4&gt;
+&lt;p&gt;Parses a string to get descriptor fields and returns them as a Descriptor.
+The string must have format &lt;em&gt;name[,library]&lt;/em&gt;&lt;br&gt;
+Throws a &lt;a href=&#34;../../errors/config_error&#34;&gt;ConfigError&lt;/a&gt; if the descriptor string is of a wrong format.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;ParseTypeDescriptorFromString(value string) (&lt;a href=&#34;&#34;&gt;*TypeDescriptor&lt;/a&gt;, error)&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;value&lt;/strong&gt;: string - a string to parse.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;returns&lt;/strong&gt;: (&lt;a href=&#34;&#34;&gt;*TypeDescriptor&lt;/a&gt;, error) - a newly created Descriptor.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id=&#34;string&#34;&gt;String&lt;/h4&gt;
+&lt;p&gt;Gets a string representation of the object.
+The result has format &lt;em&gt;name[,package]&lt;/em&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;(c &lt;a href=&#34;&#34;&gt;*TypeDescriptor&lt;/a&gt;) String() string&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;returns&lt;/strong&gt;: string - string representation of the object.&lt;/li&gt;
+&lt;/ul&gt;
+
+      </description>
+    </item>
+    
+    <item>
+      <title>Toolkit_api: TypeMatcher</title>
+      <link>/toolkit_api/golang/commons/reflect/type_matcher/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/toolkit_api/golang/commons/reflect/type_matcher/</guid>
+      <description>
+        
+        
+        &lt;h3 id=&#34;description&#34;&gt;Description&lt;/h3&gt;
+&lt;p&gt;The TypeMatcher class allows you to match value types based on equality.&lt;/p&gt;
+&lt;p&gt;Important points&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;This class has symmetric implementation across all languages supported by the Pip.Services toolkit and it is used to support dynamic data processing.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;methods&#34;&gt;Methods&lt;/h3&gt;
+&lt;h4 id=&#34;matchtype&#34;&gt;MatchType&lt;/h4&gt;
+&lt;p&gt;Matches expected type to an actual type.
+The types can be specified as types, type names or &lt;a href=&#34;../../convert/type_code&#34;&gt;TypeCode&lt;/a&gt;.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;MatchType(expectedType interface{}, actualType refl.Type) bool&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;expectedType&lt;/strong&gt;: interface{} - expected type to match.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;actualType&lt;/strong&gt;: refl.Type - actual type to match defined by type code.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;returns&lt;/strong&gt;: bool - true if types are matching and false if they don&amp;rsquo;t.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id=&#34;matchtypebyname&#34;&gt;MatchTypeByName&lt;/h4&gt;
+&lt;blockquote&gt;
+&lt;p&gt;MatchTypeByName(expectedType string, actualType refl.Type) bool&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;expectedType&lt;/strong&gt;: string - expected type name to match.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;actualType&lt;/strong&gt;: refl.Type - actual type to match defined by a type code.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;returns&lt;/strong&gt;: bool - true if types are matching and false if they don&amp;rsquo;t.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id=&#34;matchvalue&#34;&gt;MatchValue&lt;/h4&gt;
+&lt;p&gt;Matches expected type to a type of a value.
+The expected type can be specified by a type, type name or &lt;a href=&#34;../../convert/type_code&#34;&gt;TypeCode&lt;/a&gt;.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;func MatchValue(expectedType interface{}, actualValue interface{}) bool&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;expectedType&lt;/strong&gt;: interface{} - an expected type to match.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;actualValue&lt;/strong&gt;: interface{} -  a value to match its type to the expected one.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;returns&lt;/strong&gt;: bool - true if types are matching and false if they don&amp;rsquo;t.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id=&#34;matchvaluebyname&#34;&gt;MatchValueByName&lt;/h4&gt;
+&lt;p&gt;Matches expected type to a type of a value.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;func MatchValueByName(expectedType string, actualValue interface{}) bool&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;expectedType&lt;/strong&gt;: string - an expected type name to match.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;actualValue&lt;/strong&gt;: interface{} -  a value to match its type to the expected one.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;returns&lt;/strong&gt;: bool - true if types are matching and false if they don&amp;rsquo;t.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;see-also&#34;&gt;See also&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;h4 id=&#34;typecodeconverttype_code&#34;&gt;&lt;a href=&#34;../../convert/type_code&#34;&gt;TypeCode&lt;/a&gt;&lt;/h4&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+
+      </description>
+    </item>
+    
+    <item>
+      <title>Toolkit_api: TypeReflector</title>
+      <link>/toolkit_api/golang/commons/reflect/type_reflector/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/toolkit_api/golang/commons/reflect/type_reflector/</guid>
+      <description>
+        
+        
+        &lt;h3 id=&#34;description&#34;&gt;Description&lt;/h3&gt;
+&lt;p&gt;The TypeReflector class allows you to examine the type of an object, and create instancies of objects based on their type.&lt;/p&gt;
+&lt;p&gt;Important points&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;This class has a symmetric implementation across all languages supported by the Pip.Services toolkit and used to support dynamic data processing.&lt;/li&gt;
+&lt;li&gt;Because all languages have different casing and case sensitivity rules, the TypeReflector class treats all type names as case insensitive.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;methods&#34;&gt;Methods&lt;/h3&gt;
+&lt;h4 id=&#34;createinstance&#34;&gt;CreateInstance&lt;/h4&gt;
+&lt;p&gt;Creates an instance of an object type specified by its name
+and library where it is defined.&lt;/p&gt;
+&lt;p&gt;See &lt;a href=&#34;#gettype&#34;&gt;GetType&lt;/a&gt;
+See &lt;a href=&#34;#createinstancebytype&#34;&gt;CreateInstanceByType&lt;/a&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;func (c *TTypeReflector) CreateInstance(name string, pkg string, args &amp;hellip;any) (any, error)&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;name&lt;/strong&gt;: string - an object type name.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;pkg&lt;/strong&gt;: string - a library (module) where object type is defined.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;args&lt;/strong&gt;: any - arguments for the object constructor.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;returns&lt;/strong&gt;: (any, error) - the created object instance.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id=&#34;createinstancebytype&#34;&gt;CreateInstanceByType&lt;/h4&gt;
+&lt;p&gt;Creates an instance of an object type.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;(c *TTypeReflector) CreateInstanceByType(typ refl.Type, args &amp;hellip;any) (any, error)&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;typ&lt;/strong&gt;: refl.Type - object type (factory function) to create.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;args&lt;/strong&gt;: &amp;hellip;any - arguments for the object constructor.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;returns&lt;/strong&gt;: (any, error) - created object instance.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id=&#34;createinstancebydescriptor&#34;&gt;CreateInstanceByDescriptor&lt;/h4&gt;
+&lt;p&gt;Creates an instance of an object type specified by a type descriptor.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;(c *TTypeReflector) CreateInstanceByDescriptor(typ &lt;a href=&#34;../type_descriptor&#34;&gt;*TypeDescriptor&lt;/a&gt;, args &amp;hellip;any) (any, error)&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;typ&lt;/strong&gt;: &lt;a href=&#34;../type_descriptor&#34;&gt;*TypeDescriptor&lt;/a&gt; - type descriptor that points to an object type&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;args&lt;/strong&gt;: &amp;hellip;any - arguments for the object constructor.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;returns&lt;/strong&gt;: (any, error) - created object instance.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id=&#34;createinstancebytype-1&#34;&gt;CreateInstanceByType&lt;/h4&gt;
+&lt;p&gt;Creates an instance of an object type.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;(c *TTypeReflector) CreateInstanceByType(typ refl.Type, args &amp;hellip;any) (any, error)&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;type&lt;/strong&gt;: refl.Type - object type (factory function) to create.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;args&lt;/strong&gt;: &amp;hellip;any - arguments for the object constructor.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;returns&lt;/strong&gt;: (any, error) - created object instance.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id=&#34;gettype&#34;&gt;GetType&lt;/h4&gt;
+&lt;p&gt;Gets an object&amp;rsquo;s type by its name and library where it is defined.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;(c *TTypeReflector) GetType(name string, pkg string) refl.Type&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;name&lt;/strong&gt;: string - object type name.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;pkg&lt;/strong&gt;: string - library where the type is defined&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;returns&lt;/strong&gt;: refl.Type - object type or nil is the type wasn&amp;rsquo;t found.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id=&#34;gettypebydescriptor&#34;&gt;GetTypeByDescriptor&lt;/h4&gt;
+&lt;p&gt;Gets an object&amp;rsquo;s type by type descriptor.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;(c *TTypeReflector) GetTypeByDescriptor(typ &lt;a href=&#34;../type_descriptor&#34;&gt;*TypeDescriptor&lt;/a&gt;) refl.Type&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;typ&lt;/strong&gt;: &lt;a href=&#34;../type_descriptor&#34;&gt;*TypeDescriptor&lt;/a&gt; - type descriptor that points to an object type&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;returns&lt;/strong&gt;: refl.Type - object type or nil is the type wasn&amp;rsquo;t found.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id=&#34;isprimitive&#34;&gt;IsPrimitive!&lt;/h4&gt;
+&lt;p&gt;&lt;strong&gt;Note: this is not implemented for this language yet&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;Checks if a value has a primitive type.&lt;/p&gt;
+&lt;p&gt;Primitive types are: numbers, strings, booleans, date and time.
+Complex (non-primitive types are): objects, maps and arrays.&lt;br&gt;
+See &lt;a href=&#34;../../convert/type_converter/#totypecode&#34;&gt;TypeConverter.ToTypeCode&lt;/a&gt;, &lt;a href=&#34;../../convert/type_code&#34;&gt;TypeCode&lt;/a&gt;&lt;/p&gt;
+&lt;h3 id=&#34;examples&#34;&gt;Examples&lt;/h3&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-go&#34; data-lang=&#34;go&#34;&gt;&lt;span style=&#34;color:#75af00&#34;&gt;descriptor&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;:=&lt;/span&gt; &lt;span style=&#34;color:#75af00&#34;&gt;NewTypeDescriptor&lt;/span&gt;&lt;span style=&#34;color:#111&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color:#d88200&#34;&gt;&amp;#34;MyObject&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#111&#34;&gt;,&lt;/span&gt; &lt;span style=&#34;color:#d88200&#34;&gt;&amp;#34;mylibrary&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#111&#34;&gt;)&lt;/span&gt;
+&lt;span style=&#34;color:#75af00&#34;&gt;TypeReflector&lt;/span&gt;&lt;span style=&#34;color:#111&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#75af00&#34;&gt;GetTypeByDescriptor&lt;/span&gt;&lt;span style=&#34;color:#111&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color:#75af00&#34;&gt;descriptor&lt;/span&gt;&lt;span style=&#34;color:#111&#34;&gt;)&lt;/span&gt;
+&lt;span style=&#34;color:#75af00&#34;&gt;myObj&lt;/span&gt; &lt;span style=&#34;color:#111&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#75af00&#34;&gt;TypeReflector&lt;/span&gt;&lt;span style=&#34;color:#111&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#75af00&#34;&gt;CreateInstanceByDescriptor&lt;/span&gt;&lt;span style=&#34;color:#111&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color:#75af00&#34;&gt;descriptor&lt;/span&gt;&lt;span style=&#34;color:#111&#34;&gt;)&lt;/span&gt;
+
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id=&#34;see-also&#34;&gt;See also&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;h4 id=&#34;typedescriptortype_descriptor&#34;&gt;&lt;a href=&#34;../type_descriptor&#34;&gt;TypeDescriptor&lt;/a&gt;&lt;/h4&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+
+      </description>
+    </item>
+    
+  </channel>
+</rss>

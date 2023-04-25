@@ -1,0 +1,52 @@
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Pip.Services Docs – Services</title>
+    <link>/toolkit_api/dart/swagger/services/</link>
+    <description>Recent content in Services on Pip.Services Docs</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    
+	  <atom:link href="/toolkit_api/dart/swagger/services/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+      
+        
+      
+    
+    
+    <item>
+      <title>Toolkit_api: SwaggerService</title>
+      <link>/toolkit_api/dart/swagger/services/swagger_service/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/toolkit_api/dart/swagger/services/swagger_service/</guid>
+      <description>
+        
+        
+        &lt;p&gt;&lt;strong&gt;Implements:&lt;/strong&gt; &lt;a href=&#34;../../../rpc/services/iswagger_service&#34;&gt;ISwaggerService&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Extends&lt;/strong&gt;: &lt;a href=&#34;../../../rpc/services/rest_service&#34;&gt;RestService&lt;/a&gt;&lt;/p&gt;
+&lt;h3 id=&#34;description&#34;&gt;Description&lt;/h3&gt;
+&lt;p&gt;The SwaggerService class allows you to create a Swagger UI service.&lt;/p&gt;
+&lt;h3 id=&#34;instance-methods&#34;&gt;Instance methods&lt;/h3&gt;
+&lt;h4 id=&#34;register&#34;&gt;register&lt;/h4&gt;
+&lt;p&gt;Registers the Swagger service.&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;@override&lt;/code&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;void register()&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h4 id=&#34;registeropenapispec&#34;&gt;registerOpenApiSpec&lt;/h4&gt;
+&lt;p&gt;Performs the required Swagger registration steps.&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;@override&lt;/code&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;void registerOpenApiSpec(String? baseRoute, String? swaggerRoute)&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;baseRoute&lt;/strong&gt;: String - base route&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;swaggerRoute&lt;/strong&gt;: String - Swagger route&lt;/li&gt;
+&lt;/ul&gt;
+
+      </description>
+    </item>
+    
+  </channel>
+</rss>

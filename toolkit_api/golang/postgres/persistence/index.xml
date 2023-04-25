@@ -1,0 +1,808 @@
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Pip.Services Docs – Persistence</title>
+    <link>/toolkit_api/golang/postgres/persistence/</link>
+    <description>Recent content in Persistence on Pip.Services Docs</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    
+	  <atom:link href="/toolkit_api/golang/postgres/persistence/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+      
+        
+      
+    
+    
+    <item>
+      <title>Toolkit_api: IdentifiableJsonPostgresPersistence</title>
+      <link>/toolkit_api/golang/postgres/persistence/identifiable_json_postgres_persistence/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/toolkit_api/golang/postgres/persistence/identifiable_json_postgres_persistence/</guid>
+      <description>
+        
+        
+        &lt;p&gt;&lt;strong&gt;Implements:&lt;/strong&gt; &lt;a href=&#34;../identifiable_postgres_persistence&#34;&gt;IdentifiablePostgresPersistence&lt;/a&gt;,&lt;/p&gt;
+&lt;h3 id=&#34;description&#34;&gt;Description&lt;/h3&gt;
+&lt;p&gt;The IdentifiableJsonPostgresPersistence class allows you to create persistence components used to store data in PosgreSQL databases in JSON or JSONB fields and implement a number of CRUD operations over data items with unique ids.&lt;/p&gt;
+&lt;p&gt;Important points&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;The data items must implement the &lt;a href=&#34;../../../commons/data/iidentifiable&#34;&gt;IIdentifiable&lt;/a&gt; interface.&lt;/li&gt;
+&lt;li&gt;In basic scenarios child classes shall only override the &lt;a href=&#34;../postgres_persistence/#getpagebyfilter&#34;&gt;GetPageByFilter&lt;/a&gt;, &lt;a href=&#34;../postgres_persistence/#getlistbyfilter&#34;&gt;GetListByFilter&lt;/a&gt; or &lt;a href=&#34;../postgres_persistence/#deletebyfilter&#34;&gt;DeleteByFilter&lt;/a&gt;  operations with a specific filter function.&lt;/li&gt;
+&lt;li&gt;All other operations can be used out of the box.&lt;/li&gt;
+&lt;li&gt;In complex scenarios child classes can implement additional operations by accessing &lt;strong&gt;c.Db&lt;/strong&gt; or &lt;strong&gt;c.Collection&lt;/strong&gt; properties.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id=&#34;configuration-parameters&#34;&gt;Configuration parameters&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;collection&lt;/strong&gt;: (optional) PostgreSQL collection name&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;connection(s)&lt;/strong&gt;:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;discovery_key&lt;/strong&gt;: (optional) key used to retrieve the connection from &lt;a href=&#34;../../../components/connect/idiscovery&#34;&gt;IDiscovery&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;host&lt;/strong&gt;: host name or IP address&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;port&lt;/strong&gt;: port number (default: 27017)&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;uri&lt;/strong&gt;: resource URI or connection string with all parameters in it&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;credential(s)&lt;/strong&gt;:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;store_key&lt;/strong&gt;: (optional) key to retrieve the credentials from &lt;a href=&#34;../../../components/auth/icredential_store&#34;&gt;ICredentialStore&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;username&lt;/strong&gt;: (optional) username&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;password&lt;/strong&gt;: (optional) user&amp;rsquo;s password&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;options&lt;/strong&gt;:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;connect_timeout&lt;/strong&gt;: (optional) number of milliseconds to wait before timing out when connecting a new client (default: 0)&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;idle_timeout&lt;/strong&gt;: (optional) number of milliseconds a client must sit idle in the pool and not be checked out (default: 10000)&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;max_pool_size&lt;/strong&gt;: (optional) maximum number of clients the pool can contain (default: 10)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id=&#34;references&#34;&gt;References&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;*:logger:*:*:1.0&lt;/strong&gt; - (optional) &lt;a href=&#34;../../../components/log/ilogger&#34;&gt;ILogger&lt;/a&gt; components to pass log messages&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;*:discovery:*:*:1.0&lt;/strong&gt; - (optional) &lt;a href=&#34;../../../components/connect/idiscovery&#34;&gt;IDiscovery&lt;/a&gt; services&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;*:credential-store:*:*:1.0&lt;/strong&gt; - (optional) credential stores to resolve credentials (&lt;a href=&#34;../../../components/auth/icredential_store&#34;&gt;ICredentialStore&lt;/a&gt;)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;constructors&#34;&gt;Constructors&lt;/h3&gt;
+&lt;p&gt;Creates a new instance of the persistence component.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;InheritIdentifiableJsonPostgresPersistence[T any, K any](overrides &lt;a href=&#34;../ipostgres_persistence_overrides&#34;&gt;IPostgresPersistenceOverrides[T]&lt;/a&gt;, tableName string) &lt;a href=&#34;&#34;&gt;*IdentifiableJsonPostgresPersistence[T, K]&lt;/a&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;overrides&lt;/strong&gt;: &lt;a href=&#34;../ipostgres_persistence_overrides&#34;&gt;IPostgresPersistenceOverrides[T]&lt;/a&gt; - References to override virtual methods.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;tableName&lt;/strong&gt;: string - (optional) a table name.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;methods&#34;&gt;Methods&lt;/h3&gt;
+&lt;h4 id=&#34;convertfrompublic&#34;&gt;ConvertFromPublic&lt;/h4&gt;
+&lt;p&gt;Converts object value from public to internal format.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;(c &lt;a href=&#34;&#34;&gt;*IdentifiableJsonPostgresPersistence[T,K]&lt;/a&gt;) ConvertFromPublic(value T) map[string]any&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;value&lt;/strong&gt;: T - object in public format to convert.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;returns&lt;/strong&gt;: map[string]any - converted object in internal format.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id=&#34;converttopublic&#34;&gt;ConvertToPublic&lt;/h4&gt;
+&lt;p&gt;Converts object value from internal to public format.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;(c &lt;a href=&#34;&#34;&gt;*IdentifiableJsonPostgresPersistence[T,K]&lt;/a&gt;) ConvertToPublic(rows pgx.Rows) T&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;rows&lt;/strong&gt;: pgx.Rows - object in internal format to convert.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;returns&lt;/strong&gt;: T - converted object in public format.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id=&#34;ensuretable&#34;&gt;EnsureTable&lt;/h4&gt;
+&lt;p&gt;Adds DML statement to automatically create a JSON(B) table&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;(c &lt;a href=&#34;&#34;&gt;*IdentifiableJsonPostgresPersistence[T,K]&lt;/a&gt;) EnsureTable(idType string, dataType string)&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;idType&lt;/strong&gt;: string - type of the id column&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;dataType&lt;/strong&gt;: string - type of the data column&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id=&#34;updatepartially&#34;&gt;UpdatePartially&lt;/h4&gt;
+&lt;p&gt;Updates only few selected fields in a data item.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;(c &lt;a href=&#34;&#34;&gt;*IdentifiableJsonPostgresPersistence[T,K]&lt;/a&gt;) UpdatePartially(ctx context.Context, correlationId string, id interface{}, data &lt;a href=&#34;../../../commons/data/any_value_map&#34;&gt;*cdata.AnyValueMap&lt;/a&gt;) (result interface{}, err error)&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;ctx&lt;/strong&gt;: context.Context - operation context.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;correlationId&lt;/strong&gt;: string - (optional) transaction id used to trace execution through the call chain.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;id&lt;/strong&gt;: interface{} - id of the data item to be updated.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;data&lt;/strong&gt;: &lt;a href=&#34;../../../commons/data/any_value_map&#34;&gt;*cdata.AnyValueMap&lt;/a&gt; - map with fields to be updated.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;return&lt;/strong&gt;: (result interface{}, err error) - updated item&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;examples&#34;&gt;Examples&lt;/h3&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-go&#34; data-lang=&#34;go&#34;&gt;&lt;span style=&#34;color:#00a8c8&#34;&gt;type&lt;/span&gt; &lt;span style=&#34;color:#75af00&#34;&gt;DummyJsonPostgresPersistence&lt;/span&gt; &lt;span style=&#34;color:#00a8c8&#34;&gt;struct&lt;/span&gt; &lt;span style=&#34;color:#111&#34;&gt;{&lt;/span&gt;
+	&lt;span style=&#34;color:#f92672&#34;&gt;*&lt;/span&gt;&lt;span style=&#34;color:#75af00&#34;&gt;persist&lt;/span&gt;&lt;span style=&#34;color:#111&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#75af00&#34;&gt;IdentifiableJsonPostgresPersistence&lt;/span&gt;&lt;span style=&#34;color:#111&#34;&gt;[&lt;/span&gt;&lt;span style=&#34;color:#75af00&#34;&gt;fixtures&lt;/span&gt;&lt;span style=&#34;color:#111&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#75af00&#34;&gt;Dummy&lt;/span&gt;&lt;span style=&#34;color:#111&#34;&gt;,&lt;/span&gt; &lt;span style=&#34;color:#00a8c8&#34;&gt;string&lt;/span&gt;&lt;span style=&#34;color:#111&#34;&gt;]&lt;/span&gt;
+&lt;span style=&#34;color:#111&#34;&gt;}&lt;/span&gt;
+
+&lt;span style=&#34;color:#00a8c8&#34;&gt;func&lt;/span&gt; &lt;span style=&#34;color:#75af00&#34;&gt;NewDummyJsonPostgresPersistence&lt;/span&gt;&lt;span style=&#34;color:#111&#34;&gt;()&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;*&lt;/span&gt;&lt;span style=&#34;color:#75af00&#34;&gt;DummyJsonPostgresPersistence&lt;/span&gt; &lt;span style=&#34;color:#111&#34;&gt;{&lt;/span&gt;
+	&lt;span style=&#34;color:#75af00&#34;&gt;c&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;:=&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;&amp;amp;&lt;/span&gt;&lt;span style=&#34;color:#75af00&#34;&gt;DummyJsonPostgresPersistence&lt;/span&gt;&lt;span style=&#34;color:#111&#34;&gt;{}&lt;/span&gt;
+	&lt;span style=&#34;color:#75af00&#34;&gt;c&lt;/span&gt;&lt;span style=&#34;color:#111&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#75af00&#34;&gt;IdentifiableJsonPostgresPersistence&lt;/span&gt; &lt;span style=&#34;color:#111&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#75af00&#34;&gt;persist&lt;/span&gt;&lt;span style=&#34;color:#111&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#75af00&#34;&gt;InheritIdentifiableJsonPostgresPersistence&lt;/span&gt;&lt;span style=&#34;color:#111&#34;&gt;[&lt;/span&gt;&lt;span style=&#34;color:#75af00&#34;&gt;fixtures&lt;/span&gt;&lt;span style=&#34;color:#111&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#75af00&#34;&gt;Dummy&lt;/span&gt;&lt;span style=&#34;color:#111&#34;&gt;,&lt;/span&gt; &lt;span style=&#34;color:#00a8c8&#34;&gt;string&lt;/span&gt;&lt;span style=&#34;color:#111&#34;&gt;](&lt;/span&gt;&lt;span style=&#34;color:#75af00&#34;&gt;c&lt;/span&gt;&lt;span style=&#34;color:#111&#34;&gt;,&lt;/span&gt; &lt;span style=&#34;color:#d88200&#34;&gt;&amp;#34;dummies_json&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#111&#34;&gt;)&lt;/span&gt;
+	&lt;span style=&#34;color:#00a8c8&#34;&gt;return&lt;/span&gt; &lt;span style=&#34;color:#75af00&#34;&gt;c&lt;/span&gt;
+&lt;span style=&#34;color:#111&#34;&gt;}&lt;/span&gt;
+
+&lt;span style=&#34;color:#00a8c8&#34;&gt;func&lt;/span&gt; &lt;span style=&#34;color:#111&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color:#75af00&#34;&gt;c&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;*&lt;/span&gt;&lt;span style=&#34;color:#75af00&#34;&gt;DummyJsonPostgresPersistence&lt;/span&gt;&lt;span style=&#34;color:#111&#34;&gt;)&lt;/span&gt; &lt;span style=&#34;color:#75af00&#34;&gt;DefineSchema&lt;/span&gt;&lt;span style=&#34;color:#111&#34;&gt;()&lt;/span&gt; &lt;span style=&#34;color:#111&#34;&gt;{&lt;/span&gt;
+	&lt;span style=&#34;color:#75af00&#34;&gt;c&lt;/span&gt;&lt;span style=&#34;color:#111&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#75af00&#34;&gt;ClearSchema&lt;/span&gt;&lt;span style=&#34;color:#111&#34;&gt;()&lt;/span&gt;
+	&lt;span style=&#34;color:#75af00&#34;&gt;c&lt;/span&gt;&lt;span style=&#34;color:#111&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#75af00&#34;&gt;IdentifiableJsonPostgresPersistence&lt;/span&gt;&lt;span style=&#34;color:#111&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#75af00&#34;&gt;DefineSchema&lt;/span&gt;&lt;span style=&#34;color:#111&#34;&gt;()&lt;/span&gt;
+	&lt;span style=&#34;color:#75af00&#34;&gt;c&lt;/span&gt;&lt;span style=&#34;color:#111&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#75af00&#34;&gt;EnsureTable&lt;/span&gt;&lt;span style=&#34;color:#111&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color:#d88200&#34;&gt;&amp;#34;&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#111&#34;&gt;,&lt;/span&gt; &lt;span style=&#34;color:#d88200&#34;&gt;&amp;#34;&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#111&#34;&gt;)&lt;/span&gt;
+	&lt;span style=&#34;color:#75af00&#34;&gt;c&lt;/span&gt;&lt;span style=&#34;color:#111&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#75af00&#34;&gt;EnsureIndex&lt;/span&gt;&lt;span style=&#34;color:#111&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color:#75af00&#34;&gt;c&lt;/span&gt;&lt;span style=&#34;color:#111&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#75af00&#34;&gt;TableName&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;+&lt;/span&gt;&lt;span style=&#34;color:#d88200&#34;&gt;&amp;#34;_key&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#111&#34;&gt;,&lt;/span&gt; &lt;span style=&#34;color:#00a8c8&#34;&gt;map&lt;/span&gt;&lt;span style=&#34;color:#111&#34;&gt;[&lt;/span&gt;&lt;span style=&#34;color:#00a8c8&#34;&gt;string&lt;/span&gt;&lt;span style=&#34;color:#111&#34;&gt;]&lt;/span&gt;&lt;span style=&#34;color:#00a8c8&#34;&gt;string&lt;/span&gt;&lt;span style=&#34;color:#111&#34;&gt;{&lt;/span&gt;&lt;span style=&#34;color:#d88200&#34;&gt;&amp;#34;(data-&amp;gt;&amp;#39;key&amp;#39;)&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#111&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#d88200&#34;&gt;&amp;#34;1&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#111&#34;&gt;},&lt;/span&gt; &lt;span style=&#34;color:#00a8c8&#34;&gt;map&lt;/span&gt;&lt;span style=&#34;color:#111&#34;&gt;[&lt;/span&gt;&lt;span style=&#34;color:#00a8c8&#34;&gt;string&lt;/span&gt;&lt;span style=&#34;color:#111&#34;&gt;]&lt;/span&gt;&lt;span style=&#34;color:#00a8c8&#34;&gt;string&lt;/span&gt;&lt;span style=&#34;color:#111&#34;&gt;{&lt;/span&gt;&lt;span style=&#34;color:#d88200&#34;&gt;&amp;#34;unique&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#111&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#d88200&#34;&gt;&amp;#34;true&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#111&#34;&gt;})&lt;/span&gt;
+&lt;span style=&#34;color:#111&#34;&gt;}&lt;/span&gt;
+
+&lt;span style=&#34;color:#00a8c8&#34;&gt;func&lt;/span&gt; &lt;span style=&#34;color:#111&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color:#75af00&#34;&gt;c&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;*&lt;/span&gt;&lt;span style=&#34;color:#75af00&#34;&gt;DummyJsonPostgresPersistence&lt;/span&gt;&lt;span style=&#34;color:#111&#34;&gt;)&lt;/span&gt; &lt;span style=&#34;color:#75af00&#34;&gt;GetPageByFilter&lt;/span&gt;&lt;span style=&#34;color:#111&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color:#75af00&#34;&gt;ctx&lt;/span&gt; &lt;span style=&#34;color:#75af00&#34;&gt;context&lt;/span&gt;&lt;span style=&#34;color:#111&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#75af00&#34;&gt;Context&lt;/span&gt;&lt;span style=&#34;color:#111&#34;&gt;,&lt;/span&gt; &lt;span style=&#34;color:#75af00&#34;&gt;correlationId&lt;/span&gt; &lt;span style=&#34;color:#00a8c8&#34;&gt;string&lt;/span&gt;&lt;span style=&#34;color:#111&#34;&gt;,&lt;/span&gt;
+	&lt;span style=&#34;color:#75af00&#34;&gt;filter&lt;/span&gt; &lt;span style=&#34;color:#75af00&#34;&gt;cdata&lt;/span&gt;&lt;span style=&#34;color:#111&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#75af00&#34;&gt;FilterParams&lt;/span&gt;&lt;span style=&#34;color:#111&#34;&gt;,&lt;/span&gt; &lt;span style=&#34;color:#75af00&#34;&gt;paging&lt;/span&gt; &lt;span style=&#34;color:#75af00&#34;&gt;cdata&lt;/span&gt;&lt;span style=&#34;color:#111&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#75af00&#34;&gt;PagingParams&lt;/span&gt;&lt;span style=&#34;color:#111&#34;&gt;)&lt;/span&gt; &lt;span style=&#34;color:#111&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color:#75af00&#34;&gt;page&lt;/span&gt; &lt;span style=&#34;color:#75af00&#34;&gt;cdata&lt;/span&gt;&lt;span style=&#34;color:#111&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#75af00&#34;&gt;DataPage&lt;/span&gt;&lt;span style=&#34;color:#111&#34;&gt;[&lt;/span&gt;&lt;span style=&#34;color:#75af00&#34;&gt;fixtures&lt;/span&gt;&lt;span style=&#34;color:#111&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#75af00&#34;&gt;Dummy&lt;/span&gt;&lt;span style=&#34;color:#111&#34;&gt;],&lt;/span&gt; &lt;span style=&#34;color:#75af00&#34;&gt;err&lt;/span&gt; &lt;span style=&#34;color:#00a8c8&#34;&gt;error&lt;/span&gt;&lt;span style=&#34;color:#111&#34;&gt;)&lt;/span&gt; &lt;span style=&#34;color:#111&#34;&gt;{&lt;/span&gt;
+
+	&lt;span style=&#34;color:#75af00&#34;&gt;key&lt;/span&gt;&lt;span style=&#34;color:#111&#34;&gt;,&lt;/span&gt; &lt;span style=&#34;color:#75af00&#34;&gt;ok&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;:=&lt;/span&gt; &lt;span style=&#34;color:#75af00&#34;&gt;filter&lt;/span&gt;&lt;span style=&#34;color:#111&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#75af00&#34;&gt;GetAsNullableString&lt;/span&gt;&lt;span style=&#34;color:#111&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color:#d88200&#34;&gt;&amp;#34;Key&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#111&#34;&gt;)&lt;/span&gt;
+	&lt;span style=&#34;color:#75af00&#34;&gt;filterObj&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;:=&lt;/span&gt; &lt;span style=&#34;color:#d88200&#34;&gt;&amp;#34;&amp;#34;&lt;/span&gt;
+	&lt;span style=&#34;color:#00a8c8&#34;&gt;if&lt;/span&gt; &lt;span style=&#34;color:#75af00&#34;&gt;ok&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;&amp;amp;&amp;amp;&lt;/span&gt; &lt;span style=&#34;color:#75af00&#34;&gt;key&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;!=&lt;/span&gt; &lt;span style=&#34;color:#d88200&#34;&gt;&amp;#34;&amp;#34;&lt;/span&gt; &lt;span style=&#34;color:#111&#34;&gt;{&lt;/span&gt;
+		&lt;span style=&#34;color:#75af00&#34;&gt;filterObj&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;+=&lt;/span&gt; &lt;span style=&#34;color:#d88200&#34;&gt;&amp;#34;data-&amp;gt;key=&amp;#39;&amp;#34;&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;+&lt;/span&gt; &lt;span style=&#34;color:#75af00&#34;&gt;key&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;+&lt;/span&gt; &lt;span style=&#34;color:#d88200&#34;&gt;&amp;#34;&amp;#39;&amp;#34;&lt;/span&gt;
+	&lt;span style=&#34;color:#111&#34;&gt;}&lt;/span&gt;
+
+	&lt;span style=&#34;color:#00a8c8&#34;&gt;return&lt;/span&gt; &lt;span style=&#34;color:#75af00&#34;&gt;c&lt;/span&gt;&lt;span style=&#34;color:#111&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#75af00&#34;&gt;IdentifiableJsonPostgresPersistence&lt;/span&gt;&lt;span style=&#34;color:#111&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#75af00&#34;&gt;GetPageByFilter&lt;/span&gt;&lt;span style=&#34;color:#111&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color:#75af00&#34;&gt;ctx&lt;/span&gt;&lt;span style=&#34;color:#111&#34;&gt;,&lt;/span&gt; &lt;span style=&#34;color:#75af00&#34;&gt;correlationId&lt;/span&gt;&lt;span style=&#34;color:#111&#34;&gt;,&lt;/span&gt;
+		&lt;span style=&#34;color:#75af00&#34;&gt;filterObj&lt;/span&gt;&lt;span style=&#34;color:#111&#34;&gt;,&lt;/span&gt; &lt;span style=&#34;color:#75af00&#34;&gt;paging&lt;/span&gt;&lt;span style=&#34;color:#111&#34;&gt;,&lt;/span&gt;
+		&lt;span style=&#34;color:#d88200&#34;&gt;&amp;#34;&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#111&#34;&gt;,&lt;/span&gt; &lt;span style=&#34;color:#d88200&#34;&gt;&amp;#34;&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#111&#34;&gt;,&lt;/span&gt;
+	&lt;span style=&#34;color:#111&#34;&gt;)&lt;/span&gt;
+&lt;span style=&#34;color:#111&#34;&gt;}&lt;/span&gt;
+
+&lt;span style=&#34;color:#00a8c8&#34;&gt;func&lt;/span&gt; &lt;span style=&#34;color:#111&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color:#75af00&#34;&gt;c&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;*&lt;/span&gt;&lt;span style=&#34;color:#75af00&#34;&gt;DummyJsonPostgresPersistence&lt;/span&gt;&lt;span style=&#34;color:#111&#34;&gt;)&lt;/span&gt; &lt;span style=&#34;color:#75af00&#34;&gt;GetCountByFilter&lt;/span&gt;&lt;span style=&#34;color:#111&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color:#75af00&#34;&gt;ctx&lt;/span&gt; &lt;span style=&#34;color:#75af00&#34;&gt;context&lt;/span&gt;&lt;span style=&#34;color:#111&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#75af00&#34;&gt;Context&lt;/span&gt;&lt;span style=&#34;color:#111&#34;&gt;,&lt;/span&gt; &lt;span style=&#34;color:#75af00&#34;&gt;correlationId&lt;/span&gt; &lt;span style=&#34;color:#00a8c8&#34;&gt;string&lt;/span&gt;&lt;span style=&#34;color:#111&#34;&gt;,&lt;/span&gt;
+	&lt;span style=&#34;color:#75af00&#34;&gt;filter&lt;/span&gt; &lt;span style=&#34;color:#75af00&#34;&gt;cdata&lt;/span&gt;&lt;span style=&#34;color:#111&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#75af00&#34;&gt;FilterParams&lt;/span&gt;&lt;span style=&#34;color:#111&#34;&gt;)&lt;/span&gt; &lt;span style=&#34;color:#111&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color:#75af00&#34;&gt;count&lt;/span&gt; &lt;span style=&#34;color:#00a8c8&#34;&gt;int64&lt;/span&gt;&lt;span style=&#34;color:#111&#34;&gt;,&lt;/span&gt; &lt;span style=&#34;color:#75af00&#34;&gt;err&lt;/span&gt; &lt;span style=&#34;color:#00a8c8&#34;&gt;error&lt;/span&gt;&lt;span style=&#34;color:#111&#34;&gt;)&lt;/span&gt; &lt;span style=&#34;color:#111&#34;&gt;{&lt;/span&gt;
+
+	&lt;span style=&#34;color:#75af00&#34;&gt;filterObj&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;:=&lt;/span&gt; &lt;span style=&#34;color:#d88200&#34;&gt;&amp;#34;&amp;#34;&lt;/span&gt;
+	&lt;span style=&#34;color:#00a8c8&#34;&gt;if&lt;/span&gt; &lt;span style=&#34;color:#75af00&#34;&gt;key&lt;/span&gt;&lt;span style=&#34;color:#111&#34;&gt;,&lt;/span&gt; &lt;span style=&#34;color:#75af00&#34;&gt;ok&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;:=&lt;/span&gt; &lt;span style=&#34;color:#75af00&#34;&gt;filter&lt;/span&gt;&lt;span style=&#34;color:#111&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#75af00&#34;&gt;GetAsNullableString&lt;/span&gt;&lt;span style=&#34;color:#111&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color:#d88200&#34;&gt;&amp;#34;Key&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#111&#34;&gt;);&lt;/span&gt; &lt;span style=&#34;color:#75af00&#34;&gt;ok&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;&amp;amp;&amp;amp;&lt;/span&gt; &lt;span style=&#34;color:#75af00&#34;&gt;key&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;!=&lt;/span&gt; &lt;span style=&#34;color:#d88200&#34;&gt;&amp;#34;&amp;#34;&lt;/span&gt; &lt;span style=&#34;color:#111&#34;&gt;{&lt;/span&gt;
+		&lt;span style=&#34;color:#75af00&#34;&gt;filterObj&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;+=&lt;/span&gt; &lt;span style=&#34;color:#d88200&#34;&gt;&amp;#34;data-&amp;gt;key=&amp;#39;&amp;#34;&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;+&lt;/span&gt; &lt;span style=&#34;color:#75af00&#34;&gt;key&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;+&lt;/span&gt; &lt;span style=&#34;color:#d88200&#34;&gt;&amp;#34;&amp;#39;&amp;#34;&lt;/span&gt;
+	&lt;span style=&#34;color:#111&#34;&gt;}&lt;/span&gt;
+
+	&lt;span style=&#34;color:#00a8c8&#34;&gt;return&lt;/span&gt; &lt;span style=&#34;color:#75af00&#34;&gt;c&lt;/span&gt;&lt;span style=&#34;color:#111&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#75af00&#34;&gt;IdentifiableJsonPostgresPersistence&lt;/span&gt;&lt;span style=&#34;color:#111&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#75af00&#34;&gt;GetCountByFilter&lt;/span&gt;&lt;span style=&#34;color:#111&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color:#75af00&#34;&gt;ctx&lt;/span&gt;&lt;span style=&#34;color:#111&#34;&gt;,&lt;/span&gt; &lt;span style=&#34;color:#75af00&#34;&gt;correlationId&lt;/span&gt;&lt;span style=&#34;color:#111&#34;&gt;,&lt;/span&gt; &lt;span style=&#34;color:#75af00&#34;&gt;filterObj&lt;/span&gt;&lt;span style=&#34;color:#111&#34;&gt;)&lt;/span&gt;
+&lt;span style=&#34;color:#111&#34;&gt;}&lt;/span&gt;
+
+&lt;span style=&#34;color:#00a8c8&#34;&gt;func&lt;/span&gt; &lt;span style=&#34;color:#111&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color:#75af00&#34;&gt;c&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;*&lt;/span&gt;&lt;span style=&#34;color:#75af00&#34;&gt;DummyJsonPostgresPersistence&lt;/span&gt;&lt;span style=&#34;color:#111&#34;&gt;)&lt;/span&gt; &lt;span style=&#34;color:#75af00&#34;&gt;GetOneRandom&lt;/span&gt;&lt;span style=&#34;color:#111&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color:#75af00&#34;&gt;ctx&lt;/span&gt; &lt;span style=&#34;color:#75af00&#34;&gt;context&lt;/span&gt;&lt;span style=&#34;color:#111&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#75af00&#34;&gt;Context&lt;/span&gt;&lt;span style=&#34;color:#111&#34;&gt;,&lt;/span&gt; &lt;span style=&#34;color:#75af00&#34;&gt;correlationId&lt;/span&gt; &lt;span style=&#34;color:#00a8c8&#34;&gt;string&lt;/span&gt;&lt;span style=&#34;color:#111&#34;&gt;)&lt;/span&gt; &lt;span style=&#34;color:#111&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color:#75af00&#34;&gt;item&lt;/span&gt; &lt;span style=&#34;color:#75af00&#34;&gt;fixtures&lt;/span&gt;&lt;span style=&#34;color:#111&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#75af00&#34;&gt;Dummy&lt;/span&gt;&lt;span style=&#34;color:#111&#34;&gt;,&lt;/span&gt; &lt;span style=&#34;color:#75af00&#34;&gt;err&lt;/span&gt; &lt;span style=&#34;color:#00a8c8&#34;&gt;error&lt;/span&gt;&lt;span style=&#34;color:#111&#34;&gt;)&lt;/span&gt; &lt;span style=&#34;color:#111&#34;&gt;{&lt;/span&gt;
+	&lt;span style=&#34;color:#00a8c8&#34;&gt;return&lt;/span&gt; &lt;span style=&#34;color:#75af00&#34;&gt;c&lt;/span&gt;&lt;span style=&#34;color:#111&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#75af00&#34;&gt;IdentifiableJsonPostgresPersistence&lt;/span&gt;&lt;span style=&#34;color:#111&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#75af00&#34;&gt;GetOneRandom&lt;/span&gt;&lt;span style=&#34;color:#111&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color:#75af00&#34;&gt;ctx&lt;/span&gt;&lt;span style=&#34;color:#111&#34;&gt;,&lt;/span&gt; &lt;span style=&#34;color:#75af00&#34;&gt;correlationId&lt;/span&gt;&lt;span style=&#34;color:#111&#34;&gt;,&lt;/span&gt; &lt;span style=&#34;color:#d88200&#34;&gt;&amp;#34;&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#111&#34;&gt;)&lt;/span&gt;
+&lt;span style=&#34;color:#111&#34;&gt;}&lt;/span&gt;
+
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+      </description>
+    </item>
+    
+    <item>
+      <title>Toolkit_api: IdentifiablePostgresPersistence</title>
+      <link>/toolkit_api/golang/postgres/persistence/identifiable_postgres_persistence/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/toolkit_api/golang/postgres/persistence/identifiable_postgres_persistence/</guid>
+      <description>
+        
+        
+        &lt;p&gt;&lt;strong&gt;Implements:&lt;/strong&gt; &lt;a href=&#34;../postgres_persistence&#34;&gt;PostgresPersistence&lt;/a&gt;&lt;/p&gt;
+&lt;h3 id=&#34;description&#34;&gt;Description&lt;/h3&gt;
+&lt;p&gt;The IdentifiablePostgresPersistence class allows you to create persistence components that store data in PostgreSQL databases and implement a number of CRUD operations over data items with unique ids.&lt;/p&gt;
+&lt;p&gt;Important points&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;The data items must implement the &lt;a href=&#34;../../../commons/data/iidentifiable&#34;&gt;IIdentifiable&lt;/a&gt; interface.&lt;/li&gt;
+&lt;li&gt;In basic scenarios child classes shall only override the &lt;a href=&#34;../postgres_persistence/#getpagebyfilter&#34;&gt;GetPageByFilter&lt;/a&gt;, &lt;a href=&#34;../postgres_persistence/#getlistbyfilter&#34;&gt;GetListByFilter&lt;/a&gt; or &lt;a href=&#34;../postgres_persistence/#deletebyfilter&#34;&gt;DeleteByFilter&lt;/a&gt; operations with a specific filter function.&lt;/li&gt;
+&lt;li&gt;All other operations can be used out of the box.&lt;/li&gt;
+&lt;li&gt;In complex scenarios child classes can implement additional operations by accessing &lt;strong&gt;c.Db&lt;/strong&gt; or &lt;strong&gt;c.Collection&lt;/strong&gt; properties.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id=&#34;configuration-parameters&#34;&gt;Configuration parameters&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;collection&lt;/strong&gt;: (optional) Postgres collection name&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;connection(s)&lt;/strong&gt;:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;discovery_key&lt;/strong&gt;: (optional) key to retrieve the connection from &lt;a href=&#34;../../../components/connect/idiscovery&#34;&gt;IDiscovery&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;host&lt;/strong&gt;: host name or IP address&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;port&lt;/strong&gt;: port number (default: 27017)&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;uri&lt;/strong&gt;: resource URI or connection string with all parameters in it&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;credential(s)&lt;/strong&gt;:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;store_key&lt;/strong&gt;: (optional) key to retrieve the credentials from &lt;a href=&#34;../../../components/auth/icredential_store&#34;&gt;ICredentialStore&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;username&lt;/strong&gt;: (optional) username&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;password&lt;/strong&gt;: (optional) user&amp;rsquo;s password&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;options&lt;/strong&gt;:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;connect_timeout&lt;/strong&gt;: (optional) number of milliseconds to wait before timing out when connecting a new client (default: 0)&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;idle_timeout&lt;/strong&gt;: (optional) number of milliseconds a client must sit idle in the pool and not be checked out (default: 10000)&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;max_pool_size&lt;/strong&gt;: (optional) maximum number of clients the pool can contain (default: 10)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id=&#34;references&#34;&gt;References&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;*:logger:*:*:1.0&lt;/strong&gt; - (optional) &lt;a href=&#34;../../../components/log/ilogger&#34;&gt;ILogger&lt;/a&gt; components to pass log messages&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;*:discovery:*:*:1.0&lt;/strong&gt; - (optional) &lt;a href=&#34;../../../components/connect/idiscovery&#34;&gt;IDiscovery&lt;/a&gt; services&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;*:credential-store:*:*:1.0&lt;/strong&gt; - (optional) credential stores to resolve credentials (&lt;a href=&#34;../../../components/auth/icredential_store&#34;&gt;ICredentialStore&lt;/a&gt;)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;constructors&#34;&gt;Constructors&lt;/h3&gt;
+&lt;h4 id=&#34;inheritidentifiablepostgrespersistence&#34;&gt;InheritIdentifiablePostgresPersistence&lt;/h4&gt;
+&lt;p&gt;Creates a new instance of the persistence component.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;InheritIdentifiablePostgresPersistence[T any, K any](overrides &lt;a href=&#34;../ipostgres_persistence_overrides&#34;&gt;IPostgresPersistenceOverrides[T]&lt;/a&gt;, tableName string) &lt;a href=&#34;&#34;&gt;*IdentifiablePostgresPersistence[T,K]&lt;/a&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;overrides&lt;/strong&gt;: &lt;a href=&#34;../ipostgres_persistence_overrides&#34;&gt;IPostgresPersistenceOverrides[T]&lt;/a&gt; - References to override virtual methods.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;tableName&lt;/strong&gt;: string - (optional) a table name.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;methods&#34;&gt;Methods&lt;/h3&gt;
+&lt;h4 id=&#34;create&#34;&gt;Create&lt;/h4&gt;
+&lt;p&gt;Creates a data item.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;(c &lt;a href=&#34;&#34;&gt;*IdentifiablePostgresPersistence[T,K]&lt;/a&gt;) Create(ctx context.Context, correlationId string, item T) (result T, err error)&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;ctx&lt;/strong&gt;: context.Context - operation context.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;correlationId&lt;/strong&gt;: string - (optional) transaction id used to trace execution through the call chain.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;item&lt;/strong&gt;: T - item to be created.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;returns&lt;/strong&gt;: (result T, err error) - created item&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id=&#34;deletebyid&#34;&gt;DeleteById&lt;/h4&gt;
+&lt;p&gt;Deletes a data item by it&amp;rsquo;s unique id.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;(c &lt;a href=&#34;&#34;&gt;*IdentifiablePostgresPersistence[T,K]&lt;/a&gt;) DeleteById(ctx context.Context, correlationId string, id K) (result T, err error)&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;ctx&lt;/strong&gt;: context.Context - operation context.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;correlationId&lt;/strong&gt;: string - (optional) transaction id used to trace execution through the call chain.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;id&lt;/strong&gt;: K - id of the item to be deleted&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;returns&lt;/strong&gt;: (result T, err error) - deleted item&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id=&#34;deletebyids&#34;&gt;DeleteByIds&lt;/h4&gt;
+&lt;p&gt;Deletes multiple data items by their unique ids.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;(c &lt;a href=&#34;&#34;&gt;*IdentifiablePostgresPersistence[T,K]&lt;/a&gt;) DeleteByIds(ctx context.Context, correlationId string, ids []K) error&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;ctx&lt;/strong&gt;: context.Context - operation context.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;correlationId&lt;/strong&gt;: string - (optional) transaction id used to trace execution through the call chain.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;ids&lt;/strong&gt;: []K - ids of data items to be deleted.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;returns&lt;/strong&gt;: error - returns error if not received.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id=&#34;getlistbyids&#34;&gt;GetListByIds&lt;/h4&gt;
+&lt;p&gt;Gets a list of data items retrieved by given unique ids.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;(c &lt;a href=&#34;&#34;&gt;*IdentifiablePostgresPersistence[T,K]&lt;/a&gt;) GetListByIds(ctx context.Context, correlationId string, ids []K) (items []T, err error)&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;ctx&lt;/strong&gt;: context.Context - operation context.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;correlationId&lt;/strong&gt;: string - (optional) transaction id used to trace execution through the call chain.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;ids&lt;/strong&gt;: []K - ids of data items to be retrieved&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;returns&lt;/strong&gt;: (items []T, err error) - data list&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id=&#34;getonebyid&#34;&gt;GetOneById&lt;/h4&gt;
+&lt;p&gt;Gets a data item by its unique id.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;(c &lt;a href=&#34;&#34;&gt;*IdentifiablePostgresPersistence[T,K]&lt;/a&gt;) GetOneById(ctx context.Context, correlationId string, id K) (item T, err error)&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;ctx&lt;/strong&gt;: context.Context - operation context.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;correlationId&lt;/strong&gt;: string - (optional) transaction id used to trace execution through the call chain.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;id&lt;/strong&gt;: K - id of data item to be retrieved.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;returns&lt;/strong&gt;: (item T, err error)  - data item&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id=&#34;set&#34;&gt;Set&lt;/h4&gt;
+&lt;p&gt;Sets a data item. If the data item exists it updates it.
+Otherwise, it creates a new data item.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;(c &lt;a href=&#34;&#34;&gt;*IdentifiablePostgresPersistence[T,K]&lt;/a&gt;) Set(ctx context.Context, correlationId string, item T) (result T, err error)&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;ctx&lt;/strong&gt;: context.Context - operation context.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;correlationId&lt;/strong&gt;: string - (optional) transaction id used to trace execution through the call chain.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;item&lt;/strong&gt;: T - item to be set.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;returns&lt;/strong&gt;: (result T, err error) - updated item&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id=&#34;update&#34;&gt;Update&lt;/h4&gt;
+&lt;p&gt;Updates a data item.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;(c &lt;a href=&#34;&#34;&gt;*IdentifiablePostgresPersistence[T,K]&lt;/a&gt;) Update(ctx context.Context, correlationId string, item interface{}) (result T, err error)&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;correlationId&lt;/strong&gt;: string - (optional) transaction id used to trace execution through the call chain.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;item&lt;/strong&gt;: T - item to be updated.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;returns&lt;/strong&gt;: (result T, err error) - updated item&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id=&#34;updatepartially&#34;&gt;UpdatePartially&lt;/h4&gt;
+&lt;p&gt;Updates only a few selected fields in a data item.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;(c &lt;a href=&#34;&#34;&gt;*IdentifiablePostgresPersistence[T,K]&lt;/a&gt;) UpdatePartially(ctx context.Context, correlationId string, id K, data &lt;a href=&#34;../../../commons/data/any_value_map&#34;&gt;*cdata.AnyValueMap&lt;/a&gt;) (result T, err error)&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;correlationId&lt;/strong&gt;: string - (optional) transaction id used to trace execution through the call chain.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;id&lt;/strong&gt;: K - id of the data item to be updated.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;data&lt;/strong&gt;: &lt;a href=&#34;../../../commons/data/any_value_map&#34;&gt;*cdata.AnyValueMap&lt;/a&gt; - map with fields to be updated.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;returns&lt;/strong&gt;: (result T, err error)- updated item&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;examples&#34;&gt;Examples&lt;/h3&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-go&#34; data-lang=&#34;go&#34;&gt;&lt;span style=&#34;color:#00a8c8&#34;&gt;type&lt;/span&gt; &lt;span style=&#34;color:#75af00&#34;&gt;DummyPostgresPersistence&lt;/span&gt; &lt;span style=&#34;color:#00a8c8&#34;&gt;struct&lt;/span&gt; &lt;span style=&#34;color:#111&#34;&gt;{&lt;/span&gt;
+	&lt;span style=&#34;color:#f92672&#34;&gt;*&lt;/span&gt;&lt;span style=&#34;color:#75af00&#34;&gt;persist&lt;/span&gt;&lt;span style=&#34;color:#111&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#75af00&#34;&gt;IdentifiablePostgresPersistence&lt;/span&gt;&lt;span style=&#34;color:#111&#34;&gt;[&lt;/span&gt;&lt;span style=&#34;color:#75af00&#34;&gt;fixtures&lt;/span&gt;&lt;span style=&#34;color:#111&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#75af00&#34;&gt;Dummy&lt;/span&gt;&lt;span style=&#34;color:#111&#34;&gt;,&lt;/span&gt; &lt;span style=&#34;color:#00a8c8&#34;&gt;string&lt;/span&gt;&lt;span style=&#34;color:#111&#34;&gt;]&lt;/span&gt;
+&lt;span style=&#34;color:#111&#34;&gt;}&lt;/span&gt;
+
+&lt;span style=&#34;color:#00a8c8&#34;&gt;func&lt;/span&gt; &lt;span style=&#34;color:#75af00&#34;&gt;NewDummyPostgresPersistence&lt;/span&gt;&lt;span style=&#34;color:#111&#34;&gt;()&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;*&lt;/span&gt;&lt;span style=&#34;color:#75af00&#34;&gt;DummyPostgresPersistence&lt;/span&gt; &lt;span style=&#34;color:#111&#34;&gt;{&lt;/span&gt;
+	&lt;span style=&#34;color:#75af00&#34;&gt;c&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;:=&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;&amp;amp;&lt;/span&gt;&lt;span style=&#34;color:#75af00&#34;&gt;DummyPostgresPersistence&lt;/span&gt;&lt;span style=&#34;color:#111&#34;&gt;{}&lt;/span&gt;
+	&lt;span style=&#34;color:#75af00&#34;&gt;c&lt;/span&gt;&lt;span style=&#34;color:#111&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#75af00&#34;&gt;IdentifiablePostgresPersistence&lt;/span&gt; &lt;span style=&#34;color:#111&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#75af00&#34;&gt;persist&lt;/span&gt;&lt;span style=&#34;color:#111&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#75af00&#34;&gt;InheritIdentifiablePostgresPersistence&lt;/span&gt;&lt;span style=&#34;color:#111&#34;&gt;[&lt;/span&gt;&lt;span style=&#34;color:#75af00&#34;&gt;fixtures&lt;/span&gt;&lt;span style=&#34;color:#111&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#75af00&#34;&gt;Dummy&lt;/span&gt;&lt;span style=&#34;color:#111&#34;&gt;,&lt;/span&gt; &lt;span style=&#34;color:#00a8c8&#34;&gt;string&lt;/span&gt;&lt;span style=&#34;color:#111&#34;&gt;](&lt;/span&gt;&lt;span style=&#34;color:#75af00&#34;&gt;c&lt;/span&gt;&lt;span style=&#34;color:#111&#34;&gt;,&lt;/span&gt; &lt;span style=&#34;color:#d88200&#34;&gt;&amp;#34;dummies&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#111&#34;&gt;)&lt;/span&gt;
+	&lt;span style=&#34;color:#00a8c8&#34;&gt;return&lt;/span&gt; &lt;span style=&#34;color:#75af00&#34;&gt;c&lt;/span&gt;
+&lt;span style=&#34;color:#111&#34;&gt;}&lt;/span&gt;
+
+&lt;span style=&#34;color:#00a8c8&#34;&gt;func&lt;/span&gt; &lt;span style=&#34;color:#111&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color:#75af00&#34;&gt;c&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;*&lt;/span&gt;&lt;span style=&#34;color:#75af00&#34;&gt;DummyPostgresPersistence&lt;/span&gt;&lt;span style=&#34;color:#111&#34;&gt;)&lt;/span&gt; &lt;span style=&#34;color:#75af00&#34;&gt;DefineSchema&lt;/span&gt;&lt;span style=&#34;color:#111&#34;&gt;()&lt;/span&gt; &lt;span style=&#34;color:#111&#34;&gt;{&lt;/span&gt;
+	&lt;span style=&#34;color:#75af00&#34;&gt;c&lt;/span&gt;&lt;span style=&#34;color:#111&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#75af00&#34;&gt;ClearSchema&lt;/span&gt;&lt;span style=&#34;color:#111&#34;&gt;()&lt;/span&gt;
+	&lt;span style=&#34;color:#75af00&#34;&gt;c&lt;/span&gt;&lt;span style=&#34;color:#111&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#75af00&#34;&gt;IdentifiablePostgresPersistence&lt;/span&gt;&lt;span style=&#34;color:#111&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#75af00&#34;&gt;DefineSchema&lt;/span&gt;&lt;span style=&#34;color:#111&#34;&gt;()&lt;/span&gt;
+	&lt;span style=&#34;color:#75715e&#34;&gt;// Row name must be in double quotes for properly case!!!
+&lt;/span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;&lt;/span&gt;	&lt;span style=&#34;color:#75af00&#34;&gt;c&lt;/span&gt;&lt;span style=&#34;color:#111&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#75af00&#34;&gt;EnsureSchema&lt;/span&gt;&lt;span style=&#34;color:#111&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color:#d88200&#34;&gt;&amp;#34;CREATE TABLE &amp;#34;&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;+&lt;/span&gt; &lt;span style=&#34;color:#75af00&#34;&gt;c&lt;/span&gt;&lt;span style=&#34;color:#111&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#75af00&#34;&gt;QuotedTableName&lt;/span&gt;&lt;span style=&#34;color:#111&#34;&gt;()&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;+&lt;/span&gt; &lt;span style=&#34;color:#d88200&#34;&gt;&amp;#34; (\&amp;#34;id\&amp;#34; TEXT PRIMARY KEY, \&amp;#34;key\&amp;#34; TEXT, \&amp;#34;content\&amp;#34; TEXT)&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#111&#34;&gt;)&lt;/span&gt;
+	&lt;span style=&#34;color:#75af00&#34;&gt;c&lt;/span&gt;&lt;span style=&#34;color:#111&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#75af00&#34;&gt;EnsureIndex&lt;/span&gt;&lt;span style=&#34;color:#111&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color:#75af00&#34;&gt;c&lt;/span&gt;&lt;span style=&#34;color:#111&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#75af00&#34;&gt;IdentifiablePostgresPersistence&lt;/span&gt;&lt;span style=&#34;color:#111&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#75af00&#34;&gt;TableName&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;+&lt;/span&gt;&lt;span style=&#34;color:#d88200&#34;&gt;&amp;#34;_key&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#111&#34;&gt;,&lt;/span&gt; &lt;span style=&#34;color:#00a8c8&#34;&gt;map&lt;/span&gt;&lt;span style=&#34;color:#111&#34;&gt;[&lt;/span&gt;&lt;span style=&#34;color:#00a8c8&#34;&gt;string&lt;/span&gt;&lt;span style=&#34;color:#111&#34;&gt;]&lt;/span&gt;&lt;span style=&#34;color:#00a8c8&#34;&gt;string&lt;/span&gt;&lt;span style=&#34;color:#111&#34;&gt;{&lt;/span&gt;&lt;span style=&#34;color:#d88200&#34;&gt;&amp;#34;key&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#111&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#d88200&#34;&gt;&amp;#34;1&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#111&#34;&gt;},&lt;/span&gt; &lt;span style=&#34;color:#00a8c8&#34;&gt;map&lt;/span&gt;&lt;span style=&#34;color:#111&#34;&gt;[&lt;/span&gt;&lt;span style=&#34;color:#00a8c8&#34;&gt;string&lt;/span&gt;&lt;span style=&#34;color:#111&#34;&gt;]&lt;/span&gt;&lt;span style=&#34;color:#00a8c8&#34;&gt;string&lt;/span&gt;&lt;span style=&#34;color:#111&#34;&gt;{&lt;/span&gt;&lt;span style=&#34;color:#d88200&#34;&gt;&amp;#34;unique&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#111&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#d88200&#34;&gt;&amp;#34;true&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#111&#34;&gt;})&lt;/span&gt;
+&lt;span style=&#34;color:#111&#34;&gt;}&lt;/span&gt;
+
+&lt;span style=&#34;color:#00a8c8&#34;&gt;func&lt;/span&gt; &lt;span style=&#34;color:#111&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color:#75af00&#34;&gt;c&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;*&lt;/span&gt;&lt;span style=&#34;color:#75af00&#34;&gt;DummyPostgresPersistence&lt;/span&gt;&lt;span style=&#34;color:#111&#34;&gt;)&lt;/span&gt; &lt;span style=&#34;color:#75af00&#34;&gt;GetPageByFilter&lt;/span&gt;&lt;span style=&#34;color:#111&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color:#75af00&#34;&gt;ctx&lt;/span&gt; &lt;span style=&#34;color:#75af00&#34;&gt;context&lt;/span&gt;&lt;span style=&#34;color:#111&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#75af00&#34;&gt;Context&lt;/span&gt;&lt;span style=&#34;color:#111&#34;&gt;,&lt;/span&gt; &lt;span style=&#34;color:#75af00&#34;&gt;correlationId&lt;/span&gt; &lt;span style=&#34;color:#00a8c8&#34;&gt;string&lt;/span&gt;&lt;span style=&#34;color:#111&#34;&gt;,&lt;/span&gt;
+	&lt;span style=&#34;color:#75af00&#34;&gt;filter&lt;/span&gt; &lt;span style=&#34;color:#75af00&#34;&gt;cdata&lt;/span&gt;&lt;span style=&#34;color:#111&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#75af00&#34;&gt;FilterParams&lt;/span&gt;&lt;span style=&#34;color:#111&#34;&gt;,&lt;/span&gt; &lt;span style=&#34;color:#75af00&#34;&gt;paging&lt;/span&gt; &lt;span style=&#34;color:#75af00&#34;&gt;cdata&lt;/span&gt;&lt;span style=&#34;color:#111&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#75af00&#34;&gt;PagingParams&lt;/span&gt;&lt;span style=&#34;color:#111&#34;&gt;)&lt;/span&gt; &lt;span style=&#34;color:#111&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color:#75af00&#34;&gt;page&lt;/span&gt; &lt;span style=&#34;color:#75af00&#34;&gt;cdata&lt;/span&gt;&lt;span style=&#34;color:#111&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#75af00&#34;&gt;DataPage&lt;/span&gt;&lt;span style=&#34;color:#111&#34;&gt;[&lt;/span&gt;&lt;span style=&#34;color:#75af00&#34;&gt;fixtures&lt;/span&gt;&lt;span style=&#34;color:#111&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#75af00&#34;&gt;Dummy&lt;/span&gt;&lt;span style=&#34;color:#111&#34;&gt;],&lt;/span&gt; &lt;span style=&#34;color:#75af00&#34;&gt;err&lt;/span&gt; &lt;span style=&#34;color:#00a8c8&#34;&gt;error&lt;/span&gt;&lt;span style=&#34;color:#111&#34;&gt;)&lt;/span&gt; &lt;span style=&#34;color:#111&#34;&gt;{&lt;/span&gt;
+
+	&lt;span style=&#34;color:#75af00&#34;&gt;key&lt;/span&gt;&lt;span style=&#34;color:#111&#34;&gt;,&lt;/span&gt; &lt;span style=&#34;color:#75af00&#34;&gt;ok&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;:=&lt;/span&gt; &lt;span style=&#34;color:#75af00&#34;&gt;filter&lt;/span&gt;&lt;span style=&#34;color:#111&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#75af00&#34;&gt;GetAsNullableString&lt;/span&gt;&lt;span style=&#34;color:#111&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color:#d88200&#34;&gt;&amp;#34;Key&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#111&#34;&gt;)&lt;/span&gt;
+	&lt;span style=&#34;color:#75af00&#34;&gt;filterObj&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;:=&lt;/span&gt; &lt;span style=&#34;color:#d88200&#34;&gt;&amp;#34;&amp;#34;&lt;/span&gt;
+	&lt;span style=&#34;color:#00a8c8&#34;&gt;if&lt;/span&gt; &lt;span style=&#34;color:#75af00&#34;&gt;ok&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;&amp;amp;&amp;amp;&lt;/span&gt; &lt;span style=&#34;color:#75af00&#34;&gt;key&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;!=&lt;/span&gt; &lt;span style=&#34;color:#d88200&#34;&gt;&amp;#34;&amp;#34;&lt;/span&gt; &lt;span style=&#34;color:#111&#34;&gt;{&lt;/span&gt;
+		&lt;span style=&#34;color:#75af00&#34;&gt;filterObj&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;+=&lt;/span&gt; &lt;span style=&#34;color:#d88200&#34;&gt;&amp;#34;key=&amp;#39;&amp;#34;&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;+&lt;/span&gt; &lt;span style=&#34;color:#75af00&#34;&gt;key&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;+&lt;/span&gt; &lt;span style=&#34;color:#d88200&#34;&gt;&amp;#34;&amp;#39;&amp;#34;&lt;/span&gt;
+	&lt;span style=&#34;color:#111&#34;&gt;}&lt;/span&gt;
+	&lt;span style=&#34;color:#75af00&#34;&gt;sorting&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;:=&lt;/span&gt; &lt;span style=&#34;color:#d88200&#34;&gt;&amp;#34;&amp;#34;&lt;/span&gt;
+
+	&lt;span style=&#34;color:#00a8c8&#34;&gt;return&lt;/span&gt; &lt;span style=&#34;color:#75af00&#34;&gt;c&lt;/span&gt;&lt;span style=&#34;color:#111&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#75af00&#34;&gt;IdentifiablePostgresPersistence&lt;/span&gt;&lt;span style=&#34;color:#111&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#75af00&#34;&gt;GetPageByFilter&lt;/span&gt;&lt;span style=&#34;color:#111&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color:#75af00&#34;&gt;ctx&lt;/span&gt;&lt;span style=&#34;color:#111&#34;&gt;,&lt;/span&gt; &lt;span style=&#34;color:#75af00&#34;&gt;correlationId&lt;/span&gt;&lt;span style=&#34;color:#111&#34;&gt;,&lt;/span&gt;
+		&lt;span style=&#34;color:#75af00&#34;&gt;filterObj&lt;/span&gt;&lt;span style=&#34;color:#111&#34;&gt;,&lt;/span&gt; &lt;span style=&#34;color:#75af00&#34;&gt;paging&lt;/span&gt;&lt;span style=&#34;color:#111&#34;&gt;,&lt;/span&gt;
+		&lt;span style=&#34;color:#75af00&#34;&gt;sorting&lt;/span&gt;&lt;span style=&#34;color:#111&#34;&gt;,&lt;/span&gt; &lt;span style=&#34;color:#d88200&#34;&gt;&amp;#34;&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#111&#34;&gt;,&lt;/span&gt;
+	&lt;span style=&#34;color:#111&#34;&gt;)&lt;/span&gt;
+&lt;span style=&#34;color:#111&#34;&gt;}&lt;/span&gt;
+
+&lt;span style=&#34;color:#00a8c8&#34;&gt;func&lt;/span&gt; &lt;span style=&#34;color:#111&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color:#75af00&#34;&gt;c&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;*&lt;/span&gt;&lt;span style=&#34;color:#75af00&#34;&gt;DummyPostgresPersistence&lt;/span&gt;&lt;span style=&#34;color:#111&#34;&gt;)&lt;/span&gt; &lt;span style=&#34;color:#75af00&#34;&gt;GetCountByFilter&lt;/span&gt;&lt;span style=&#34;color:#111&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color:#75af00&#34;&gt;ctx&lt;/span&gt; &lt;span style=&#34;color:#75af00&#34;&gt;context&lt;/span&gt;&lt;span style=&#34;color:#111&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#75af00&#34;&gt;Context&lt;/span&gt;&lt;span style=&#34;color:#111&#34;&gt;,&lt;/span&gt; &lt;span style=&#34;color:#75af00&#34;&gt;correlationId&lt;/span&gt; &lt;span style=&#34;color:#00a8c8&#34;&gt;string&lt;/span&gt;&lt;span style=&#34;color:#111&#34;&gt;,&lt;/span&gt;
+	&lt;span style=&#34;color:#75af00&#34;&gt;filter&lt;/span&gt; &lt;span style=&#34;color:#75af00&#34;&gt;cdata&lt;/span&gt;&lt;span style=&#34;color:#111&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#75af00&#34;&gt;FilterParams&lt;/span&gt;&lt;span style=&#34;color:#111&#34;&gt;)&lt;/span&gt; &lt;span style=&#34;color:#111&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color:#75af00&#34;&gt;count&lt;/span&gt; &lt;span style=&#34;color:#00a8c8&#34;&gt;int64&lt;/span&gt;&lt;span style=&#34;color:#111&#34;&gt;,&lt;/span&gt; &lt;span style=&#34;color:#75af00&#34;&gt;err&lt;/span&gt; &lt;span style=&#34;color:#00a8c8&#34;&gt;error&lt;/span&gt;&lt;span style=&#34;color:#111&#34;&gt;)&lt;/span&gt; &lt;span style=&#34;color:#111&#34;&gt;{&lt;/span&gt;
+
+	&lt;span style=&#34;color:#75af00&#34;&gt;key&lt;/span&gt;&lt;span style=&#34;color:#111&#34;&gt;,&lt;/span&gt; &lt;span style=&#34;color:#75af00&#34;&gt;ok&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;:=&lt;/span&gt; &lt;span style=&#34;color:#75af00&#34;&gt;filter&lt;/span&gt;&lt;span style=&#34;color:#111&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#75af00&#34;&gt;GetAsNullableString&lt;/span&gt;&lt;span style=&#34;color:#111&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color:#d88200&#34;&gt;&amp;#34;Key&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#111&#34;&gt;)&lt;/span&gt;
+	&lt;span style=&#34;color:#75af00&#34;&gt;filterObj&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;:=&lt;/span&gt; &lt;span style=&#34;color:#d88200&#34;&gt;&amp;#34;&amp;#34;&lt;/span&gt;
+	&lt;span style=&#34;color:#00a8c8&#34;&gt;if&lt;/span&gt; &lt;span style=&#34;color:#75af00&#34;&gt;ok&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;&amp;amp;&amp;amp;&lt;/span&gt; &lt;span style=&#34;color:#75af00&#34;&gt;key&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;!=&lt;/span&gt; &lt;span style=&#34;color:#d88200&#34;&gt;&amp;#34;&amp;#34;&lt;/span&gt; &lt;span style=&#34;color:#111&#34;&gt;{&lt;/span&gt;
+		&lt;span style=&#34;color:#75af00&#34;&gt;filterObj&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;+=&lt;/span&gt; &lt;span style=&#34;color:#d88200&#34;&gt;&amp;#34;key=&amp;#39;&amp;#34;&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;+&lt;/span&gt; &lt;span style=&#34;color:#75af00&#34;&gt;key&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;+&lt;/span&gt; &lt;span style=&#34;color:#d88200&#34;&gt;&amp;#34;&amp;#39;&amp;#34;&lt;/span&gt;
+	&lt;span style=&#34;color:#111&#34;&gt;}&lt;/span&gt;
+	&lt;span style=&#34;color:#00a8c8&#34;&gt;return&lt;/span&gt; &lt;span style=&#34;color:#75af00&#34;&gt;c&lt;/span&gt;&lt;span style=&#34;color:#111&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#75af00&#34;&gt;IdentifiablePostgresPersistence&lt;/span&gt;&lt;span style=&#34;color:#111&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#75af00&#34;&gt;GetCountByFilter&lt;/span&gt;&lt;span style=&#34;color:#111&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color:#75af00&#34;&gt;ctx&lt;/span&gt;&lt;span style=&#34;color:#111&#34;&gt;,&lt;/span&gt; &lt;span style=&#34;color:#75af00&#34;&gt;correlationId&lt;/span&gt;&lt;span style=&#34;color:#111&#34;&gt;,&lt;/span&gt; &lt;span style=&#34;color:#75af00&#34;&gt;filterObj&lt;/span&gt;&lt;span style=&#34;color:#111&#34;&gt;)&lt;/span&gt;
+&lt;span style=&#34;color:#111&#34;&gt;}&lt;/span&gt;
+
+&lt;span style=&#34;color:#00a8c8&#34;&gt;func&lt;/span&gt; &lt;span style=&#34;color:#111&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color:#75af00&#34;&gt;c&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;*&lt;/span&gt;&lt;span style=&#34;color:#75af00&#34;&gt;DummyPostgresPersistence&lt;/span&gt;&lt;span style=&#34;color:#111&#34;&gt;)&lt;/span&gt; &lt;span style=&#34;color:#75af00&#34;&gt;GetOneRandom&lt;/span&gt;&lt;span style=&#34;color:#111&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color:#75af00&#34;&gt;ctx&lt;/span&gt; &lt;span style=&#34;color:#75af00&#34;&gt;context&lt;/span&gt;&lt;span style=&#34;color:#111&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#75af00&#34;&gt;Context&lt;/span&gt;&lt;span style=&#34;color:#111&#34;&gt;,&lt;/span&gt; &lt;span style=&#34;color:#75af00&#34;&gt;correlationId&lt;/span&gt; &lt;span style=&#34;color:#00a8c8&#34;&gt;string&lt;/span&gt;&lt;span style=&#34;color:#111&#34;&gt;)&lt;/span&gt; &lt;span style=&#34;color:#111&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color:#75af00&#34;&gt;item&lt;/span&gt; &lt;span style=&#34;color:#75af00&#34;&gt;fixtures&lt;/span&gt;&lt;span style=&#34;color:#111&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#75af00&#34;&gt;Dummy&lt;/span&gt;&lt;span style=&#34;color:#111&#34;&gt;,&lt;/span&gt; &lt;span style=&#34;color:#75af00&#34;&gt;err&lt;/span&gt; &lt;span style=&#34;color:#00a8c8&#34;&gt;error&lt;/span&gt;&lt;span style=&#34;color:#111&#34;&gt;)&lt;/span&gt; &lt;span style=&#34;color:#111&#34;&gt;{&lt;/span&gt;
+	&lt;span style=&#34;color:#00a8c8&#34;&gt;return&lt;/span&gt; &lt;span style=&#34;color:#75af00&#34;&gt;c&lt;/span&gt;&lt;span style=&#34;color:#111&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#75af00&#34;&gt;IdentifiablePostgresPersistence&lt;/span&gt;&lt;span style=&#34;color:#111&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#75af00&#34;&gt;GetOneRandom&lt;/span&gt;&lt;span style=&#34;color:#111&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color:#75af00&#34;&gt;ctx&lt;/span&gt;&lt;span style=&#34;color:#111&#34;&gt;,&lt;/span&gt; &lt;span style=&#34;color:#75af00&#34;&gt;correlationId&lt;/span&gt;&lt;span style=&#34;color:#111&#34;&gt;,&lt;/span&gt; &lt;span style=&#34;color:#d88200&#34;&gt;&amp;#34;&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#111&#34;&gt;)&lt;/span&gt;
+&lt;span style=&#34;color:#111&#34;&gt;}&lt;/span&gt;
+
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+      </description>
+    </item>
+    
+    <item>
+      <title>Toolkit_api: IPostgresPersistenceOverrides</title>
+      <link>/toolkit_api/golang/postgres/persistence/ipostgres_persistence_overrides/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/toolkit_api/golang/postgres/persistence/ipostgres_persistence_overrides/</guid>
+      <description>
+        
+        
+        &lt;h3 id=&#34;description&#34;&gt;Description&lt;/h3&gt;
+&lt;p&gt;The IPostgresPersistenceOverrides[T] interface is used to perform on-demand registrations.&lt;/p&gt;
+&lt;h3 id=&#34;methods&#34;&gt;Methods&lt;/h3&gt;
+&lt;h4 id=&#34;convertfrompublic&#34;&gt;ConvertFromPublic&lt;/h4&gt;
+&lt;p&gt;Converts an object value from public to internal format.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;ConvertFromPublic(item T) any&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;value&lt;/strong&gt;: any - object in public format to convert.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;returns&lt;/strong&gt;: (map[string]any, error) - converted object in internal format.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id=&#34;convertfrompublicpartial&#34;&gt;ConvertFromPublicPartial&lt;/h4&gt;
+&lt;p&gt;ConvertFromPublicPartial method help convert object (map) from public view by replaced &amp;ldquo;Id&amp;rdquo; to &amp;ldquo;_id&amp;rdquo; field&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;ConvertFromPublicPartial(item T) (map[string]any, error)&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;item&lt;/strong&gt;: T - item for conversion.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;returns&lt;/strong&gt;: (map[string]any, error) - result map&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id=&#34;converttopublic&#34;&gt;ConvertToPublic&lt;/h4&gt;
+&lt;p&gt;Converts and object value from internal to public format.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;(c *MongoDbPersistence) ConvertToPublic(value *sql.Rows) (T, error)&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;value&lt;/strong&gt;: *sql.Rows - object in internal format to convert.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;returns&lt;/strong&gt;: (T, error) - converted object in public format.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id=&#34;defineschema&#34;&gt;DefineSchema&lt;/h4&gt;
+&lt;p&gt;Defines the database schema&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;DefineSchema()&lt;/p&gt;
+&lt;/blockquote&gt;
+
+      </description>
+    </item>
+    
+    <item>
+      <title>Toolkit_api: PostgresPersistence</title>
+      <link>/toolkit_api/golang/postgres/persistence/postgres_persistence/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/toolkit_api/golang/postgres/persistence/postgres_persistence/</guid>
+      <description>
+        
+        
+        &lt;p&gt;&lt;strong&gt;Implements:&lt;/strong&gt; &lt;a href=&#34;../../../commons/refer/ireferenceable&#34;&gt;IReferenceable&lt;/a&gt;, &lt;a href=&#34;../../../commons/refer/iunreferenceable&#34;&gt;IUnreferenceable&lt;/a&gt;, &lt;a href=&#34;../../../commons/config/iconfigurable&#34;&gt;IConfigurable&lt;/a&gt;, &lt;a href=&#34;../../../commons/run/iopenable&#34;&gt;IOpenable&lt;/a&gt;, &lt;a href=&#34;../../../commons/run/icleanable&#34;&gt;ICleanable&lt;/a&gt;&lt;/p&gt;
+&lt;h3 id=&#34;description&#34;&gt;Description&lt;/h3&gt;
+&lt;p&gt;The PostgresPersistence class allows you to create persistence components that store data in PostgreSQL using the official driver.&lt;/p&gt;
+&lt;p&gt;Important points&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;This is the most basic persistence component that is only
+able to store data items of any type.&lt;/li&gt;
+&lt;li&gt;Specific CRUD operations
+over the data items must be implemented in child classes by
+accessing &lt;strong&gt;c.Db&lt;/strong&gt; or &lt;strong&gt;c.Collection&lt;/strong&gt; properties.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id=&#34;configuration-parameters&#34;&gt;Configuration parameters&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;collection&lt;/strong&gt;: (optional) PostgreSQL collection name&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;connection(s)&lt;/strong&gt;:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;discovery_key&lt;/strong&gt;: (optional) key to retrieve the connection from &lt;a href=&#34;../../../components/connect/idiscovery&#34;&gt;IDiscovery&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;host&lt;/strong&gt;: host name or IP address&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;port&lt;/strong&gt;: port number (default: 27017)&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;uri&lt;/strong&gt;: resource URI or connection string with all parameters in it&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;credential(s)&lt;/strong&gt;:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;store_key&lt;/strong&gt;: (optional) key to retrieve the credentials from &lt;a href=&#34;../../../components/auth/icredential_store&#34;&gt;ICredentialStore&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;username&lt;/strong&gt;: (optional) username&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;password&lt;/strong&gt;: (optional) user&amp;rsquo;s password&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;options&lt;/strong&gt;:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;connect_timeout&lt;/strong&gt;: (optional) number of milliseconds to wait before timing out when connecting a new client (default: 0)&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;idle_timeout&lt;/strong&gt;: (optional) number of milliseconds a client must sit idle in the pool and not be checked out (default: 10000)&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;max_pool_size&lt;/strong&gt;: (optional) maximum number of clients the pool can contain (default: 10)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id=&#34;references&#34;&gt;References&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;*:logger:*:*:1.0&lt;/strong&gt; - (optional) &lt;a href=&#34;../../../components/log/ilogger&#34;&gt;ILogger&lt;/a&gt; components to pass log messages&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;*:discovery:*:*:1.0&lt;/strong&gt; - (optional) &lt;a href=&#34;../../../components/connect/idiscovery&#34;&gt;IDiscovery&lt;/a&gt; services&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;*:credential-store:*:*:1.0&lt;/strong&gt; - (optional) credential stores to resolve credentials&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;constructors&#34;&gt;Constructors&lt;/h3&gt;
+&lt;h4 id=&#34;inheritpostgrespersistence&#34;&gt;InheritPostgresPersistence&lt;/h4&gt;
+&lt;p&gt;Creates a new instance of the persistence component.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;InheritPostgresPersistence[T any](overrides &lt;a href=&#34;../ipostgres_persistence_overrides&#34;&gt;IPostgresPersistenceOverrides[T]&lt;/a&gt;, tableName string) *PostgresPersistence&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;overrides&lt;/strong&gt;: &lt;a href=&#34;../ipostgres_persistence_overrides&#34;&gt;IPostgresPersistenceOverrides[T]&lt;/a&gt; - References to override virtual methods.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;tableName&lt;/strong&gt;: string - (optional) a table name.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;fields&#34;&gt;Fields&lt;/h3&gt;
+&lt;span class=&#34;hide-title-link&#34;&gt;
+&lt;h4 id=&#34;tablename&#34;&gt;TableName&lt;/h4&gt;
+&lt;p&gt;The PostgreSQL table name.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;TableName&lt;/strong&gt;: string&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h4 id=&#34;dependencyresolver&#34;&gt;DependencyResolver&lt;/h4&gt;
+&lt;p&gt;The dependency resolver.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;DependencyResolver&lt;/strong&gt;: &lt;a href=&#34;../../../commons/refer/dependency_resolver&#34;&gt;*DependencyResolver&lt;/a&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h4 id=&#34;logger&#34;&gt;Logger&lt;/h4&gt;
+&lt;p&gt;The logger.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;Logger&lt;/strong&gt;: &lt;a href=&#34;../../../components/log/composite_logger&#34;&gt;*CompositeLogger&lt;/a&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h4 id=&#34;_connection&#34;&gt;_connection&lt;/h4&gt;
+&lt;p&gt;The PostgreSQL connection component.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;Connection&lt;/strong&gt;: &lt;a href=&#34;../../connect/postgres_connection&#34;&gt;*PostgresConnection&lt;/a&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h4 id=&#34;client&#34;&gt;Client&lt;/h4&gt;
+&lt;p&gt;The PostgreSQL connection pool object.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;Client&lt;/strong&gt;: *pgxpool.Pool&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h4 id=&#34;databasename&#34;&gt;DatabaseName&lt;/h4&gt;
+&lt;p&gt;The PostgreSQL database name.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;DatabaseName&lt;/strong&gt;: string&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h4 id=&#34;maxpagesize&#34;&gt;MaxPageSize&lt;/h4&gt;
+&lt;p&gt;The maximum number of records to return from the database.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;MaxPageSize&lt;/strong&gt;: int&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;/span&gt;
+&lt;h3 id=&#34;methods&#34;&gt;Methods&lt;/h3&gt;
+&lt;h4 id=&#34;clear&#34;&gt;Clear&lt;/h4&gt;
+&lt;p&gt;Clears a component&amp;rsquo;s state.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;(c &lt;a href=&#34;&#34;&gt;*PostgresPersistence[T]&lt;/a&gt;) Clear(ctx context.Context, correlationId string) error&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;ctx&lt;/strong&gt;: context.Context - operation context.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;correlationId&lt;/strong&gt;: string- object to convert from the public partial format.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;returns&lt;/strong&gt;: error - returns error if not received.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id=&#34;clearschema&#34;&gt;ClearSchema&lt;/h4&gt;
+&lt;p&gt;Clears all auto-created objects.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;(c &lt;a href=&#34;&#34;&gt;*PostgresPersistence[T]&lt;/a&gt;) ClearSchema()&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h4 id=&#34;close&#34;&gt;Close&lt;/h4&gt;
+&lt;p&gt;Closes the component and frees used resources.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;(c &lt;a href=&#34;&#34;&gt;*PostgresPersistence[T]&lt;/a&gt;) Close(ctx context.Context, correlationId string) (err error)&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;ctx&lt;/strong&gt;: context.Context - operation context.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;correlationId&lt;/strong&gt;: string- object to convert from the public partial format.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;returns&lt;/strong&gt;: (err error) - returns error if not received.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id=&#34;configure&#34;&gt;Configure&lt;/h4&gt;
+&lt;p&gt;Configures the component.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;(c &lt;a href=&#34;&#34;&gt;*PostgresPersistence[T]&lt;/a&gt;) Configure(ctx context.Context, config &lt;a href=&#34;../../../commons/config/config_params&#34;&gt;*conf.ConfigParams&lt;/a&gt;)&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;ctx&lt;/strong&gt;: context.Context - operationcontext.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;config&lt;/strong&gt;: &lt;a href=&#34;../../../commons/config/config_params&#34;&gt;*conf.ConfigParams&lt;/a&gt; - configuration parameters to set.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id=&#34;convertfrompublic&#34;&gt;ConvertFromPublic&lt;/h4&gt;
+&lt;p&gt;Converts an object value from public to internal format.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;(c &lt;a href=&#34;&#34;&gt;*PostgresPersistence[T]&lt;/a&gt;) ConvertFromPublic(value T) (map[string]any, error)&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;value&lt;/strong&gt;: T - object in public format to convert.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;returns&lt;/strong&gt;: (map[string]any, error) - converted object in internal format.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id=&#34;convertfrompublicpartial&#34;&gt;ConvertFromPublicPartial&lt;/h4&gt;
+&lt;p&gt;Converts the given object from the public partial format.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;(c &lt;a href=&#34;&#34;&gt;*PostgresPersistence[T]&lt;/a&gt;) ConvertFromPublicPartial(value map[string]any) (map[string]any, error)&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;value&lt;/strong&gt;: map[string]any - the object to convert from the public partial format.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;returns&lt;/strong&gt;: (map[string]any, error) - the initial object.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id=&#34;converttopublic&#34;&gt;ConvertToPublic&lt;/h4&gt;
+&lt;p&gt;Converts an object value from internal to public format.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;(c &lt;a href=&#34;&#34;&gt;*PostgresPersistence[T]&lt;/a&gt;) ConvertToPublic(rows pgx.Rows) T&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;item&lt;/strong&gt;: pgx.Rows - object in internal format to convert.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;returns&lt;/strong&gt;: T - converted object in public format.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id=&#34;create&#34;&gt;Create&lt;/h4&gt;
+&lt;p&gt;Creates a data item.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;(c &lt;a href=&#34;&#34;&gt;*PostgresPersistence[T]&lt;/a&gt;) Create(ctx context.Context, correlationId string, item T) (result T, err error)&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;ctx&lt;/strong&gt;: context.Context - operation context.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;correlationId&lt;/strong&gt;: string - (optional) transaction id used to trace execution through the call chain.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;item&lt;/strong&gt;: T - item to be created.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;returns&lt;/strong&gt;: (result T, err error) - created item&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id=&#34;createschema&#34;&gt;CreateSchema&lt;/h4&gt;
+&lt;p&gt;Checks if a table exists and if it doesn&amp;rsquo;t, it creates the necessary database objects.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;(c &lt;a href=&#34;&#34;&gt;*PostgresPersistence[T]&lt;/a&gt;) CreateSchema(correlationId string) (err error)&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;correlationId&lt;/strong&gt;: string - (optional) transaction id used to trace execution through the call chain.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;returns&lt;/strong&gt;: (err error) - returns error if not received.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id=&#34;defineschema&#34;&gt;DefineSchema&lt;/h4&gt;
+&lt;p&gt;Defines database schema via auto create objects or convenience methods.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;(c &lt;a href=&#34;&#34;&gt;*PostgresPersistence[T]&lt;/a&gt;) DefineSchema()&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h4 id=&#34;deletebyfilter&#34;&gt;DeleteByFilter&lt;/h4&gt;
+&lt;p&gt;Deletes data items that match to a given filter.
+This method shall be called by a func &lt;strong&gt;DeleteByFilter&lt;/strong&gt; method from child class that
+receives &lt;a href=&#34;../../../commons/data/filter_params&#34;&gt;FilterParams&lt;/a&gt; and converts them into a filter function.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;(c &lt;a href=&#34;&#34;&gt;*PostgresPersistence[T]&lt;/a&gt;) DeleteByFilter(ctx context.Context, correlationId string, filter string) (err error)&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;ctx&lt;/strong&gt;: context.Context - operation context.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;correlationId&lt;/strong&gt;: string - (optional) transaction id used to trace execution through the call chain.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;filter&lt;/strong&gt;: string - (optional) a filter JSON object.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;returns&lt;/strong&gt;: (err error) - returns error if not received.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id=&#34;ensureindex&#34;&gt;EnsureIndex&lt;/h4&gt;
+&lt;p&gt;Adds index definition to create it on opening.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;(c &lt;a href=&#34;&#34;&gt;*PostgresPersistence[T]&lt;/a&gt;) EnsureIndex(name string, keys map[string]string, options map[string]string)&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;keys&lt;/strong&gt;: map[string]string - index keys (fields)&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;options&lt;/strong&gt;: map[string]string - index options&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id=&#34;ensureschema&#34;&gt;EnsureSchema&lt;/h4&gt;
+&lt;p&gt;Adds a statement to schema definition.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;(c &lt;a href=&#34;&#34;&gt;*PostgresPersistence[T]&lt;/a&gt;) EnsureSchema(schemaStatement string)&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;schemaStatement&lt;/strong&gt;: string - statement to be added to the schema&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id=&#34;generatecolumns&#34;&gt;GenerateColumns&lt;/h4&gt;
+&lt;p&gt;Generates a list of column names to use in SQL statements like: &amp;ldquo;column1,column2,column3&amp;rdquo;.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;(c &lt;a href=&#34;&#34;&gt;*PostgresPersistence[T]&lt;/a&gt;) GenerateColumns(columns []string) string&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;values&lt;/strong&gt;: []string - an array with column values.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;returns&lt;/strong&gt;: string - generated list of column names&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id=&#34;generatecolumnsandvalues&#34;&gt;GenerateColumnsAndValues&lt;/h4&gt;
+&lt;p&gt;GenerateColumnsAndValues generates a list of column parameters&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;GenerateColumnsAndValues(objMap map[string]any) ([]string, []any)&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;values&lt;/strong&gt;: map[string]any - an key-value map with column values.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;returns&lt;/strong&gt;: ([]string, []any) - a generated list of column values.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id=&#34;generateparameters&#34;&gt;GenerateParameters&lt;/h4&gt;
+&lt;p&gt;Generates a list of value parameters to use in SQL statements like: &lt;em&gt;&amp;quot;$1,$2,$3&amp;quot;&lt;/em&gt;.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;(c &lt;a href=&#34;&#34;&gt;*PostgresPersistence[T]&lt;/a&gt;) GenerateParameters(valuesCount int) string&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;values&lt;/strong&gt;: int - count of generate parameters.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;returns&lt;/strong&gt;: string - generated list of value parameters&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id=&#34;generatesetparameters&#34;&gt;GenerateSetParameters&lt;/h4&gt;
+&lt;p&gt;Generates a list of column sets to use in UPDATE statements like: &lt;em&gt;&amp;quot;$1,$2,$3&amp;quot;&lt;/em&gt;.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;(c &lt;a href=&#34;&#34;&gt;*PostgresPersistence[T]&lt;/a&gt;) GenerateSetParameters(values []string) string&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;values&lt;/strong&gt;: []string - an array with column values.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;returns&lt;/strong&gt;: string - generated list of column sets&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id=&#34;generatevalues&#34;&gt;GenerateValues&lt;/h4&gt;
+&lt;p&gt;Generates a list of column parameters.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;(c &lt;a href=&#34;&#34;&gt;*PostgresPersistence[T]&lt;/a&gt;) GenerateValues(columns string, values interface{}) []interface{}&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;values&lt;/strong&gt;: interface{} - key-value map with columns and values&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;returns&lt;/strong&gt;: []interface{} - generated list of column values&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id=&#34;getcountbyfilter&#34;&gt;GetCountByFilter&lt;/h4&gt;
+&lt;p&gt;Gets a number of data items retrieved by a given filter.&lt;/p&gt;
+&lt;p&gt;This method shall be called by a func &lt;strong&gt;GetCountByFilter&lt;/strong&gt; method from a child class that
+receives &lt;a href=&#34;../../../commons/data/filter_params&#34;&gt;FilterParams&lt;/a&gt; and converts them into a filter function.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;(c &lt;a href=&#34;&#34;&gt;*PostgresPersistence[T]&lt;/a&gt;) GetCountByFilter(ctx context.Context, correlationId string, filter string) (count int64, err error)&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;ctx&lt;/strong&gt;: context.Context - operation context.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;correlationId&lt;/strong&gt;: string - (optional) transaction id used to trace execution through the call chain.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;filter&lt;/strong&gt;: string - (optional) JSON object filter.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;returns&lt;/strong&gt;: (count int64, err error) - number of filtered items.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id=&#34;getlistbyfilter&#34;&gt;GetListByFilter&lt;/h4&gt;
+&lt;p&gt;Gets a list of data items retrieved by a given filter and sorted according to sort parameters.&lt;/p&gt;
+&lt;p&gt;This method shall be called by a func &lt;strong&gt;GetListByFilter&lt;/strong&gt; method from a child class that
+receives &lt;a href=&#34;../../../commons/data/filter_params&#34;&gt;FilterParams&lt;/a&gt; and converts them into a filter function.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;(c &lt;a href=&#34;&#34;&gt;*PostgresPersistence[T]&lt;/a&gt;) GetListByFilter(ctx context.Context, correlationId string, filter string, sort string, sel string) (items []T, err error)&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;ctx&lt;/strong&gt;: context.Context - operation context.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;correlationId&lt;/strong&gt;: string - (optional) transaction id used to trace execution through the call chain.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;filter&lt;/strong&gt;: string - (optional) filter function to filter items&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;sort&lt;/strong&gt;: string - (optional) sorting parameters&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;sel&lt;/strong&gt;: string - (optional) projection parameters (not used yet)&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;returns&lt;/strong&gt;: (items []T, err error) - data list of filtered results.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id=&#34;getonerandom&#34;&gt;GetOneRandom&lt;/h4&gt;
+&lt;p&gt;Gets a random item from items that match to a given filter.&lt;/p&gt;
+&lt;p&gt;This method shall be called by a func getOneRandom method from a child class
+that receives &lt;a href=&#34;../../../commons/data/filter_params&#34;&gt;FilterParams&lt;/a&gt; and converts them into a filter function.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;(c &lt;a href=&#34;&#34;&gt;*PostgresPersistence[T]&lt;/a&gt;) GetOneRandom(ctx context.Context, correlationId string, filter string) (item T, err error)&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;ctx&lt;/strong&gt;: context.Context - operation context.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;correlationId&lt;/strong&gt;: string - (optional) transaction id used to trace execution through the call chain.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;filter&lt;/strong&gt;: string - (optional) a filter JSON object.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;returns&lt;/strong&gt;: (item T, err error) - random item.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id=&#34;getpagebyfilter&#34;&gt;GetPageByFilter&lt;/h4&gt;
+&lt;p&gt;Gets a page of data items retrieved by a given filter and sorted according to sort parameters.&lt;/p&gt;
+&lt;p&gt;This method shall be called by a func &lt;strong&gt;GetPageByFilter&lt;/strong&gt; method from a child class that
+receives &lt;a href=&#34;../../../commons/data/filter_params&#34;&gt;FilterParams&lt;/a&gt; and converts them into a filter function.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;(c &lt;a href=&#34;&#34;&gt;*PostgresPersistence[T]&lt;/a&gt;) GetPageByFilter(ctx context.Context, correlationId string, filter string, paging &lt;a href=&#34;../../../commons/data/paging_params&#34;&gt;*cdata.PagingParams&lt;/a&gt;, sort string, sel string) (page &lt;a href=&#34;../../../commons/data/data_page&#34;&gt;*cdata.DataPage[T]&lt;/a&gt;, err error)&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;correlationId&lt;/strong&gt;: string - (optional) transaction id used to trace execution through a call chain.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;filter&lt;/strong&gt;: string - (optional) filter for JSON objects&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;paging&lt;/strong&gt;: &lt;a href=&#34;../../../commons/data/paging_params&#34;&gt;*cdata.PagingParams&lt;/a&gt; - (optional) paging parameters&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;sort&lt;/strong&gt;: string - (optional) sorting JSON object&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;sel&lt;/strong&gt;: string - (optional) projection JSON object&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;returns&lt;/strong&gt;: (page &lt;a href=&#34;../../../commons/data/data_page&#34;&gt;*cdata.DataPage[T]&lt;/a&gt;, err error) - data page with filtered result&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id=&#34;isopen&#34;&gt;IsOpen&lt;/h4&gt;
+&lt;p&gt;Checks if the component is opened.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;(c &lt;a href=&#34;&#34;&gt;*PostgresPersistence[T]&lt;/a&gt;) IsOpen() bool&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;returns&lt;/strong&gt;: bool - True if the component has been opened and False otherwise.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id=&#34;isterminated&#34;&gt;IsTerminated&lt;/h4&gt;
+&lt;p&gt;IsTerminated checks if the wee need to terminate process before close component.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;(c *PostgresPersistence[T]) IsTerminated() bool&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;returns&lt;/strong&gt;: bool - true if you need terminate your processes.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id=&#34;open&#34;&gt;Open&lt;/h4&gt;
+&lt;p&gt;Opens the component.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;(c &lt;a href=&#34;&#34;&gt;*PostgresPersistence[T]&lt;/a&gt;) Open(ctx context.Context, correlationId string) (err error)&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;ctx&lt;/strong&gt;: context.Context - operation context.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;correlationId&lt;/strong&gt;: string - (optional) transaction id used to trace execution through the call chain.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;returns&lt;/strong&gt;: (err error) - returns error if not received.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id=&#34;quoteidentifier&#34;&gt;QuoteIdentifier&lt;/h4&gt;
+&lt;p&gt;Adds a single quote to each side of the string.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;(c &lt;a href=&#34;&#34;&gt;*PostgresPersistence[T]&lt;/a&gt;) QuoteIdentifier(value string) string&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;value&lt;/strong&gt;: string - string where quotes need to be added&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;returns&lt;/strong&gt;: string - string with added quotes&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id=&#34;setreferences&#34;&gt;SetReferences&lt;/h4&gt;
+&lt;p&gt;Sets references to dependent components.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;(c &lt;a href=&#34;&#34;&gt;*PostgresPersistence[T]&lt;/a&gt;) SetReferences(ctx context.Context, references &lt;a href=&#34;../../../commons/refer/ireferences&#34;&gt;cref.IReferences&lt;/a&gt;)&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;ctx&lt;/strong&gt;: context.Context - operation context.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;references&lt;/strong&gt;: &lt;a href=&#34;../../../commons/refer/ireferences&#34;&gt;cref.IReferences&lt;/a&gt; - references to locate the component dependencies.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id=&#34;unsetreferences&#34;&gt;UnsetReferences&lt;/h4&gt;
+&lt;p&gt;Unsets (clears) previously set references to dependent components.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;(c &lt;a href=&#34;&#34;&gt;*PostgresPersistence[T]&lt;/a&gt;) UnsetReferences()&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h4 id=&#34;quotedtablename&#34;&gt;QuotedTableName&lt;/h4&gt;
+&lt;p&gt;Return quoted SchemaName with TableName (&amp;ldquo;schema&amp;rdquo;.&amp;ldquo;table&amp;rdquo;)&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;(c &lt;a href=&#34;&#34;&gt;*PostgresPersistence[T]&lt;/a&gt;) QuotedTableName() string&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;returns&lt;/strong&gt;: string - quoted SchemaName.&lt;/li&gt;
+&lt;/ul&gt;
+
+      </description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,132 @@
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Pip.Services Docs – Auth</title>
+    <link>/toolkit_api/python/rpc/auth/</link>
+    <description>Recent content in Auth on Pip.Services Docs</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    
+	  <atom:link href="/toolkit_api/python/rpc/auth/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+      
+        
+      
+    
+    
+    <item>
+      <title>Toolkit_api: BasicAuthorizer</title>
+      <link>/toolkit_api/python/rpc/auth/basic_authorizer/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/toolkit_api/python/rpc/auth/basic_authorizer/</guid>
+      <description>
+        
+        
+        &lt;h3 id=&#34;description&#34;&gt;Description&lt;/h3&gt;
+&lt;p&gt;The BasicAuthorizer provides two methods: one to grant access to everyone and another to grant access to authorized users.&lt;/p&gt;
+&lt;h3 id=&#34;instance-methods&#34;&gt;Instance methods&lt;/h3&gt;
+&lt;h4 id=&#34;anybody&#34;&gt;anybody&lt;/h4&gt;
+&lt;p&gt;Allows everyone access, even unauthorized users.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;anybody(): Callable&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;returns&lt;/strong&gt;: Callable - returns anybody handler.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id=&#34;signed&#34;&gt;signed&lt;/h4&gt;
+&lt;p&gt;Access is granted only to authorized users.&lt;br&gt;
+Throws &lt;a href=&#34;../../../commons/errors/unauthorized_exception&#34;&gt;UnauthorizedException&lt;/a&gt; exception if not authorized.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;signed(): Callable&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;returns&lt;/strong&gt;: Callable - returns sign handler.&lt;/li&gt;
+&lt;/ul&gt;
+
+      </description>
+    </item>
+    
+    <item>
+      <title>Toolkit_api: OwnerAuthorizer</title>
+      <link>/toolkit_api/python/rpc/auth/owner_authorizer/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/toolkit_api/python/rpc/auth/owner_authorizer/</guid>
+      <description>
+        
+        
+        &lt;h3 id=&#34;description&#34;&gt;Description&lt;/h3&gt;
+&lt;p&gt;The OwnerAuthorizer class provides access granting methods for owners and administrators.&lt;/p&gt;
+&lt;h3 id=&#34;instance-methods&#34;&gt;Instance methods&lt;/h3&gt;
+&lt;h4 id=&#34;owner&#34;&gt;owner&lt;/h4&gt;
+&lt;p&gt;Access is granted only for the session owner.&lt;br&gt;
+Throws &lt;a href=&#34;../../../commons/errors/unauthorized_exception&#34;&gt;UnauthorizedException&lt;/a&gt; exception if not authorized or not owner.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;owner(id_param: str = &amp;lsquo;user_id&amp;rsquo;): Callable&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;id_param&lt;/strong&gt;: str - id of the current owner.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;returns&lt;/strong&gt;: Callable - returns owner handler.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id=&#34;owner_or_admin&#34;&gt;owner_or_admin&lt;/h4&gt;
+&lt;p&gt;Access is granted only to authorized users.&lt;br&gt;
+Throws &lt;a href=&#34;../../../commons/errors/unauthorized_exception&#34;&gt;UnauthorizedException&lt;/a&gt; exception if not authorized or not owner.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;owner_or_admin(id_param: str = &amp;lsquo;user_id&amp;rsquo;): Callable&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;id_param&lt;/strong&gt;: str - id of the current owner.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;returns&lt;/strong&gt;: Callable - returns owner or admin handler.&lt;/li&gt;
+&lt;/ul&gt;
+
+      </description>
+    </item>
+    
+    <item>
+      <title>Toolkit_api: RoleAuthorizer</title>
+      <link>/toolkit_api/python/rpc/auth/role_authorizer/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/toolkit_api/python/rpc/auth/role_authorizer/</guid>
+      <description>
+        
+        
+        &lt;h3 id=&#34;description&#34;&gt;Description&lt;/h3&gt;
+&lt;p&gt;The RoleAuthorizer class provides methods to check on user&amp;rsquo;s roles.&lt;/p&gt;
+&lt;h3 id=&#34;instance-methods&#34;&gt;Instance methods&lt;/h3&gt;
+&lt;h4 id=&#34;user_in_roles&#34;&gt;user_in_roles&lt;/h4&gt;
+&lt;p&gt;Checks on the roles a user has been assigned.
+Throws &lt;a href=&#34;../../../commons/errors/unauthorized_exception&#34;&gt;UnauthorizedException&lt;/a&gt; exception if not authorized or not owner.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;user_in_roles(roles: List[str]): Callable&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;roles&lt;/strong&gt;: List[str] - roles list.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;returns&lt;/strong&gt;: Callable - returns roles handler.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id=&#34;user_in_role&#34;&gt;user_in_role&lt;/h4&gt;
+&lt;p&gt;Checks if the role is assigned to the user.&lt;br&gt;
+Throws &lt;a href=&#34;../../../commons/errors/unauthorized_exception&#34;&gt;UnauthorizedException&lt;/a&gt; exception if not authorized or not owner.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;user_in_role(role: str): Callable&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;role&lt;/strong&gt;: str - user role.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;returns&lt;/strong&gt;: Callable - returns role handler.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id=&#34;admin&#34;&gt;admin&lt;/h4&gt;
+&lt;p&gt;Checks if the user has admin role.&lt;br&gt;
+Throws &lt;a href=&#34;../../../commons/errors/unauthorized_exception&#34;&gt;UnauthorizedException&lt;/a&gt; exception if not authorized or not owner.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;admin(): Callable&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;returns&lt;/strong&gt;: Callable - returns admin handler.&lt;/li&gt;
+&lt;/ul&gt;
+
+      </description>
+    </item>
+    
+  </channel>
+</rss>

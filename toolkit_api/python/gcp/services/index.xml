@@ -1,0 +1,405 @@
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Pip.Services Docs – Services</title>
+    <link>/toolkit_api/python/gcp/services/</link>
+    <description>Recent content in Services on Pip.Services Docs</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    
+	  <atom:link href="/toolkit_api/python/gcp/services/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+      
+        
+      
+    
+    
+    <item>
+      <title>Toolkit_api: CloudFunctionAction</title>
+      <link>/toolkit_api/python/gcp/services/cloud_function_action/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/toolkit_api/python/gcp/services/cloud_function_action/</guid>
+      <description>
+        
+        
+        &lt;h3 id=&#34;description&#34;&gt;Description&lt;/h3&gt;
+&lt;p&gt;The CloudFunctionAction defines some fields such as action, cmd and schema.&lt;/p&gt;
+&lt;h3 id=&#34;fields&#34;&gt;Fields&lt;/h3&gt;
+&lt;span class=&#34;hide-title-link&#34;&gt;
+&lt;h4 id=&#34;action&#34;&gt;action&lt;/h4&gt;
+&lt;p&gt;Action to be executed&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;action&lt;/strong&gt;: Callable[&lt;a href=&#34;https://flask.palletsprojects.com/en/2.1.x/api/#incoming-request-data&#34;&gt;flask.Request&lt;/a&gt;, Any]&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h4 id=&#34;cmd&#34;&gt;cmd&lt;/h4&gt;
+&lt;p&gt;Command to call the action&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;cmd&lt;/strong&gt;: str&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h4 id=&#34;schema&#34;&gt;schema&lt;/h4&gt;
+&lt;p&gt;Schema to validate action parameters&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;schema&lt;/strong&gt;: &lt;a href=&#34;../../../commons/validate/schema&#34;&gt;Schema&lt;/a&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;/span&gt;
+
+      </description>
+    </item>
+    
+    <item>
+      <title>Toolkit_api: CloudFunctionService</title>
+      <link>/toolkit_api/python/gcp/services/cloud_function_service/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/toolkit_api/python/gcp/services/cloud_function_service/</guid>
+      <description>
+        
+        
+        &lt;p&gt;&lt;strong&gt;Implements&lt;/strong&gt;: &lt;a href=&#34;../icloud_function_service&#34;&gt;ICloudFunctionService&lt;/a&gt;, &lt;a href=&#34;../../../commons/run/iopenable&#34;&gt;IOpenable&lt;/a&gt;, &lt;a href=&#34;../../../commons/config/iconfigurable&#34;&gt;IConfigurable&lt;/a&gt;, &lt;a href=&#34;../../../commons/refer/ireferenceable&#34;&gt;IReferenceable&lt;/a&gt;&lt;/p&gt;
+&lt;h3 id=&#34;description&#34;&gt;Description&lt;/h3&gt;
+&lt;p&gt;The CloudFunctionService class allows you to create a service that receives remove calls via the Google Function protocol.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Important points&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;This service is intended to work inside an CloudFunction container that exposes registered actions externally.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id=&#34;configuration-parameters&#34;&gt;Configuration parameters&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;dependencies&lt;/strong&gt;:
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;controller&lt;/strong&gt;: override for Controller dependency&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id=&#34;references&#34;&gt;References&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;*:logger:*:*:1.0&lt;/strong&gt;: (optional) &lt;a href=&#34;../../../components/log/ilogger&#34;&gt;ILogger&lt;/a&gt; components to pass log messages.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;*:counters:*:*:1.0&lt;/strong&gt;: (optional) &lt;a href=&#34;../../../components/count/icounters&#34;&gt;ICounters&lt;/a&gt; components to pass collected measurements.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;constructors&#34;&gt;Constructors&lt;/h3&gt;
+&lt;p&gt;Creates an instance of this service.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;CloudFunctionService(name: str)&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;name&lt;/strong&gt;: string - name of the service used to generate an action cmd.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;fields&#34;&gt;Fields&lt;/h3&gt;
+&lt;span class=&#34;hide-title-link&#34;&gt;
+&lt;h4 id=&#34;_counters&#34;&gt;_counters&lt;/h4&gt;
+&lt;p&gt;Performance counters.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;_counters&lt;/strong&gt;: &lt;a href=&#34;../../../components/count/composite_counters&#34;&gt;CompositeCounters&lt;/a&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h4 id=&#34;_dependency_resolver&#34;&gt;_dependency_resolver&lt;/h4&gt;
+&lt;p&gt;Dependency resolver.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;_dependency_resolver&lt;/strong&gt;: &lt;a href=&#34;../../../commons/refer/dependency_resolver&#34;&gt;DependencyResolver&lt;/a&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h4 id=&#34;_logger&#34;&gt;_logger&lt;/h4&gt;
+&lt;p&gt;Logger.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;_logger&lt;/strong&gt;: &lt;a href=&#34;../../../components/log/composite_logger&#34;&gt;CompositeLogger&lt;/a&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h4 id=&#34;_tracer&#34;&gt;_tracer&lt;/h4&gt;
+&lt;p&gt;Tracer.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;_tracer&lt;/strong&gt;: &lt;a href=&#34;../../../components/trace/composite_tracer&#34;&gt;CompositeTracer&lt;/a&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;/span&gt;
+&lt;h3 id=&#34;instance-methods&#34;&gt;Instance methods&lt;/h3&gt;
+&lt;h4 id=&#34;_apply_interceptors&#34;&gt;_apply_interceptors&lt;/h4&gt;
+&lt;p&gt;Applies interceptors to the action.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;_apply_interceptors(action: Callable[&lt;a href=&#34;https://flask.palletsprojects.com/en/2.1.x/api/#incoming-request-data&#34;&gt;flask.Request&lt;/a&gt;, Any]): Callable[&lt;a href=&#34;https://flask.palletsprojects.com/en/2.1.x/api/#incoming-request-data&#34;&gt;flask.Request&lt;/a&gt;, Any]&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;action&lt;/strong&gt;: Callable[&lt;a href=&#34;https://flask.palletsprojects.com/en/2.1.x/api/#incoming-request-data&#34;&gt;flask.Request&lt;/a&gt;, Any] - action&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;returns&lt;/strong&gt;: Callable[&lt;a href=&#34;https://flask.palletsprojects.com/en/2.1.x/api/#incoming-request-data&#34;&gt;flask.Request&lt;/a&gt;, Any]&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id=&#34;_apply_validation&#34;&gt;_apply_validation&lt;/h4&gt;
+&lt;p&gt;Performs a validation.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;_apply_validation(schema: &lt;a href=&#34;../../../commons/validate/schema&#34;&gt;Schema&lt;/a&gt;, action: Callable[&lt;a href=&#34;https://flask.palletsprojects.com/en/2.1.x/api/#incoming-request-data&#34;&gt;flask.Request&lt;/a&gt;, Any]): Callable[&lt;a href=&#34;https://flask.palletsprojects.com/en/2.1.x/api/#incoming-request-data&#34;&gt;flask.Request&lt;/a&gt;, Any]&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;schema&lt;/strong&gt;: &lt;a href=&#34;../../../commons/validate/schema&#34;&gt;Schema&lt;/a&gt; - schema used in the validation&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;action&lt;/strong&gt;: Callable[&lt;a href=&#34;https://flask.palletsprojects.com/en/2.1.x/api/#incoming-request-data&#34;&gt;flask.Request&lt;/a&gt;, Any] - action&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;returns&lt;/strong&gt;: Callable[&lt;a href=&#34;https://flask.palletsprojects.com/en/2.1.x/api/#incoming-request-data&#34;&gt;flask.Request&lt;/a&gt;, Any] - returned result&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id=&#34;close&#34;&gt;close&lt;/h4&gt;
+&lt;p&gt;Closes a component and frees used resources.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;close(correlation_id: Optional[str])&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;correlation_id&lt;/strong&gt;: Optional[str] - (optional) transaction id used to trace execution through the call chain.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id=&#34;_apply_interceptors-1&#34;&gt;_apply_interceptors&lt;/h4&gt;
+&lt;p&gt;Apply interceptors to the actions&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;_apply_interceptors(action: Callable[&lt;a href=&#34;https://flask.palletsprojects.com/en/2.1.x/api/#incoming-request-data&#34;&gt;flask.Request&lt;/a&gt;, Any]) -&amp;gt; Callable[&lt;a href=&#34;https://flask.palletsprojects.com/en/2.1.x/api/#incoming-request-data&#34;&gt;flask.Request&lt;/a&gt;, Any]:&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;action&lt;/strong&gt;: Callable[&lt;a href=&#34;https://flask.palletsprojects.com/en/2.1.x/api/#incoming-request-data&#34;&gt;flask.Request&lt;/a&gt;, Any] - configuration parameters to be set.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;returns&lt;/strong&gt;: Callable[&lt;a href=&#34;https://flask.palletsprojects.com/en/2.1.x/api/#incoming-request-data&#34;&gt;flask.Request&lt;/a&gt;, Any] - wrapped function into interceptor&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id=&#34;_generate_action_cmd&#34;&gt;_generate_action_cmd&lt;/h4&gt;
+&lt;p&gt;Adds &amp;lsquo;.cmd&amp;rsquo; to a command name&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;_generate_action_cmd(name: str): str&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;name&lt;/strong&gt;: str - command name&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;returns&lt;/strong&gt;: str - command name with &amp;lsquo;.cmd&amp;rsquo; added at its end.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id=&#34;get_actions&#34;&gt;get_actions&lt;/h4&gt;
+&lt;p&gt;Get all actions supported by the service.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;get_actions(): List[&lt;a href=&#34;../cloud_function_action&#34;&gt;CloudFunctionAction&lt;/a&gt;]&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;returns&lt;/strong&gt;: List[&lt;a href=&#34;../cloud_function_action&#34;&gt;CloudFunctionAction&lt;/a&gt;] - array with supported actions.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id=&#34;_get_command&#34;&gt;_get_command&lt;/h4&gt;
+&lt;p&gt;Returns command from Google Function request.&lt;/p&gt;
+&lt;p&gt;This method can be overloaded in child classes&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;_get_command(req: &lt;a href=&#34;https://flask.palletsprojects.com/en/2.1.x/api/#incoming-request-data&#34;&gt;flask.Request&lt;/a&gt;): str&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;req&lt;/strong&gt;: &lt;a href=&#34;https://flask.palletsprojects.com/en/2.1.x/api/#incoming-request-data&#34;&gt;flask.Request&lt;/a&gt; - the function request&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;returns&lt;/strong&gt;: str - returned command from request.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id=&#34;_get_correlation_id&#34;&gt;_get_correlation_id&lt;/h4&gt;
+&lt;p&gt;Returns correlationId from Google Function request.&lt;/p&gt;
+&lt;p&gt;This method can be overloaded in child classes&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;_get_correlation_id(req: &lt;a href=&#34;https://flask.palletsprojects.com/en/2.1.x/api/#incoming-request-data&#34;&gt;flask.Request&lt;/a&gt;): str&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;req&lt;/strong&gt;: &lt;a href=&#34;https://flask.palletsprojects.com/en/2.1.x/api/#incoming-request-data&#34;&gt;flask.Request&lt;/a&gt; - the function request&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;returns&lt;/strong&gt;: str - returned correlationId from request.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id=&#34;_instrument&#34;&gt;_instrument&lt;/h4&gt;
+&lt;p&gt;Adds instrumentation to log calls and measures call time.
+It returns a Timing object that is used to end the time measurement.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;_instrument(correlation_id: Optional[str], name: str): &lt;a href=&#34;../../../rpc/services/instrument_timing&#34;&gt;InstrumentTiming&lt;/a&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;correlation_id&lt;/strong&gt;: Optional[str] - (optional) transaction id used to trace execution through the call chain.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;name&lt;/strong&gt;: str - method&amp;rsquo;s name.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;returns&lt;/strong&gt;: &lt;a href=&#34;../../../rpc/services/instrument_timing&#34;&gt;InstrumentTiming&lt;/a&gt; - Timing object to end the time measurement.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id=&#34;isopen&#34;&gt;isOpen&lt;/h4&gt;
+&lt;p&gt;Checks if the component is open.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;isOpen(): bool&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;returns&lt;/strong&gt;: bool - true if the component is open and false otherwise.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id=&#34;open&#34;&gt;open&lt;/h4&gt;
+&lt;p&gt;Opens the component.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;open(correlation_id: Optional[str])&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;correlation_id&lt;/strong&gt;: Optional[str] - (optional) transaction id used to trace execution through the call chain.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id=&#34;_register_action&#34;&gt;_register_action&lt;/h4&gt;
+&lt;p&gt;Registers an action in Google Function function.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;_register_action(name: str, schema: &lt;a href=&#34;../../../commons/validate/schema&#34;&gt;Schema&lt;/a&gt;, action: Callable[&lt;a href=&#34;https://flask.palletsprojects.com/en/2.1.x/api/#incoming-request-data&#34;&gt;flask.Request&lt;/a&gt;, Any])&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;name&lt;/strong&gt;: str - action name&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;schema&lt;/strong&gt;: &lt;a href=&#34;../../../commons/validate/schema&#34;&gt;Schema&lt;/a&gt; - validation schema used to validate received parameters.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;action&lt;/strong&gt;: Callable[&lt;a href=&#34;https://flask.palletsprojects.com/en/2.1.x/api/#incoming-request-data&#34;&gt;flask.Request&lt;/a&gt;, Any] - action function that is called when the operation is invoked.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id=&#34;_register_action_with_auth&#34;&gt;_register_action_with_auth&lt;/h4&gt;
+&lt;p&gt;Registers an action with authorization.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;_register_action_with_auth(self, name: str, schema: &lt;a href=&#34;../../../commons/validate/schema&#34;&gt;Schema&lt;/a&gt;, authorize: Callable[[Any, Callable[&lt;a href=&#34;https://flask.palletsprojects.com/en/2.1.x/api/#incoming-request-data&#34;&gt;flask.Request&lt;/a&gt;, Any]], Any], action: Callable[&lt;a href=&#34;https://flask.palletsprojects.com/en/2.1.x/api/#incoming-request-data&#34;&gt;flask.Request&lt;/a&gt;, Any])&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;name&lt;/strong&gt;: string - action&amp;rsquo;s name&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;schema&lt;/strong&gt;: &lt;a href=&#34;../../../commons/validate/schema&#34;&gt;Schema&lt;/a&gt; - validation schema used to validate received parameters.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;authorize&lt;/strong&gt;: Callable[[Any, Callable[&lt;a href=&#34;https://flask.palletsprojects.com/en/2.1.x/api/#incoming-request-data&#34;&gt;flask.Request&lt;/a&gt;, Any]] - authorization interceptor&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;action&lt;/strong&gt;: Callable[&lt;a href=&#34;https://flask.palletsprojects.com/en/2.1.x/api/#incoming-request-data&#34;&gt;flask.Request&lt;/a&gt;, Any] - action function that is called when the operation is invoked.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id=&#34;_register_interceptor&#34;&gt;_register_interceptor&lt;/h4&gt;
+&lt;p&gt;Registers a middleware for actions in Google Function service.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;_register_interceptor(cmd: str, action: Callable[[&lt;a href=&#34;https://flask.palletsprojects.com/en/2.1.x/api/#incoming-request-data&#34;&gt;flask.Request&lt;/a&gt;], Any])&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;cmd&lt;/strong&gt;: str - the command name for intercept or regex.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;action&lt;/strong&gt;: Callable[[&lt;a href=&#34;https://flask.palletsprojects.com/en/2.1.x/api/#incoming-request-data&#34;&gt;flask.Request&lt;/a&gt;], Any] - action function that is called when middleware is invoked.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id=&#34;set_references&#34;&gt;set_references&lt;/h4&gt;
+&lt;p&gt;Sets references to dependent components.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;set_references(references: &lt;a href=&#34;../../../commons/refer/ireferences&#34;&gt;IReferences&lt;/a&gt;)&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;references&lt;/strong&gt;: &lt;a href=&#34;../../../commons/refer/ireferences&#34;&gt;IReferences&lt;/a&gt; - references to locate the component&amp;rsquo;s dependencies.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;abstract-methods&#34;&gt;Abstract methods&lt;/h3&gt;
+&lt;h4 id=&#34;register&#34;&gt;register&lt;/h4&gt;
+&lt;p&gt;Registers all service routes in an HTTP endpoint.&lt;/p&gt;
+&lt;p&gt;This method is called by the service and must be overridden
+in child classes.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;code&gt;abstractmethod&lt;/code&gt; register()&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h3 id=&#34;examples&#34;&gt;Examples&lt;/h3&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span style=&#34;color:#00a8c8&#34;&gt;class&lt;/span&gt; &lt;span style=&#34;color:#75af00&#34;&gt;MyCloudFunctionService&lt;/span&gt;&lt;span style=&#34;color:#111&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color:#111&#34;&gt;CloudFunctionService&lt;/span&gt;&lt;span style=&#34;color:#111&#34;&gt;):&lt;/span&gt;
+    &lt;span style=&#34;color:#111&#34;&gt;_controller&lt;/span&gt;&lt;span style=&#34;color:#111&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#111&#34;&gt;IMyController&lt;/span&gt;
+   &lt;span style=&#34;color:#f92672&#34;&gt;...&lt;/span&gt;
+
+   &lt;span style=&#34;color:#00a8c8&#34;&gt;def&lt;/span&gt; &lt;span style=&#34;color:#111&#34;&gt;__init__&lt;/span&gt;&lt;span style=&#34;color:#111&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color:#111&#34;&gt;self&lt;/span&gt;&lt;span style=&#34;color:#111&#34;&gt;):&lt;/span&gt;
+        &lt;span style=&#34;color:#111&#34;&gt;super&lt;/span&gt;&lt;span style=&#34;color:#111&#34;&gt;()&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#111&#34;&gt;__init__&lt;/span&gt;&lt;span style=&#34;color:#111&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color:#d88200&#34;&gt;&amp;#39;v1.myservice&amp;#39;&lt;/span&gt;&lt;span style=&#34;color:#111&#34;&gt;)&lt;/span&gt;
+        &lt;span style=&#34;color:#111&#34;&gt;self&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#111&#34;&gt;_dependency_resolver&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#111&#34;&gt;put&lt;/span&gt;&lt;span style=&#34;color:#111&#34;&gt;(&lt;/span&gt;
+            &lt;span style=&#34;color:#d88200&#34;&gt;&amp;#34;controller&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#111&#34;&gt;,&lt;/span&gt;
+            &lt;span style=&#34;color:#111&#34;&gt;Descriptor&lt;/span&gt;&lt;span style=&#34;color:#111&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color:#d88200&#34;&gt;&amp;#34;mygroup&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#111&#34;&gt;,&lt;/span&gt;&lt;span style=&#34;color:#d88200&#34;&gt;&amp;#34;controller&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#111&#34;&gt;,&lt;/span&gt;&lt;span style=&#34;color:#d88200&#34;&gt;&amp;#34;*&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#111&#34;&gt;,&lt;/span&gt;&lt;span style=&#34;color:#d88200&#34;&gt;&amp;#34;*&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#111&#34;&gt;,&lt;/span&gt;&lt;span style=&#34;color:#d88200&#34;&gt;&amp;#34;1.0&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#111&#34;&gt;)&lt;/span&gt;
+        &lt;span style=&#34;color:#111&#34;&gt;)&lt;/span&gt;
+
+   &lt;span style=&#34;color:#00a8c8&#34;&gt;def&lt;/span&gt; &lt;span style=&#34;color:#75af00&#34;&gt;set_references&lt;/span&gt;&lt;span style=&#34;color:#111&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color:#111&#34;&gt;self&lt;/span&gt;&lt;span style=&#34;color:#111&#34;&gt;,&lt;/span&gt; &lt;span style=&#34;color:#111&#34;&gt;references&lt;/span&gt;&lt;span style=&#34;color:#111&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#111&#34;&gt;IReferences&lt;/span&gt;&lt;span style=&#34;color:#111&#34;&gt;):&lt;/span&gt;
+      &lt;span style=&#34;color:#111&#34;&gt;super&lt;/span&gt;&lt;span style=&#34;color:#111&#34;&gt;()&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#111&#34;&gt;set_references&lt;/span&gt;&lt;span style=&#34;color:#111&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color:#111&#34;&gt;references&lt;/span&gt;&lt;span style=&#34;color:#111&#34;&gt;)&lt;/span&gt;
+      &lt;span style=&#34;color:#111&#34;&gt;self&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#111&#34;&gt;_controller&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#111&#34;&gt;self&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#111&#34;&gt;_dependency_resolver&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#111&#34;&gt;get_required&lt;/span&gt;&lt;span style=&#34;color:#111&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color:#d88200&#34;&gt;&amp;#34;controller&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#111&#34;&gt;)&lt;/span&gt;
+
+   &lt;span style=&#34;color:#00a8c8&#34;&gt;def&lt;/span&gt; &lt;span style=&#34;color:#75af00&#34;&gt;__action&lt;/span&gt;&lt;span style=&#34;color:#111&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color:#111&#34;&gt;self&lt;/span&gt;&lt;span style=&#34;color:#111&#34;&gt;,&lt;/span&gt; &lt;span style=&#34;color:#111&#34;&gt;req&lt;/span&gt;&lt;span style=&#34;color:#111&#34;&gt;):&lt;/span&gt;
+        &lt;span style=&#34;color:#111&#34;&gt;correlation_id&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#111&#34;&gt;self&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#111&#34;&gt;_get_correlation_id&lt;/span&gt;&lt;span style=&#34;color:#111&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color:#111&#34;&gt;req&lt;/span&gt;&lt;span style=&#34;color:#111&#34;&gt;)&lt;/span&gt;
+        &lt;span style=&#34;color:#111&#34;&gt;id&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#111&#34;&gt;req&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#111&#34;&gt;args&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#111&#34;&gt;get&lt;/span&gt;&lt;span style=&#34;color:#111&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color:#d88200&#34;&gt;&amp;#39;id&amp;#39;&lt;/span&gt;&lt;span style=&#34;color:#111&#34;&gt;)&lt;/span&gt;
+        &lt;span style=&#34;color:#00a8c8&#34;&gt;return&lt;/span&gt; &lt;span style=&#34;color:#111&#34;&gt;self&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#111&#34;&gt;_controller&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#111&#34;&gt;get_my_data&lt;/span&gt;&lt;span style=&#34;color:#111&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color:#111&#34;&gt;correlationId&lt;/span&gt;&lt;span style=&#34;color:#111&#34;&gt;,&lt;/span&gt; &lt;span style=&#34;color:#111&#34;&gt;id&lt;/span&gt;&lt;span style=&#34;color:#111&#34;&gt;)&lt;/span&gt;
+
+   &lt;span style=&#34;color:#00a8c8&#34;&gt;def&lt;/span&gt; &lt;span style=&#34;color:#75af00&#34;&gt;register&lt;/span&gt;&lt;span style=&#34;color:#111&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color:#111&#34;&gt;self&lt;/span&gt;&lt;span style=&#34;color:#111&#34;&gt;):&lt;/span&gt;
+       &lt;span style=&#34;color:#111&#34;&gt;self&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#111&#34;&gt;_register_action&lt;/span&gt;&lt;span style=&#34;color:#111&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color:#d88200&#34;&gt;&amp;#34;get_my_data&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#111&#34;&gt;,&lt;/span&gt; &lt;span style=&#34;color:#00a8c8&#34;&gt;None&lt;/span&gt;&lt;span style=&#34;color:#111&#34;&gt;,&lt;/span&gt; &lt;span style=&#34;color:#111&#34;&gt;self&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#111&#34;&gt;__action&lt;/span&gt;&lt;span style=&#34;color:#111&#34;&gt;)&lt;/span&gt;
+       &lt;span style=&#34;color:#f92672&#34;&gt;...&lt;/span&gt;
+
+&lt;span style=&#34;color:#111&#34;&gt;service&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#111&#34;&gt;MyCloudFunctionService&lt;/span&gt;&lt;span style=&#34;color:#111&#34;&gt;()&lt;/span&gt;
+&lt;span style=&#34;color:#111&#34;&gt;service&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#111&#34;&gt;configure&lt;/span&gt;&lt;span style=&#34;color:#111&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color:#111&#34;&gt;ConfigParams&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#111&#34;&gt;from_tuples&lt;/span&gt;&lt;span style=&#34;color:#111&#34;&gt;(&lt;/span&gt;
+    &lt;span style=&#34;color:#d88200&#34;&gt;&amp;#34;connection.protocol&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#111&#34;&gt;,&lt;/span&gt; &lt;span style=&#34;color:#d88200&#34;&gt;&amp;#34;http&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#111&#34;&gt;,&lt;/span&gt;
+    &lt;span style=&#34;color:#d88200&#34;&gt;&amp;#34;connection.host&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#111&#34;&gt;,&lt;/span&gt; &lt;span style=&#34;color:#d88200&#34;&gt;&amp;#34;localhost&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#111&#34;&gt;,&lt;/span&gt;
+    &lt;span style=&#34;color:#d88200&#34;&gt;&amp;#34;connection.port&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#111&#34;&gt;,&lt;/span&gt; &lt;span style=&#34;color:#ae81ff&#34;&gt;8080&lt;/span&gt;
+&lt;span style=&#34;color:#111&#34;&gt;))&lt;/span&gt;
+
+&lt;span style=&#34;color:#111&#34;&gt;service&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#111&#34;&gt;set_references&lt;/span&gt;&lt;span style=&#34;color:#111&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color:#111&#34;&gt;References&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#111&#34;&gt;from_tuples&lt;/span&gt;&lt;span style=&#34;color:#111&#34;&gt;(&lt;/span&gt;
+    &lt;span style=&#34;color:#111&#34;&gt;Descriptor&lt;/span&gt;&lt;span style=&#34;color:#111&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color:#d88200&#34;&gt;&amp;#34;mygroup&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#111&#34;&gt;,&lt;/span&gt;&lt;span style=&#34;color:#d88200&#34;&gt;&amp;#34;controller&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#111&#34;&gt;,&lt;/span&gt;&lt;span style=&#34;color:#d88200&#34;&gt;&amp;#34;default&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#111&#34;&gt;,&lt;/span&gt;&lt;span style=&#34;color:#d88200&#34;&gt;&amp;#34;default&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#111&#34;&gt;,&lt;/span&gt;&lt;span style=&#34;color:#d88200&#34;&gt;&amp;#34;1.0&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#111&#34;&gt;),&lt;/span&gt; &lt;span style=&#34;color:#111&#34;&gt;controller&lt;/span&gt;
+&lt;span style=&#34;color:#111&#34;&gt;))&lt;/span&gt;
+
+&lt;span style=&#34;color:#111&#34;&gt;service&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#111&#34;&gt;open&lt;/span&gt;&lt;span style=&#34;color:#111&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color:#d88200&#34;&gt;&amp;#34;123&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#111&#34;&gt;)&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+      </description>
+    </item>
+    
+    <item>
+      <title>Toolkit_api: CommandableCloudFunctionService</title>
+      <link>/toolkit_api/python/gcp/services/commandable_cloud_function_service/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/toolkit_api/python/gcp/services/commandable_cloud_function_service/</guid>
+      <description>
+        
+        
+        &lt;p&gt;&lt;strong&gt;Implements&lt;/strong&gt;: &lt;a href=&#34;../cloud_function_service&#34;&gt;CloudFunctionService&lt;/a&gt;&lt;/p&gt;
+&lt;h3 id=&#34;description&#34;&gt;Description&lt;/h3&gt;
+&lt;p&gt;The CommandableCloudFunctionService class allows you to create abstract services that receive commands via the Google Function protocols to operations automatically generated for commnads defined in &lt;a href=&#34;../../../commons/commands/icommandable&#34;&gt;ICommandable components&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Important points&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;Each command is exposed as an invoke method that receives a command&amp;rsquo;s name and parameters.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Commandable services require only 3 lines of code to implement a robust external Google Function-based remote interface.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;This service is intended to work inside an Google Function container that exploses registered actions externally.&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id=&#34;configuration-parameters&#34;&gt;Configuration parameters&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;dependencies&lt;/strong&gt;:
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;controller&lt;/strong&gt;: override for Controller dependency&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id=&#34;references&#34;&gt;References&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;*:logger:*:*:1.0&lt;/strong&gt;: (optional) &lt;a href=&#34;../../../components/log/ilogger&#34;&gt;ILogger&lt;/a&gt; components to pass log messages.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;*:counters:*:*:1.0&lt;/strong&gt;: (optional) &lt;a href=&#34;../../../components/count/icounters&#34;&gt;ICounters&lt;/a&gt; components to pass collected measurements.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;constructors&#34;&gt;Constructors&lt;/h3&gt;
+&lt;blockquote&gt;
+&lt;p&gt;CommandableCloudFunctionService(name: str)&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;name&lt;/strong&gt;: str - service&amp;rsquo;s name.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;instance-methods&#34;&gt;Instance methods&lt;/h3&gt;
+&lt;h4 id=&#34;_get_parameters&#34;&gt;_get_parameters&lt;/h4&gt;
+&lt;p&gt;Returns body from Google Function request.
+This method can be overloaded in child classes&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;_get_parameters(req: &lt;a href=&#34;https://flask.palletsprojects.com/en/2.1.x/api/#incoming-request-data&#34;&gt;flask.Request&lt;/a&gt;): &lt;a href=&#34;../../../commons/run/parameters&#34;&gt;Parameters&lt;/a&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;req&lt;/strong&gt;: &lt;a href=&#34;https://flask.palletsprojects.com/en/2.1.x/api/#incoming-request-data&#34;&gt;flask.Request&lt;/a&gt; - Google Function request.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;returns&lt;/strong&gt;: &lt;a href=&#34;../../../commons/run/parameters&#34;&gt;Parameters&lt;/a&gt; - Returns Parameters from request&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id=&#34;register&#34;&gt;register&lt;/h4&gt;
+&lt;p&gt;Registers all actions in Google Function.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;register()&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h3 id=&#34;examples&#34;&gt;Examples&lt;/h3&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span style=&#34;color:#00a8c8&#34;&gt;class&lt;/span&gt; &lt;span style=&#34;color:#75af00&#34;&gt;MyCommandableCloudFunctionService&lt;/span&gt;&lt;span style=&#34;color:#111&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color:#111&#34;&gt;CommandableCloudFunctionService&lt;/span&gt;&lt;span style=&#34;color:#111&#34;&gt;):&lt;/span&gt;
+    &lt;span style=&#34;color:#00a8c8&#34;&gt;def&lt;/span&gt; &lt;span style=&#34;color:#111&#34;&gt;__init__&lt;/span&gt;&lt;span style=&#34;color:#111&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color:#111&#34;&gt;self&lt;/span&gt;&lt;span style=&#34;color:#111&#34;&gt;):&lt;/span&gt;
+        &lt;span style=&#34;color:#111&#34;&gt;super&lt;/span&gt;&lt;span style=&#34;color:#111&#34;&gt;()&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#111&#34;&gt;__init__&lt;/span&gt;&lt;span style=&#34;color:#111&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color:#d88200&#34;&gt;&amp;#34;mydata&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#111&#34;&gt;)&lt;/span&gt;
+        &lt;span style=&#34;color:#111&#34;&gt;self&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#111&#34;&gt;_dependency_resolver&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#111&#34;&gt;put&lt;/span&gt;&lt;span style=&#34;color:#111&#34;&gt;(&lt;/span&gt;
+            &lt;span style=&#34;color:#d88200&#34;&gt;&amp;#34;controller&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#111&#34;&gt;,&lt;/span&gt;
+            &lt;span style=&#34;color:#111&#34;&gt;Descriptor&lt;/span&gt;&lt;span style=&#34;color:#111&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color:#d88200&#34;&gt;&amp;#34;mygroup&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#111&#34;&gt;,&lt;/span&gt;&lt;span style=&#34;color:#d88200&#34;&gt;&amp;#34;controller&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#111&#34;&gt;,&lt;/span&gt;&lt;span style=&#34;color:#d88200&#34;&gt;&amp;#34;*&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#111&#34;&gt;,&lt;/span&gt;&lt;span style=&#34;color:#d88200&#34;&gt;&amp;#34;*&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#111&#34;&gt;,&lt;/span&gt;&lt;span style=&#34;color:#d88200&#34;&gt;&amp;#34;1.0&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#111&#34;&gt;)&lt;/span&gt;
+        &lt;span style=&#34;color:#111&#34;&gt;)&lt;/span&gt;
+      
+&lt;span style=&#34;color:#111&#34;&gt;service&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#111&#34;&gt;MyCommandableCloudFunctionService&lt;/span&gt;&lt;span style=&#34;color:#111&#34;&gt;()&lt;/span&gt;
+
+&lt;span style=&#34;color:#111&#34;&gt;service&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#111&#34;&gt;set_references&lt;/span&gt;&lt;span style=&#34;color:#111&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color:#111&#34;&gt;References&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#111&#34;&gt;from_tuples&lt;/span&gt;&lt;span style=&#34;color:#111&#34;&gt;(&lt;/span&gt;
+    &lt;span style=&#34;color:#111&#34;&gt;Descriptor&lt;/span&gt;&lt;span style=&#34;color:#111&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color:#d88200&#34;&gt;&amp;#34;mygroup&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#111&#34;&gt;,&lt;/span&gt;&lt;span style=&#34;color:#d88200&#34;&gt;&amp;#34;controller&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#111&#34;&gt;,&lt;/span&gt;&lt;span style=&#34;color:#d88200&#34;&gt;&amp;#34;default&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#111&#34;&gt;,&lt;/span&gt;&lt;span style=&#34;color:#d88200&#34;&gt;&amp;#34;default&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#111&#34;&gt;,&lt;/span&gt;&lt;span style=&#34;color:#d88200&#34;&gt;&amp;#34;1.0&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#111&#34;&gt;),&lt;/span&gt; &lt;span style=&#34;color:#111&#34;&gt;controller&lt;/span&gt;
+&lt;span style=&#34;color:#111&#34;&gt;))&lt;/span&gt;
+
+&lt;span style=&#34;color:#111&#34;&gt;service&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#111&#34;&gt;open&lt;/span&gt;&lt;span style=&#34;color:#111&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color:#d88200&#34;&gt;&amp;#34;123&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#111&#34;&gt;)&lt;/span&gt;
+
+&lt;span style=&#34;color:#111&#34;&gt;print&lt;/span&gt;&lt;span style=&#34;color:#111&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color:#d88200&#34;&gt;&amp;#34;The Google Function service is running&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#111&#34;&gt;)&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+      </description>
+    </item>
+    
+    <item>
+      <title>Toolkit_api: ICloudFunctionService</title>
+      <link>/toolkit_api/python/gcp/services/icloud_function_service/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/toolkit_api/python/gcp/services/icloud_function_service/</guid>
+      <description>
+        
+        
+        &lt;h3 id=&#34;description&#34;&gt;Description&lt;/h3&gt;
+&lt;p&gt;The ICloudFunctionService interface allows you to integrate Google Function services into Google Function containers and connect their actions to the function calls.&lt;/p&gt;
+&lt;h3 id=&#34;instance-methods&#34;&gt;Instance methods&lt;/h3&gt;
+&lt;h4 id=&#34;get_actions&#34;&gt;get_actions&lt;/h4&gt;
+&lt;p&gt;Gets all the actions supported by the service.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;get_actions(): List[&lt;a href=&#34;../cloud_function_action&#34;&gt;CloudFunctionAction&lt;/a&gt;]&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;returns&lt;/strong&gt;: List[&lt;a href=&#34;../cloud_function_action&#34;&gt;CloudFunctionAction&lt;/a&gt;] - array with supported actions.&lt;/li&gt;
+&lt;/ul&gt;
+
+      </description>
+    </item>
+    
+  </channel>
+</rss>

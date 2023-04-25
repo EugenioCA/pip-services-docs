@@ -1,0 +1,331 @@
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Pip.Services Docs – Connect</title>
+    <link>/toolkit_api/golang/gcp/connect/</link>
+    <description>Recent content in Connect on Pip.Services Docs</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    
+	  <atom:link href="/toolkit_api/golang/gcp/connect/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+      
+        
+      
+    
+    
+    <item>
+      <title>Toolkit_api: GcpConnectionParams</title>
+      <link>/toolkit_api/golang/gcp/connect/gcp_connection_params/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/toolkit_api/golang/gcp/connect/gcp_connection_params/</guid>
+      <description>
+        
+        
+        &lt;h3 id=&#34;description&#34;&gt;Description&lt;/h3&gt;
+&lt;p&gt;Contains connection parameters to authenticate against Google Functions
+and connect to specific Google Function.&lt;/p&gt;
+&lt;p&gt;The class is able to compose and parse Google Function connection parameters.&lt;/p&gt;
+&lt;p&gt;In addition to standard parameters &lt;a href=&#34;../../../components/auth/credential_params&#34;&gt;CredentialParams&lt;/a&gt; may contain any number of custom parameters&lt;/p&gt;
+&lt;h4 id=&#34;configuration-parameters&#34;&gt;Configuration parameters&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;connections&lt;/strong&gt;:
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;uri&lt;/strong&gt;:           full connection uri with specific app and function name&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;protocol&lt;/strong&gt;:      connection protocol&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;project_id&lt;/strong&gt;:    is your Google Cloud Platform project ID&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;region&lt;/strong&gt;:        is the region where your function is deployed&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;function_name&lt;/strong&gt;: is the name of the HTTP function you deployed&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;credentials&lt;/strong&gt;:
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;account&lt;/strong&gt;: the service account name&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;auth_token&lt;/strong&gt;:    Google-generated ID token or null if using custom auth&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;constructors&#34;&gt;Constructors&lt;/h3&gt;
+&lt;h4 id=&#34;newemptygcpconnectionparams&#34;&gt;NewEmptyGcpConnectionParams&lt;/h4&gt;
+&lt;p&gt;Creates an new instance of the connection parameters.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;NewEmptyGcpConnectionParams() &lt;a href=&#34;&#34;&gt;*GcpConnectionParams&lt;/a&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h4 id=&#34;newgcpconnectionparams&#34;&gt;NewGcpConnectionParams&lt;/h4&gt;
+&lt;p&gt;Creates an new instance of the connection parameters.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;NewGcpConnectionParams(values map[string]string) &lt;a href=&#34;&#34;&gt;*GcpConnectionParams&lt;/a&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;values&lt;/strong&gt;: map[string]string - (optional) an object to be converted into key-value pairs to initialize this connection.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id=&#34;newgcpconnectionparamsfromconfig&#34;&gt;NewGcpConnectionParamsFromConfig&lt;/h4&gt;
+&lt;p&gt;Retrieves GcpConnectionParams from configuration parameters.
+The values are retrieves from &amp;ldquo;connection&amp;rdquo; and &amp;ldquo;credential&amp;rdquo; sections.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;NewGcpConnectionParamsFromConfig(config &lt;a href=&#34;../../../commons/config/config_params&#34;&gt;*ConfigParams&lt;/a&gt;) *GcpConnectionParams&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;config&lt;/strong&gt;: &lt;a href=&#34;../../../commons/config/config_params&#34;&gt;*ConfigParams&lt;/a&gt; - configuration parameterss.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id=&#34;newgcpconnectionparamsfromtuples&#34;&gt;NewGcpConnectionParamsFromTuples&lt;/h4&gt;
+&lt;p&gt;Creates a new ConfigParams object filled with provided key-value pairs called tuples.
+Tuples parameters contain a sequence of key1, value1, key2, value2, &amp;hellip; pairs.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;NewGcpConnectionParamsFromTuples(tuples &amp;hellip;any) &lt;a href=&#34;&#34;&gt;*GcpConnectionParams&lt;/a&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;tuples&lt;/strong&gt;: &amp;hellip;any - the tuples to fill a new ConfigParams object.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id=&#34;newgcpconnectionparamsfrommaps&#34;&gt;NewGcpConnectionParamsFromMaps&lt;/h4&gt;
+&lt;p&gt;Retrieves GcpConnectionParams from multiple configuration parameters.
+The values are retrieves from &amp;ldquo;connection&amp;rdquo; and &amp;ldquo;credential&amp;rdquo; sections.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;NewGcpConnectionParamsFromMaps(configs &amp;hellip;map[string]string) &lt;a href=&#34;&#34;&gt;*GcpConnectionParams&lt;/a&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;configs&lt;/strong&gt;: &amp;hellip;map[string]string - a list with configuration parameters.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;instance-methods&#34;&gt;Instance methods&lt;/h3&gt;
+&lt;h4 id=&#34;authtoken&#34;&gt;AuthToken&lt;/h4&gt;
+&lt;p&gt;Gets an ID token with the request to authenticate themselves&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;(c &lt;a href=&#34;&#34;&gt;*GcpConnectionParams&lt;/a&gt;) AuthToken() (string, bool)&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;returns&lt;/strong&gt;: (string, bool) - the ID token.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id=&#34;function&#34;&gt;Function&lt;/h4&gt;
+&lt;p&gt;Gets the Google function name.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;(c &lt;a href=&#34;&#34;&gt;*GcpConnectionParams&lt;/a&gt;) Function() (string, bool)&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;returns&lt;/strong&gt;: (string, bool) - the Google function name.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id=&#34;uri&#34;&gt;Uri&lt;/h4&gt;
+&lt;p&gt;Gets the Google Platform service uri.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;(c &lt;a href=&#34;&#34;&gt;*GcpConnectionParams&lt;/a&gt;) Uri() (string, bool)&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;returns&lt;/strong&gt;: (string, bool) - the Google function uri.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id=&#34;protocol&#34;&gt;Protocol&lt;/h4&gt;
+&lt;p&gt;Gets the Google function connection protocol.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;(c &lt;a href=&#34;&#34;&gt;*GcpConnectionParams&lt;/a&gt;) Protocol() (string, bool)&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;returns&lt;/strong&gt;: (string, bool) - the Google function connection protocol.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id=&#34;projectid&#34;&gt;ProjectId&lt;/h4&gt;
+&lt;p&gt;Gets the Google Cloud Platform project ID.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;(c &lt;a href=&#34;&#34;&gt;*GcpConnectionParams&lt;/a&gt;) ProjectId() (string, bool)&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;returns&lt;/strong&gt;: (string, bool) - the project ID.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id=&#34;region&#34;&gt;Region&lt;/h4&gt;
+&lt;p&gt;Gets the region where your function is deployed.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;(c &lt;a href=&#34;&#34;&gt;*GcpConnectionParams&lt;/a&gt;) Region() (string, bool)&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;returns&lt;/strong&gt;: (string, bool) - the region of deployed function.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id=&#34;setauthtoken&#34;&gt;SetAuthToken&lt;/h4&gt;
+&lt;p&gt;Sets an ID token with the request to authenticate themselves&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;(c &lt;a href=&#34;&#34;&gt;*GcpConnectionParams&lt;/a&gt;) SetAuthToken(value string)&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;value&lt;/strong&gt;: string -  a new ID token.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id=&#34;setfunction&#34;&gt;SetFunction&lt;/h4&gt;
+&lt;p&gt;Sets the Google function name.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;(c &lt;a href=&#34;&#34;&gt;*GcpConnectionParams&lt;/a&gt;) SetFunction(value string)&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;value&lt;/strong&gt;: string - a new Google function name.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id=&#34;seturi&#34;&gt;SetUri&lt;/h4&gt;
+&lt;p&gt;Sets the Google Platform service uri.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;(c &lt;a href=&#34;&#34;&gt;*GcpConnectionParams&lt;/a&gt;) SetUri(value string)&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;value&lt;/strong&gt;: string - a new Google function uri.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id=&#34;setprotocol&#34;&gt;SetProtocol&lt;/h4&gt;
+&lt;p&gt;Sets the Google function connection protocol.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;(c &lt;a href=&#34;&#34;&gt;*GcpConnectionParams&lt;/a&gt;) SetProtocol(value string)&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;value&lt;/strong&gt;: string - a new Google function connection protocol.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id=&#34;setprojectid&#34;&gt;SetProjectId&lt;/h4&gt;
+&lt;p&gt;Sets the Google Cloud Platform project ID.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;(c &lt;a href=&#34;&#34;&gt;*GcpConnectionParams&lt;/a&gt;) SetProjectId(value string)&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;value&lt;/strong&gt;: string - a new project ID.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id=&#34;setregion&#34;&gt;SetRegion&lt;/h4&gt;
+&lt;p&gt;Sets the region where your function is deployed.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;(c &lt;a href=&#34;&#34;&gt;*GcpConnectionParams&lt;/a&gt;) SetRegion(value string)&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;returns&lt;/strong&gt;: string - the region of deployed function&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id=&#34;validate&#34;&gt;Validate&lt;/h4&gt;
+&lt;p&gt;Validates this connection parameters&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;(c &lt;a href=&#34;&#34;&gt;*GcpConnectionParams&lt;/a&gt;) Validate(correlationId string) error&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;correlationId&lt;/strong&gt;: string - (optional) transaction id to trace execution through call chain.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;returns&lt;/strong&gt;: error - error validation.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;examples&#34;&gt;Examples&lt;/h3&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-go&#34; data-lang=&#34;go&#34;&gt;&lt;span style=&#34;color:#75af00&#34;&gt;connection&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;:=&lt;/span&gt; &lt;span style=&#34;color:#75af00&#34;&gt;connect&lt;/span&gt;&lt;span style=&#34;color:#111&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#75af00&#34;&gt;NewGcpConnectionParamsFromTuples&lt;/span&gt;&lt;span style=&#34;color:#111&#34;&gt;(&lt;/span&gt;
+	&lt;span style=&#34;color:#d88200&#34;&gt;&amp;#34;connection.uri&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#111&#34;&gt;,&lt;/span&gt; &lt;span style=&#34;color:#d88200&#34;&gt;&amp;#34;http://east-my_test_project.cloudfunctions.net/myfunction&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#111&#34;&gt;,&lt;/span&gt;
+	&lt;span style=&#34;color:#d88200&#34;&gt;&amp;#34;connection.protocol&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#111&#34;&gt;,&lt;/span&gt; &lt;span style=&#34;color:#d88200&#34;&gt;&amp;#34;http&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#111&#34;&gt;,&lt;/span&gt;
+	&lt;span style=&#34;color:#d88200&#34;&gt;&amp;#34;connection.region&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#111&#34;&gt;,&lt;/span&gt; &lt;span style=&#34;color:#d88200&#34;&gt;&amp;#34;east&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#111&#34;&gt;,&lt;/span&gt;
+	&lt;span style=&#34;color:#d88200&#34;&gt;&amp;#34;connection.function&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#111&#34;&gt;,&lt;/span&gt; &lt;span style=&#34;color:#d88200&#34;&gt;&amp;#34;myfunction&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#111&#34;&gt;,&lt;/span&gt;
+	&lt;span style=&#34;color:#d88200&#34;&gt;&amp;#34;connection.project_id&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#111&#34;&gt;,&lt;/span&gt; &lt;span style=&#34;color:#d88200&#34;&gt;&amp;#34;my_test_project&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#111&#34;&gt;,&lt;/span&gt;
+	&lt;span style=&#34;color:#d88200&#34;&gt;&amp;#34;credential.auth_token&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#111&#34;&gt;,&lt;/span&gt; &lt;span style=&#34;color:#d88200&#34;&gt;&amp;#34;1234&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#111&#34;&gt;,&lt;/span&gt;
+&lt;span style=&#34;color:#111&#34;&gt;)&lt;/span&gt;
+&lt;span style=&#34;color:#75af00&#34;&gt;uri&lt;/span&gt;&lt;span style=&#34;color:#111&#34;&gt;,&lt;/span&gt; &lt;span style=&#34;color:#75af00&#34;&gt;_&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;:=&lt;/span&gt; &lt;span style=&#34;color:#75af00&#34;&gt;connection&lt;/span&gt;&lt;span style=&#34;color:#111&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#75af00&#34;&gt;Uri&lt;/span&gt;&lt;span style=&#34;color:#111&#34;&gt;()&lt;/span&gt;               &lt;span style=&#34;color:#75715e&#34;&gt;// Result: &amp;#34;http://east-my_test_project.cloudfunctions.net/myfunction&amp;#34;
+&lt;/span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;&lt;/span&gt;&lt;span style=&#34;color:#75af00&#34;&gt;region&lt;/span&gt;&lt;span style=&#34;color:#111&#34;&gt;,&lt;/span&gt; &lt;span style=&#34;color:#75af00&#34;&gt;_&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;:=&lt;/span&gt; &lt;span style=&#34;color:#75af00&#34;&gt;connection&lt;/span&gt;&lt;span style=&#34;color:#111&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#75af00&#34;&gt;Region&lt;/span&gt;&lt;span style=&#34;color:#111&#34;&gt;()&lt;/span&gt;         &lt;span style=&#34;color:#75715e&#34;&gt;// Result: &amp;#34;east&amp;#34;
+&lt;/span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;&lt;/span&gt;&lt;span style=&#34;color:#75af00&#34;&gt;protocol&lt;/span&gt;&lt;span style=&#34;color:#111&#34;&gt;,&lt;/span&gt; &lt;span style=&#34;color:#75af00&#34;&gt;_&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;:=&lt;/span&gt; &lt;span style=&#34;color:#75af00&#34;&gt;connection&lt;/span&gt;&lt;span style=&#34;color:#111&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#75af00&#34;&gt;Protocol&lt;/span&gt;&lt;span style=&#34;color:#111&#34;&gt;()&lt;/span&gt;     &lt;span style=&#34;color:#75715e&#34;&gt;// Result: &amp;#34;http&amp;#34;
+&lt;/span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;&lt;/span&gt;&lt;span style=&#34;color:#75af00&#34;&gt;functionName&lt;/span&gt;&lt;span style=&#34;color:#111&#34;&gt;,&lt;/span&gt; &lt;span style=&#34;color:#75af00&#34;&gt;_&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;:=&lt;/span&gt; &lt;span style=&#34;color:#75af00&#34;&gt;connection&lt;/span&gt;&lt;span style=&#34;color:#111&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#75af00&#34;&gt;Function&lt;/span&gt;&lt;span style=&#34;color:#111&#34;&gt;()&lt;/span&gt; &lt;span style=&#34;color:#75715e&#34;&gt;// Result: &amp;#34;myfunction&amp;#34;
+&lt;/span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;&lt;/span&gt;&lt;span style=&#34;color:#75af00&#34;&gt;projectId&lt;/span&gt;&lt;span style=&#34;color:#111&#34;&gt;,&lt;/span&gt; &lt;span style=&#34;color:#75af00&#34;&gt;_&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;:=&lt;/span&gt; &lt;span style=&#34;color:#75af00&#34;&gt;connection&lt;/span&gt;&lt;span style=&#34;color:#111&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#75af00&#34;&gt;ProjectId&lt;/span&gt;&lt;span style=&#34;color:#111&#34;&gt;()&lt;/span&gt;   &lt;span style=&#34;color:#75715e&#34;&gt;// Result: &amp;#34;my_test_project&amp;#34;
+&lt;/span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;&lt;/span&gt;&lt;span style=&#34;color:#75af00&#34;&gt;authToken&lt;/span&gt;&lt;span style=&#34;color:#111&#34;&gt;,&lt;/span&gt; &lt;span style=&#34;color:#75af00&#34;&gt;_&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;:=&lt;/span&gt; &lt;span style=&#34;color:#75af00&#34;&gt;connection&lt;/span&gt;&lt;span style=&#34;color:#111&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#75af00&#34;&gt;AuthToken&lt;/span&gt;&lt;span style=&#34;color:#111&#34;&gt;()&lt;/span&gt;   &lt;span style=&#34;color:#75715e&#34;&gt;// Result: &amp;#34;1234&amp;#34;
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id=&#34;see-also&#34;&gt;See also&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;h4 id=&#34;gcpconnectionresolvergcp_connection_resolver&#34;&gt;&lt;a href=&#34;../gcp_connection_resolver&#34;&gt;GcpConnectionResolver&lt;/a&gt;&lt;/h4&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+
+      </description>
+    </item>
+    
+    <item>
+      <title>Toolkit_api: GcpConnectionResolver</title>
+      <link>/toolkit_api/golang/gcp/connect/gcp_connection_resolver/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/toolkit_api/golang/gcp/connect/gcp_connection_resolver/</guid>
+      <description>
+        
+        
+        &lt;h3 id=&#34;description&#34;&gt;Description&lt;/h3&gt;
+&lt;p&gt;Helper class to retrieve Google connection and credential parameters,
+validate them and compose a &lt;a href=&#34;../gcp_connection_params&#34;&gt;GcpConnectionParams&lt;/a&gt; value.&lt;/p&gt;
+&lt;h4 id=&#34;configuration-parameters&#34;&gt;Configuration parameters&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;connections&lt;/strong&gt;:
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;uri&lt;/strong&gt;:           full connection uri with specific app and function name&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;protocol&lt;/strong&gt;:      connection protocol&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;project_id&lt;/strong&gt;:    is your Google Cloud Platform project ID&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;region&lt;/strong&gt;:        is the region where your function is deployed&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;function_name&lt;/strong&gt;: is the name of the HTTP function you deployed&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;credentials&lt;/strong&gt;:
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;account&lt;/strong&gt;: the service account name&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;auth_token&lt;/strong&gt;: Google-generated ID token or null if using custom auth&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id=&#34;references&#34;&gt;References&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;*:credential-store:*:*:1.0&lt;/strong&gt; - (optional) credential stores to resolve credentials.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;constructors&#34;&gt;Constructors&lt;/h3&gt;
+&lt;h4 id=&#34;newgcpconnectionresolver&#34;&gt;NewGcpConnectionResolver&lt;/h4&gt;
+&lt;p&gt;Creates new instance of GcpConnectionResolver&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;NewGcpConnectionResolver() &lt;a href=&#34;&#34;&gt;*GcpConnectionResolver&lt;/a&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h3 id=&#34;fields&#34;&gt;Fields&lt;/h3&gt;
+&lt;span class=&#34;hide-title-link&#34;&gt;
+&lt;h4 id=&#34;connectionresolver&#34;&gt;connectionResolver&lt;/h4&gt;
+&lt;p&gt;Connection resolver.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;connectionResolver&lt;/strong&gt;: &lt;a href=&#34;../../../components/connect/connection_resolver&#34;&gt;*ConnectionResolver&lt;/a&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h4 id=&#34;credentialresolver&#34;&gt;credentialResolver&lt;/h4&gt;
+&lt;p&gt;Credential resolver.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;credentialResolver&lt;/strong&gt;: &lt;a href=&#34;../../../components/auth/credential_resolver&#34;&gt;*CredentialResolver&lt;/a&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;/span&gt;
+&lt;h3 id=&#34;instance-methods&#34;&gt;Instance methods&lt;/h3&gt;
+&lt;h4 id=&#34;configure&#34;&gt;Configure&lt;/h4&gt;
+&lt;p&gt;Configures a component by passing its configuration parameters.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;(c &lt;a href=&#34;&#34;&gt;*GcpConnectionResolver&lt;/a&gt;) Configure(ctx context.Context, config *cconf.ConfigParams)&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;ctx&lt;/strong&gt;: context.Context - operation context.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;config&lt;/strong&gt;: &lt;a href=&#34;../../../commons/config/config_params&#34;&gt;*ConfigParams&lt;/a&gt; - configuration parameters to be set.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id=&#34;resolve&#34;&gt;Resolve&lt;/h4&gt;
+&lt;p&gt;Resolves connection and credential parameters and generates a single
+&lt;a href=&#34;../gcp_connection_params&#34;&gt;GcpConnectionParams&lt;/a&gt; value.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;(c &lt;a href=&#34;&#34;&gt;*GcpConnectionResolver&lt;/a&gt;) Resolve(correlationId string) (&lt;a href=&#34;../gcp_connection_params&#34;&gt;GcpConnectionParams&lt;/a&gt;, error)&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;correlationId&lt;/strong&gt;: string - (optional) transaction id used to trace execution through the call chain.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;returns&lt;/strong&gt;: (&lt;a href=&#34;../gcp_connection_params&#34;&gt;GcpConnectionParams&lt;/a&gt;, error) - receives an GcpConnectionParams value or error.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id=&#34;setreferences&#34;&gt;SetReferences&lt;/h4&gt;
+&lt;p&gt;Sets references to dependent components.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;(c &lt;a href=&#34;&#34;&gt;*GcpConnectionResolver&lt;/a&gt;) SetReferences(ctx context.Context, references &lt;a href=&#34;../../../commons/refer/ireferences&#34;&gt;IReferences&lt;/a&gt;)&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;ctx&lt;/strong&gt;: context.Context - operation context.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;references&lt;/strong&gt;: &lt;a href=&#34;../../../commons/refer/ireferences&#34;&gt;IReferences&lt;/a&gt; - references to locate the component&amp;rsquo;s dependencies.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;examples&#34;&gt;Examples&lt;/h3&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-go&#34; data-lang=&#34;go&#34;&gt;&lt;span style=&#34;color:#75af00&#34;&gt;config&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;:=&lt;/span&gt; &lt;span style=&#34;color:#75af00&#34;&gt;config&lt;/span&gt;&lt;span style=&#34;color:#111&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#75af00&#34;&gt;NewConfigParamsFromTuples&lt;/span&gt;&lt;span style=&#34;color:#111&#34;&gt;(&lt;/span&gt;
+	&lt;span style=&#34;color:#d88200&#34;&gt;&amp;#34;connection.uri&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#111&#34;&gt;,&lt;/span&gt; &lt;span style=&#34;color:#d88200&#34;&gt;&amp;#34;http://east-my_test_project.cloudfunctions.net/myfunction&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#111&#34;&gt;,&lt;/span&gt;
+	&lt;span style=&#34;color:#d88200&#34;&gt;&amp;#34;connection.protocol&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#111&#34;&gt;,&lt;/span&gt; &lt;span style=&#34;color:#d88200&#34;&gt;&amp;#34;http&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#111&#34;&gt;,&lt;/span&gt;
+	&lt;span style=&#34;color:#d88200&#34;&gt;&amp;#34;connection.region&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#111&#34;&gt;,&lt;/span&gt; &lt;span style=&#34;color:#d88200&#34;&gt;&amp;#34;east&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#111&#34;&gt;,&lt;/span&gt;
+	&lt;span style=&#34;color:#d88200&#34;&gt;&amp;#34;connection.function&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#111&#34;&gt;,&lt;/span&gt; &lt;span style=&#34;color:#d88200&#34;&gt;&amp;#34;myfunction&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#111&#34;&gt;,&lt;/span&gt;
+	&lt;span style=&#34;color:#d88200&#34;&gt;&amp;#34;connection.project_id&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#111&#34;&gt;,&lt;/span&gt; &lt;span style=&#34;color:#d88200&#34;&gt;&amp;#34;my_test_project&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#111&#34;&gt;,&lt;/span&gt;
+	&lt;span style=&#34;color:#d88200&#34;&gt;&amp;#34;credential.auth_token&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#111&#34;&gt;,&lt;/span&gt; &lt;span style=&#34;color:#d88200&#34;&gt;&amp;#34;1234&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#111&#34;&gt;,&lt;/span&gt;
+&lt;span style=&#34;color:#111&#34;&gt;)&lt;/span&gt;
+&lt;span style=&#34;color:#75af00&#34;&gt;ctx&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;:=&lt;/span&gt; &lt;span style=&#34;color:#75af00&#34;&gt;context&lt;/span&gt;&lt;span style=&#34;color:#111&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#75af00&#34;&gt;Background&lt;/span&gt;&lt;span style=&#34;color:#111&#34;&gt;()&lt;/span&gt;
+&lt;span style=&#34;color:#75af00&#34;&gt;connectionResolver&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;:=&lt;/span&gt; &lt;span style=&#34;color:#75af00&#34;&gt;connect&lt;/span&gt;&lt;span style=&#34;color:#111&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#75af00&#34;&gt;NewGcpConnectionResolver&lt;/span&gt;&lt;span style=&#34;color:#111&#34;&gt;()&lt;/span&gt;
+&lt;span style=&#34;color:#75af00&#34;&gt;connectionResolver&lt;/span&gt;&lt;span style=&#34;color:#111&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#75af00&#34;&gt;Configure&lt;/span&gt;&lt;span style=&#34;color:#111&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color:#75af00&#34;&gt;ctx&lt;/span&gt;&lt;span style=&#34;color:#111&#34;&gt;,&lt;/span&gt; &lt;span style=&#34;color:#75af00&#34;&gt;config&lt;/span&gt;&lt;span style=&#34;color:#111&#34;&gt;)&lt;/span&gt;
+&lt;span style=&#34;color:#75af00&#34;&gt;connectionResolver&lt;/span&gt;&lt;span style=&#34;color:#111&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#75af00&#34;&gt;SetReferences&lt;/span&gt;&lt;span style=&#34;color:#111&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color:#75af00&#34;&gt;ctx&lt;/span&gt;&lt;span style=&#34;color:#111&#34;&gt;,&lt;/span&gt; &lt;span style=&#34;color:#75af00&#34;&gt;references&lt;/span&gt;&lt;span style=&#34;color:#111&#34;&gt;)&lt;/span&gt;
+&lt;span style=&#34;color:#75af00&#34;&gt;connectionParams&lt;/span&gt;&lt;span style=&#34;color:#111&#34;&gt;,&lt;/span&gt; &lt;span style=&#34;color:#75af00&#34;&gt;_&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;:=&lt;/span&gt; &lt;span style=&#34;color:#75af00&#34;&gt;connectionResolver&lt;/span&gt;&lt;span style=&#34;color:#111&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#75af00&#34;&gt;Resolve&lt;/span&gt;&lt;span style=&#34;color:#111&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color:#d88200&#34;&gt;&amp;#34;123&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#111&#34;&gt;)&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id=&#34;see-also&#34;&gt;See also&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;h4 id=&#34;connectionparamscomponentsconnectconnection_params&#34;&gt;&lt;a href=&#34;../../../components/connect/connection_params&#34;&gt;ConnectionParams&lt;/a&gt;&lt;/h4&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;h4 id=&#34;idiscoverycomponentsconnectidiscovery&#34;&gt;&lt;a href=&#34;../../../components/connect/idiscovery&#34;&gt;IDiscovery&lt;/a&gt;&lt;/h4&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+
+      </description>
+    </item>
+    
+  </channel>
+</rss>

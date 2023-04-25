@@ -1,0 +1,136 @@
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Pip.Services Docs – Azure module</title>
+    <link>/toolkit_api/net/azure/</link>
+    <description>Recent content in Azure module on Pip.Services Docs</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    
+	  <atom:link href="/toolkit_api/net/azure/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+      
+        
+      
+    
+    
+    <item>
+      <title>Toolkit_api: Clients</title>
+      <link>/toolkit_api/net/azure/clients/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/toolkit_api/net/azure/clients/</guid>
+      <description>
+        
+        
+        &lt;hr&gt;
+&lt;div class=&#34;module-body&#34;&gt; 
+&lt;h3 id=&#34;classes&#34;&gt;Classes&lt;/h3&gt;
+&lt;h4 id=&#34;azurefunctionclientazure_function_client&#34;&gt;&lt;a href=&#34;azure_function_client&#34;&gt;AzureFunctionClient&lt;/a&gt;&lt;/h4&gt;
+&lt;p&gt;Abstract client that calls Azure Functions.&lt;br&gt;
+When making calls &amp;ldquo;cmd&amp;rdquo; parameter determines which what action shall be called, while
+other parameters are passed to the action itself.&lt;/p&gt;
+&lt;h4 id=&#34;commandableazurefunctionclientcommandable_azure_function_client&#34;&gt;&lt;a href=&#34;commandable_azure_function_client&#34;&gt;CommandableAzureFunctionClient&lt;/a&gt;&lt;/h4&gt;
+&lt;p&gt;Abstract client that calls commandable Azure Functions.&lt;br&gt;
+Commandable services are generated automatically for &lt;a href=&#34;../../commons/commands/icommandable&#34;&gt;ICommandable&lt;/a&gt; objects. Each command is exposed as action determined by &amp;ldquo;cmd&amp;rdquo; parameter.&lt;/p&gt;
+&lt;/div&gt;
+
+      </description>
+    </item>
+    
+    <item>
+      <title>Toolkit_api: Connect</title>
+      <link>/toolkit_api/net/azure/connect/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/toolkit_api/net/azure/connect/</guid>
+      <description>
+        
+        
+        &lt;hr&gt;
+&lt;div class=&#34;module-body&#34;&gt; 
+&lt;h3 id=&#34;classes&#34;&gt;Classes&lt;/h3&gt;
+&lt;h4 id=&#34;azurefunctionconnectionparamsazure_function_connection_params&#34;&gt;&lt;a href=&#34;azure_function_connection_params&#34;&gt;AzureFunctionConnectionParams&lt;/a&gt;&lt;/h4&gt;
+&lt;p&gt;Contains connection parameters to authenticate against Azure Functions
+and connect to specific Azure Function.&lt;/p&gt;
+&lt;h4 id=&#34;azurefunctionconnectionresolverazure_function_connection_resolver&#34;&gt;&lt;a href=&#34;azure_function_connection_resolver&#34;&gt;AzureFunctionConnectionResolver&lt;/a&gt;&lt;/h4&gt;
+&lt;p&gt;Helper class to retrieve Azure connection and credential parameters,
+validate them and compose a &lt;a href=&#34;azure_function_connection_params&#34;&gt;AzureFunctionConnectionParams&lt;/a&gt; value.&lt;/p&gt;
+&lt;/div&gt;
+
+      </description>
+    </item>
+    
+    <item>
+      <title>Toolkit_api: Containers</title>
+      <link>/toolkit_api/net/azure/containers/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/toolkit_api/net/azure/containers/</guid>
+      <description>
+        
+        
+        &lt;hr&gt;
+&lt;div class=&#34;module-body&#34;&gt; 
+&lt;h3 id=&#34;classes&#34;&gt;Classes&lt;/h3&gt;
+&lt;h4 id=&#34;azurefunctionazure_function&#34;&gt;&lt;a href=&#34;azure_function&#34;&gt;AzureFunction&lt;/a&gt;&lt;/h4&gt;
+&lt;p&gt;Abstract Azure Function that acts as a container to instantiate and run components and expose them via an external entry point.&lt;/p&gt;
+&lt;h4 id=&#34;azurefunctioncontexthelperazure_function_context_helper&#34;&gt;&lt;a href=&#34;azure_function_context_helper&#34;&gt;AzureFunctionContextHelper&lt;/a&gt;&lt;/h4&gt;
+&lt;p&gt;Contains methods used to get correlationIds, commands and bodies from the Azure Function context.&lt;/p&gt;
+&lt;h4 id=&#34;commandableazurefunctioncommandable_azure_function&#34;&gt;&lt;a href=&#34;commandable_azure_function&#34;&gt;CommandableAzureFunction&lt;/a&gt;&lt;/h4&gt;
+&lt;p&gt;Abstract Azure Function that acts as a container to instantiate and run components and expose them via an external entry point.&lt;/p&gt;
+&lt;/div&gt;
+
+      </description>
+    </item>
+    
+    <item>
+      <title>Toolkit_api: Services</title>
+      <link>/toolkit_api/net/azure/services/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/toolkit_api/net/azure/services/</guid>
+      <description>
+        
+        
+        &lt;hr&gt;
+&lt;div class=&#34;module-body&#34;&gt; 
+&lt;h3 id=&#34;interfaces&#34;&gt;Interfaces&lt;/h3&gt;
+&lt;h4 id=&#34;iazurefunctionserviceiazure_function_service&#34;&gt;&lt;a href=&#34;iazure_function_service&#34;&gt;IAzureFunctionService&lt;/a&gt;&lt;/h4&gt;
+&lt;p&gt;An interface that allows to integrate Azure Function services into Azure Function containers and connect their actions to the function calls.&lt;/p&gt;
+&lt;br&gt;
+&lt;h3 id=&#34;classes&#34;&gt;Classes&lt;/h3&gt;
+&lt;h4 id=&#34;azurefunctionactionazure_function_action&#34;&gt;&lt;a href=&#34;azure_function_action&#34;&gt;AzureFunctionAction&lt;/a&gt;&lt;/h4&gt;
+&lt;p&gt;Defines some fields such as action, cmd and schema.&lt;/p&gt;
+&lt;h4 id=&#34;azurefunctionserviceazure_function_service&#34;&gt;&lt;a href=&#34;azure_function_service&#34;&gt;AzureFunctionService&lt;/a&gt;&lt;/h4&gt;
+&lt;p&gt;Abstract service that receives remove calls via the Azure Function protocol.&lt;/p&gt;
+&lt;h4 id=&#34;commandableazurefunctionservicecommandable_azure_function_service&#34;&gt;&lt;a href=&#34;commandable_azure_function_service&#34;&gt;CommandableAzureFunctionService&lt;/a&gt;&lt;/h4&gt;
+&lt;p&gt;Abstract service that receives commands via the Azure Function protocol to operations automatically generated for commands defined in ICommandable components.&lt;/p&gt;
+&lt;/div&gt;
+
+      </description>
+    </item>
+    
+    <item>
+      <title>Toolkit_api: Utils</title>
+      <link>/toolkit_api/net/azure/utils/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/toolkit_api/net/azure/utils/</guid>
+      <description>
+        
+        
+        &lt;hr&gt;
+&lt;div class=&#34;module-body&#34;&gt; 
+&lt;h3 id=&#34;classes&#34;&gt;Classes&lt;/h3&gt;
+&lt;h4 id=&#34;azurefunctioncontexthelperazure_function_context_helper&#34;&gt;&lt;a href=&#34;azure_function_context_helper&#34;&gt;AzureFunctionContextHelper&lt;/a&gt;&lt;/h4&gt;
+&lt;p&gt;Contains methods used to get correlationIds, commands and bodies from the Azure Function context.&lt;/p&gt;
+&lt;h4 id=&#34;azurefunctionresponsesenderazure_function_response_sender&#34;&gt;&lt;a href=&#34;azure_function_response_sender&#34;&gt;AzureFunctionResponseSender&lt;/a&gt;&lt;/h4&gt;
+&lt;p&gt;Helper class that send responses&lt;/p&gt;
+&lt;/div&gt;
+
+      </description>
+    </item>
+    
+  </channel>
+</rss>
