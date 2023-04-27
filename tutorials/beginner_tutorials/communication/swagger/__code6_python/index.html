@@ -23,11 +23,11 @@
 <meta property="og:type" content="article" />
 <meta property="og:url" content="/tutorials/beginner_tutorials/communication/swagger/__code6_python/" /><meta property="article:section" content="tutorials" />
 
-<meta property="article:modified_time" content="2023-04-27T01:45:21+02:00" />
+<meta property="article:modified_time" content="2023-04-27T19:40:36+02:00" />
 
 <meta itemprop="name" content="">
 <meta itemprop="description" content="from pip_services3_rpc.services import CommandableHttpService class FriendCommandableHttpService2(CommandableHttpService): def __init__(self): super().__init__(&#39;commandable_hello_friend2&#39;) self._dependency_resolver.put(&#39;controller&#39;, Descriptor(&#39;hello-friend&#39;, &#39;controller&#39;, &#39;*&#39;, &#39;*&#39;, &#39;*&#39;)) self._swagger_path = None def configure(self, config): super().configure(config) # Swagger self._swagger_path = config.get_as_nullable_string(&#39;swagger.path&#39;) def register(self): super().register() if self._swagger_path: self._register_open_api_spec_from_file(self._swagger_path) ">
-<meta itemprop="dateModified" content="2023-04-27T01:45:21+02:00" />
+<meta itemprop="dateModified" content="2023-04-27T19:40:36+02:00" />
 <meta itemprop="wordCount" content="33">
 <meta itemprop="keywords" content="" /><meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content=""/>

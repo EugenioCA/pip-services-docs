@@ -24,12 +24,12 @@ def set_references(self, references: IReferences): &#34;&#34;&#34; Sets referenc
 <meta property="og:type" content="article" />
 <meta property="og:url" content="/tutorials/beginner_tutorials/component/component_communication/__code19_python/" /><meta property="article:section" content="tutorials" />
 
-<meta property="article:modified_time" content="2023-04-27T01:45:21+02:00" />
+<meta property="article:modified_time" content="2023-04-27T19:40:36+02:00" />
 
 <meta itemprop="name" content="">
 <meta itemprop="description" content="See PrometheusMetricsService
 def set_references(self, references: IReferences): &#34;&#34;&#34; Sets references to dependent components. :param references: references to locate the component dependencies. &#34;&#34;&#34; super().set_references(references) self.__cached_counters = self._dependency_resolver.get_one_required(&#39;prometheus-counters&#39;) if self.__cached_counters is None: self.__cached_counters = self._dependency_resolver.get_one_required(&#39;cached-counters&#39;) context_info = references.get_one_required(Descriptor(&#34;pip-services&#34;, &#34;context-info&#34;, &#34;default&#34;, &#34;*&#34;, &#34;1.0&#34;)) if context_info is not None and (self.__source == &#39;&#39; or self.__source is None): self.__source = context_info.name if context_info is not None and (self.__instance == &#39;&#39; or self.__instance is None): self.__instance = context_info.">
-<meta itemprop="dateModified" content="2023-04-27T01:45:21+02:00" />
+<meta itemprop="dateModified" content="2023-04-27T19:40:36+02:00" />
 <meta itemprop="wordCount" content="71">
 <meta itemprop="keywords" content="" /><meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content=""/>

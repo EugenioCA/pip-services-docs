@@ -23,11 +23,11 @@
 <meta property="og:type" content="article" />
 <meta property="og:url" content="/tutorials/beginner_tutorials/communication/swagger/__code6_go/" /><meta property="article:section" content="tutorials" />
 
-<meta property="article:modified_time" content="2023-04-27T01:45:21+02:00" />
+<meta property="article:modified_time" content="2023-04-27T19:40:36+02:00" />
 
 <meta itemprop="name" content="">
 <meta itemprop="description" content="import ( refer &#34;github.com/pip-services3-gox/pip-services3-commons-gox/refer&#34; cservices &#34;github.com/pip-services3-gox/pip-services3-rpc-gox/services&#34; cconf &#34;github.com/pip-services3-gox/pip-services3-commons-gox/config&#34; ) type FriendCommandableHttpService2 struct { rpcservices.CommandableHttpService _swaggerPath string } func NewFriendCommandableHttpService2() *FriendCommandableHttpService2 { c := &amp;FriendCommandableHttpService2{} c.CommandableHttpService = *rpcservices.InheritCommandableHttpService(c, &#34;commandable_hello_friend2&#34;) c.DependencyResolver.Put(context.Background(), &#34;controller&#34;, crefer.NewDescriptor(&#34;hello-friend&#34;, &#34;controller&#34;, &#34;*&#34;, &#34;*&#34;, &#34;*&#34;)) return c } func (c *FriendCommandableHttpService2) Configure(ctx context.Context, config *cconf.ConfigParams) { c.RestService.Configure(ctx, config) // swagger 	c._swaggerPath, _ = config.GetAsNullableString(&#34;swagger.path&#34;) } func (c *FriendCommandableHttpService2) Register() { c.CommandableHttpService.Register() // swagger 	if c._swaggerPath != &#34;&#34; { c.">
-<meta itemprop="dateModified" content="2023-04-27T01:45:21+02:00" />
+<meta itemprop="dateModified" content="2023-04-27T19:40:36+02:00" />
 <meta itemprop="wordCount" content="71">
 <meta itemprop="keywords" content="" /><meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content=""/>

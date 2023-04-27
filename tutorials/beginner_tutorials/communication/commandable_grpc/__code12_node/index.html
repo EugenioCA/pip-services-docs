@@ -23,11 +23,11 @@
 <meta property="og:type" content="article" />
 <meta property="og:url" content="/tutorials/beginner_tutorials/communication/commandable_grpc/__code12_node/" /><meta property="article:section" content="tutorials" />
 
-<meta property="article:modified_time" content="2023-04-27T01:45:21+02:00" />
+<meta property="article:modified_time" content="2023-04-27T19:40:36+02:00" />
 
 <meta itemprop="name" content="">
 <meta itemprop="description" content="import { DataPage, Descriptor, FilterParams, PagingParams } from &#34;pip-services3-commons-nodex&#34;; import { CommandableGrpcClient } from &#34;pip-services3-grpc-nodex&#34;; import { MyData, IMyDataClient } from &#34;my-package&#34;; export class MyCommandableGrpcClient extends CommandableGrpcClient implements IMyDataClient { public constructor() { super(&#39;mydata&#39;); } public async getMyDatas(correlationId: string, filter: FilterParams, paging: PagingParams): Promise&lt;DataPage&lt;MyData&gt;&gt; { return await this.callCommand(&#39;get_my_datas&#39;, correlationId, { filter: filter, paging: paging }); } public async getMyDataById(correlationId: string, id: string): Promise&lt;MyData&gt; { return await this.callCommand(&#39;get_my_data_by_id&#39;, correlationId, { my_data_id: id }); } public async createMyData(correlationId: string, entity: MyData): Promise&lt;MyData&gt; { return await this.">
-<meta itemprop="dateModified" content="2023-04-27T01:45:21+02:00" />
+<meta itemprop="dateModified" content="2023-04-27T19:40:36+02:00" />
 <meta itemprop="wordCount" content="123">
 <meta itemprop="keywords" content="" /><meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content=""/>

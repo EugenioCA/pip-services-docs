@@ -23,11 +23,11 @@
 <meta property="og:type" content="article" />
 <meta property="og:url" content="/tutorials/beginner_tutorials/persistences/designing_persistence/__code5_python/" /><meta property="article:section" content="tutorials" />
 
-<meta property="article:modified_time" content="2023-04-27T01:45:21+02:00" />
+<meta property="article:modified_time" content="2023-04-27T19:40:36+02:00" />
 
 <meta itemprop="name" content="">
 <meta itemprop="description" content="class MyIdentifiablePostgresPersistence(IdentifiablePostgresPersistence, IMyDataPersistence): def __init__(self): super().__init__(&#39;mydata&#39;) def _define_schema(self): self._clear_schema() self._ensure_schema(&#39;CREATE TABLE &#39; &#43; self._table_name &#43; &#39; (id TEXT PRIMARY KEY, key TEXT, content TEXT)&#39;) self._ensure_index(self._table_name &#43; &#39;_key&#39;, {&#39;key&#39;: 1}, {&#39;unique&#39;: True}) def _compose_filter(self, filter: FilterParams): filter = filter or FilterParams() key = filter.get_as_nullable_string(&#39;key&#39;) content = filter.get_as_nullable_string(&#39;content&#39;) filter_condition = &#39;&#39; if key is not None: filter_condition &#43;= &#34;key=&#39;&#34; &#43; key &#43; &#34;&#39;&#34; if content is not None: filter_condition &#43;= &#34;content=&#39;&#34; &#43; content &#43; &#34;&#39;&#34; return filter_condition def _compose_sort(self, sort: SortParams): sort = sort or SortParams() compose_sort = &#39;&#39; for i, filed in enumerate(sort): compose_sort &#43;= filed.">
-<meta itemprop="dateModified" content="2023-04-27T01:45:21+02:00" />
+<meta itemprop="dateModified" content="2023-04-27T19:40:36+02:00" />
 <meta itemprop="wordCount" content="169">
 <meta itemprop="keywords" content="" /><meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content=""/>

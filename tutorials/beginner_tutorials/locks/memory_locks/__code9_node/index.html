@@ -23,11 +23,11 @@
 <meta property="og:type" content="article" />
 <meta property="og:url" content="/tutorials/beginner_tutorials/locks/memory_locks/__code9_node/" /><meta property="article:section" content="tutorials" />
 
-<meta property="article:modified_time" content="2023-04-27T01:45:21+02:00" />
+<meta property="article:modified_time" content="2023-04-27T19:40:36+02:00" />
 
 <meta itemprop="name" content="">
 <meta itemprop="description" content="import { ConfigParams, Descriptor, IReferenceable, IReferences, References } from &#34;pip-services3-commons-nodex&#34;; import { ICache, MemoryCache, MemoryLock } from &#34;pip-services3-components-nodex&#34;; export class MyComponent implements IReferenceable { private _cache: ICache; private _lock: MemoryLock; public setReferences(references: IReferences): void { this._cache = references.getOneRequired(new Descriptor(&#34;*&#34;, &#34;cache&#34;, &#34;*&#34;, &#34;*&#34;, &#34;1.0&#34;)); this._lock = references.getOneRequired(new Descriptor(&#34;*&#34;, &#34;lock&#34;, &#34;*&#34;, &#34;*&#34;, &#34;1.0&#34;)); } public async storeResult(correlationId: string, param1: string): Promise&lt;void&gt; { // Lock  this._lock.acquireLock(correlationId, &#34;mykey&#34;, 1000, 1000); let config = ConfigParams.">
-<meta itemprop="dateModified" content="2023-04-27T01:45:21+02:00" />
+<meta itemprop="dateModified" content="2023-04-27T19:40:36+02:00" />
 <meta itemprop="wordCount" content="177">
 <meta itemprop="keywords" content="" /><meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content=""/>

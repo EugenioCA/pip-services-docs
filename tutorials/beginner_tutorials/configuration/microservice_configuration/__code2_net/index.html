@@ -23,11 +23,11 @@
 <meta property="og:type" content="article" />
 <meta property="og:url" content="/tutorials/beginner_tutorials/configuration/microservice_configuration/__code2_net/" /><meta property="article:section" content="tutorials" />
 
-<meta property="article:modified_time" content="2023-04-27T01:45:21+02:00" />
+<meta property="article:modified_time" content="2023-04-27T19:40:36+02:00" />
 
 <meta itemprop="name" content="">
 <meta itemprop="description" content="using System.Threading.Tasks; using PipServices3.Components.Build; using PipServices3.Container; /// &lt;summary&gt; /// Creating a process container /// &lt;/summary&gt; class MyProcess : ProcessContainer { public MyProcess() : base(&#34;myservice&#34;, &#34;My service running as a process&#34;) { this._configPath = &#34;./configV4.yaml&#34;; var MyFactory1 = new Factory(); MyFactory1.RegisterAsType(new Descriptor(&#34;myservice&#34;, &#34;component-a1&#34;, &#34;default&#34;, &#34;*&#34;, &#34;1.0&#34;), typeof(ComponentA1)); MyFactory1.RegisterAsType(new Descriptor(&#34;myservice&#34;, &#34;component-a2&#34;, &#34;default&#34;, &#34;*&#34;, &#34;1.0&#34;), typeof(ComponentA2)); MyFactory1.RegisterAsType(new Descriptor(&#34;myservice&#34;, &#34;component-b&#34;, &#34;default&#34;, &#34;*&#34;, &#34;1.0&#34;), typeof(ComponentB)); this._factories.Add(MyFactory1); } } /// &lt;summary&gt; /// Running the container /// &lt;/summary&gt; /// &lt;param name=&#34;args&#34;&gt;&lt;/param&gt; static void Main(string[] args) { try { var task = (new MyProcess()).">
-<meta itemprop="dateModified" content="2023-04-27T01:45:21+02:00" />
+<meta itemprop="dateModified" content="2023-04-27T19:40:36+02:00" />
 <meta itemprop="wordCount" content="97">
 <meta itemprop="keywords" content="" /><meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content=""/>

@@ -23,11 +23,11 @@
 <meta property="og:type" content="article" />
 <meta property="og:url" content="/tutorials/beginner_tutorials/communication/commandable_http/__code4_dart/" /><meta property="article:section" content="tutorials" />
 
-<meta property="article:modified_time" content="2023-04-27T01:45:21+02:00" />
+<meta property="article:modified_time" content="2023-04-27T19:40:36+02:00" />
 
 <meta itemprop="name" content="">
 <meta itemprop="description" content="import &#39;package:pip_services3_commons/pip_services3_commons.dart&#39;; import &#39;package:pip_services3_rpc/pip_services3_rpc.dart&#39;; class HelloFriendController implements IConfigurable, ICommandable { String _defaultName = &#39;World&#39;; FriendsCommandSet? _commandSet; HelloFriendController() { _defaultName = &#39;Pip User&#39;; } @override void configure(ConfigParams config) { _defaultName = config.getAsStringWithDefault(&#39;default_name&#39;, _defaultName); } @override CommandSet getCommandSet() { _commandSet ??= FriendsCommandSet(this); return _commandSet!; } String greeting(String? name) { return &#39;Hello, ${name ?? _defaultName}&#39;; } } ">
-<meta itemprop="dateModified" content="2023-04-27T01:45:21+02:00" />
+<meta itemprop="dateModified" content="2023-04-27T19:40:36+02:00" />
 <meta itemprop="wordCount" content="54">
 <meta itemprop="keywords" content="" /><meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content=""/>

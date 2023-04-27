@@ -23,11 +23,11 @@
 <meta property="og:type" content="article" />
 <meta property="og:url" content="/tutorials/beginner_tutorials/configuration/microservice_configuration/__code2_node/" /><meta property="article:section" content="tutorials" />
 
-<meta property="article:modified_time" content="2023-04-27T01:45:21+02:00" />
+<meta property="article:modified_time" content="2023-04-27T19:40:36+02:00" />
 
 <meta itemprop="name" content="">
 <meta itemprop="description" content="import { ProcessContainer } from &#34;pip-services3-container-nodex&#34;; import { Factory } from &#34;pip-services3-components-nodex&#34;; /** * Creating a process container */ export class MyProcess extends ProcessContainer { public constructor() { super(&#39;myservice&#39;, &#39;My service running as a process&#39;) this._configPath = &#39;./configV4.yaml&#39; let MyFactory1 = new Factory(); MyFactory1.registerAsType(new Descriptor(&#34;myservice&#34;, &#34;component-a1&#34;, &#34;default&#34;, &#34;*&#34;, &#34;1.0&#34;), ComponentA1); MyFactory1.registerAsType(new Descriptor(&#34;myservice&#34;, &#34;component-a2&#34;, &#34;default&#34;, &#34;*&#34;, &#34;1.0&#34;), ComponentA2); MyFactory1.registerAsType(new Descriptor(&#34;myservice&#34;, &#34;component-b&#34;, &#34;default&#34;, &#34;*&#34;, &#34;1.0&#34;), ComponentB); this._factories.add(MyFactory1) } } /** * Running the container */ function main() { let runner = new MyProcess(); console.">
-<meta itemprop="dateModified" content="2023-04-27T01:45:21+02:00" />
+<meta itemprop="dateModified" content="2023-04-27T19:40:36+02:00" />
 <meta itemprop="wordCount" content="90">
 <meta itemprop="keywords" content="" /><meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content=""/>

@@ -23,11 +23,11 @@
 <meta property="og:type" content="article" />
 <meta property="og:url" content="/tutorials/beginner_tutorials/configuration/deployment_configuration/__code4_net/" /><meta property="article:section" content="tutorials" />
 
-<meta property="article:modified_time" content="2023-04-27T01:45:21+02:00" />
+<meta property="article:modified_time" content="2023-04-27T19:40:36+02:00" />
 
 <meta itemprop="name" content="">
 <meta itemprop="description" content="using PipServices3.Postgres.Persistence; public class HelloFriendPersistence2 : IdentifiablePostgresPersistence&lt;MyFriend, string&gt;, IMyDataPersistence { public HelloFriendPersistence2() : base(&#34;myfriends3&#34;) { } protected override void DefineSchema() { ClearSchema(); EnsureSchema($&#34;CREATE TABLE IF NOT EXISTS {_tableName} (id TEXT PRIMARY KEY, type TEXT, name TEXT)&#34;); } private static string ComposeFilter(FilterParams filter) { filter ??= new FilterParams(); var type = filter.GetAsNullableString(&#34;type&#34;); var name = filter.GetAsNullableString(&#34;name&#34;); var filterCondition = &#34;&#34;; if (type != null) filterCondition &#43;= &#34;`type`=&#39;&#34; &#43; type &#43; &#34;&#39;&#34;; if (name !">
-<meta itemprop="dateModified" content="2023-04-27T01:45:21+02:00" />
+<meta itemprop="dateModified" content="2023-04-27T19:40:36+02:00" />
 <meta itemprop="wordCount" content="96">
 <meta itemprop="keywords" content="" /><meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content=""/>

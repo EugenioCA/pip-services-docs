@@ -23,11 +23,11 @@
 <meta property="og:type" content="article" />
 <meta property="og:url" content="/tutorials/beginner_tutorials/observability/elasticsearch/__code5_python/" /><meta property="article:section" content="tutorials" />
 
-<meta property="article:modified_time" content="2023-04-27T01:45:21+02:00" />
+<meta property="article:modified_time" content="2023-04-27T19:40:36+02:00" />
 
 <meta itemprop="name" content="">
 <meta itemprop="description" content="from pip_services3_elasticsearch.log import ElasticSearchLogger from pip_services3_commons.run import IOpenable from pip_services3_commons.config import IConfigurable, ConfigParams from typing import Optional import time class MyComponentA(IConfigurable, IOpenable): _console_log = True def __init__(self): self._logger = ElasticSearchLogger() self._logger.info(&#34;123&#34; , &#34;MyComponentA has been created.&#34;) def configure(self, config: ConfigParams): self._logger.configure(config) def open(self, correlation_id: Optional[str]): self._logger.open(correlation_id) def close(self, correlation_id: Optional[str]): self._logger.close(correlation_id) def mymethod(self): try: if self._console_log: print(&#34;Hola amigo&#34;) print(&#34;Bonjour mon ami&#34;) self._logger.info(&#34;123&#34; , &#34;Greetings created.&#34;) finally: self._logger.info(&#34;123&#34; , &#34;Finally reached.&#34;) ">
-<meta itemprop="dateModified" content="2023-04-27T01:45:21+02:00" />
+<meta itemprop="dateModified" content="2023-04-27T19:40:36+02:00" />
 <meta itemprop="wordCount" content="70">
 <meta itemprop="keywords" content="" /><meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content=""/>

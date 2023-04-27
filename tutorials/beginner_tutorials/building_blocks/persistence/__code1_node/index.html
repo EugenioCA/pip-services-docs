@@ -23,11 +23,11 @@
 <meta property="og:type" content="article" />
 <meta property="og:url" content="/tutorials/beginner_tutorials/building_blocks/persistence/__code1_node/" /><meta property="article:section" content="tutorials" />
 
-<meta property="article:modified_time" content="2023-04-27T01:45:21+02:00" />
+<meta property="article:modified_time" content="2023-04-27T19:40:36+02:00" />
 
 <meta itemprop="name" content="">
 <meta itemprop="description" content="import { MongoDbPersistence } from &#39;pip-services3-mongodb-nodex&#39;; class MyObject { key: string; name: string; } class MyMongoDbPersistence extends MongoDbPersistence&lt;MyObject&gt; { public constructor() { super(&#34;mycollection&#34;); } public async getByName(correlationId: string, name: string): Promise&lt;MyObject&gt; { let criteria= { name: name }; let res = await super.getListByFilter(correlationId, criteria, null, null); return res.length &gt; 0 ? res[0] : null; } public async createDefault(correlationId: string, name: string): Promise&lt;MyObject&gt; { name = name ?? &#34;unknown&#34;; let key = name.">
-<meta itemprop="dateModified" content="2023-04-27T01:45:21+02:00" />
+<meta itemprop="dateModified" content="2023-04-27T19:40:36+02:00" />
 <meta itemprop="wordCount" content="150">
 <meta itemprop="keywords" content="" /><meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content=""/>

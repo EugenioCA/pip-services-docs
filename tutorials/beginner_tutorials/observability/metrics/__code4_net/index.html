@@ -23,11 +23,11 @@
 <meta property="og:type" content="article" />
 <meta property="og:url" content="/tutorials/beginner_tutorials/observability/metrics/__code4_net/" /><meta property="article:section" content="tutorials" />
 
-<meta property="article:modified_time" content="2023-04-27T01:45:21+02:00" />
+<meta property="article:modified_time" content="2023-04-27T19:40:36+02:00" />
 
 <meta itemprop="name" content="">
 <meta itemprop="description" content="using System; using System.Collections.Generic; using System.Linq; using PipServices3.Components.Count; namespace ExampleApp { class Program { static void Main(string[] args) { var countersNull = new NullCounters(); var mycomponentNull = new MyComponent(countersNull); var countExec = 2; for (var i = 0; i &lt; countExec; i&#43;&#43;) mycomponentNull.MyMethod(); } } class MyCachedCounters : CachedCounters { protected override void Save(IEnumerable&lt;Counter&gt; counters) { var countersList = counters.ToList(); Console.WriteLine(&#34;Saving &#34; &#43; countersList[0].Name &#43; &#34; and &#34; &#43; countersList[1].Name); } } class MyComponent { ICounters counters; bool _consoleLog = true; public MyComponent(ICounters counters) { this.">
-<meta itemprop="dateModified" content="2023-04-27T01:45:21+02:00" />
+<meta itemprop="dateModified" content="2023-04-27T19:40:36+02:00" />
 <meta itemprop="wordCount" content="124">
 <meta itemprop="keywords" content="" /><meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content=""/>

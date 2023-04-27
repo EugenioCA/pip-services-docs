@@ -23,11 +23,11 @@
 <meta property="og:type" content="article" />
 <meta property="og:url" content="/tutorials/beginner_tutorials/communication/swagger/__code4_net/" /><meta property="article:section" content="tutorials" />
 
-<meta property="article:modified_time" content="2023-04-27T01:45:21+02:00" />
+<meta property="article:modified_time" content="2023-04-27T19:40:36+02:00" />
 
 <meta itemprop="name" content="">
 <meta itemprop="description" content="using System; using PipServices3.Commons.Commands; using PipServices3.Commons.Validate; using PipServices3.Commons.Run; public class FriendsCommandSet: CommandSet { private HelloFriendController _controller; public FriendsCommandSet(HelloFriendController controller) : base() { _controller = controller; AddCommand(MakeGreeting()); } private ICommand MakeGreeting() { return new Command(&#34;greeting&#34;, new ObjectSchema().WithRequiredProperty(&#34;name&#34;, TypeCode.String), (string correlationId, Parameters args) =&gt; { var name = args.GetAsString(&#34;name&#34;); var res = _controller.Greeting(name); return res; } ); } } ">
-<meta itemprop="dateModified" content="2023-04-27T01:45:21+02:00" />
+<meta itemprop="dateModified" content="2023-04-27T19:40:36+02:00" />
 <meta itemprop="wordCount" content="57">
 <meta itemprop="keywords" content="" /><meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content=""/>

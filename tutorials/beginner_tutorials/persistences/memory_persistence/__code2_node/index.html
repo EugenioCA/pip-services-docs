@@ -24,12 +24,12 @@ import { FilterParams } from &#39;pip-services3-commons-nodex&#39;; import { Pag
 <meta property="og:type" content="article" />
 <meta property="og:url" content="/tutorials/beginner_tutorials/persistences/memory_persistence/__code2_node/" /><meta property="article:section" content="tutorials" />
 
-<meta property="article:modified_time" content="2023-04-27T01:45:21+02:00" />
+<meta property="article:modified_time" content="2023-04-27T19:40:36+02:00" />
 
 <meta itemprop="name" content="">
 <meta itemprop="description" content="See: IdentifiableMemoryPersistence
 import { FilterParams } from &#39;pip-services3-commons-nodex&#39;; import { PagingParams } from &#39;pip-services3-commons-nodex&#39;; import { DataPage } from &#39;pip-services3-commons-nodex&#39;; import { IdentifiableMemoryPersistence } from &#39;pip-services3-data-nodex&#39;; export class MyMemoryPersistence extends IdentifiableMemoryPersistence&lt;Dummy, string&gt; { public constructor() { super(); } private composeFilter(filter: FilterParams): (item: Dummy) =&gt; boolean { filter = filter != null ? filter : new FilterParams(); let id = filter.getAsNullableString(&#34;id&#34;); let tempIds = filter.getAsNullableString(&#34;ids&#34;); let ids = tempIds != null ?">
-<meta itemprop="dateModified" content="2023-04-27T01:45:21+02:00" />
+<meta itemprop="dateModified" content="2023-04-27T19:40:36+02:00" />
 <meta itemprop="wordCount" content="178">
 <meta itemprop="keywords" content="" /><meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content=""/>

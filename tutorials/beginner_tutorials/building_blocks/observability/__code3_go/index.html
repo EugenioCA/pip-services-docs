@@ -23,11 +23,11 @@
 <meta property="og:type" content="article" />
 <meta property="og:url" content="/tutorials/beginner_tutorials/building_blocks/observability/__code3_go/" /><meta property="article:section" content="tutorials" />
 
-<meta property="article:modified_time" content="2023-04-27T01:45:21+02:00" />
+<meta property="article:modified_time" content="2023-04-27T19:40:36+02:00" />
 
 <meta itemprop="name" content="">
 <meta itemprop="description" content="import ( &#34;context&#34; cref &#34;github.com/pip-services3-gox/pip-services3-commons-gox/refer&#34; ctrace &#34;github.com/pip-services3-gox/pip-services3-components-gox/trace&#34; ) type MyComponent struct { // ... 	tracer *ctrace.CompositeTracer } func (c *MyComponent) SetReferences(ctx context.Context, references cref.IReferences) { c.tracer.SetReferences(ctx, references) } func (c *MyComponent) DoSomething(ctx context.Context, correlationId string) { timing := c.tracer.BeginTrace(ctx, correlationId, &#34;mycomponent&#34;, &#34;do_something&#34;) // ...  if err != nil { timing.EndFailure(ctx, err) } else { timing.EndTrace(ctx) } } ">
-<meta itemprop="dateModified" content="2023-04-27T01:45:21+02:00" />
+<meta itemprop="dateModified" content="2023-04-27T19:40:36+02:00" />
 <meta itemprop="wordCount" content="57">
 <meta itemprop="keywords" content="" /><meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content=""/>

@@ -23,11 +23,11 @@
 <meta property="og:type" content="article" />
 <meta property="og:url" content="/tutorials/beginner_tutorials/communication/commandable_http/__code3_go/" /><meta property="article:section" content="tutorials" />
 
-<meta property="article:modified_time" content="2023-04-27T01:45:21+02:00" />
+<meta property="article:modified_time" content="2023-04-27T19:40:36+02:00" />
 
 <meta itemprop="name" content="">
 <meta itemprop="description" content="import ( cref &#34;github.com/pip-services3-gox/pip-services3-commons-gox/refer&#34; srvc &#34;github.com/pip-services3-gox/pip-services3-rpc-gox/services&#34; ) type FriendCommandableHttpService struct { *srvc.CommandableHttpService DependencyResolver *cref.DependencyResolver } func NewFriendCommandableHttpService() *FriendCommandableHttpService { c := &amp;FriendCommandableHttpService{} c.CommandableHttpService = srvc.InheritCommandableHttpService(c, &#34;commandable_hello_friend&#34;) c.DependencyResolver.Put(&#34;controller&#34;, cref.NewDescriptor(&#34;hello-friend&#34;, &#34;controller&#34;, &#34;*&#34;, &#34;*&#34;, &#34;*&#34;)) return c } ">
-<meta itemprop="dateModified" content="2023-04-27T01:45:21+02:00" />
+<meta itemprop="dateModified" content="2023-04-27T19:40:36+02:00" />
 <meta itemprop="wordCount" content="35">
 <meta itemprop="keywords" content="" /><meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content=""/>

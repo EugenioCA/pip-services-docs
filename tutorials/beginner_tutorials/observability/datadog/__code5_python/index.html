@@ -23,11 +23,11 @@
 <meta property="og:type" content="article" />
 <meta property="og:url" content="/tutorials/beginner_tutorials/observability/datadog/__code5_python/" /><meta property="article:section" content="tutorials" />
 
-<meta property="article:modified_time" content="2023-04-27T01:45:21+02:00" />
+<meta property="article:modified_time" content="2023-04-27T19:40:36+02:00" />
 
 <meta itemprop="name" content="">
 <meta itemprop="description" content="import time from typing import Optional from pip_services3_commons.config import IConfigurable, ConfigParams from pip_services3_commons.run import IOpenable from pip_services3_datadog.count import DataDogCounters class MyComponentA(IConfigurable, IOpenable): _console_log = True def __init__(self): self._counters = DataDogCounters() if self._console_log: print(&#34;MyComponentA has been created.&#34;) def configure(self, config: ConfigParams): self._counters.configure(config) def get_counters(self) -&gt; DataDogCounters: return self._counters def is_open(self) -&gt; bool: return self._counters.is_open() def open(self, correlation_id: Optional[str]): self._counters.open(correlation_id) def close(self, correlation_id: Optional[str]): self._counters.close(correlation_id) def my_method(self): self._counters.increment(&#34;mycomponent.mymethod.calls&#34;, 1) timing = self._counters.begin_timing(&#34;mycomponent.mymethod.exec_time&#34;) try: if self.">
-<meta itemprop="dateModified" content="2023-04-27T01:45:21+02:00" />
+<meta itemprop="dateModified" content="2023-04-27T19:40:36+02:00" />
 <meta itemprop="wordCount" content="81">
 <meta itemprop="keywords" content="" /><meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content=""/>

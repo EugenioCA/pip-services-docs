@@ -24,12 +24,12 @@ package clients1 import ( &#34;context&#34; data1 &#34;github.com/pip-services-s
 <meta property="og:type" content="article" />
 <meta property="og:url" content="/tutorials/advanced_tutorials/client_library/__code4_go/" /><meta property="article:section" content="tutorials" />
 
-<meta property="article:modified_time" content="2023-04-27T01:45:21+02:00" />
+<meta property="article:modified_time" content="2023-04-27T19:40:36+02:00" />
 
 <meta itemprop="name" content="">
 <meta itemprop="description" content="/version1/BeaconsHttpClientV1.ts
 package clients1 import ( &#34;context&#34; data1 &#34;github.com/pip-services-samples/service-beacons-gox/data/version1&#34; cdata &#34;github.com/pip-services3-gox/pip-services3-commons-gox/data&#34; cclients &#34;github.com/pip-services3-gox/pip-services3-rpc-gox/clients&#34; clients &#34;github.com/pip-services3-gox/pip-services3-rpc-gox/clients&#34; ) type BeaconsHttpClientV1 struct { *cclients.CommandableHttpClient } func NewBeaconsHttpClientV1() *BeaconsHttpClientV1 { c := &amp;BeaconsHttpClientV1{ CommandableHttpClient: cclients.NewCommandableHttpClient(&#34;v1/beacons&#34;), } return c } func (c *BeaconsHttpClientV1) GetBeacons(ctx context.Context, correlationId string, filter cdata.FilterParams, paging cdata.PagingParams) (*cdata.DataPage[data1.BeaconV1], error) { params := cdata.NewEmptyStringValueMap() c.AddFilterParams(params, &amp;filter) c.AddPagingParams(params, &amp;paging) response, err := c.CallCommand(ctx, &#34;get_beacons&#34;, correlationId, cdata.NewAnyValueMapFromValue(params.Value())) if err != nil { return cdata.NewEmptyDataPage[data1.BeaconV1](), err } return clients.">
-<meta itemprop="dateModified" content="2023-04-27T01:45:21+02:00" />
+<meta itemprop="dateModified" content="2023-04-27T19:40:36+02:00" />
 <meta itemprop="wordCount" content="307">
 <meta itemprop="keywords" content="" /><meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content=""/>

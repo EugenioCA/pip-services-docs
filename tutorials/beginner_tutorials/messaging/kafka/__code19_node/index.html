@@ -23,11 +23,11 @@
 <meta property="og:type" content="article" />
 <meta property="og:url" content="/tutorials/beginner_tutorials/messaging/kafka/__code19_node/" /><meta property="article:section" content="tutorials" />
 
-<meta property="article:modified_time" content="2023-04-27T01:45:21+02:00" />
+<meta property="article:modified_time" content="2023-04-27T19:40:36+02:00" />
 
 <meta itemprop="name" content="">
 <meta itemprop="description" content="import { ConfigParams, ICleanable } from &#34;pip-services3-commons-nodex&#34;; import { KafkaMessageQueue } from &#34;pip-services3-kafka-nodex&#34;; import { IMessageQueue, IMessageReceiver, MessageEnvelope } from &#34;pip-services3-messaging-nodex&#34;; class MyMessageReceiver implements IMessageReceiver, ICleanable { private _messages: MessageEnvelope[] = []; constructor() { } public get messages(): MessageEnvelope[] { return this._messages; } public get messageCount(): number { return this._messages.length; } public async receiveMessage(envelope: MessageEnvelope, queue: IMessageQueue): Promise&lt;void&gt; { this._messages.push(envelope); } public async clear(correlationId: string): Promise&lt;void&gt; { this._messages = []; } } export async function main() { let queue = new KafkaMessageQueue(); queue.">
-<meta itemprop="dateModified" content="2023-04-27T01:45:21+02:00" />
+<meta itemprop="dateModified" content="2023-04-27T19:40:36+02:00" />
 <meta itemprop="wordCount" content="157">
 <meta itemprop="keywords" content="" /><meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content=""/>

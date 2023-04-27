@@ -23,11 +23,11 @@
 <meta property="og:type" content="article" />
 <meta property="og:url" content="/tutorials/beginner_tutorials/observability/metrics/__code1_go/" /><meta property="article:section" content="tutorials" />
 
-<meta property="article:modified_time" content="2023-04-27T01:45:21+02:00" />
+<meta property="article:modified_time" content="2023-04-27T19:40:36+02:00" />
 
 <meta itemprop="name" content="">
 <meta itemprop="description" content="import ( &#34;context&#34; &#34;fmt&#34; ccount &#34;github.com/pip-services3-gox/pip-services3-components-gox/count&#34; ) type MyComponent struct { _consoleLog bool _counters ccount.ICounters } func NewMyComponentA(counters ccount.ICounters) *MyComponent { c := &amp;MyComponent{} c._counters = counters if c._consoleLog { fmt.Println(&#34;MyComponent has been created.&#34;) } return c } func (c *MyComponent) Mymethod() { c._counters.Increment(context.Background(), &#34;mycomponent.mymethod.calls&#34;, 1) timing := c._counters.BeginTiming(context.Background(), &#34;mycomponent.mymethod.exec_time&#34;) defer timing.EndTiming() if c._consoleLog { fmt.Println(&#34;Hola amigo&#34;) fmt.Println(&#34;Bonjour mon ami&#34;) } } ">
-<meta itemprop="dateModified" content="2023-04-27T01:45:21+02:00" />
+<meta itemprop="dateModified" content="2023-04-27T19:40:36+02:00" />
 <meta itemprop="wordCount" content="62">
 <meta itemprop="keywords" content="" /><meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content=""/>

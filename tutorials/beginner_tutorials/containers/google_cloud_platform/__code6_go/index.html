@@ -23,11 +23,11 @@
 <meta property="og:type" content="article" />
 <meta property="og:url" content="/tutorials/beginner_tutorials/containers/google_cloud_platform/__code6_go/" /><meta property="article:section" content="tutorials" />
 
-<meta property="article:modified_time" content="2023-04-27T01:45:21+02:00" />
+<meta property="article:modified_time" content="2023-04-27T19:40:36+02:00" />
 
 <meta itemprop="name" content="">
 <meta itemprop="description" content="// Controller&#39;s descriptor is defined in the configuration file type MyCommandableCloudFunction struct { *gcpcont.CommandableCloudFunction controller *MyController } func NewMyCommandableCloudFunction() *MyCommandableCloudFunction { c := &amp;MyCommandableCloudFunction{} c.CommandableCloudFunction = gcpcont.NewCommandableCloudFunction() c.SetConfigPath(&#34;./config.yaml&#34;) c.AddFactory(NewMyFactory()) return c } func (c *MyCommandableCloudFunction) SetReferences(ctx context.Context, references cref.IReferences) { c.CommandableCloudFunction.SetReferences(ctx, references) res, err := references.GetOneRequired(cref.NewDescriptor(&#34;mygroup&#34;, &#34;controller&#34;, &#34;default&#34;, &#34;controller&#34;, &#34;*&#34;)) if err != nil { panic(&#34;Controller is not found&#34;) } c.controller = res.(*MyController) } ">
-<meta itemprop="dateModified" content="2023-04-27T01:45:21+02:00" />
+<meta itemprop="dateModified" content="2023-04-27T19:40:36+02:00" />
 <meta itemprop="wordCount" content="64">
 <meta itemprop="keywords" content="" /><meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content=""/>

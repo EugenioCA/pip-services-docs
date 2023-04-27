@@ -23,11 +23,11 @@
 <meta property="og:type" content="article" />
 <meta property="og:url" content="/tutorials/beginner_tutorials/messaging/kafka/__code12_net/" /><meta property="article:section" content="tutorials" />
 
-<meta property="article:modified_time" content="2023-04-27T01:45:21+02:00" />
+<meta property="article:modified_time" content="2023-04-27T19:40:36+02:00" />
 
 <meta itemprop="name" content="">
 <meta itemprop="description" content="using Confluent.Kafka; using PipServices3.Commons.Config; using PipServices3.Kafka.Connect; var kc = new KafkaConnection(); var config = ConfigParams.FromTuples( &#34;connection.host&#34;, &#34;localhost&#34;, &#34;connection.port&#34;, 9092 ); kc.Configure(config); await kc.OpenAsync(null); await kc.CreateQueueAsync(&#34;my_queueA&#34;); await kc.CreateQueueAsync(&#34;my_queueB&#34;); await kc.CreateQueueAsync(&#34;my_queueC&#34;); var messages = new List&lt;Message&lt;byte[], byte[]&gt;&gt;(); for (var i = 0; i &lt; 3; i&#43;&#43;) { var message = new Message&lt;byte[], byte[]&gt;(); message.Value = Encoding.ASCII.GetBytes(&#34;message &#34; &#43; i.ToString()); messages.Add(message); } await kc.PublishAsync(&#34;my_topicA&#34;, messages[0]); await kc.PublishAsync(&#34;my_topicB&#34;, messages[1]); await kc.PublishAsync(&#34;my_topicC&#34;, messages[2]); var myListener = new MyListener(); await kc.">
-<meta itemprop="dateModified" content="2023-04-27T01:45:21+02:00" />
+<meta itemprop="dateModified" content="2023-04-27T19:40:36+02:00" />
 <meta itemprop="wordCount" content="107">
 <meta itemprop="keywords" content="" /><meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content=""/>
