@@ -23,11 +23,11 @@
 <meta property="og:type" content="article" />
 <meta property="og:url" content="/tutorials/beginner_tutorials/configuration/deployment_configuration/__code2_dart/" /><meta property="article:section" content="tutorials" />
 
-<meta property="article:modified_time" content="2023-04-24T19:08:36+02:00" />
+<meta property="article:modified_time" content="2023-04-27T01:45:21+02:00" />
 
 <meta itemprop="name" content="">
 <meta itemprop="description" content="import &#39;package:pip_services3_commons/pip_services3_commons.dart&#39;; class HelloFriendController implements IConfigurable, IReferenceable { String defaultName; IMyDataPersistence? persistence; HelloFriendController() : defaultName = &#39;Pip User&#39;; @override void configure(ConfigParams config) { defaultName = config.getAsStringWithDefault(&#39;default_name&#39;, defaultName); } @override void setReferences(IReferences references) { persistence = references.getOneRequired( Descriptor(&#39;hello-friend&#39;, &#39;persistence&#39;, &#39;*&#39;, &#39;*&#39;, &#39;1.0&#39;)); } Future&lt;String&gt; greeting() async { var filter = FilterParams.fromTuples([&#39;type&#39;, &#39;friend&#39;]); var selectedFilter = await persistence!.getOneRandom(null, filter); var name = selectedFilter?.name ?? &#39;&#39;; return &#39;Hello, &#39; &#43; name &#43; &#39; !">
-<meta itemprop="dateModified" content="2023-04-24T19:08:36+02:00" />
+<meta itemprop="dateModified" content="2023-04-27T01:45:21+02:00" />
 <meta itemprop="wordCount" content="104">
 <meta itemprop="keywords" content="" /><meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content=""/>

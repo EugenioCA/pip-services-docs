@@ -23,11 +23,11 @@
 <meta property="og:type" content="article" />
 <meta property="og:url" content="/tutorials/beginner_tutorials/three_tier_architecture/__code12_net/" /><meta property="article:section" content="tutorials" />
 
-<meta property="article:modified_time" content="2023-04-24T19:08:36+02:00" />
+<meta property="article:modified_time" content="2023-04-27T01:45:21+02:00" />
 
 <meta itemprop="name" content="">
 <meta itemprop="description" content="using System; using System.Runtime.Serialization; using System.Threading.Tasks; using PipServices3.Commons.Config; using PipServices3.Commons.Refer; using PipServices3.Commons.Data; using PipServices3.Rpc.Services; using Microsoft.AspNetCore.Http; using Microsoft.AspNetCore.Routing; using PipServices3.MySql.Persistence; using PipServices3.Components.Build; using PipServices3.Container; using PipServices3.Rpc.Build; // Data object [DataContract] public class MyFriend : IStringIdentifiable { [DataMember(Name = &#34;id&#34;)] public string Id { get; set; } [DataMember(Name = &#34;type&#34;)] public string Type { get; set; } [DataMember(Name = &#34;name&#34;)] public string Name { get; set; } } // Tier 1: View public class HelloFriendRestService: RestService { protected HelloFriendController controller; public HelloFriendRestService() : base() { _baseRoute = &#34;/hello_friend&#34;; } public override void Configure(ConfigParams config) { base.">
-<meta itemprop="dateModified" content="2023-04-24T19:08:36+02:00" />
+<meta itemprop="dateModified" content="2023-04-27T01:45:21+02:00" />
 <meta itemprop="wordCount" content="496">
 <meta itemprop="keywords" content="" /><meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content=""/>

@@ -23,11 +23,11 @@
 <meta property="og:type" content="article" />
 <meta property="og:url" content="/tutorials/beginner_tutorials/three_tier_architecture/__code8_python/" /><meta property="article:section" content="tutorials" />
 
-<meta property="article:modified_time" content="2023-04-24T19:08:36+02:00" />
+<meta property="article:modified_time" content="2023-04-27T01:45:21+02:00" />
 
 <meta itemprop="name" content="">
 <meta itemprop="description" content="from pip_services3_mysql.persistence import IdentifiableMySqlPersistence from pip_services3_commons.data import FilterParams class HelloFriendPersistence(IdentifiableMySqlPersistence): def __init__(self): super(HelloFriendPersistence, self).__init__(&#39;myfriends3&#39;) def _define_schema(self): self._clear_schema() self._ensure_schema( &#39;CREATE TABLE IF NOT EXISTS `&#39; &#43; self._table_name &#43; &#39;` (id VARCHAR(32) PRIMARY KEY, `type` VARCHAR(50), `name` TEXT)&#39;) def _compose_filter(self, filter: FilterParams): filter = filter or FilterParams() type = filter.get_as_nullable_string(&#39;type&#39;) name = filter.get_as_nullable_string(&#39;name&#39;) filter_condition = &#39;&#39; if type is not None: filter_condition &#43;= &#34;`type`=&#39;&#34; &#43; type &#43; &#34;&#39;&#34; if name is not None: filter_condition &#43;= &#34;`name`=&#39;&#34; &#43; name &#43; &#34;&#39;&#34; return filter_condition def get_one_random(self, correlation_id: str, filter: FilterParams) -&gt; MyFriend: return super().">
-<meta itemprop="dateModified" content="2023-04-24T19:08:36+02:00" />
+<meta itemprop="dateModified" content="2023-04-27T01:45:21+02:00" />
 <meta itemprop="wordCount" content="91">
 <meta itemprop="keywords" content="" /><meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content=""/>

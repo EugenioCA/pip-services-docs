@@ -23,11 +23,11 @@
 <meta property="og:type" content="article" />
 <meta property="og:url" content="/tutorials/beginner_tutorials/discovery_services/__code7_python/" /><meta property="article:section" content="tutorials" />
 
-<meta property="article:modified_time" content="2023-04-24T19:08:36+02:00" />
+<meta property="article:modified_time" content="2023-04-27T01:45:21+02:00" />
 
 <meta itemprop="name" content="">
 <meta itemprop="description" content="# Pre-requisites from pip_services3_commons.config import ConfigParams from pip_services3_components.connect import MemoryDiscovery, ConnectionParams # Defining the component  config = ConfigParams.from_tuples( &#34;connections.key1.host&#34;, &#34;10.1.1.100&#34;, &#34;connections.key1.port&#34;, &#34;8080&#34;, &#34;connections.key2.host&#34;, &#34;10.1.1.100&#34;, &#34;connections.key2.port&#34;, &#34;8082&#34; ) discovery = MemoryDiscovery() discovery.configure(config) # Adding more parameters  discovery.register(&#39;123&#39;, &#39;key1&#39;, ConnectionParams.from_tuples( &#39;param1&#39;, &#39;val1&#39;, &#39;param2&#39;, &#39;val2&#39; )) discovery.register(&#39;123&#39;, &#39;key3&#39;, ConnectionParams.from_tuples( &#39;host&#39;, &#39;localhost&#39;, &#39;port&#39;, &#39;8000&#39; )) # Resolving connections  print(discovery.resolve_one(&#34;123&#34;, &#34;key1&#34;)) print(discovery.resolve_all(&#34;123&#34;, &#34;key1&#34;)) print(discovery.resolve_one(&#34;123&#34;, &#34;key3&#34;)) Which after running produces the following result:">
-<meta itemprop="dateModified" content="2023-04-24T19:08:36+02:00" />
+<meta itemprop="dateModified" content="2023-04-27T01:45:21+02:00" />
 <meta itemprop="wordCount" content="67">
 <meta itemprop="keywords" content="" /><meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content=""/>

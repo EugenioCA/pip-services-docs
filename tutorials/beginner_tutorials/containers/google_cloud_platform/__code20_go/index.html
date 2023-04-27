@@ -23,11 +23,11 @@
 <meta property="og:type" content="article" />
 <meta property="og:url" content="/tutorials/beginner_tutorials/containers/google_cloud_platform/__code20_go/" /><meta property="article:section" content="tutorials" />
 
-<meta property="article:modified_time" content="2023-04-24T19:08:36+02:00" />
+<meta property="article:modified_time" content="2023-04-27T01:45:21+02:00" />
 
 <meta itemprop="name" content="">
 <meta itemprop="description" content="type MyCommandSet struct { *ccomand.CommandSet controller *MyController } func NewMyCommandSet(controller *MyController) *MyCommandSet { c := &amp;MyCommandSet{} c.controller = controller c.AddCommand(c.MakeGreeting()) return c } func (c *MyCommandSet) MakeGreeting() *ccomand.Command { return ccomand.NewCommand( &#34;greetings&#34;, cvalid.NewObjectSchema().WithRequiredProperty(&#34;name&#34;, cconv.String), func(ctx context.Context, correlationId string, args *crun.Parameters) (any, error) { name := args.GetAsString(&#34;name&#34;) return c.controller.Greetings(ctx, name) }, ) } ">
-<meta itemprop="dateModified" content="2023-04-24T19:08:36+02:00" />
+<meta itemprop="dateModified" content="2023-04-27T01:45:21+02:00" />
 <meta itemprop="wordCount" content="52">
 <meta itemprop="keywords" content="" /><meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content=""/>

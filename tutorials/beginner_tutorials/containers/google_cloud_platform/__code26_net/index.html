@@ -23,11 +23,11 @@
 <meta property="og:type" content="article" />
 <meta property="og:url" content="/tutorials/beginner_tutorials/containers/google_cloud_platform/__code26_net/" /><meta property="article:section" content="tutorials" />
 
-<meta property="article:modified_time" content="2023-04-24T19:08:36+02:00" />
+<meta property="article:modified_time" content="2023-04-27T01:45:21+02:00" />
 
 <meta itemprop="name" content="">
 <meta itemprop="description" content="using Microsoft.AspNetCore.Http; using PipServices3.Commons.Refer; using PipServices3.Components.Build; using PipServices3.Gcp.Containers; using PipServices3.Gcp.Services; using PipServices3.Rpc.Services; using System.Collections.Generic; using System.Threading.Tasks; namespace ExampleApp { public class MyCloudFunctionService : CloudFunctionService { private MyController1 _controller; private IDictionary&lt;string, string&gt; _headers = new Dictionary&lt;string, string&gt;() { { &#34;Content-Type&#34;, &#34;application/json&#34; } }; public MyCloudFunctionService() : base(&#34;myservice&#34;) { } public override void SetReferences(IReferences references) { base.SetReferences(references); _controller = references.GetOneRequired&lt;MyController1&gt;(new Descriptor(&#34;mygroup&#34;, &#34;controller&#34;, &#34;*&#34;, &#34;controller1&#34;, &#34;1.0&#34;)); } private async Task Action(HttpContext context) { var parameters = await CloudFunctionRequestHelper.">
-<meta itemprop="dateModified" content="2023-04-24T19:08:36+02:00" />
+<meta itemprop="dateModified" content="2023-04-27T01:45:21+02:00" />
 <meta itemprop="wordCount" content="271">
 <meta itemprop="keywords" content="" /><meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content=""/>

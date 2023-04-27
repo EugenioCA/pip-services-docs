@@ -24,12 +24,12 @@ package persistence import ( &#34;reflect&#34; &#34;strings&#34; data1 &#34;gith
 <meta property="og:type" content="article" />
 <meta property="og:url" content="/tutorials/advanced_tutorials/mongodb_persistence/__code1_go/" /><meta property="article:section" content="tutorials" />
 
-<meta property="article:modified_time" content="2023-04-24T19:08:36+02:00" />
+<meta property="article:modified_time" content="2023-04-27T01:45:21+02:00" />
 
 <meta itemprop="name" content="">
 <meta itemprop="description" content="See: MongoDb module
 package persistence import ( &#34;reflect&#34; &#34;strings&#34; data1 &#34;github.com/pip-services-samples/service-beacons-gox/data/version1&#34; cdata &#34;github.com/pip-services3-gox/pip-services3-commons-gox/data&#34; mpersist &#34;github.com/pip-services3-gox/pip-services3-mongodb-gox/persistence&#34; &#34;go.mongodb.org/mongo-driver/bson&#34; &#34;go.mongodb.org/mongo-driver/mongo&#34; ) type BeaconsMongoDbPersistence struct { *mpersist.IdentifiableMongoDbPersistence } func NewBeaconsMongoDbPersistence() *BeaconsMongoDbPersistence { c := &amp;BeaconsMongoDbPersistence{} c.IdentifiableMongoDbPersistence = mpersist.InheritIdentifiableMongoDbPersistence(c, &#34;beacons&#34;) return c } func (c *BeaconsMongoDbPersistence) composeFilter(filter *cdata.FilterParams) interface{} { if filter == nil { filter = cdata.NewEmptyFilterParams() } criteria := make([]bson.M, 0, 0) id := filter.GetAsString(&#34;id&#34;) if id != &#34;&#34; { criteria = append(criteria, bson.">
-<meta itemprop="dateModified" content="2023-04-24T19:08:36+02:00" />
+<meta itemprop="dateModified" content="2023-04-27T01:45:21+02:00" />
 <meta itemprop="wordCount" content="231">
 <meta itemprop="keywords" content="" /><meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content=""/>

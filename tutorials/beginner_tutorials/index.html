@@ -226974,16 +226974,16 @@
       <ul>
         <li>
           <ul>
-            <li><a href="#configuring-connectionsconfiguring_connections"><a href="configuring_connections">Configuring connections</a></a></li>
-            <li><a href="#configuring-credentialsconfiguring_credentials"><a href="configuring_credentials">Configuring credentials</a></a></li>
-            <li><a href="#connection-utilsconnection_utils"><a href="connection_utils">Connection utils</a></a></li>
-            <li><a href="#data-conversiondata_conversion"><a href="data_conversion">Data conversion</a></a></li>
-            <li><a href="#datadogdatadog"><a href="datadog">Datadog</a></a></li>
-            <li><a href="#deployment-time-configurationdeployment_configuration"><a href="deployment_configuration">Deployment time configuration</a></a></li>
-            <li><a href="#designing-persistencedesigning_persistence"><a href="designing_persistence">Designing persistence</a></a></li>
+            <li><a href="#configuring-connectionsconfigurationconfiguring_connections"><a href="configuration/configuring_connections">Configuring connections</a></a></li>
+            <li><a href="#configuring-credentialsconfigurationconfiguring_credentials"><a href="configuration/configuring_credentials">Configuring credentials</a></a></li>
+            <li><a href="#connection-utilscommunicationconnection_utils"><a href="communication/connection_utils">Connection utils</a></a></li>
+            <li><a href="#data-conversiondata_handlingdata_conversion"><a href="data_handling/data_conversion">Data conversion</a></a></li>
+            <li><a href="#datadogobservabilitydatadog"><a href="observability/datadog">Datadog</a></a></li>
+            <li><a href="#deployment-time-configurationconfigurationdeployment_configuration"><a href="configuration/deployment_configuration">Deployment time configuration</a></a></li>
+            <li><a href="#designing-persistencepersistencesdesigning_persistence"><a href="persistences/designing_persistence">Designing persistence</a></a></li>
             <li><a href="#discovery-servicesdiscovery_services"><a href="discovery_services">Discovery services</a></a></li>
-            <li><a href="#elasticsearchelasticsearch"><a href="elasticsearch">Elasticsearch</a></a></li>
-            <li><a href="#fluentdfluentd"><a href="fluentd">Fluentd</a></a></li>
+            <li><a href="#elasticsearchobservabilityelasticsearch"><a href="observability/elasticsearch">Elasticsearch</a></a></li>
+            <li><a href="#fluentdobservabilityfluentd"><a href="observability/fluentd">Fluentd</a></a></li>
             <li><a href="#logginglogging"><a href="logging">Logging</a></a></li>
             <li><a href="#metricsmetrics"><a href="metrics">Metrics</a></a></li>
             <li><a href="#mongodb-persistencemongodb_persistence"><a href="mongodb_persistence">MongoDB persistence</a></a></li>
@@ -227048,28 +227048,28 @@
         
 	
 	<hr>
-<h3 id="configuring-connectionsconfiguring_connections"><a href="configuring_connections">Configuring connections</a></h3>
+<h3 id="configuring-connectionsconfigurationconfiguring_connections"><a href="configuration/configuring_connections">Configuring connections</a></h3>
 <p>In this tutorial, you will learn how to configure connections with the ConnectionParams component and perform CRUD operations with them. First, we will see different ways to create connections, such as from a constructor, a tuple, a string, and a ConfigParams object. Then, we will see how to extract, modify and delete different fields in those connections.</p>
-<h3 id="configuring-credentialsconfiguring_credentials"><a href="configuring_credentials">Configuring credentials</a></h3>
+<h3 id="configuring-credentialsconfigurationconfiguring_credentials"><a href="configuration/configuring_credentials">Configuring credentials</a></h3>
 <p>In this tutorial, you will understand how to operate with the CredentialParams component by performing CRUD operations. We will begin by learning to create an instance of this component using its constructor, a tuple, a string, and the ConfigParam class. Then, we will understand how to extract and update the values of credential parameters stored in the component, and delete those parameters.</p>
-<h3 id="connection-utilsconnection_utils"><a href="connection_utils">Connection utils</a></h3>
+<h3 id="connection-utilscommunicationconnection_utils"><a href="communication/connection_utils">Connection utils</a></h3>
 <p>In this tutorial, you will learn how to use a set of utilities offered by Pip.Services that can be used to simplify the handling of connections. We will start by explaining how to import these components. Then, we will see their syntax and how to use them. Finally, we will explore an example that illustrates the practical application of some of these utilities.</p>
-<h3 id="data-conversiondata_conversion"><a href="data_conversion">Data conversion</a></h3>
+<h3 id="data-conversiondata_handlingdata_conversion"><a href="data_handling/data_conversion">Data conversion</a></h3>
 <p>This tutorial will help you to understand the different conversion components available in the Pip.Services toolkit, Commons module, convert library. The tutorial consists of a brief explanation of each class and its methods followed by a set of examples that show how to use each of them.</p>
-<h3 id="datadogdatadog"><a href="datadog">Datadog</a></h3>
+<h3 id="datadogobservabilitydatadog"><a href="observability/datadog">Datadog</a></h3>
 <p>How to send metrics and logs to Datadog.
 In this tutorial, you will learn how to send different metrics and logs to Datadog. For this, we will first create a class with a method that, once executed, sends metrics to Datadog via the DataDogCounters component. Then, we will modify this class and use it to send log information to Datadog via the DataDogLogger class.</p>
-<h3 id="deployment-time-configurationdeployment_configuration"><a href="deployment_configuration">Deployment time configuration</a></h3>
+<h3 id="deployment-time-configurationconfigurationdeployment_configuration"><a href="configuration/deployment_configuration">Deployment time configuration</a></h3>
 <p>How to set up and change your configurations at deployment time.
 In this tutorial, you will learn how to configure at deployment time an application based on Pip.Services components.</p>
-<h3 id="designing-persistencedesigning_persistence"><a href="designing_persistence">Designing persistence</a></h3>
+<h3 id="designing-persistencepersistencesdesigning_persistence"><a href="persistences/designing_persistence">Designing persistence</a></h3>
 <p>In this tutorial, you will understand how to design your persistence in such a way that your code benefits from one of the main features of Pip.Services, which is symmetric code implementation.
 In order to see this, we will create an example using two different databases (MySQL and PostgreSQL). Then, we will create a common set of instructions to manage CRUD operations and transfer data from one database into another.</p>
 <h3 id="discovery-servicesdiscovery_services"><a href="discovery_services">Discovery services</a></h3>
 <p>In this tutorial, you will learn how to create and operate a discovery service that stores connection parameters in memory. We will begin by explaining the necessary pre-requisites. Then, we will continue by showing how to create the service and add and extract connection parameters from it. We will finish with a comprehensive example that illustrates all the learned concepts.</p>
-<h3 id="elasticsearchelasticsearch"><a href="elasticsearch">Elasticsearch</a></h3>
+<h3 id="elasticsearchobservabilityelasticsearch"><a href="observability/elasticsearch">Elasticsearch</a></h3>
 <p>In this tutorial you will learn how to work with the ElasticSearchLogger component, which is used to send logs to Elasticsearch. First, we will see the necessary pre-requisites. Then, we will continue by creating a custom component with an example method, running it and generating the logs. After this, we will verify that the messages reached Elasticsearch by using the Elasticvue online tool. Finally, we will improve our custom component by including several Pip.Services best practices.</p>
-<h3 id="fluentdfluentd"><a href="fluentd">Fluentd</a></h3>
+<h3 id="fluentdobservabilityfluentd"><a href="observability/fluentd">Fluentd</a></h3>
 <p>In this tutorial, you will learn how to use the FluentdLogger component to send log messages to Fluentd. First, we will describe this component and understand its pre-requisites. Then, we will create a custom component with methods that generate log messages every time they are called, run it and see the messages received by Fluentd. Finally, we will combine the different code sections into one program and summarize what we have learned.</p>
 <h3 id="logginglogging"><a href="logging">Logging</a></h3>
 <p>In this tutorial, you will learn how to add logging capacity to a microservice. First, we will understand what logging consists of. Then, we will use the microservice we created in the &ldquo;Creating a component&rdquo; tutorial, replace the printed messages with logger messages and create an exception in our business process (my_task). After running the code, we will see the tagged messages from the logger.</p>

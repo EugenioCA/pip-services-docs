@@ -23,11 +23,11 @@
 <meta property="og:type" content="article" />
 <meta property="og:url" content="/tutorials/beginner_tutorials/communication/commandable_grpc/__code12_python/" /><meta property="article:section" content="tutorials" />
 
-<meta property="article:modified_time" content="2023-04-24T19:08:36+02:00" />
+<meta property="article:modified_time" content="2023-04-27T01:45:21+02:00" />
 
 <meta itemprop="name" content="">
 <meta itemprop="description" content="from typing import Optional from pip_services3_commons.data.DataPage import DataPage from pip_services3_commons.data.FilterParams import FilterParams from pip_services3_commons.data.PagingParams import PagingParams from pip_services3_grpc.clients.CommandableGrpcClient import CommandableGrpcClient from data.MyData import MyData from .IMyDataClient import IMyDataClient class MyCommandableGrpcClient(CommandableGrpcClient, IMyDataClient): def __init__(self): super().__init__(&#39;mydata&#39;) def get_my_datas(self, correlation_id: Optional[str], filter: Optional[FilterParams], paging: Optional[PagingParams]) -&gt; DataPage: return self.call_command(&#39;get_my_datas&#39;, correlation_id, {&#39;filter&#39;: filter, &#39;paging&#39;: paging}) def get_my_data_by_id(self, correlation_id: Optional[str], my_data_id) -&gt; MyData: return self.call_command(&#39;get_my_data_by_id&#39;, correlation_id, {&#39;my_data_id&#39;: my_data_id}) def create_my_data(self, correlation_id: Optional[str], my_data) -&gt; MyData: return self.">
-<meta itemprop="dateModified" content="2023-04-24T19:08:36+02:00" />
+<meta itemprop="dateModified" content="2023-04-27T01:45:21+02:00" />
 <meta itemprop="wordCount" content="100">
 <meta itemprop="keywords" content="" /><meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content=""/>

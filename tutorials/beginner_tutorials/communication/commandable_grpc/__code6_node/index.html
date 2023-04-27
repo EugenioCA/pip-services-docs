@@ -23,11 +23,11 @@
 <meta property="og:type" content="article" />
 <meta property="og:url" content="/tutorials/beginner_tutorials/communication/commandable_grpc/__code6_node/" /><meta property="article:section" content="tutorials" />
 
-<meta property="article:modified_time" content="2023-04-24T19:08:36+02:00" />
+<meta property="article:modified_time" content="2023-04-27T01:45:21+02:00" />
 
 <meta itemprop="name" content="">
 <meta itemprop="description" content="import { Command, CommandSet, DataPage, FilterParams, FilterParamsSchema, ICommand, ObjectSchema, PagingParams, PagingParamsSchema, TypeCode } from &#34;pip-services3-commons-nodex&#34;; import { IMyDataController, MyDataSchema, MyData } from &#34;my-package&#34;; export class MyDataCommandSet extends CommandSet { private _controller: IMyDataController; public constructor(controller: IMyDataController) { super(); this._controller = controller; this.addCommand(this._makePageByFilterCommand()); this.addCommand(this._makeGetOneByIdCommand()); this.addCommand(this._makeCreateCommand()); this.addCommand(this._makeUpdateCommand()); this.addCommand(this._makeDeleteByIdCommand()); } private _makePageByFilterCommand(): ICommand { return new Command( &#39;get_my_datas&#39;, new ObjectSchema() .withOptionalProperty(&#39;filter&#39;, new FilterParamsSchema()) .withOptionalProperty(&#39;paging&#39;, new PagingParamsSchema()), async (correlationId: string, args: Parameters) =&gt; { let filter = FilterParams.">
-<meta itemprop="dateModified" content="2023-04-24T19:08:36+02:00" />
+<meta itemprop="dateModified" content="2023-04-27T01:45:21+02:00" />
 <meta itemprop="wordCount" content="210">
 <meta itemprop="keywords" content="" /><meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content=""/>

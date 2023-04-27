@@ -23,11 +23,11 @@
 <meta property="og:type" content="article" />
 <meta property="og:url" content="/tutorials/beginner_tutorials/messaging/rabbitmq/__code7_go/" /><meta property="article:section" content="tutorials" />
 
-<meta property="article:modified_time" content="2023-04-24T19:08:36+02:00" />
+<meta property="article:modified_time" content="2023-04-27T01:45:21+02:00" />
 
 <meta itemprop="name" content="">
 <meta itemprop="description" content="import ( &#34;context&#34; &#34;fmt&#34; cconf &#34;github.com/pip-services3-gox/pip-services3-commons-gox/config&#34; cqueues &#34;github.com/pip-services3-gox/pip-services3-messaging-gox/queues&#34; rqueues &#34;github.com/pip-services3-gox/pip-services3-rabbitmq-gox/queues&#34; ) func main() { // Create and configure a component 	queue := rqueues.NewEmptyRabbitMQMessageQueue(&#34;my_topic&#34;) queue.Configure(context.Background(), cconf.NewConfigParamsFromTuples( &#34;exchange&#34;, &#34;myqueue&#34;, // rabbitmq exchange type 	&#34;queue&#34;, &#34;myqueue&#34;, // queue name 	&#34;options.auto_create&#34;, true, // autocreate queue 	&#34;connection.host&#34;, &#34;localhost&#34;, &#34;connection.port&#34;, 5672, // if need credentials 	&#34;credential.username&#34;, &#34;user&#34;, &#34;credential.password&#34;, &#34;password&#34;, )) err := queue.Open(context.Background(), &#34;123&#34;) if err != nil { panic(err) } err = queue.">
-<meta itemprop="dateModified" content="2023-04-24T19:08:36+02:00" />
+<meta itemprop="dateModified" content="2023-04-27T01:45:21+02:00" />
 <meta itemprop="wordCount" content="96">
 <meta itemprop="keywords" content="" /><meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content=""/>

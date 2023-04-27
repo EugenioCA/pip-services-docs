@@ -23,11 +23,11 @@
 <meta property="og:type" content="article" />
 <meta property="og:url" content="/tutorials/beginner_tutorials/communication/command_set/__code5_go/" /><meta property="article:section" content="tutorials" />
 
-<meta property="article:modified_time" content="2023-04-24T19:08:36+02:00" />
+<meta property="article:modified_time" content="2023-04-27T01:45:21+02:00" />
 
 <meta itemprop="name" content="">
 <meta itemprop="description" content="type MyCommandSetB struct { *ccmd.CommandSet } func NewMyCommandSetB() *MyCommandSetB { c := &amp;MyCommandSetB{ CommandSet: ccmd.NewCommandSet(), } c.AddCommand(c.command1B()) return c } func (c *MyCommandSetB) command1B() ccmd.ICommand { return ccmd.NewCommand( &#34;command1B&#34;, nil, func(ctx context.Context, correlationId string, args *crun.Parameters) (result interface{}, err error) { fmt.Println(&#34;command 1B&#34;) return }, ) } type MyCommandSet struct { *ccmd.CommandSet } func NewMyCommandSet() *MyCommandSet { c := &amp;MyCommandSet{ CommandSet: ccmd.NewCommandSet(), } c.AddCommandSet(NewMyCommandSetB().CommandSet) return c } ">
-<meta itemprop="dateModified" content="2023-04-24T19:08:36+02:00" />
+<meta itemprop="dateModified" content="2023-04-27T01:45:21+02:00" />
 <meta itemprop="wordCount" content="67">
 <meta itemprop="keywords" content="" /><meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content=""/>

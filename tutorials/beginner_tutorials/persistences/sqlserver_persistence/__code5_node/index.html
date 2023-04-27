@@ -23,11 +23,11 @@
 <meta property="og:type" content="article" />
 <meta property="og:url" content="/tutorials/beginner_tutorials/persistences/sqlserver_persistence/__code5_node/" /><meta property="article:section" content="tutorials" />
 
-<meta property="article:modified_time" content="2023-04-24T19:08:36+02:00" />
+<meta property="article:modified_time" content="2023-04-27T01:45:21+02:00" />
 
 <meta itemprop="name" content="">
 <meta itemprop="description" content="export class MySqlServerPersistence extends SqlServerPersistence&lt;MyData&gt; { public constructor() { super(&#39;mydata&#39;); } protected defineSchema(): void { this.clearSchema(); this.ensureSchema(&#39;CREATE TABLE [&#39; &#43; this._tableName &#43; &#39;] ([id] VARCHAR(32) PRIMARY KEY, [key] VARCHAR(50), [content] VARCHAR(MAX))&#39;); this.ensureIndex(this._tableName &#43; &#39;_key&#39;, { key: 1 }, { unique: true }); } public getOneRandom(correlationId: string, filter: any): Promise&lt;MyData&gt; { return super.getOneRandom(correlationId, filter); } public getPageByFilter(correlationId: string, filter: any, paging: PagingParams, sort: any): Promise&lt;DataPage&lt;MyData&gt;&gt; { return super.getPageByFilter(correlationId, filter, paging, null, null); } public getListByFilter(correlationId: string, filter: any, sort: any, select: any): Promise&lt;MyData[]&gt; { return super.">
-<meta itemprop="dateModified" content="2023-04-24T19:08:36+02:00" />
+<meta itemprop="dateModified" content="2023-04-27T01:45:21+02:00" />
 <meta itemprop="wordCount" content="101">
 <meta itemprop="keywords" content="" /><meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content=""/>

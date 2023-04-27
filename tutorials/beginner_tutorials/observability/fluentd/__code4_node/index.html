@@ -23,11 +23,11 @@
 <meta property="og:type" content="article" />
 <meta property="og:url" content="/tutorials/beginner_tutorials/observability/fluentd/__code4_node/" /><meta property="article:section" content="tutorials" />
 
-<meta property="article:modified_time" content="2023-04-24T19:08:36+02:00" />
+<meta property="article:modified_time" content="2023-04-27T01:45:21+02:00" />
 
 <meta itemprop="name" content="">
 <meta itemprop="description" content="import { ConfigParams, Descriptor, IOpenable } from &#39;pip-services3-commons-nodex&#39;; import { IConfigurable } from &#39;pip-services3-commons-nodex&#39;; import { FluentdLogger } from &#39;pip-services3-fluentd-nodex&#39;; class MyComponent implements IConfigurable, IOpenable { private _logger = new FluentdLogger(); public constructor(){ this._logger.configure(ConfigParams.fromTuples( &#34;connection.protocol&#34;, &#34;http&#34;, &#34;connection.host&#34;, &#34;localhost&#34;, &#34;connection.port&#34;, 24224 )); this._logger.setLevel(5); this._logger.open(&#34;123&#34;); this._logger.info(null, &#34;MyComponent has been created.666666&#34;); this._logger.debug(&#34;123&#34;, &#34;Everything is OK.&#34;); } public configure(config: ConfigParams): void { this._logger.info(null, &#34;MyComponent is configured.&#34;) } public open(correlationId: string): Promise&lt;void&gt; { this._logger.info(null, &#34;MyComponent is open.">
-<meta itemprop="dateModified" content="2023-04-24T19:08:36+02:00" />
+<meta itemprop="dateModified" content="2023-04-27T01:45:21+02:00" />
 <meta itemprop="wordCount" content="144">
 <meta itemprop="keywords" content="" /><meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content=""/>

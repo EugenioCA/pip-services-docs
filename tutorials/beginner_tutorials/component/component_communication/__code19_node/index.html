@@ -24,12 +24,12 @@
 <meta property="og:type" content="article" />
 <meta property="og:url" content="/tutorials/beginner_tutorials/component/component_communication/__code19_node/" /><meta property="article:section" content="tutorials" />
 
-<meta property="article:modified_time" content="2023-04-24T19:08:36+02:00" />
+<meta property="article:modified_time" content="2023-04-27T01:45:21+02:00" />
 
 <meta itemprop="name" content="">
 <meta itemprop="description" content="See PrometheusMetricsService
 /** * Sets references to dependent components. * * @param references references to locate the component dependencies. */ public setReferences(references: IReferences): void { super.setReferences(references); this._cachedCounters = this._dependencyResolver.getOneOptional&lt;PrometheusCounters&gt;(&#34;prometheus-counters&#34;); if (this._cachedCounters == null) this._cachedCounters = this._dependencyResolver.getOneOptional&lt;CachedCounters&gt;(&#34;cached-counters&#34;); let contextInfo = references.getOneOptional&lt;ContextInfo&gt;( new Descriptor(&#34;pip-services&#34;, &#34;context-info&#34;, &#34;default&#34;, &#34;*&#34;, &#34;1.0&#34;)); if (contextInfo != null &amp;&amp; (this._source == &#34;&#34; || this._source == undefined)) { this._source = contextInfo.name; } if (contextInfo != null &amp;&amp; (this._instance == &#34;&#34; || this.">
-<meta itemprop="dateModified" content="2023-04-24T19:08:36+02:00" />
+<meta itemprop="dateModified" content="2023-04-27T01:45:21+02:00" />
 <meta itemprop="wordCount" content="81">
 <meta itemprop="keywords" content="" /><meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content=""/>

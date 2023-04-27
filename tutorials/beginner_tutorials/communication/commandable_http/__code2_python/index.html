@@ -23,11 +23,11 @@
 <meta property="og:type" content="article" />
 <meta property="og:url" content="/tutorials/beginner_tutorials/communication/commandable_http/__code2_python/" /><meta property="article:section" content="tutorials" />
 
-<meta property="article:modified_time" content="2023-04-24T19:08:36+02:00" />
+<meta property="article:modified_time" content="2023-04-27T01:45:21+02:00" />
 
 <meta itemprop="name" content="">
 <meta itemprop="description" content="from pip_services3_commons.commands import Command, CommandSet, ICommand from pip_services3_commons.run import Parameters from pip_services3_commons.validate import Schema, ObjectSchema from pip_services3_commons.convert import TypeCode from typing import Optional class FriendsCommandSet(CommandSet): _controller: &#39;HelloFriendController&#39; def __init__(self, controller): super().__init__() self._controller = controller self.add_command(self._make_greeting()) def _make_greeting(self) -&gt; ICommand: def handler(correlation_id: Optional[str], args: Parameters): name = args.get_as_string(&#34;name&#34;) res = self._controller.greeting(name) return res return Command( &#34;greeting&#34;, ObjectSchema(True).with_required_property(&#34;name&#34;, TypeCode.String), handler ) ">
-<meta itemprop="dateModified" content="2023-04-24T19:08:36+02:00" />
+<meta itemprop="dateModified" content="2023-04-27T01:45:21+02:00" />
 <meta itemprop="wordCount" content="59">
 <meta itemprop="keywords" content="" /><meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content=""/>

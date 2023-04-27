@@ -23,11 +23,11 @@
 <meta property="og:type" content="article" />
 <meta property="og:url" content="/tutorials/beginner_tutorials/building_blocks/persistence/__code4_go/" /><meta property="article:section" content="tutorials" />
 
-<meta property="article:modified_time" content="2023-04-24T19:08:36+02:00" />
+<meta property="article:modified_time" content="2023-04-27T01:45:21+02:00" />
 
 <meta itemprop="name" content="">
 <meta itemprop="description" content="import ( &#34;context&#34; &#34;github.com/pip-services3-go/pip-services3-commons-go/refer&#34; &#34;github.com/pip-services3-gox/pip-services3-commons-gox/config&#34; ) type MyCustomPersistence struct { // Custom implementation using any persistence framework } func NewMyCustomPersistence() *MyCustomPersistence { return &amp;MyCustomPersistence{} } type MyCustomPersistenceWrapper struct { config *config.ConfigParams persistence *MyCustomPersistence } func NewMyCustomPersistenceWrapper() *MyCustomPersistenceWrapper { return &amp;MyCustomPersistenceWrapper{ config: config.NewConfigParams(), } } func (c *MyCustomPersistenceWrapper) Configure(ctx context.Context, config *config.ConfigParams) { // Store config parameters 	if config != nil { c.config = config } } func (c *MyCustomPersistenceWrapper) SetReferences(ctx context.">
-<meta itemprop="dateModified" content="2023-04-24T19:08:36+02:00" />
+<meta itemprop="dateModified" content="2023-04-27T01:45:21+02:00" />
 <meta itemprop="wordCount" content="162">
 <meta itemprop="keywords" content="" /><meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content=""/>

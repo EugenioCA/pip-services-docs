@@ -23,11 +23,11 @@
 <meta property="og:type" content="article" />
 <meta property="og:url" content="/tutorials/beginner_tutorials/observability/metrics/__code2_dart/" /><meta property="article:section" content="tutorials" />
 
-<meta property="article:modified_time" content="2023-04-24T19:08:36+02:00" />
+<meta property="article:modified_time" content="2023-04-27T01:45:21+02:00" />
 
 <meta itemprop="name" content="">
 <meta itemprop="description" content="import &#39;package:pip_services3_components/pip_services3_components.dart&#39;; void main(List&lt;String&gt; argument) async { var countersCached = MyCachedCounters(); var mycomponentCached = MyComponent(countersCached); var countExec = 2; for (var i = 0; i &lt; countExec; i&#43;&#43;) { mycomponentCached.mymethod(); } var resultCached = countersCached.getAll(); print(&#39;Metrics&#39;); for (var res in resultCached) { print(&#39;Count: &#39; &#43; res.count.toString()); print(&#39;Min: &#39; &#43; res.min.toString()); print(&#39;Max: &#39; &#43; res.max.toString()); print(&#39;Average: &#39; &#43; res.average.toString()); print(&#39;Time: &#39; &#43; res.time.toString()); print(&#39;Name: &#39; &#43; res.name.toString()); print(&#39;Type: &#39; &#43; res.type.toString()); print(&#39;-----------------&#39;); } } class MyCachedCounters extends CachedCounters { @override void save(List&lt;Counter&gt; counters) { print(&#39;Saving &#39; &#43; counters[0].">
-<meta itemprop="dateModified" content="2023-04-24T19:08:36+02:00" />
+<meta itemprop="dateModified" content="2023-04-27T01:45:21+02:00" />
 <meta itemprop="wordCount" content="95">
 <meta itemprop="keywords" content="" /><meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content=""/>

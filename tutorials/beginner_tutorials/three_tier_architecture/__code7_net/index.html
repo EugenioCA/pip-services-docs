@@ -23,11 +23,11 @@
 <meta property="og:type" content="article" />
 <meta property="og:url" content="/tutorials/beginner_tutorials/three_tier_architecture/__code7_net/" /><meta property="article:section" content="tutorials" />
 
-<meta property="article:modified_time" content="2023-04-24T19:08:36+02:00" />
+<meta property="article:modified_time" content="2023-04-27T01:45:21+02:00" />
 
 <meta itemprop="name" content="">
 <meta itemprop="description" content="using PipServices3.Commons.Config; using PipServices3.Commons.Refer; using PipServices3.Commons.Commands; public class HelloFriendController : IConfigurable, IReferenceable { private string defaultName; private HelloFriendPersistence persistence; public HelloFriendController() { defaultName = &#34;Pip User&#34;; } public void Configure(ConfigParams config) { defaultName = config.GetAsStringWithDefault(&#34;default_name&#34;, defaultName); } public void SetReferences(IReferences references) { persistence = references.GetOneRequired&lt;HelloFriendPersistence&gt;(new Descriptor(&#34;hello-friend&#34;, &#34;persistence&#34;, &#34;*&#34;, &#34;*&#34;, &#34;1.0&#34;)); } public async Task&lt;string&gt; Greeting() { var filter = FilterParams.FromTuples(&#34;type&#34;, &#34;friend&#34;); var selectedFilter = await persistence.GetOneRandomAsync(null, filter); var name = selectedFilter!">
-<meta itemprop="dateModified" content="2023-04-24T19:08:36+02:00" />
+<meta itemprop="dateModified" content="2023-04-27T01:45:21+02:00" />
 <meta itemprop="wordCount" content="99">
 <meta itemprop="keywords" content="" /><meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content=""/>

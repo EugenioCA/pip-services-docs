@@ -23,11 +23,11 @@
 <meta property="og:type" content="article" />
 <meta property="og:url" content="/tutorials/beginner_tutorials/communication/direct_client/__code2_node/" /><meta property="article:section" content="tutorials" />
 
-<meta property="article:modified_time" content="2023-04-24T19:08:36+02:00" />
+<meta property="article:modified_time" content="2023-04-27T01:45:21+02:00" />
 
 <meta itemprop="name" content="">
 <meta itemprop="description" content="// Pre-requisites import { ConfigParams, DependencyResolver, Descriptor, IConfigurable, IReferenceable, IReferences } from &#34;pip-services3-commons-nodex&#34;; import { DirectClient } from &#34;pip-services3-rpc-nodex&#34;; // Direct client export class MyDirectClient extends DirectClient&lt;MyController&gt; { _dependencyResolver = new DependencyResolver(); public constructor() { super(); this._controller = null this._dependencyResolver.put(&#34;controller&#34;, new Descriptor(&#34;pip-services&#34;, &#34;controller&#34;, &#34;*&#34;, &#34;*&#34;, &#34;1.0&#34;)) } public setReferences(references: IReferences): void { this._dependencyResolver.setReferences(references); this._controller = this._dependencyResolver.getOneRequired(&#34;controller&#34;); } } // Instantiation let client = new MyDirectClient(); ">
-<meta itemprop="dateModified" content="2023-04-24T19:08:36+02:00" />
+<meta itemprop="dateModified" content="2023-04-27T01:45:21+02:00" />
 <meta itemprop="wordCount" content="65">
 <meta itemprop="keywords" content="" /><meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content=""/>

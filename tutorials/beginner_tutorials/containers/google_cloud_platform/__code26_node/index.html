@@ -23,11 +23,11 @@
 <meta property="og:type" content="article" />
 <meta property="og:url" content="/tutorials/beginner_tutorials/containers/google_cloud_platform/__code26_node/" /><meta property="article:section" content="tutorials" />
 
-<meta property="article:modified_time" content="2023-04-24T19:08:36+02:00" />
+<meta property="article:modified_time" content="2023-04-27T01:45:21+02:00" />
 
 <meta itemprop="name" content="">
 <meta itemprop="description" content="import { Descriptor, IReferenceable, IReferences } from &#34;pip-services3-commons-nodex&#34;; import { Factory } from &#34;pip-services3-components-nodex&#34;; import { CloudFunction, CloudFunctionRequestHelper, CloudFunctionService } from &#34;pip-services3-gcp-nodex&#34;; import { HttpResponseSender } from &#34;pip-services3-rpc-nodex&#34;; export class MyCloudFunctionService extends CloudFunctionService { private _controller: MyController1; private _headers = { &#39;Content-Type&#39;: &#39;application/json&#39; }; public constructor() { super(&#34;myservice&#34;); } public setReferences(references: IReferences): void { super.setReferences(references); this._controller = references.getOneRequired(new Descriptor(&#34;mygroup&#34;, &#34;controller&#34;, &#34;*&#34;, &#34;controller1&#34;, &#34;1.0&#34;)); } private async action(req: Request, res: Response): Promise&lt;void&gt; { let params = CloudFunctionRequestHelper.">
-<meta itemprop="dateModified" content="2023-04-24T19:08:36+02:00" />
+<meta itemprop="dateModified" content="2023-04-27T01:45:21+02:00" />
 <meta itemprop="wordCount" content="267">
 <meta itemprop="keywords" content="" /><meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content=""/>

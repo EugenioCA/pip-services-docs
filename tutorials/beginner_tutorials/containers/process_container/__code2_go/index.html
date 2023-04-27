@@ -23,11 +23,11 @@
 <meta property="og:type" content="article" />
 <meta property="og:url" content="/tutorials/beginner_tutorials/containers/process_container/__code2_go/" /><meta property="article:section" content="tutorials" />
 
-<meta property="article:modified_time" content="2023-04-24T19:08:36+02:00" />
+<meta property="article:modified_time" content="2023-04-27T01:45:21+02:00" />
 
 <meta itemprop="name" content="">
 <meta itemprop="description" content="import ( &#34;context&#34; &#34;fmt&#34; cconf &#34;github.com/pip-services3-gox/pip-services3-commons-gox/config&#34; crefer &#34;github.com/pip-services3-gox/pip-services3-commons-gox/refer&#34; crun &#34;github.com/pip-services3-gox/pip-services3-commons-gox/run&#34; ) type MyComponentA struct { opened bool } func NewMyComponentA() *MyComponentA { defer fmt.Println(&#34;MyComponentA has been created.&#34;) c := &amp;MyComponentA{} return c } func (c *MyComponentA) Configure(ctx context.Context, config *cconf.ConfigParams) { fmt.Println(&#34;MyComponentA has been configured.&#34;) } func (c *MyComponentA) SetReferences(ctx context.Context, references crefer.IReferences) { fmt.Println(&#34;MyComponentA&#39;s references have been defined.&#34;) } func (c *MyComponentA) UnsetReferences() { fmt.Println(&#34;References cleared&#34;) } func (c *MyComponentA) IsOpen() bool { return c.">
-<meta itemprop="dateModified" content="2023-04-24T19:08:36+02:00" />
+<meta itemprop="dateModified" content="2023-04-27T01:45:21+02:00" />
 <meta itemprop="wordCount" content="131">
 <meta itemprop="keywords" content="" /><meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content=""/>

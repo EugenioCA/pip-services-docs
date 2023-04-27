@@ -23,11 +23,11 @@
 <meta property="og:type" content="article" />
 <meta property="og:url" content="/tutorials/beginner_tutorials/communication/direct_client/__code2_dart/" /><meta property="article:section" content="tutorials" />
 
-<meta property="article:modified_time" content="2023-04-24T19:08:36+02:00" />
+<meta property="article:modified_time" content="2023-04-27T01:45:21+02:00" />
 
 <meta itemprop="name" content="">
 <meta itemprop="description" content="// Pre-requisites import &#39;package:pip_services3_commons/pip_services3_commons.dart&#39;; import &#39;package:pip_services3_rpc/pip_services3_rpc.dart&#39;; // Direct client class MyDirectClient extends DirectClient&lt;MyController&gt; { MyDirectClient() { dependencyResolver.put(&#39;controller&#39;, Descriptor(&#39;pip-services&#39;, &#39;controller&#39;, &#39;*&#39;, &#39;*&#39;, &#39;1.0&#39;)); } @override void setReferences(IReferences references) { dependencyResolver.setReferences(references); controller = dependencyResolver.getOneRequired&lt;MyController&gt;(&#39;controller&#39;); } void myMethod() { controller.myMethod(); } } // Instantiation var client = MyDirectClient(); ">
-<meta itemprop="dateModified" content="2023-04-24T19:08:36+02:00" />
+<meta itemprop="dateModified" content="2023-04-27T01:45:21+02:00" />
 <meta itemprop="wordCount" content="45">
 <meta itemprop="keywords" content="" /><meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content=""/>

@@ -23,11 +23,11 @@
 <meta property="og:type" content="article" />
 <meta property="og:url" content="/tutorials/beginner_tutorials/containers/google_cloud_platform/__code26_go/" /><meta property="article:section" content="tutorials" />
 
-<meta property="article:modified_time" content="2023-04-24T19:08:36+02:00" />
+<meta property="article:modified_time" content="2023-04-27T01:45:21+02:00" />
 
 <meta itemprop="name" content="">
 <meta itemprop="description" content="import ( &#34;context&#34; &#34;net/http&#34; cref &#34;github.com/pip-services3-gox/pip-services3-commons-gox/refer&#34; cbuild &#34;github.com/pip-services3-gox/pip-services3-components-gox/build&#34; gcpcont &#34;github.com/pip-services3-gox/pip-services3-gcp-gox/containers&#34; gcpserv &#34;github.com/pip-services3-gox/pip-services3-gcp-gox/services&#34; gcputil &#34;github.com/pip-services3-gox/pip-services3-gcp-gox/utils&#34; rpcserv &#34;github.com/pip-services3-gox/pip-services3-rpc-gox/services&#34; ) type MyCloudFunctionService struct { *gcpserv.CloudFunctionService controller *MyController1 headers map[string]string } func NewMyCloudFunctionService() *MyCloudFunctionService { c := &amp;MyCloudFunctionService{} c.CloudFunctionService = gcpserv.NewCloudFunctionService(&#34;myservice&#34;) return c } func (c *MyCloudFunctionService) SetReferences(ctx context.Context, references cref.IReferences) { c.CloudFunctionService.SetReferences(ctx, references) res, err := references.GetOneRequired(cref.NewDescriptor(&#34;mygroup&#34;, &#34;controller&#34;, &#34;*&#34;, &#34;controller1&#34;, &#34;1.0&#34;)) if err != nil { panic(&#34;Controller is not found&#34;) } c.controller = res.">
-<meta itemprop="dateModified" content="2023-04-24T19:08:36+02:00" />
+<meta itemprop="dateModified" content="2023-04-27T01:45:21+02:00" />
 <meta itemprop="wordCount" content="326">
 <meta itemprop="keywords" content="" /><meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content=""/>

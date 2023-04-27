@@ -24,12 +24,12 @@
 <meta property="og:type" content="article" />
 <meta property="og:url" content="/tutorials/advanced_tutorials/microservice_facade/__code15_python/" /><meta property="article:section" content="tutorials" />
 
-<meta property="article:modified_time" content="2023-04-24T19:08:36+02:00" />
+<meta property="article:modified_time" content="2023-04-27T01:45:21+02:00" />
 
 <meta itemprop="name" content="">
 <meta itemprop="description" content="/pip_facades_sample_python/build/FacadeFactory.py
 # -*- coding: utf-8 -*- from pip_services3_commons.refer.Descriptor import Descriptor from pip_services3_components.build.Factory import Factory from pip_facades_sample_python.services.version1.FacadeServiceV1 import FacadeServiceV1 from pip_facades_sample_python.services.version2.FacadeServiceV2 import FacadeServiceV2 class FacadeFactory(Factory): FacadeServiceV1Descriptor = Descriptor(&#39;pip-facades-example&#39;, &#39;service&#39;, &#39;http&#39;, &#39;*&#39;, &#39;1.0&#39;) FacadeServiceV2Descriptor = Descriptor(&#39;pip-facades-example&#39;, &#39;service&#39;, &#39;http&#39;, &#39;*&#39;, &#39;2.0&#39;) def __init__(self): super(FacadeFactory, self).__init__() self.register_as_type(FacadeFactory.FacadeServiceV1Descriptor, FacadeServiceV1) self.register_as_type(FacadeFactory.FacadeServiceV2Descriptor, FacadeServiceV2) ">
-<meta itemprop="dateModified" content="2023-04-24T19:08:36+02:00" />
+<meta itemprop="dateModified" content="2023-04-27T01:45:21+02:00" />
 <meta itemprop="wordCount" content="46">
 <meta itemprop="keywords" content="" /><meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content=""/>
