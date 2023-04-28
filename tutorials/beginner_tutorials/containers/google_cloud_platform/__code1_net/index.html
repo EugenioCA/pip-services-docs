@@ -23,11 +23,11 @@
 <meta property="og:type" content="article" />
 <meta property="og:url" content="/tutorials/beginner_tutorials/containers/google_cloud_platform/__code1_net/" /><meta property="article:section" content="tutorials" />
 
-<meta property="article:modified_time" content="2023-04-27T19:40:36+02:00" />
+<meta property="article:modified_time" content="2023-04-28T15:45:00+02:00" />
 
 <meta itemprop="name" content="">
 <meta itemprop="description" content="// Controller&#39;s descriptor is defined in the configuration file public class MyCloudFunction: CloudFunction { private MyController _controller; public MyCloudFunction(): base(&#34;mygroup&#34;, &#34;MyGroup&#34;) { _configPath = &#34;./config.yaml&#34;; _factories.Add(new MyFactory()); } public override void SetReferences(IReferences references) { base.SetReferences(references); this._controller = references.GetOneRequired&lt;MyController&gt;(new Descriptor(&#34;mygroup&#34;, &#34;controller&#34;, &#34;default&#34;, &#34;controller&#34;, &#34;*&#34;)); } private async Task Action(HttpContext context) { var parameters = await CloudFunctionRequestHelper.GetParametersAsync(context); var name = parameters.GetAsStringWithDefault(&#34;name&#34;, &#34;default name&#34;); var result = await _controller.Greetings(name); await HttpResponseSender.SendResultAsync(result); } protected override void Register() { RegisterAction(&#34;greetings&#34;, null, Action); } } ">
-<meta itemprop="dateModified" content="2023-04-27T19:40:36+02:00" />
+<meta itemprop="dateModified" content="2023-04-28T15:45:00+02:00" />
 <meta itemprop="wordCount" content="79">
 <meta itemprop="keywords" content="" /><meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content=""/>

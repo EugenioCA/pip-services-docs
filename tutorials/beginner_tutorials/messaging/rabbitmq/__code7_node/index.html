@@ -23,11 +23,11 @@
 <meta property="og:type" content="article" />
 <meta property="og:url" content="/tutorials/beginner_tutorials/messaging/rabbitmq/__code7_node/" /><meta property="article:section" content="tutorials" />
 
-<meta property="article:modified_time" content="2023-04-27T19:40:36+02:00" />
+<meta property="article:modified_time" content="2023-04-28T15:45:00+02:00" />
 
 <meta itemprop="name" content="">
 <meta itemprop="description" content="import { ConfigParams } from &#39;pip-services3-commons-nodex&#39;; import { MessageEnvelope } from &#39;pip-services3-messaging-nodex&#39;; import { RabbitMQMessageQueue } from &#39;pip-services3-rbbitmq-nodex&#39; export async function main() { let queue = new RabbitMQMessageQueue(); queue.configure(ConfigParams.fromTuples( &#34;exchange&#34;, &#34;myqueue&#34;, // rabbitmq exchange type  &#34;queue&#34;, &#34;myqueue&#34;, // queue name  &#34;options.auto_create&#34;, true, // autocreate queue  &#34;connection.host&#34;, &#34;localhost&#34;, &#34;connection.port&#34;, 5672 // if need credentials  //&#34;credential.username&#34;, &#34;user&#34;,  //&#34;credential.password&#34;, &#34;pass123&#34;  )); await queue.open(&#34;123&#34;); await queue.send(&#34;123&#34;, new MessageEnvelope(null, &#34;mymessage&#34;, &#34;ABC&#34;)); let received = await queue.">
-<meta itemprop="dateModified" content="2023-04-27T19:40:36+02:00" />
+<meta itemprop="dateModified" content="2023-04-28T15:45:00+02:00" />
 <meta itemprop="wordCount" content="76">
 <meta itemprop="keywords" content="" /><meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content=""/>

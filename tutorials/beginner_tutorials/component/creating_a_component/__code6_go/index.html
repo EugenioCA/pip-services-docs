@@ -23,11 +23,11 @@
 <meta property="og:type" content="article" />
 <meta property="og:url" content="/tutorials/beginner_tutorials/component/creating_a_component/__code6_go/" /><meta property="article:section" content="tutorials" />
 
-<meta property="article:modified_time" content="2023-04-27T19:40:36+02:00" />
+<meta property="article:modified_time" content="2023-04-28T15:45:00+02:00" />
 
 <meta itemprop="name" content="">
 <meta itemprop="description" content="import ( &#34;fmt&#34; config &#34;github.com/pip-services3-gox/pip-services3-commons-gox/config&#34; refer &#34;github.com/pip-services3-gox/pip-services3-commons-gox/refer&#34; run &#34;github.com/pip-services3-gox/pip-services3-commons-gox/run&#34; ) type MyComponentB struct { // ... } type MyComponentA struct { config.IConfigurable refer.IReferenceable run.IOpenable param1 string param2 int open bool anotherComponent interface{} dummyVariable string status string } // ...  func (c *MyComponentA) Close(ctx context.Context, correlationId string) error { c.open = false c.status = &#34;Closed&#34; fmt.Println(&#34;MyComponentA has been closed.&#34;) return nil } ">
-<meta itemprop="dateModified" content="2023-04-27T19:40:36+02:00" />
+<meta itemprop="dateModified" content="2023-04-28T15:45:00+02:00" />
 <meta itemprop="wordCount" content="61">
 <meta itemprop="keywords" content="" /><meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content=""/>

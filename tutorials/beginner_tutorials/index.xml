@@ -2179,14 +2179,14 @@ The core of the toolkit is shown in green. It consists of two modules, both of w
 
 
 
-&lt;a class=&#34;btn btn-link&#34; id=&#34;btn-collapse-1682636016755525291&#34; style=&#34;border: none;text-decoration:underline;&#34;  type=&#34;button&#34;
-    data-toggle=&#34;collapse&#34; data-target=&#34;#collapse-1682636016755525291&#34; aria-expanded=&#34;false&#34; aria-controls=&#34;collapse-1682636016755525291&#34;&gt;
+&lt;a class=&#34;btn btn-link&#34; id=&#34;btn-collapse-1682691371684307670&#34; style=&#34;border: none;text-decoration:underline;&#34;  type=&#34;button&#34;
+    data-toggle=&#34;collapse&#34; data-target=&#34;#collapse-1682691371684307670&#34; aria-expanded=&#34;false&#34; aria-controls=&#34;collapse-1682691371684307670&#34;&gt;
     &lt;h4&gt;Code Example
-        &lt;i id=&#34;collapse-1682636016755525291-arrow&#34; class=&#34;pl-2 fas fa-caret-down&#34;&gt;&lt;/i&gt;
+        &lt;i id=&#34;collapse-1682691371684307670-arrow&#34; class=&#34;pl-2 fas fa-caret-down&#34;&gt;&lt;/i&gt;
     &lt;/h4&gt;
 &lt;/a&gt;
 
-&lt;div class=&#34;collapse pt-1&#34; id=&#34;collapse-1682636016755525291&#34;&gt;
+&lt;div class=&#34;collapse pt-1&#34; id=&#34;collapse-1682691371684307670&#34;&gt;
     
         
             
@@ -2359,10 +2359,10 @@ The core of the toolkit is shown in green. It consists of two modules, both of w
 
 
 &lt;script type=&#34;text/javascript&#34;&gt;
-    document.getElementById(&#34;btn-collapse-1682636016755525291&#34;).addEventListener(&#39;click&#39;, changeArrow);
+    document.getElementById(&#34;btn-collapse-1682691371684307670&#34;).addEventListener(&#39;click&#39;, changeArrow);
 
     function changeArrow(e) {
-        let arrow = document.getElementById(&#34;collapse-1682636016755525291-arrow&#34;)
+        let arrow = document.getElementById(&#34;collapse-1682691371684307670-arrow&#34;)
         if (arrow.classList.contains(&#34;fa-caret-up&#34;)) {
             arrow.classList.replace(&#34;fa-caret-up&#34;, &#34;fa-caret-down&#34;)
         } else {
@@ -2382,14 +2382,14 @@ The core of the toolkit is shown in green. It consists of two modules, both of w
 
 
 
-&lt;a class=&#34;btn btn-link&#34; id=&#34;btn-collapse-1682636016769871719&#34; style=&#34;border: none;text-decoration:underline;&#34;  type=&#34;button&#34;
-    data-toggle=&#34;collapse&#34; data-target=&#34;#collapse-1682636016769871719&#34; aria-expanded=&#34;false&#34; aria-controls=&#34;collapse-1682636016769871719&#34;&gt;
+&lt;a class=&#34;btn btn-link&#34; id=&#34;btn-collapse-1682691371694823251&#34; style=&#34;border: none;text-decoration:underline;&#34;  type=&#34;button&#34;
+    data-toggle=&#34;collapse&#34; data-target=&#34;#collapse-1682691371694823251&#34; aria-expanded=&#34;false&#34; aria-controls=&#34;collapse-1682691371694823251&#34;&gt;
     &lt;h4&gt;Code Example
-        &lt;i id=&#34;collapse-1682636016769871719-arrow&#34; class=&#34;pl-2 fas fa-caret-down&#34;&gt;&lt;/i&gt;
+        &lt;i id=&#34;collapse-1682691371694823251-arrow&#34; class=&#34;pl-2 fas fa-caret-down&#34;&gt;&lt;/i&gt;
     &lt;/h4&gt;
 &lt;/a&gt;
 
-&lt;div class=&#34;collapse pt-1&#34; id=&#34;collapse-1682636016769871719&#34;&gt;
+&lt;div class=&#34;collapse pt-1&#34; id=&#34;collapse-1682691371694823251&#34;&gt;
     
         
             
@@ -2601,10 +2601,10 @@ The core of the toolkit is shown in green. It consists of two modules, both of w
 
 
 &lt;script type=&#34;text/javascript&#34;&gt;
-    document.getElementById(&#34;btn-collapse-1682636016769871719&#34;).addEventListener(&#39;click&#39;, changeArrow);
+    document.getElementById(&#34;btn-collapse-1682691371694823251&#34;).addEventListener(&#39;click&#39;, changeArrow);
 
     function changeArrow(e) {
-        let arrow = document.getElementById(&#34;collapse-1682636016769871719-arrow&#34;)
+        let arrow = document.getElementById(&#34;collapse-1682691371694823251-arrow&#34;)
         if (arrow.classList.contains(&#34;fa-caret-up&#34;)) {
             arrow.classList.replace(&#34;fa-caret-up&#34;, &#34;fa-caret-down&#34;)
         } else {
@@ -2624,14 +2624,14 @@ The core of the toolkit is shown in green. It consists of two modules, both of w
 
 
 
-&lt;a class=&#34;btn btn-link&#34; id=&#34;btn-collapse-1682636016787560554&#34; style=&#34;border: none;text-decoration:underline;&#34;  type=&#34;button&#34;
-    data-toggle=&#34;collapse&#34; data-target=&#34;#collapse-1682636016787560554&#34; aria-expanded=&#34;false&#34; aria-controls=&#34;collapse-1682636016787560554&#34;&gt;
+&lt;a class=&#34;btn btn-link&#34; id=&#34;btn-collapse-1682691371707486249&#34; style=&#34;border: none;text-decoration:underline;&#34;  type=&#34;button&#34;
+    data-toggle=&#34;collapse&#34; data-target=&#34;#collapse-1682691371707486249&#34; aria-expanded=&#34;false&#34; aria-controls=&#34;collapse-1682691371707486249&#34;&gt;
     &lt;h4&gt;Code Example
-        &lt;i id=&#34;collapse-1682636016787560554-arrow&#34; class=&#34;pl-2 fas fa-caret-down&#34;&gt;&lt;/i&gt;
+        &lt;i id=&#34;collapse-1682691371707486249-arrow&#34; class=&#34;pl-2 fas fa-caret-down&#34;&gt;&lt;/i&gt;
     &lt;/h4&gt;
 &lt;/a&gt;
 
-&lt;div class=&#34;collapse pt-1&#34; id=&#34;collapse-1682636016787560554&#34;&gt;
+&lt;div class=&#34;collapse pt-1&#34; id=&#34;collapse-1682691371707486249&#34;&gt;
     
         
             
@@ -2849,10 +2849,10 @@ The core of the toolkit is shown in green. It consists of two modules, both of w
 
 
 &lt;script type=&#34;text/javascript&#34;&gt;
-    document.getElementById(&#34;btn-collapse-1682636016787560554&#34;).addEventListener(&#39;click&#39;, changeArrow);
+    document.getElementById(&#34;btn-collapse-1682691371707486249&#34;).addEventListener(&#39;click&#39;, changeArrow);
 
     function changeArrow(e) {
-        let arrow = document.getElementById(&#34;collapse-1682636016787560554-arrow&#34;)
+        let arrow = document.getElementById(&#34;collapse-1682691371707486249-arrow&#34;)
         if (arrow.classList.contains(&#34;fa-caret-up&#34;)) {
             arrow.classList.replace(&#34;fa-caret-up&#34;, &#34;fa-caret-down&#34;)
         } else {
@@ -2880,14 +2880,14 @@ The core of the toolkit is shown in green. It consists of two modules, both of w
 
 
 
-&lt;a class=&#34;btn btn-link&#34; id=&#34;btn-collapse-1682636016807589492&#34; style=&#34;border: none;text-decoration:underline;&#34;  type=&#34;button&#34;
-    data-toggle=&#34;collapse&#34; data-target=&#34;#collapse-1682636016807589492&#34; aria-expanded=&#34;false&#34; aria-controls=&#34;collapse-1682636016807589492&#34;&gt;
+&lt;a class=&#34;btn btn-link&#34; id=&#34;btn-collapse-1682691371722090962&#34; style=&#34;border: none;text-decoration:underline;&#34;  type=&#34;button&#34;
+    data-toggle=&#34;collapse&#34; data-target=&#34;#collapse-1682691371722090962&#34; aria-expanded=&#34;false&#34; aria-controls=&#34;collapse-1682691371722090962&#34;&gt;
     &lt;h4&gt;Code Example
-        &lt;i id=&#34;collapse-1682636016807589492-arrow&#34; class=&#34;pl-2 fas fa-caret-down&#34;&gt;&lt;/i&gt;
+        &lt;i id=&#34;collapse-1682691371722090962-arrow&#34; class=&#34;pl-2 fas fa-caret-down&#34;&gt;&lt;/i&gt;
     &lt;/h4&gt;
 &lt;/a&gt;
 
-&lt;div class=&#34;collapse pt-1&#34; id=&#34;collapse-1682636016807589492&#34;&gt;
+&lt;div class=&#34;collapse pt-1&#34; id=&#34;collapse-1682691371722090962&#34;&gt;
     
         
             
@@ -3065,10 +3065,10 @@ The core of the toolkit is shown in green. It consists of two modules, both of w
 
 
 &lt;script type=&#34;text/javascript&#34;&gt;
-    document.getElementById(&#34;btn-collapse-1682636016807589492&#34;).addEventListener(&#39;click&#39;, changeArrow);
+    document.getElementById(&#34;btn-collapse-1682691371722090962&#34;).addEventListener(&#39;click&#39;, changeArrow);
 
     function changeArrow(e) {
-        let arrow = document.getElementById(&#34;collapse-1682636016807589492-arrow&#34;)
+        let arrow = document.getElementById(&#34;collapse-1682691371722090962-arrow&#34;)
         if (arrow.classList.contains(&#34;fa-caret-up&#34;)) {
             arrow.classList.replace(&#34;fa-caret-up&#34;, &#34;fa-caret-down&#34;)
         } else {
@@ -3142,6 +3142,10 @@ One of the roles of the microservice&amp;rsquo;s container is to correctly initi
 &lt;p&gt;In this tutorial, we will learn how to create a component and how to assemble a service from it. We will start with a short description of a component&amp;rsquo;s lifecycle and then we will create a component by defining step-by-step all the elements that compose its lifecycle. Finally, we will assemble a service from it through a container, run it, and see the results.&lt;/p&gt;
 &lt;h3 id=&#34;descriptorsdescriptors&#34;&gt;&lt;a href=&#34;descriptors&#34;&gt;Descriptors&lt;/a&gt;&lt;/h3&gt;
 &lt;p&gt;This tutorial will help you understand what a descriptor is, how to create one, how to get its properties, how to check its completeness, how to convert it to a string, and how to compare it to other descriptors. Finally, it provides an example of its usage.&lt;/p&gt;
+&lt;h3 id=&#34;factoriesfactories&#34;&gt;&lt;a href=&#34;factories&#34;&gt;Factories&lt;/a&gt;&lt;/h3&gt;
+&lt;p&gt;This tutorial will teach you how to create factories for custom components, and how to use Pip.Service’s default factories to create instances of components already included in the toolkit.&lt;/p&gt;
+&lt;h3 id=&#34;reflectionreflection&#34;&gt;&lt;a href=&#34;reflection&#34;&gt;Reflection&lt;/a&gt;&lt;/h3&gt;
+&lt;p&gt;In this tutorial, you will learn how to use the Reflect package. This package provides different classes that will allow you to develop code with introspection capacity.&lt;/p&gt;
 
       </description>
     </item>
@@ -3164,6 +3168,8 @@ One of the roles of the microservice&amp;rsquo;s container is to correctly initi
 &lt;h3 id=&#34;commandable-httpcommandable_http_services&#34;&gt;&lt;a href=&#34;commandable_http_services&#34;&gt;Commandable HTTP&lt;/a&gt;&lt;/h3&gt;
 &lt;p&gt;In this tutorial, you will learn how to create and consume CommandableHttpServices. This type of service is characterized by containing a set of commands that can be called via the HTTP/REST protocol.&lt;/p&gt;
 &lt;p&gt;In order to explain its functionality, this tutorial begins by explaining the necessary pre-requisites to work with this component. Then, it shows how to create a command set and a service that uses it. To complete the service, it describes how to include it in a ProcessContainer.&lt;/p&gt;
+&lt;h3 id=&#34;communication-utilsconnection_utils&#34;&gt;&lt;a href=&#34;connection_utils&#34;&gt;Communication utils&lt;/a&gt;&lt;/h3&gt;
+&lt;p&gt;In this tutorial, you will learn how to use a set of utilities offered by Pip.Services that can be used to simplify the handling of connections. We will start by explaining how to import these components. Then, we will see their syntax and how to use them. Finally, we will explore an example that illustrates the practical application of some of these utilities.&lt;/p&gt;
 &lt;h3 id=&#34;direct-clientdirect_client&#34;&gt;&lt;a href=&#34;direct_client&#34;&gt;Direct client&lt;/a&gt;&lt;/h3&gt;
 &lt;p&gt;A direct client is a component that calls a controller directly in the same memory space. In general, it is used when multiple microservices are deployed in a single container (monolith system) and communication between them can be done by direct calls. Within Pip.Services, the DirectClient component is used to create it.&lt;/p&gt;
 &lt;h3 id=&#34;grpcgrpc&#34;&gt;&lt;a href=&#34;grpc&#34;&gt;gRPC&lt;/a&gt;&lt;/h3&gt;
@@ -3202,6 +3208,7 @@ One of the roles of the microservice&amp;rsquo;s container is to correctly initi
 &lt;h3 id=&#34;mongodb-basicmongodb_persistence&#34;&gt;&lt;a href=&#34;mongodb_persistence&#34;&gt;MongoDB Basic&lt;/a&gt;&lt;/h3&gt;
 &lt;p&gt;Another frequent choice of persistence is Pip.Service&amp;rsquo;s MongoDb persistence. This persistence stores data in MongoDB - a popular document-oriented database. The most basic implementation of this component is the MongoDbPersistence class defined in the MongoDb module. It is capable of storing a collection of documents, opening and closing connections, and performing a few simple CRUD operations.&lt;/p&gt;
 &lt;h3 id=&#34;cassandracassandra&#34;&gt;&lt;a href=&#34;cassandra&#34;&gt;Cassandra&lt;/a&gt;&lt;/h3&gt;
+&lt;p&gt;In this tutorial, you will learn how to interact with Cassandra, a NoSQL database, using the CassandraPersistence and IdentifiableCassandraPersistence components.&lt;/p&gt;
 
       </description>
     </item>
@@ -3242,6 +3249,12 @@ Upon completion of this tutorial, you will gain an understanding of the various 
 In this tutorial you will learn how to create yml configuration files. First, we will see a general case. Then, we will show examples of the most common components in PIP.Services. These examples are valid for any of the six languages used by the toolkit.&lt;/p&gt;
 &lt;h3 id=&#34;configurationsconfigurations&#34;&gt;&lt;a href=&#34;configurations&#34;&gt;Configurations&lt;/a&gt;&lt;/h3&gt;
 &lt;p&gt;In this tutorial, we will see how to create configurations using the ConfigParams class, and how to read those configurations when they contain a parameter called &amp;ldquo;name&amp;rdquo; or &amp;ldquo;id&amp;rdquo;, and when they have an &amp;ldquo;options&amp;rdquo; section.&lt;/p&gt;
+&lt;h3 id=&#34;configuring-connectionsconfiguring_connections&#34;&gt;&lt;a href=&#34;configuring_connections&#34;&gt;Configuring Connections&lt;/a&gt;&lt;/h3&gt;
+&lt;p&gt;In this tutorial, you will learn how to configure connections with the ConnectionParams component and perform CRUD operations with them. First, we will see different ways to create connections, such as from a constructor, a tuple, a string, and a ConfigParams object. Then, we will see how to extract, modify and delete different fields in those connections.&lt;/p&gt;
+&lt;h3 id=&#34;configuring-credentialsconfiguring_credentials&#34;&gt;&lt;a href=&#34;configuring_credentials&#34;&gt;Configuring Credentials&lt;/a&gt;&lt;/h3&gt;
+&lt;p&gt;In this tutorial, you will understand how to operate with the CredentialParams component by performing CRUD operations. We will begin by learning to create an instance of this component using its constructor, a tuple, a string, and the ConfigParam class. Then, we will understand how to extract and update the values of credential parameters stored in the component, and delete those parameters.&lt;/p&gt;
+&lt;h3 id=&#34;deployment-time-configurationdeployment_configuration&#34;&gt;&lt;a href=&#34;deployment_configuration&#34;&gt;Deployment Time Configuration&lt;/a&gt;&lt;/h3&gt;
+&lt;p&gt;How to set up and change your configurations at deployment time. In this tutorial, you will learn how to configure at deployment time an application based on Pip.Services components&lt;/p&gt;
 &lt;h3 id=&#34;microservice-configurationmicroservice_configuration&#34;&gt;&lt;a href=&#34;microservice_configuration&#34;&gt;Microservice configuration&lt;/a&gt;&lt;/h3&gt;
 &lt;p&gt;This tutorial will explore the microservice configuration process. For this, we will first see an example that contains the main configuration aspects that most microservices have. Then, we will analyze how this process triggers and works. Finally, we will summarize what was learned.&lt;/p&gt;
 
@@ -3270,7 +3283,7 @@ In this tutorial you will learn how to create yml configuration files. First, we
     </item>
     
     <item>
-      <title>Tutorials: Data Conversion</title>
+      <title>Tutorials: Data Handling</title>
       <link>/tutorials/beginner_tutorials/data_handling/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
@@ -3280,29 +3293,13 @@ In this tutorial you will learn how to create yml configuration files. First, we
         
         &lt;hr&gt;
 &lt;h3 id=&#34;data-conversiondata_conversion&#34;&gt;&lt;a href=&#34;data_conversion&#34;&gt;Data Conversion&lt;/a&gt;&lt;/h3&gt;
+&lt;p&gt;This tutorial will help you to understand the different conversion components available in the Pip.Services toolkit, Commons module, convert library. The tutorial consists of a brief explanation of each class and its methods followed by a set of examples that show how to use each of them.&lt;/p&gt;
 &lt;h3 id=&#34;data-validationdata_validation&#34;&gt;&lt;a href=&#34;data_validation&#34;&gt;Data Validation&lt;/a&gt;&lt;/h3&gt;
+&lt;p&gt;In this tutorial, we will learn how to use a set of validation rules available in the Pip.Services toolkit.&lt;/p&gt;
 &lt;h3 id=&#34;dynamic-data-typesdynamic_data_types&#34;&gt;&lt;a href=&#34;dynamic_data_types&#34;&gt;Dynamic Data Types&lt;/a&gt;&lt;/h3&gt;
+&lt;p&gt;This tutorial explains how to use the three dynamic data types available in Pip.Services. They are AnyValue, AnyValueArray and AnyValueMap, which define dynamic types for single values (variables), arrays, and maps respectively. These types can hold any type of data, which can then be converted to several well-known formats such as integer, float, and more.&lt;/p&gt;
 &lt;h3 id=&#34;randomnessrandomness&#34;&gt;&lt;a href=&#34;randomness&#34;&gt;Randomness&lt;/a&gt;&lt;/h3&gt;
-
-      </description>
-    </item>
-    
-    <item>
-      <title>Tutorials: Data Conversion</title>
-      <link>/tutorials/beginner_tutorials/observability/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>/tutorials/beginner_tutorials/observability/</guid>
-      <description>
-        
-        
-        &lt;hr&gt;
-&lt;h3 id=&#34;datadogdatadog&#34;&gt;&lt;a href=&#34;datadog&#34;&gt;Datadog&lt;/a&gt;&lt;/h3&gt;
-&lt;h3 id=&#34;elasticsearchelasticsearch&#34;&gt;&lt;a href=&#34;elasticsearch&#34;&gt;ElasticSearch&lt;/a&gt;&lt;/h3&gt;
-&lt;h3 id=&#34;fluentdfluentd&#34;&gt;&lt;a href=&#34;fluentd&#34;&gt;Fluentd&lt;/a&gt;&lt;/h3&gt;
-&lt;h3 id=&#34;logginglogging&#34;&gt;&lt;a href=&#34;logging&#34;&gt;Logging&lt;/a&gt;&lt;/h3&gt;
-&lt;h3 id=&#34;metricsmetrics&#34;&gt;&lt;a href=&#34;metrics&#34;&gt;Metrics&lt;/a&gt;&lt;/h3&gt;
-&lt;h3 id=&#34;prometheusprometheus&#34;&gt;&lt;a href=&#34;prometheus&#34;&gt;Prometheus&lt;/a&gt;&lt;/h3&gt;
+&lt;p&gt;How to generate random values with the Commons&#39; Random package. In this tutorial, we will learn how to use the Random package available in the Commons module. This package contains a set of classes and methods that can be used to generate different types of random values, such as Booleans, doubles, floats, and integers. It also offers methods to generate different types of texts such as names and surnames, and methods to randomly select an element from an array or text.&lt;/p&gt;
 
       </description>
     </item>
@@ -3324,6 +3321,32 @@ In this tutorial you will learn how to create yml configuration files. First, we
 &lt;p&gt;This tutorial will help you understand how to use the MemoryLock and NullLock components. First, we will see the basic functionality of the MemoryLock class. Then, we will construct an example that will show how to use this type of lock. After this, we will learn what the NullLock is, how it differentiates from the MemoryLock and when to use it. At the end, we will summarize all the concepts learned.&lt;/p&gt;
 &lt;h3 id=&#34;redisredis&#34;&gt;&lt;a href=&#34;redis&#34;&gt;Redis&lt;/a&gt;&lt;/h3&gt;
 &lt;p&gt;In this tutorial, you will see how to use two components related to the Redis database. The first is the RedisCache class, which can be used to create distributed caches that store values in Redis. The second is RedisLock, a component that allows us to create a distributed lock based on the Redis database.&lt;/p&gt;
+
+      </description>
+    </item>
+    
+    <item>
+      <title>Tutorials: Observability</title>
+      <link>/tutorials/beginner_tutorials/observability/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/tutorials/beginner_tutorials/observability/</guid>
+      <description>
+        
+        
+        &lt;hr&gt;
+&lt;h3 id=&#34;datadogdatadog&#34;&gt;&lt;a href=&#34;datadog&#34;&gt;Datadog&lt;/a&gt;&lt;/h3&gt;
+&lt;p&gt;How to send metrics and logs to Datadog. In this tutorial, you will learn how to send different metrics and logs to Datadog. For this, we will first create a class with a method that, once executed, sends metrics to Datadog via the DataDogCounters component. Then, we will modify this class and use it to send log information to Datadog via the DataDogLogger class.&lt;/p&gt;
+&lt;h3 id=&#34;elasticsearchelasticsearch&#34;&gt;&lt;a href=&#34;elasticsearch&#34;&gt;ElasticSearch&lt;/a&gt;&lt;/h3&gt;
+&lt;p&gt;In this tutorial you will learn how to work with the ElasticSearchLogger component, which is used to send logs to Elasticsearch. First, we will see the necessary pre-requisites. Then, we will continue by creating a custom component with an example method, running it and generating the logs. After this, we will verify that the messages reached Elasticsearch by using the Elasticvue online tool. Finally, we will improve our custom component by including several Pip.Services best practices.&lt;/p&gt;
+&lt;h3 id=&#34;fluentdfluentd&#34;&gt;&lt;a href=&#34;fluentd&#34;&gt;Fluentd&lt;/a&gt;&lt;/h3&gt;
+&lt;p&gt;In this tutorial, you will learn how to use the FluentdLogger component to send log messages to Fluentd. First, we will describe this component and understand its pre-requisites. Then, we will create a custom component with methods that generate log messages every time they are called, run it and see the messages received by Fluentd. Finally, we will combine the different code sections into one program and summarize what we have learned&lt;/p&gt;
+&lt;h3 id=&#34;logginglogging&#34;&gt;&lt;a href=&#34;logging&#34;&gt;Logging&lt;/a&gt;&lt;/h3&gt;
+&lt;p&gt;In this tutorial, you will learn how to add logging capacity to a microservice. First, we will understand what logging consists of. Then, we will use the microservice we created in the “Creating a component” tutorial, replace the printed messages with logger messages and create an exception in our business process (my_task). After running the code, we will see the tagged messages from the logger.&lt;/p&gt;
+&lt;h3 id=&#34;metricsmetrics&#34;&gt;&lt;a href=&#34;metrics&#34;&gt;Metrics&lt;/a&gt;&lt;/h3&gt;
+&lt;p&gt;This tutorial will teach you how to create and manage performance metrics with Pip.Services components. First, we will learn how counters are defined in the toolkit and how to add them to a component. Then, we will see several options to manage the obtained performance metrics, such as storing them in memory, showing them on a console, sending them to external tools, and grouping them in composite counters. We will also study a dummy component used to simulate counters&lt;/p&gt;
+&lt;h3 id=&#34;prometheusprometheus&#34;&gt;&lt;a href=&#34;prometheus&#34;&gt;Prometheus&lt;/a&gt;&lt;/h3&gt;
+&lt;p&gt;In this tutorial, you will learn how to send different metrics to Prometheus. First, we will see how to do this via the Pushgateway. Then, we will understand how to show our metrics on a /metrics page. Finally, we will go through a set of different methods, which are useful to create different counters.&lt;/p&gt;
 
       </description>
     </item>
@@ -4148,14 +4171,14 @@ In this tutorial you will learn how to create yml configuration files. First, we
 
 
 
-&lt;a class=&#34;btn btn-link&#34; id=&#34;btn-collapse-1682635992766712264&#34; style=&#34;border: none;text-decoration:underline;&#34;  type=&#34;button&#34;
-    data-toggle=&#34;collapse&#34; data-target=&#34;#collapse-1682635992766712264&#34; aria-expanded=&#34;false&#34; aria-controls=&#34;collapse-1682635992766712264&#34;&gt;
+&lt;a class=&#34;btn btn-link&#34; id=&#34;btn-collapse-1682691355906820810&#34; style=&#34;border: none;text-decoration:underline;&#34;  type=&#34;button&#34;
+    data-toggle=&#34;collapse&#34; data-target=&#34;#collapse-1682691355906820810&#34; aria-expanded=&#34;false&#34; aria-controls=&#34;collapse-1682691355906820810&#34;&gt;
     &lt;h4&gt;Code Example
-        &lt;i id=&#34;collapse-1682635992766712264-arrow&#34; class=&#34;pl-2 fas fa-caret-down&#34;&gt;&lt;/i&gt;
+        &lt;i id=&#34;collapse-1682691355906820810-arrow&#34; class=&#34;pl-2 fas fa-caret-down&#34;&gt;&lt;/i&gt;
     &lt;/h4&gt;
 &lt;/a&gt;
 
-&lt;div class=&#34;collapse pt-1&#34; id=&#34;collapse-1682635992766712264&#34;&gt;
+&lt;div class=&#34;collapse pt-1&#34; id=&#34;collapse-1682691355906820810&#34;&gt;
     
         
             
@@ -4210,10 +4233,10 @@ In this tutorial you will learn how to create yml configuration files. First, we
 
 
 &lt;script type=&#34;text/javascript&#34;&gt;
-    document.getElementById(&#34;btn-collapse-1682635992766712264&#34;).addEventListener(&#39;click&#39;, changeArrow);
+    document.getElementById(&#34;btn-collapse-1682691355906820810&#34;).addEventListener(&#39;click&#39;, changeArrow);
 
     function changeArrow(e) {
-        let arrow = document.getElementById(&#34;collapse-1682635992766712264-arrow&#34;)
+        let arrow = document.getElementById(&#34;collapse-1682691355906820810-arrow&#34;)
         if (arrow.classList.contains(&#34;fa-caret-up&#34;)) {
             arrow.classList.replace(&#34;fa-caret-up&#34;, &#34;fa-caret-down&#34;)
         } else {
@@ -4233,14 +4256,14 @@ In this tutorial you will learn how to create yml configuration files. First, we
 
 
 
-&lt;a class=&#34;btn btn-link&#34; id=&#34;btn-collapse-1682635992774901687&#34; style=&#34;border: none;text-decoration:underline;&#34;  type=&#34;button&#34;
-    data-toggle=&#34;collapse&#34; data-target=&#34;#collapse-1682635992774901687&#34; aria-expanded=&#34;false&#34; aria-controls=&#34;collapse-1682635992774901687&#34;&gt;
+&lt;a class=&#34;btn btn-link&#34; id=&#34;btn-collapse-1682691355915768775&#34; style=&#34;border: none;text-decoration:underline;&#34;  type=&#34;button&#34;
+    data-toggle=&#34;collapse&#34; data-target=&#34;#collapse-1682691355915768775&#34; aria-expanded=&#34;false&#34; aria-controls=&#34;collapse-1682691355915768775&#34;&gt;
     &lt;h4&gt;Code Example
-        &lt;i id=&#34;collapse-1682635992774901687-arrow&#34; class=&#34;pl-2 fas fa-caret-down&#34;&gt;&lt;/i&gt;
+        &lt;i id=&#34;collapse-1682691355915768775-arrow&#34; class=&#34;pl-2 fas fa-caret-down&#34;&gt;&lt;/i&gt;
     &lt;/h4&gt;
 &lt;/a&gt;
 
-&lt;div class=&#34;collapse pt-1&#34; id=&#34;collapse-1682635992774901687&#34;&gt;
+&lt;div class=&#34;collapse pt-1&#34; id=&#34;collapse-1682691355915768775&#34;&gt;
     
         
             
@@ -4304,10 +4327,10 @@ In this tutorial you will learn how to create yml configuration files. First, we
 
 
 &lt;script type=&#34;text/javascript&#34;&gt;
-    document.getElementById(&#34;btn-collapse-1682635992774901687&#34;).addEventListener(&#39;click&#39;, changeArrow);
+    document.getElementById(&#34;btn-collapse-1682691355915768775&#34;).addEventListener(&#39;click&#39;, changeArrow);
 
     function changeArrow(e) {
-        let arrow = document.getElementById(&#34;collapse-1682635992774901687-arrow&#34;)
+        let arrow = document.getElementById(&#34;collapse-1682691355915768775-arrow&#34;)
         if (arrow.classList.contains(&#34;fa-caret-up&#34;)) {
             arrow.classList.replace(&#34;fa-caret-up&#34;, &#34;fa-caret-down&#34;)
         } else {
@@ -4327,14 +4350,14 @@ In this tutorial you will learn how to create yml configuration files. First, we
 
 
 
-&lt;a class=&#34;btn btn-link&#34; id=&#34;btn-collapse-1682635992778468998&#34; style=&#34;border: none;text-decoration:underline;&#34;  type=&#34;button&#34;
-    data-toggle=&#34;collapse&#34; data-target=&#34;#collapse-1682635992778468998&#34; aria-expanded=&#34;false&#34; aria-controls=&#34;collapse-1682635992778468998&#34;&gt;
+&lt;a class=&#34;btn btn-link&#34; id=&#34;btn-collapse-1682691355922235822&#34; style=&#34;border: none;text-decoration:underline;&#34;  type=&#34;button&#34;
+    data-toggle=&#34;collapse&#34; data-target=&#34;#collapse-1682691355922235822&#34; aria-expanded=&#34;false&#34; aria-controls=&#34;collapse-1682691355922235822&#34;&gt;
     &lt;h4&gt;Code Example
-        &lt;i id=&#34;collapse-1682635992778468998-arrow&#34; class=&#34;pl-2 fas fa-caret-down&#34;&gt;&lt;/i&gt;
+        &lt;i id=&#34;collapse-1682691355922235822-arrow&#34; class=&#34;pl-2 fas fa-caret-down&#34;&gt;&lt;/i&gt;
     &lt;/h4&gt;
 &lt;/a&gt;
 
-&lt;div class=&#34;collapse pt-1&#34; id=&#34;collapse-1682635992778468998&#34;&gt;
+&lt;div class=&#34;collapse pt-1&#34; id=&#34;collapse-1682691355922235822&#34;&gt;
     
         
             
@@ -4400,10 +4423,10 @@ In this tutorial you will learn how to create yml configuration files. First, we
 
 
 &lt;script type=&#34;text/javascript&#34;&gt;
-    document.getElementById(&#34;btn-collapse-1682635992778468998&#34;).addEventListener(&#39;click&#39;, changeArrow);
+    document.getElementById(&#34;btn-collapse-1682691355922235822&#34;).addEventListener(&#39;click&#39;, changeArrow);
 
     function changeArrow(e) {
-        let arrow = document.getElementById(&#34;collapse-1682635992778468998-arrow&#34;)
+        let arrow = document.getElementById(&#34;collapse-1682691355922235822-arrow&#34;)
         if (arrow.classList.contains(&#34;fa-caret-up&#34;)) {
             arrow.classList.replace(&#34;fa-caret-up&#34;, &#34;fa-caret-down&#34;)
         } else {
@@ -4423,14 +4446,14 @@ In this tutorial you will learn how to create yml configuration files. First, we
 
 
 
-&lt;a class=&#34;btn btn-link&#34; id=&#34;btn-collapse-1682635992781320006&#34; style=&#34;border: none;text-decoration:underline;&#34;  type=&#34;button&#34;
-    data-toggle=&#34;collapse&#34; data-target=&#34;#collapse-1682635992781320006&#34; aria-expanded=&#34;false&#34; aria-controls=&#34;collapse-1682635992781320006&#34;&gt;
+&lt;a class=&#34;btn btn-link&#34; id=&#34;btn-collapse-1682691355928114965&#34; style=&#34;border: none;text-decoration:underline;&#34;  type=&#34;button&#34;
+    data-toggle=&#34;collapse&#34; data-target=&#34;#collapse-1682691355928114965&#34; aria-expanded=&#34;false&#34; aria-controls=&#34;collapse-1682691355928114965&#34;&gt;
     &lt;h4&gt;Code Example
-        &lt;i id=&#34;collapse-1682635992781320006-arrow&#34; class=&#34;pl-2 fas fa-caret-down&#34;&gt;&lt;/i&gt;
+        &lt;i id=&#34;collapse-1682691355928114965-arrow&#34; class=&#34;pl-2 fas fa-caret-down&#34;&gt;&lt;/i&gt;
     &lt;/h4&gt;
 &lt;/a&gt;
 
-&lt;div class=&#34;collapse pt-1&#34; id=&#34;collapse-1682635992781320006&#34;&gt;
+&lt;div class=&#34;collapse pt-1&#34; id=&#34;collapse-1682691355928114965&#34;&gt;
     
         
             
@@ -4485,10 +4508,10 @@ In this tutorial you will learn how to create yml configuration files. First, we
 
 
 &lt;script type=&#34;text/javascript&#34;&gt;
-    document.getElementById(&#34;btn-collapse-1682635992781320006&#34;).addEventListener(&#39;click&#39;, changeArrow);
+    document.getElementById(&#34;btn-collapse-1682691355928114965&#34;).addEventListener(&#39;click&#39;, changeArrow);
 
     function changeArrow(e) {
-        let arrow = document.getElementById(&#34;collapse-1682635992781320006-arrow&#34;)
+        let arrow = document.getElementById(&#34;collapse-1682691355928114965-arrow&#34;)
         if (arrow.classList.contains(&#34;fa-caret-up&#34;)) {
             arrow.classList.replace(&#34;fa-caret-up&#34;, &#34;fa-caret-down&#34;)
         } else {
@@ -4508,14 +4531,14 @@ In this tutorial you will learn how to create yml configuration files. First, we
 
 
 
-&lt;a class=&#34;btn btn-link&#34; id=&#34;btn-collapse-1682635992785135917&#34; style=&#34;border: none;text-decoration:underline;&#34;  type=&#34;button&#34;
-    data-toggle=&#34;collapse&#34; data-target=&#34;#collapse-1682635992785135917&#34; aria-expanded=&#34;false&#34; aria-controls=&#34;collapse-1682635992785135917&#34;&gt;
+&lt;a class=&#34;btn btn-link&#34; id=&#34;btn-collapse-1682691355934622512&#34; style=&#34;border: none;text-decoration:underline;&#34;  type=&#34;button&#34;
+    data-toggle=&#34;collapse&#34; data-target=&#34;#collapse-1682691355934622512&#34; aria-expanded=&#34;false&#34; aria-controls=&#34;collapse-1682691355934622512&#34;&gt;
     &lt;h4&gt;Code Example
-        &lt;i id=&#34;collapse-1682635992785135917-arrow&#34; class=&#34;pl-2 fas fa-caret-down&#34;&gt;&lt;/i&gt;
+        &lt;i id=&#34;collapse-1682691355934622512-arrow&#34; class=&#34;pl-2 fas fa-caret-down&#34;&gt;&lt;/i&gt;
     &lt;/h4&gt;
 &lt;/a&gt;
 
-&lt;div class=&#34;collapse pt-1&#34; id=&#34;collapse-1682635992785135917&#34;&gt;
+&lt;div class=&#34;collapse pt-1&#34; id=&#34;collapse-1682691355934622512&#34;&gt;
     
         
             
@@ -4567,10 +4590,10 @@ In this tutorial you will learn how to create yml configuration files. First, we
 
 
 &lt;script type=&#34;text/javascript&#34;&gt;
-    document.getElementById(&#34;btn-collapse-1682635992785135917&#34;).addEventListener(&#39;click&#39;, changeArrow);
+    document.getElementById(&#34;btn-collapse-1682691355934622512&#34;).addEventListener(&#39;click&#39;, changeArrow);
 
     function changeArrow(e) {
-        let arrow = document.getElementById(&#34;collapse-1682635992785135917-arrow&#34;)
+        let arrow = document.getElementById(&#34;collapse-1682691355934622512-arrow&#34;)
         if (arrow.classList.contains(&#34;fa-caret-up&#34;)) {
             arrow.classList.replace(&#34;fa-caret-up&#34;, &#34;fa-caret-down&#34;)
         } else {

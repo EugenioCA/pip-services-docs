@@ -23,11 +23,11 @@
 <meta property="og:type" content="article" />
 <meta property="og:url" content="/tutorials/beginner_tutorials/communication/commandable_http/__code13_go/" /><meta property="article:section" content="tutorials" />
 
-<meta property="article:modified_time" content="2023-04-27T19:40:36+02:00" />
+<meta property="article:modified_time" content="2023-04-28T15:45:00+02:00" />
 
 <meta itemprop="name" content="">
 <meta itemprop="description" content="package main import ( &#34;context&#34; &#34;os&#34; ccomand &#34;github.com/pip-services3-gox/pip-services3-commons-gox/commands&#34; cconf &#34;github.com/pip-services3-gox/pip-services3-commons-gox/config&#34; cconv &#34;github.com/pip-services3-gox/pip-services3-commons-gox/convert&#34; cref &#34;github.com/pip-services3-gox/pip-services3-commons-gox/refer&#34; crun &#34;github.com/pip-services3-gox/pip-services3-commons-gox/run&#34; cvalid &#34;github.com/pip-services3-gox/pip-services3-commons-gox/validate&#34; cbuild &#34;github.com/pip-services3-gox/pip-services3-components-gox/build&#34; cproc &#34;github.com/pip-services3-gox/pip-services3-container-gox/container&#34; rbuild &#34;github.com/pip-services3-gox/pip-services3-rpc-gox/build&#34; srvc &#34;github.com/pip-services3-gox/pip-services3-rpc-gox/services&#34; sbuild &#34;github.com/pip-services3-gox/pip-services3-swagger-gox/build&#34; ) // Runner func main() { proc := NewHelloFriendProcess() proc.Run(context.Background(), os.Environ()) } // Command set type FriendsCommandSet struct { ccomand.CommandSet controller HelloFriendController } func NewFriendsCommandSet(controller HelloFriendController) *FriendsCommandSet { c := FriendsCommandSet{} c.controller = controller c.CommandSet = *ccomand.NewCommandSet() c.AddCommand(c.makeGreeting()) return &amp;c } func (c *FriendsCommandSet) makeGreeting() ccomand.">
-<meta itemprop="dateModified" content="2023-04-27T19:40:36+02:00" />
+<meta itemprop="dateModified" content="2023-04-28T15:45:00+02:00" />
 <meta itemprop="wordCount" content="287">
 <meta itemprop="keywords" content="" /><meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content=""/>

@@ -23,11 +23,11 @@
 <meta property="og:type" content="article" />
 <meta property="og:url" content="/tutorials/beginner_tutorials/communication/rest_service/__code4_node/" /><meta property="article:section" content="tutorials" />
 
-<meta property="article:modified_time" content="2023-04-27T19:40:36+02:00" />
+<meta property="article:modified_time" content="2023-04-28T15:45:00+02:00" />
 
 <meta itemprop="name" content="">
 <meta itemprop="description" content="import { ConfigParams } from &#34;pip-services3-commons-nodex&#34;; import { RestService } from &#34;pip-services3-rpc-nodex&#34;; class MyRestService extends RestService { constructor() { super(); this._baseRoute = &#34;/my_service&#34;; } private async myPage(req, res) { let result = req.query.message &#43; &#39;, &#39; &#43; req.params.name; this.sendResult(req, res, result); } public register() { this.registerRoute(&#34;GET&#34;, &#34;/my_page/:name&#34;, null, this.myPage); } } export async function main() { let myRestService = new MyRestService(); myRestService.configure(ConfigParams.fromTuples(&#34;connection.protocol&#34;, &#34;http&#34;, &#34;connection.host&#34;, &#34;localhost&#34;, &#34;connection.port&#34;, 15239)); await myRestService.open(&#34;123&#34;); } ">
-<meta itemprop="dateModified" content="2023-04-27T19:40:36+02:00" />
+<meta itemprop="dateModified" content="2023-04-28T15:45:00+02:00" />
 <meta itemprop="wordCount" content="70">
 <meta itemprop="keywords" content="" /><meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content=""/>

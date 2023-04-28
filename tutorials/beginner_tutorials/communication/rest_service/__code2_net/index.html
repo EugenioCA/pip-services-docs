@@ -23,11 +23,11 @@
 <meta property="og:type" content="article" />
 <meta property="og:url" content="/tutorials/beginner_tutorials/communication/rest_service/__code2_net/" /><meta property="article:section" content="tutorials" />
 
-<meta property="article:modified_time" content="2023-04-27T19:40:36+02:00" />
+<meta property="article:modified_time" content="2023-04-28T15:45:00+02:00" />
 
 <meta itemprop="name" content="">
 <meta itemprop="description" content="public class MyRestService : RestService { public MyRestService() : base() { _baseRoute = &#34;/my_service&#34;; } private async Task MyPage(HttpRequest req, HttpResponse res, RouteData routeData) { var parameters = GetParameters(req); var name = parameters.GetAsNullableString(&#34;name&#34;); var message = parameters.GetAsNullableString(&#34;message&#34;); var result = message &#43; &#34;, &#34; &#43; name; await SendResultAsync(res, result); } public override void Register() { RegisterRoute(&#34;GET&#34;, &#34;/my_page/{name}&#34;, this.MyPage); } } ">
-<meta itemprop="dateModified" content="2023-04-27T19:40:36+02:00" />
+<meta itemprop="dateModified" content="2023-04-28T15:45:00+02:00" />
 <meta itemprop="wordCount" content="60">
 <meta itemprop="keywords" content="" /><meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content=""/>

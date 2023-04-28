@@ -23,11 +23,11 @@
 <meta property="og:type" content="article" />
 <meta property="og:url" content="/tutorials/beginner_tutorials/communication/swagger/__code11_dart/" /><meta property="article:section" content="tutorials" />
 
-<meta property="article:modified_time" content="2023-04-27T19:40:36+02:00" />
+<meta property="article:modified_time" content="2023-04-28T15:45:00+02:00" />
 
 <meta itemprop="name" content="">
 <meta itemprop="description" content="import &#39;dart:async&#39;; import &#39;package:pip_services3_commons/pip_services3_commons.dart&#39;; import &#39;package:pip_services3_components/pip_services3_components.dart&#39;; import &#39;package:pip_services3_container/pip_services3_container.dart&#39;; import &#39;package:pip_services3_rpc/pip_services3_rpc.dart&#39;; import &#39;package:pip_services3_swagger/pip_services3_swagger.dart&#39;; import &#39;package:shelf/shelf.dart&#39;; import &#39;package:shelf_router/shelf_router.dart&#39;; void main(List&lt;String&gt; argument) { // Runner  try { var proc = HelloFriendProcess(); proc.run(argument); } catch (ex) { print(ex); } } // REST service (Swagger UI from YAML file)  class HelloFriendRestService extends RestService { HelloFriendController? _controller; String? _swaggerContent; String? _swaggerPath; HelloFriendRestService() : super() { baseRoute = &#39;/hello_friend&#39;; var controllerDescriptor = Descriptor(&#39;hello-friend&#39;, &#39;controller&#39;, &#39;*&#39;, &#39;*&#39;, &#39;1.">
-<meta itemprop="dateModified" content="2023-04-27T19:40:36+02:00" />
+<meta itemprop="dateModified" content="2023-04-28T15:45:00+02:00" />
 <meta itemprop="wordCount" content="453">
 <meta itemprop="keywords" content="" /><meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content=""/>

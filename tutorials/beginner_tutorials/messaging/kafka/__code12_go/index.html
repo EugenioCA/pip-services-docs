@@ -23,11 +23,11 @@
 <meta property="og:type" content="article" />
 <meta property="og:url" content="/tutorials/beginner_tutorials/messaging/kafka/__code12_go/" /><meta property="article:section" content="tutorials" />
 
-<meta property="article:modified_time" content="2023-04-27T19:40:36+02:00" />
+<meta property="article:modified_time" content="2023-04-28T15:45:00+02:00" />
 
 <meta itemprop="name" content="">
 <meta itemprop="description" content="import ( &#34;context&#34; &#34;fmt&#34; &#34;sync&#34; &#34;time&#34; kafka &#34;github.com/Shopify/sarama&#34; conf &#34;github.com/pip-services3-gox/pip-services3-commons-gox/config&#34; kafkaconn &#34;github.com/pip-services3-gox/pip-services3-kafka-gox/connect&#34; ) func main() { ctx := context.Background() kc := kafkaconn.NewKafkaConnection() config := conf.NewConfigParamsFromTuples( &#34;connection.host&#34;, &#34;localhost&#34;, &#34;connection.port&#34;, 9092, ) kc.Configure(context.Background(), config) kc.Open(context.Background(), &#34;&#34;) err := kc.CreateQueue(&#34;my_queueA&#34;) if err != nil { panic(err) } err = kc.DeleteQueue(&#34;my_queueA&#34;) if err != nil { panic(err) } _, _ = kc.ReadQueueNames() var listOfMessages1 []*kafka.ProducerMessage var listOfMessages2 []*kafka.ProducerMessage var listOfMessages3 []*kafka.ProducerMessage for i, val := range []string{&#34;message 1&#34;, &#34;message 2&#34;} { msg := &amp;kafka.">
-<meta itemprop="dateModified" content="2023-04-27T19:40:36+02:00" />
+<meta itemprop="dateModified" content="2023-04-28T15:45:00+02:00" />
 <meta itemprop="wordCount" content="468">
 <meta itemprop="keywords" content="" /><meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content=""/>

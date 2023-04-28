@@ -23,11 +23,11 @@
 <meta property="og:type" content="article" />
 <meta property="og:url" content="/tutorials/beginner_tutorials/communication/grpc/__code16_net/" /><meta property="article:section" content="tutorials" />
 
-<meta property="article:modified_time" content="2023-04-27T19:40:36+02:00" />
+<meta property="article:modified_time" content="2023-04-28T15:45:00+02:00" />
 
 <meta itemprop="name" content="">
 <meta itemprop="description" content="// Pre-requisites using Grpc.Core; using System; using System.Threading.Tasks; using PipServices3.Commons.Config; using PipServices3.Grpc.Services; using Calculations; // gRPC server public class MyGrpcService : GrpcService { public MyGrpcService() : base(&#34;my_data_v1&#34;) { } private async Task&lt;Number2&gt; Sum(Number1 number, ServerCallContext context) { var res = Calculations.Summator.Sum(number.Value1, number.Value2); return new Number2() { Value = res }; } protected override void OnRegister() { RegisterMethod&lt;Number1, Number2&gt;(&#34;sum&#34;, Sum); } } var service = new MyGrpcService(); service.Configure(ConfigParams.FromTuples( &#34;connection.protocol&#34;, &#34;http&#34;, &#34;connection.host&#34;, &#34;localhost&#34;, &#34;connection.">
-<meta itemprop="dateModified" content="2023-04-27T19:40:36+02:00" />
+<meta itemprop="dateModified" content="2023-04-28T15:45:00+02:00" />
 <meta itemprop="wordCount" content="78">
 <meta itemprop="keywords" content="" /><meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content=""/>

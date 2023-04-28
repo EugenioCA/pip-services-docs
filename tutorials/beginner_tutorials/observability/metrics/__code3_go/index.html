@@ -23,11 +23,11 @@
 <meta property="og:type" content="article" />
 <meta property="og:url" content="/tutorials/beginner_tutorials/observability/metrics/__code3_go/" /><meta property="article:section" content="tutorials" />
 
-<meta property="article:modified_time" content="2023-04-27T19:40:36+02:00" />
+<meta property="article:modified_time" content="2023-04-28T15:45:00+02:00" />
 
 <meta itemprop="name" content="">
 <meta itemprop="description" content="import ( &#34;context&#34; &#34;fmt&#34; cref &#34;github.com/pip-services3-gox/pip-services3-commons-gox/refer&#34; ccount &#34;github.com/pip-services3-gox/pip-services3-components-gox/count&#34; clog &#34;github.com/pip-services3-gox/pip-services3-components-gox/log&#34; ) func main() { counters := ccount.NewLogCounters() counters.SetReferences(context.Background(), cref.NewReferencesFromTuples(context.Background(), cref.NewDescriptor(&#34;pip-services&#34;, &#34;logger&#34;, &#34;console&#34;, &#34;default&#34;, &#34;1.0&#34;), clog.NewConsoleLogger(), )) mycomponentLog := NewMyComponent(counters) countExec := 2 for i := 0; i &lt; countExec; i&#43;&#43; { mycomponentLog.Mymethod(context.Background()) } resultLog := counters.GetAll() fmt.Println(&#34;Metrics&#34;) for _, res := range resultLog { fmt.Printf(&#34;Count: %d\n&#34;, res.Count()) fmt.Printf(&#34;Min: %02f\n&#34;, res.Min()) fmt.Printf(&#34;Max: %02f\n&#34;, res.Max()) fmt.Printf(&#34;Average: %02f\n&#34;, res.Average()) fmt.Printf(&#34;Time: %s\n&#34;, res.Time()) fmt.Printf(&#34;Name: %s\n&#34;, res.">
-<meta itemprop="dateModified" content="2023-04-27T19:40:36+02:00" />
+<meta itemprop="dateModified" content="2023-04-28T15:45:00+02:00" />
 <meta itemprop="wordCount" content="78">
 <meta itemprop="keywords" content="" /><meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content=""/>

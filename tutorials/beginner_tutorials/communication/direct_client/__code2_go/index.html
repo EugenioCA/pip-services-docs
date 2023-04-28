@@ -23,11 +23,11 @@
 <meta property="og:type" content="article" />
 <meta property="og:url" content="/tutorials/beginner_tutorials/communication/direct_client/__code2_go/" /><meta property="article:section" content="tutorials" />
 
-<meta property="article:modified_time" content="2023-04-27T19:40:36+02:00" />
+<meta property="article:modified_time" content="2023-04-28T15:45:00+02:00" />
 
 <meta itemprop="name" content="">
 <meta itemprop="description" content="// Pre-requisites import ( &#34;context&#34; &#34;fmt&#34; cconf &#34;github.com/pip-services3-gox/pip-services3-commons-gox/config&#34; cref &#34;github.com/pip-services3-gox/pip-services3-commons-gox/refer&#34; rpcclnt &#34;github.com/pip-services3-gox/pip-services3-rpc-gox/clients&#34; ) // Direct client type MyDirectClient struct { *rpcclnt.DirectClient dependencyResolver *cref.DependencyResolver controller *MyController } func NewMyDirectClient() *MyDirectClient { c := &amp;MyDirectClient{} c.dependencyResolver = cref.NewDependencyResolver() c.dependencyResolver.Put(context.Background(), &#34;controller&#34;, cref.NewDescriptor(&#34;pip-services&#34;, &#34;controller&#34;, &#34;*&#34;, &#34;*&#34;, &#34;1.0&#34;)) return c } func (c *MyDirectClient) SetReferences(ctx context.Context, references cref.IReferences) { c.dependencyResolver.SetReferences(ctx, references) res, err := c.dependencyResolver.GetOneRequired(&#34;controller&#34;) if err != nil { panic(err) } c.controller = res.(*MyController) } func (c *MyDirectClient) MyMethod() { c.">
-<meta itemprop="dateModified" content="2023-04-27T19:40:36+02:00" />
+<meta itemprop="dateModified" content="2023-04-28T15:45:00+02:00" />
 <meta itemprop="wordCount" content="83">
 <meta itemprop="keywords" content="" /><meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content=""/>

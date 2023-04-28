@@ -23,11 +23,11 @@
 <meta property="og:type" content="article" />
 <meta property="og:url" content="/tutorials/beginner_tutorials/communication/commandable_http/__code4_net/" /><meta property="article:section" content="tutorials" />
 
-<meta property="article:modified_time" content="2023-04-27T19:40:36+02:00" />
+<meta property="article:modified_time" content="2023-04-28T15:45:00+02:00" />
 
 <meta itemprop="name" content="">
 <meta itemprop="description" content="using PipServices3.Commons.Commands; using PipServices3.Commons.Config; public class HelloFriendController : IConfigurable, ICommandable { private string _defaultName = &#34;World&#34;; private FriendsCommandSet __commandSet; public HelloFriendController() { _defaultName = &#34;Pip User&#34;; } public void Configure(ConfigParams config) { _defaultName = config.GetAsStringWithDefault(&#34;default_name&#34;, _defaultName); } public CommandSet GetCommandSet() { if (__commandSet == null) __commandSet = new FriendsCommandSet(this); return __commandSet; } public string Greeting(string name) { return $&#34;Hello, {name ?? _defaultName} !&#34;; } } ">
-<meta itemprop="dateModified" content="2023-04-27T19:40:36+02:00" />
+<meta itemprop="dateModified" content="2023-04-28T15:45:00+02:00" />
 <meta itemprop="wordCount" content="65">
 <meta itemprop="keywords" content="" /><meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content=""/>

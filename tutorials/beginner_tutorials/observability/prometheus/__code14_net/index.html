@@ -23,11 +23,11 @@
 <meta property="og:type" content="article" />
 <meta property="og:url" content="/tutorials/beginner_tutorials/observability/prometheus/__code14_net/" /><meta property="article:section" content="tutorials" />
 
-<meta property="article:modified_time" content="2023-04-27T19:40:36+02:00" />
+<meta property="article:modified_time" content="2023-04-28T15:45:00+02:00" />
 
 <meta itemprop="name" content="">
 <meta itemprop="description" content="using System; using PipServices3.Commons.Config; using PipServices3.Commons.Refer; using PipServices3.Components.Count; using PipServices3.Components.Info; using PipServices3.Prometheus.Count; using PipServices3.Prometheus.Services; namespace ExampleApp { class Program { static void Main(string[] args) { var mycomponent = new MyComponentA(); // Create an instance of PrometheusCounters and configure it  var counters = new PrometheusCounters(); counters.Configure(ConfigParams.FromTuples( &#34;connection.protocol&#34;, &#34;http&#34;, &#34;connection.host&#34;, &#34;localhost&#34;, &#34;connection.port&#34;, 8080 )); // Create an instance of PrometheusMetricsService and configure it  var service = new PrometheusMetricsService(); service.Configure(ConfigParams.FromTuples( &#34;connection.protocol&#34;, &#34;http&#34;, &#34;connection.">
-<meta itemprop="dateModified" content="2023-04-27T19:40:36+02:00" />
+<meta itemprop="dateModified" content="2023-04-28T15:45:00+02:00" />
 <meta itemprop="wordCount" content="278">
 <meta itemprop="keywords" content="" /><meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content=""/>

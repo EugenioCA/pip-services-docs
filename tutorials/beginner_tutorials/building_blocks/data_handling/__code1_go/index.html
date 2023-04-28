@@ -23,11 +23,11 @@
 <meta property="og:type" content="article" />
 <meta property="og:url" content="/tutorials/beginner_tutorials/building_blocks/data_handling/__code1_go/" /><meta property="article:section" content="tutorials" />
 
-<meta property="article:modified_time" content="2023-04-27T19:40:36+02:00" />
+<meta property="article:modified_time" content="2023-04-28T15:45:00+02:00" />
 
 <meta itemprop="name" content="">
 <meta itemprop="description" content="import ( cconv &#34;github.com/pip-services3-gox/pip-services3-commons-gox/convert&#34; cvalid &#34;github.com/pip-services3-gox/pip-services3-commons-gox/validate&#34; cdata &#34;github.com/pip-services3-gox/pip-services3-commons-gox/data&#34; ) type MyObjectSchema struct { *cvalid.ObjectSchema } func NewMyObjectSchema() *MyObjectSchema { c := MyObjectSchema{} c.ObjectSchema = cvalid.NewObjectSchema() c.WithOptionalProperty(&#34;prop1&#34;, cconv.Integer) c.WithRequiredProperty(&#34;prop2&#34;, cconv.String) c.WithOptionalProperty(&#34;prop3&#34;, NewMySubObjectSchema()) return &amp;c } ">
-<meta itemprop="dateModified" content="2023-04-27T19:40:36+02:00" />
+<meta itemprop="dateModified" content="2023-04-28T15:45:00+02:00" />
 <meta itemprop="wordCount" content="34">
 <meta itemprop="keywords" content="" /><meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content=""/>

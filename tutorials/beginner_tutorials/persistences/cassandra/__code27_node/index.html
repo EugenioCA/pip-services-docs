@@ -23,11 +23,11 @@
 <meta property="og:type" content="article" />
 <meta property="og:url" content="/tutorials/beginner_tutorials/persistences/cassandra/__code27_node/" /><meta property="article:section" content="tutorials" />
 
-<meta property="article:modified_time" content="2023-04-27T19:40:36+02:00" />
+<meta property="article:modified_time" content="2023-04-28T15:45:00+02:00" />
 
 <meta itemprop="name" content="">
 <meta itemprop="description" content="import { IdentifiableCassandraPersistence } from &#39;pip-services3-cassandra-nodex&#39;; import { IIdentifiable, AnyValueMap } from &#39;pip-services3-commons-nodex&#39;; import { ConfigParams } from &#39;pip-services3-commons-nodex&#39;; export class MyData implements IIdentifiable&lt;string&gt; { public id: string; public name: string; public description: string; } class MyCassandraPersistence extends IdentifiableCassandraPersistence&lt;MyData, string&gt; { public constructor() { super(&#34;my_data_table&#34;, &#34;mydata_keyspace&#34;); } protected defineSchema(): void { this.clearSchema(); this.ensureSchema(&#39;CREATE TABLE &#39; &#43; this.quotedTableName() &#43; &#39; (id TEXT PRIMARY KEY, name VARCHAR(20), description VARCHAR(20))&#39;); this.ensureIndex(&#39;name&#39;, { name: 1 }, { unique: true }); } } export async function main() { let persistence = new MyCassandraPersistence(); persistence.">
-<meta itemprop="dateModified" content="2023-04-27T19:40:36+02:00" />
+<meta itemprop="dateModified" content="2023-04-28T15:45:00+02:00" />
 <meta itemprop="wordCount" content="254">
 <meta itemprop="keywords" content="" /><meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content=""/>

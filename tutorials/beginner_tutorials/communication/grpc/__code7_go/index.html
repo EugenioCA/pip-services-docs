@@ -23,11 +23,11 @@
 <meta property="og:type" content="article" />
 <meta property="og:url" content="/tutorials/beginner_tutorials/communication/grpc/__code7_go/" /><meta property="article:section" content="tutorials" />
 
-<meta property="article:modified_time" content="2023-04-27T19:40:36+02:00" />
+<meta property="article:modified_time" content="2023-04-28T15:45:00+02:00" />
 
 <meta itemprop="name" content="">
 <meta itemprop="description" content="type MyGrpcService struct { *grpcservices.GrpcService protos.SummatorServer } func NewMyGrpcService() *MyGrpcService { c := &amp;MyGrpcService{} c.GrpcService = grpcservices.InheritGrpcService(c, &#34;Summator&#34;) return c } func (c *MyGrpcService) Sum(ctx context.Context, req *protos.Number1) (result *protos.Number2, err error) { res := calculations.Summator(req.GetValue1(), req.GetValue2()) result = &amp;protos.Number2{Value: res} return result, nil } func (c *MyGrpcService) Register() { protos.RegisterSummatorServer(c.Endpoint.GetServer(), c) } ">
-<meta itemprop="dateModified" content="2023-04-27T19:40:36+02:00" />
+<meta itemprop="dateModified" content="2023-04-28T15:45:00+02:00" />
 <meta itemprop="wordCount" content="53">
 <meta itemprop="keywords" content="" /><meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content=""/>

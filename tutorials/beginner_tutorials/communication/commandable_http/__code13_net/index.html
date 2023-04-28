@@ -23,11 +23,11 @@
 <meta property="og:type" content="article" />
 <meta property="og:url" content="/tutorials/beginner_tutorials/communication/commandable_http/__code13_net/" /><meta property="article:section" content="tutorials" />
 
-<meta property="article:modified_time" content="2023-04-27T19:40:36+02:00" />
+<meta property="article:modified_time" content="2023-04-28T15:45:00+02:00" />
 
 <meta itemprop="name" content="">
 <meta itemprop="description" content="using System; using PipServices3.Commons.Commands; using PipServices3.Commons.Config; using PipServices3.Commons.Refer; using PipServices3.Commons.Run; using PipServices3.Commons.Validate; using PipServices3.Components.Build; using PipServices3.Container; using PipServices3.Rpc.Build; using PipServices3.Rpc.Services; using PipServices3.Swagger.Build; namespace ExampleApp { class Program { // Runner  static void Main(string[] args) { try { var runner = (new HelloFriendProcess()).RunAsync(args); runner.Wait(); } catch (Exception ex) { Console.Error.WriteLine(ex); } } } // Command set  public class FriendsCommandSet : CommandSet { private HelloFriendController _controller; public FriendsCommandSet(HelloFriendController controller) { _controller = controller; AddCommand(MakeGreeting()); } private ICommand MakeGreeting() { return new Command(&#34;greeting&#34;, new ObjectSchema().">
-<meta itemprop="dateModified" content="2023-04-27T19:40:36+02:00" />
+<meta itemprop="dateModified" content="2023-04-28T15:45:00+02:00" />
 <meta itemprop="wordCount" content="255">
 <meta itemprop="keywords" content="" /><meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content=""/>

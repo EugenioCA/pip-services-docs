@@ -23,11 +23,11 @@
 <meta property="og:type" content="article" />
 <meta property="og:url" content="/tutorials/beginner_tutorials/building_blocks/configurations/__code1_go/" /><meta property="article:section" content="tutorials" />
 
-<meta property="article:modified_time" content="2023-04-27T19:40:36+02:00" />
+<meta property="article:modified_time" content="2023-04-28T15:45:00+02:00" />
 
 <meta itemprop="name" content="">
 <meta itemprop="description" content="import ( cconf &#34;github.com/pip-services3-gox/pip-services3-commons-gox/config&#34; ) config := cconf.NewConfigParamsFromTuples( &#34;param1&#34;, &#34;XYZ&#34;, &#34;param2&#34;, 345, ) component.Configure(context.Background(), config) /// Also, often components can have hard-coded presets. /// The ConfigParams class has methods that allow to easily use them as defaults:  type MyComponent struct { // Implements IConfigurable  param1 string param2 int } func NewMyComponent() MyComponent { return MyComponent{ param1: &#34;ABC&#34;, param2: 123, } } func (c* MyComponent) Configure(ctx context.Context, config *cconf.ConfigParams) { c.">
-<meta itemprop="dateModified" content="2023-04-27T19:40:36+02:00" />
+<meta itemprop="dateModified" content="2023-04-28T15:45:00+02:00" />
 <meta itemprop="wordCount" content="78">
 <meta itemprop="keywords" content="" /><meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content=""/>

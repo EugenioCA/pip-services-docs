@@ -23,11 +23,11 @@
 <meta property="og:type" content="article" />
 <meta property="og:url" content="/tutorials/beginner_tutorials/communication/rest_client/__code7_net/" /><meta property="article:section" content="tutorials" />
 
-<meta property="article:modified_time" content="2023-04-27T19:40:36+02:00" />
+<meta property="article:modified_time" content="2023-04-28T15:45:00+02:00" />
 
 <meta itemprop="name" content="">
 <meta itemprop="description" content="using System; using System.IO; using System.Net.Http; using System.Collections.Generic; using System.Threading.Tasks; using Microsoft.AspNetCore.Routing; using Microsoft.AspNetCore.Http; using Microsoft.Extensions.Primitives; using PipServices3.Commons.Convert; using PipServices3.Commons.Config; using PipServices3.Rpc.Services; using PipServices3.Rpc.Clients; namespace ExampleApp { class Program { static void Main(string[] args) { // Instantiation  var myRestService = new MyRestService(); // REST service configuration  myRestService.Configure(ConfigParams.FromTuples( &#34;connection.protocol&#34;, &#34;http&#34;, &#34;connection.host&#34;, &#34;localhost&#34;, &#34;connection.port&#34;, 15235 )); // Connection  myRestService.OpenAsync(&#34;123&#34;).Wait(); // Instantiation  var client = new MyRestClient(); // REST client configuration  client.">
-<meta itemprop="dateModified" content="2023-04-27T19:40:36+02:00" />
+<meta itemprop="dateModified" content="2023-04-28T15:45:00+02:00" />
 <meta itemprop="wordCount" content="438">
 <meta itemprop="keywords" content="" /><meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content=""/>
