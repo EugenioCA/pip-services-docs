@@ -23,11 +23,11 @@
 <meta property="og:type" content="article" />
 <meta property="og:url" content="/tutorials/beginner_tutorials/building_blocks/persistence/__code3_python/" /><meta property="article:section" content="tutorials" />
 
-<meta property="article:modified_time" content="2023-04-29T18:57:35+02:00" />
+<meta property="article:modified_time" content="2023-04-29T22:57:39+02:00" />
 
 <meta itemprop="name" content="">
 <meta itemprop="description" content="from abc import ABC from pip_services3_commons.data import IIdentifiable, FilterParams, PagingParams, DataPage from pip_services3_postgres.persistence import IdentifiablePostgresPersistence class MyIdentifiableObject(IIdentifiable): def __init__(self, id: str = None, name: str = None, value: str = None): self.id = id self.name = name self.value = value class MyIdentifiablePersistence(ABC): def get_page_by_filter(self, correlation_id: str, filter: FilterParams, paging: PagingParams) -&gt; DataPage: pass def create(self, correlation_id: str, item: MyIdentifiableObject) -&gt; MyIdentifiableObject: pass def get_one_by_id(self, correlation_id: str, id: str) -&gt; MyIdentifiableObject: pass def delete_by_id(self, correlation_id: str, id: str) -&gt; MyIdentifiableObject: pass class MyIdentifiablePostgreSqlPersistence(IdentifiablePostgresPersistence, MyIdentifiablePersistence): def __init__(self): super(MyIdentifiablePostgreSqlPersistence, self).">
-<meta itemprop="dateModified" content="2023-04-29T18:57:35+02:00" />
+<meta itemprop="dateModified" content="2023-04-29T22:57:39+02:00" />
 <meta itemprop="wordCount" content="163">
 <meta itemprop="keywords" content="" /><meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content=""/>

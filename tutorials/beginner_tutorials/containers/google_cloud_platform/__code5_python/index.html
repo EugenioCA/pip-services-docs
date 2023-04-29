@@ -23,11 +23,11 @@
 <meta property="og:type" content="article" />
 <meta property="og:url" content="/tutorials/beginner_tutorials/containers/google_cloud_platform/__code5_python/" /><meta property="article:section" content="tutorials" />
 
-<meta property="article:modified_time" content="2023-04-29T18:57:35+02:00" />
+<meta property="article:modified_time" content="2023-04-29T22:57:39+02:00" />
 
 <meta itemprop="name" content="">
 <meta itemprop="description" content="import flask from pip_services3_gcp.containers import CloudFunction from pip_services3_commons.refer import IReferences from pip_services3_commons.refer import Descriptor, IReferences, IReferenceable from pip_services3_components.build import Factory class MyController(IReferenceable): def __init__(self): super().__init__() def set_references(self, references): pass def greetings(self, name: str): return f&#34;Hello, {name}!&#34; class MyFactory(Factory): def __init__(self): super().__init__() self.register_as_type(Descriptor(&#34;mygroup&#34;, &#34;controller&#34;, &#34;default&#34;, &#34;controller&#34;, &#34;1.0&#34;), MyController) class MyCloudFunction(CloudFunction): def __init__(self): super().__init__(&#34;mygroup&#34;, &#34;MyGroup&#34;) self._controller: MyController = None self._config_path = &#39;./config.yaml&#39; self._factories.add(MyFactory()) # Comment out the next line of code when using a configuration file, uncomment to use the dependency resolver # self.">
-<meta itemprop="dateModified" content="2023-04-29T18:57:35+02:00" />
+<meta itemprop="dateModified" content="2023-04-29T22:57:39+02:00" />
 <meta itemprop="wordCount" content="161">
 <meta itemprop="keywords" content="" /><meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content=""/>

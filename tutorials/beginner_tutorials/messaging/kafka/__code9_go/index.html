@@ -23,11 +23,11 @@
 <meta property="og:type" content="article" />
 <meta property="og:url" content="/tutorials/beginner_tutorials/messaging/kafka/__code9_go/" /><meta property="article:section" content="tutorials" />
 
-<meta property="article:modified_time" content="2023-04-29T18:57:35+02:00" />
+<meta property="article:modified_time" content="2023-04-29T22:57:39+02:00" />
 
 <meta itemprop="name" content="">
 <meta itemprop="description" content="import ( &#34;context&#34; &#34;fmt&#34; &#34;sync&#34; &#34;time&#34; kafka &#34;github.com/Shopify/sarama&#34; conf &#34;github.com/pip-services3-gox/pip-services3-commons-gox/config&#34; kafkaconn &#34;github.com/pip-services3-gox/pip-services3-kafka-gox/connect&#34; ) type MyListener struct { ready chan bool Lock sync.Mutex } func NewMyListener() *MyListener { c := &amp;MyListener{} c.ready = make(chan bool) return c } // Setup is run at the beginning of a new session, before ConsumeClaim. func (c *MyListener) Setup(kafka.ConsumerGroupSession) error { // Mark the consumer as ready 	c.ready &lt;- true close(c.ready) return nil } // Cleanup is run at the end of a session, once all ConsumeClaim goroutines have exited // but before the offsets are committed for the very last time.">
-<meta itemprop="dateModified" content="2023-04-29T18:57:35+02:00" />
+<meta itemprop="dateModified" content="2023-04-29T22:57:39+02:00" />
 <meta itemprop="wordCount" content="242">
 <meta itemprop="keywords" content="" /><meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content=""/>

@@ -23,11 +23,11 @@
 <meta property="og:type" content="article" />
 <meta property="og:url" content="/tutorials/beginner_tutorials/communication/rest_service/__code2_go/" /><meta property="article:section" content="tutorials" />
 
-<meta property="article:modified_time" content="2023-04-29T18:57:35+02:00" />
+<meta property="article:modified_time" content="2023-04-29T22:57:39+02:00" />
 
 <meta itemprop="name" content="">
 <meta itemprop="description" content="import ( &#34;context&#34; &#34;net/http&#34; &#34;os&#34; &#34;github.com/gorilla/mux&#34; config &#34;github.com/pip-services3-gox/pip-services3-commons-gox/config&#34; rpc &#34;github.com/pip-services3-gox/pip-services3-rpc-gox/services&#34; ) type MyRestService struct { *rpc.RestService } func NewMyRestService() *MyRestService { c := &amp;MyRestService{} c.RestService = rpc.InheritRestService(c) c.BaseRoute = &#34;/my_service&#34; return c } func (c *MyRestService) myPage(res http.ResponseWriter, req *http.Request) { vars := mux.Vars(req) name := req.URL.Query().Get(&#34;message&#34;) message := vars[&#34;name&#34;] result := message &#43; &#34;, &#34; &#43; name c.SendResult(res, req, result, nil) } func (c *MyRestService) Register() { c.RegisterRoute(&#34;GET&#34;, &#34;/my_page/{name}&#34;, nil, c.">
-<meta itemprop="dateModified" content="2023-04-29T18:57:35+02:00" />
+<meta itemprop="dateModified" content="2023-04-29T22:57:39+02:00" />
 <meta itemprop="wordCount" content="73">
 <meta itemprop="keywords" content="" /><meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content=""/>

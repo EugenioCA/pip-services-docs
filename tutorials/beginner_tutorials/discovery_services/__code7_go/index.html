@@ -23,11 +23,11 @@
 <meta property="og:type" content="article" />
 <meta property="og:url" content="/tutorials/beginner_tutorials/discovery_services/__code7_go/" /><meta property="article:section" content="tutorials" />
 
-<meta property="article:modified_time" content="2023-04-29T18:57:35+02:00" />
+<meta property="article:modified_time" content="2023-04-29T22:57:39+02:00" />
 
 <meta itemprop="name" content="">
 <meta itemprop="description" content="package main // Pre-requisites import ( &#34;fmt&#34; cconf &#34;github.com/pip-services3-gox/pip-services3-commons-gox/config&#34; cconn &#34;github.com/pip-services3-gox/pip-services3-components-gox/connect&#34; ) // Runner func main() { config := cconf.NewConfigParamsFromTuples( &#34;connections.key1.host&#34;, &#34;10.1.1.100&#34;, &#34;connections.key1.port&#34;, &#34;8080&#34;, &#34;connections.key2.host&#34;, &#34;10.1.1.100&#34;, &#34;connections.key2.port&#34;, &#34;8082&#34;, ) discovery := cconn.NewEmptyMemoryDiscovery() discovery.Configure(context.Background(), config) // Adding more parameters 	discovery.Register(&#34;123&#34;, &#34;key1&#34;, cconn.NewConnectionParamsFromTuples( &#34;param1&#34;, &#34;val1&#34;, &#34;param2&#34;, &#34;val2&#34;, )) discovery.Register(&#34;123&#34;, &#34;key3&#34;, cconn.NewConnectionParamsFromTuples( &#34;host&#34;, &#34;localhost&#34;, &#34;port&#34;, &#34;8000&#34;, )) // Resolving connections 	res1, _ := discovery.ResolveOne(&#34;123&#34;, &#34;key1&#34;) res2, _ := discovery.ResolveAll(&#34;123&#34;, &#34;key1&#34;) res3, _ := discovery.">
-<meta itemprop="dateModified" content="2023-04-29T18:57:35+02:00" />
+<meta itemprop="dateModified" content="2023-04-29T22:57:39+02:00" />
 <meta itemprop="wordCount" content="83">
 <meta itemprop="keywords" content="" /><meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content=""/>

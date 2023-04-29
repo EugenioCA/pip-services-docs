@@ -23,11 +23,11 @@
 <meta property="og:type" content="article" />
 <meta property="og:url" content="/tutorials/beginner_tutorials/three_tier_architecture/__code9_go/" /><meta property="article:section" content="tutorials" />
 
-<meta property="article:modified_time" content="2023-04-29T18:57:35+02:00" />
+<meta property="article:modified_time" content="2023-04-29T22:57:39+02:00" />
 
 <meta itemprop="name" content="">
 <meta itemprop="description" content="import ( cref &#34;github.com/pip-services3-gox/pip-services3-commons-gox/refer&#34; cbuild &#34;github.com/pip-services3-gox/pip-services3-components-gox/build&#34; ) var HttpServiceDescriptor = cref.NewDescriptor(&#34;hello-friend&#34;, &#34;service&#34;, &#34;http&#34;, &#34;*&#34;, &#34;1.0&#34;) // View var ControllerDescriptor = cref.NewDescriptor(&#34;hello-friend&#34;, &#34;controller&#34;, &#34;default&#34;, &#34;*&#34;, &#34;1.0&#34;) // Controller var PersistenceDescriptor = cref.NewDescriptor(&#34;hello-friend&#34;, &#34;persistence&#34;, &#34;mysql&#34;, &#34;*&#34;, &#34;1.0&#34;) // Persistence  type HelloFriendServiceFactory struct { *cbuild.Factory } func NewHelloFriendServiceFactory() *HelloFriendServiceFactory { c := &amp;HelloFriendServiceFactory{} c.Factory = cbuild.NewFactory() c.RegisterType(HttpServiceDescriptor, NewHelloFriendRestService) // View 	c.RegisterType(ControllerDescriptor, NewHelloFriendController) // Controller 	c.RegisterType(PersistenceDescriptor, NewHelloFriendPersistence) // Persistence  return c } ">
-<meta itemprop="dateModified" content="2023-04-29T18:57:35+02:00" />
+<meta itemprop="dateModified" content="2023-04-29T22:57:39+02:00" />
 <meta itemprop="wordCount" content="68">
 <meta itemprop="keywords" content="" /><meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content=""/>

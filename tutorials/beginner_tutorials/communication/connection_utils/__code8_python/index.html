@@ -23,11 +23,11 @@
 <meta property="og:type" content="article" />
 <meta property="og:url" content="/tutorials/beginner_tutorials/communication/connection_utils/__code8_python/" /><meta property="article:section" content="tutorials" />
 
-<meta property="article:modified_time" content="2023-04-29T18:57:35+02:00" />
+<meta property="article:modified_time" content="2023-04-29T22:57:39+02:00" />
 
 <meta itemprop="name" content="">
 <meta itemprop="description" content="from typing import Optional import pymongo from pip_services3_commons.config import IConfigurable, ConfigParams from pip_services3_commons.run import IOpenable from pymongo.collection import Collection from pip_services3_components.connect import ConnectionUtils class MongoDbConnector(IOpenable, IConfigurable): def __init__(self, secure_mongo=False): # The MongoDB connection object. self._connection: pymongo.MongoClient = None self._secure_mongo = secure_mongo self._config = ConfigParams() def is_open(self) -&gt; bool: return self._connection is not None def get_collection(self) -&gt; Collection: return self._connection.get_database().get_collection(&#39;test&#39;) def configure(self, config: ConfigParams): self._config = config # if connection passed as uri if self.">
-<meta itemprop="dateModified" content="2023-04-29T18:57:35+02:00" />
+<meta itemprop="dateModified" content="2023-04-29T22:57:39+02:00" />
 <meta itemprop="wordCount" content="148">
 <meta itemprop="keywords" content="" /><meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content=""/>

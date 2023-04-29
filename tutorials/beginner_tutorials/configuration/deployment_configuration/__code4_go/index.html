@@ -23,11 +23,11 @@
 <meta property="og:type" content="article" />
 <meta property="og:url" content="/tutorials/beginner_tutorials/configuration/deployment_configuration/__code4_go/" /><meta property="article:section" content="tutorials" />
 
-<meta property="article:modified_time" content="2023-04-29T18:57:35+02:00" />
+<meta property="article:modified_time" content="2023-04-29T22:57:39+02:00" />
 
 <meta itemprop="name" content="">
 <meta itemprop="description" content="import postgrespersist &#34;github.com/pip-services3-gox/pip-services3-postgres-gox/persistence&#34; type HelloFriendPersistence2 struct { *postgrespersist.IdentifiablePostgresPersistence[MyFriend, string] } func NewHelloFriendPersistence2() *HelloFriendPersistence2 { c := &amp;HelloFriendPersistence2{} c.IdentifiablePostgresPersistence = postgrespersist.InheritIdentifiablePostgresPersistence[MyFriend, string](c, &#34;myfriends3&#34;) return c } func (c *HelloFriendPersistence2) DefineSchema() { c.ClearSchema() c.EnsureSchema(&#34;CREATE TABLE IF NOT EXISTS &#34; &#43; c.QuotedTableName() &#43; &#34; (\&#34;id\&#34; TEXT PRIMARY KEY, \&#34;type\&#34; TEXT, \&#34;name\&#34; TEXT)&#34;) } func (c *HelloFriendPersistence2) composeFilter(filter cdata.FilterParams) string { typee, typeOk := filter.GetAsNullableString(&#34;type&#34;) name, nameOk := filter.GetAsNullableString(&#34;name&#34;) filterObj := &#34;&#34; if typeOk &amp;&amp; typee !">
-<meta itemprop="dateModified" content="2023-04-29T18:57:35+02:00" />
+<meta itemprop="dateModified" content="2023-04-29T22:57:39+02:00" />
 <meta itemprop="wordCount" content="120">
 <meta itemprop="keywords" content="" /><meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content=""/>

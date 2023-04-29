@@ -23,11 +23,11 @@
 <meta property="og:type" content="article" />
 <meta property="og:url" content="/tutorials/beginner_tutorials/building_blocks/persistence/__code1_dart/" /><meta property="article:section" content="tutorials" />
 
-<meta property="article:modified_time" content="2023-04-29T18:57:35+02:00" />
+<meta property="article:modified_time" content="2023-04-29T22:57:39+02:00" />
 
 <meta itemprop="name" content="">
 <meta itemprop="description" content="import &#39;package:pip_services3_mongodb/pip_services3_mongodb.dart&#39;; class MyObject { String key; String name; MyObject.from(this.key, this.name); Map&lt;String, dynamic&gt; toJson() { return &lt;String, dynamic&gt;{&#39;key&#39;: key, &#39;name&#39;: name}; } void fromJson(Map&lt;String, dynamic&gt; json) { key = json[&#39;key&#39;]; name = json[&#39;name&#39;]; } MyObject clone() { return MyObject.from(key, name); } } class MyMongoDbPersistence extends MongoDbPersistence&lt;MyObject&gt; { MyMongoDbPersistence() : super(&#39;mycollection&#39;); Future&lt;MyObject?&gt; getByName(String correlationId, String name) async { var criteria = {name: name}; var res = await super.getListByFilterEx(correlationId, criteria, null); return res.">
-<meta itemprop="dateModified" content="2023-04-29T18:57:35+02:00" />
+<meta itemprop="dateModified" content="2023-04-29T22:57:39+02:00" />
 <meta itemprop="wordCount" content="140">
 <meta itemprop="keywords" content="" /><meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content=""/>

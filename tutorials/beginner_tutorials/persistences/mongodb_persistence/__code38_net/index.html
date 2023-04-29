@@ -23,11 +23,11 @@
 <meta property="og:type" content="article" />
 <meta property="og:url" content="/tutorials/beginner_tutorials/persistences/mongodb_persistence/__code38_net/" /><meta property="article:section" content="tutorials" />
 
-<meta property="article:modified_time" content="2023-04-29T18:57:35+02:00" />
+<meta property="article:modified_time" content="2023-04-29T22:57:39+02:00" />
 
 <meta itemprop="name" content="">
 <meta itemprop="description" content="using System; using System.Runtime.Serialization; using PipServices3.Commons.Data; using PipServices3.Commons.Config; using PipServices3.MongoDb.Persistence; using MongoDB.Bson.Serialization.Attributes; using MongoDB.Driver; using System.Collections.Generic; using System.Threading.Tasks; public class MyIdentifiableMongoDbPersistence: IdentifiableMongoDbPersistence&lt;MyData, string&gt; { public MyIdentifiableMongoDbPersistence() : base(&#34;mydata&#34;) { } } [DataContract] [BsonNoId] [BsonIgnoreExtraElements] public class MyData : IStringIdentifiable { [BsonElement(&#34;id&#34;)] [DataMember(Name = &#34;id&#34;)] public string Id { get; set; } [BsonElement(&#34;key&#34;)] [DataMember(Name = &#34;key&#34;)] public string Key { get; set; } [BsonElement(&#34;content&#34;)] [DataMember(Name = &#34;content&#34;)] public string Content { get; set; } } public static void PrintResult(string operationNme, MyData res) { Console.">
-<meta itemprop="dateModified" content="2023-04-29T18:57:35+02:00" />
+<meta itemprop="dateModified" content="2023-04-29T22:57:39+02:00" />
 <meta itemprop="wordCount" content="205">
 <meta itemprop="keywords" content="" /><meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content=""/>

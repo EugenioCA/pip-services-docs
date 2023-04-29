@@ -23,11 +23,11 @@
 <meta property="og:type" content="article" />
 <meta property="og:url" content="/tutorials/beginner_tutorials/communication/commandable_grpc/__code6_go/" /><meta property="article:section" content="tutorials" />
 
-<meta property="article:modified_time" content="2023-04-29T18:57:35+02:00" />
+<meta property="article:modified_time" content="2023-04-29T22:57:39+02:00" />
 
 <meta itemprop="name" content="">
 <meta itemprop="description" content="import ( &#34;context&#34; &#34;encoding/json&#34; ccomand &#34;github.com/pip-services3-gox/pip-services3-commons-gox/commands&#34; cconv &#34;github.com/pip-services3-gox/pip-services3-commons-gox/convert&#34; cdata &#34;github.com/pip-services3-gox/pip-services3-commons-gox/data&#34; cref &#34;github.com/pip-services3-gox/pip-services3-commons-gox/refer&#34; crun &#34;github.com/pip-services3-gox/pip-services3-commons-gox/run&#34; cvalid &#34;github.com/pip-services3-gox/pip-services3-commons-gox/validate&#34; cbuild &#34;github.com/pip-services3-gox/pip-services3-components-gox/build&#34; grpcsrv &#34;github.com/pip-services3-gox/pip-services3-grpc-gox/services&#34; ) type MyDataCommandSet struct { *ccomand.CommandSet controller IMyDataController } func NewMyDataCommandSet(controller IMyDataController) *MyDataCommandSet { dcs := MyDataCommandSet{} dcs.CommandSet = ccomand.NewCommandSet() dcs.controller = controller dcs.AddCommand(dcs.makePageByFilterCommand()) dcs.AddCommand(dcs.makeGetOneByIdCommand()) dcs.AddCommand(dcs.makeCreateCommand()) dcs.AddCommand(dcs.makeUpdateCommand()) dcs.AddCommand(dcs.makeDeleteByIdCommand()) return &amp;dcs } func (c *MyDataCommandSet) makePageByFilterCommand() ccomand.ICommand { return ccomand.NewCommand( &#34;get_my_datas&#34;, cvalid.NewObjectSchema().WithOptionalProperty(&#34;filter&#34;, cvalid.NewFilterParamsSchema()).WithOptionalProperty(&#34;paging&#34;, cvalid.NewPagingParamsSchema()), func(ctx context.Context, correlationId string, args *crun.Parameters) (result any, err error) { var filter *cdata.">
-<meta itemprop="dateModified" content="2023-04-29T18:57:35+02:00" />
+<meta itemprop="dateModified" content="2023-04-29T22:57:39+02:00" />
 <meta itemprop="wordCount" content="261">
 <meta itemprop="keywords" content="" /><meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content=""/>

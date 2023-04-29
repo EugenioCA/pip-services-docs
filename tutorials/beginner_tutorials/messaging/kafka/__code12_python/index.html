@@ -23,11 +23,11 @@
 <meta property="og:type" content="article" />
 <meta property="og:url" content="/tutorials/beginner_tutorials/messaging/kafka/__code12_python/" /><meta property="article:section" content="tutorials" />
 
-<meta property="article:modified_time" content="2023-04-29T18:57:35+02:00" />
+<meta property="article:modified_time" content="2023-04-29T22:57:39+02:00" />
 
 <meta itemprop="name" content="">
 <meta itemprop="description" content="from pip_services3_kafka.connect import KafkaConnection from pip_services3_commons.config import ConfigParams from pip_services3_kafka.connect import IKafkaMessageListener kc = KafkaConnection() config = ConfigParams.from_tuples( &#39;connection.host&#39;, &#39;localhost&#39;, &#39;connection.port&#39;, 9092 ) kc.configure(config) kc.open(None) kc.create_queue(&#34;my_queueA&#34;) kc.create_queue(&#34;my_queueB&#34;) kc.create_queue(&#34;my_queueC&#34;) list_of_messages1 = [{&#39;value&#39;: &#34;message 1&#34;}, {&#39;value&#39;: &#34;message 2&#34;}] list_of_messages2 = [{&#39;value&#39;: &#34;message 3&#34;}, {&#39;value&#39;: &#34;message 4&#34;}] list_of_messages3 = [{&#39;value&#39;: &#34;message 5&#34;}, {&#39;value&#39;: &#34;message 6&#34;}] kc.publish(&#34;my_topicA&#34;, list_of_messages1, {}) kc.publish(&#34;my_topicB&#34;, list_of_messages2, {}) kc.publish(&#34;my_topicC&#34;, list_of_messages3, {}) class MyListener(IKafkaMessageListener): def on_message(self, topic, partition, message): print(message.value().decode(&#39;utf-8&#39;), message.offset()) my_listener = MyListener() kc.">
-<meta itemprop="dateModified" content="2023-04-29T18:57:35+02:00" />
+<meta itemprop="dateModified" content="2023-04-29T22:57:39+02:00" />
 <meta itemprop="wordCount" content="88">
 <meta itemprop="keywords" content="" /><meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content=""/>
