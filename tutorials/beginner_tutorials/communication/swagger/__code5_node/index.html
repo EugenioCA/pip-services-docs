@@ -23,11 +23,11 @@
 <meta property="og:type" content="article" />
 <meta property="og:url" content="/tutorials/beginner_tutorials/communication/swagger/__code5_node/" /><meta property="article:section" content="tutorials" />
 
-<meta property="article:modified_time" content="2023-04-28T15:45:00+02:00" />
+<meta property="article:modified_time" content="2023-04-29T17:59:15+02:00" />
 
 <meta itemprop="name" content="">
 <meta itemprop="description" content="import { ConfigParams, Descriptor } from &#39;pip-services3-commons-nodex&#39;; import { CommandableHttpService } from &#39;pip-services3-rpc-nodex&#39;; class FriendCommandableHttpService1 extends CommandableHttpService { private _swaggerPath: string; public constructor() { super(&#34;commandable_hello_friend1&#34;); this._dependencyResolver.put(&#39;controller&#39;, new Descriptor(&#34;hello-friend&#34;, &#34;controller&#34;, &#34;*&#34;, &#34;*&#34;, &#34;*&#34;)); } public configure(config: ConfigParams): void { super.configure(config); // Swagger  this._swaggerPath = config.getAsNullableString(&#34;swagger.path&#34;); } public register(): void { super.register(); if (this._swaggerPath != null) this.registerOpenApiSpecFromFile(this._swaggerPath); } } ">
-<meta itemprop="dateModified" content="2023-04-28T15:45:00+02:00" />
+<meta itemprop="dateModified" content="2023-04-29T17:59:15+02:00" />
 <meta itemprop="wordCount" content="57">
 <meta itemprop="keywords" content="" /><meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content=""/>

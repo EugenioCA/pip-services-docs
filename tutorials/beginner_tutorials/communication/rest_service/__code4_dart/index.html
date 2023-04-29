@@ -23,11 +23,11 @@
 <meta property="og:type" content="article" />
 <meta property="og:url" content="/tutorials/beginner_tutorials/communication/rest_service/__code4_dart/" /><meta property="article:section" content="tutorials" />
 
-<meta property="article:modified_time" content="2023-04-28T15:45:00+02:00" />
+<meta property="article:modified_time" content="2023-04-29T17:59:15+02:00" />
 
 <meta itemprop="name" content="">
 <meta itemprop="description" content="import &#39;dart:async&#39;; import &#39;package:shelf/shelf.dart&#39;; import &#39;package:shelf_router/shelf_router.dart&#39;; import &#39;package:pip_services3_commons/pip_services3_commons.dart&#39;; import &#39;package:pip_services3_rpc/pip_services3_rpc.dart&#39;; class MyRestService extends RestService { MyRestService() : super() { baseRoute = &#39;/my_service&#39;; } FutureOr&lt;Response&gt; myPage(Request req) async { var name = req.url.queryParameters[&#39;message&#39;]; var message = req.params[&#39;name&#39;]; var result = message.toString() &#43; &#39;, &#39; &#43; name.toString(); return sendResult(req, result); } @override void register() { registerRoute(&#39;GET&#39;, &#39;/my_page/&lt;name&gt;&#39;, null, myPage); } } void main(List&lt;String&gt; arguments) async { var myRestService = MyRestService(); myRestService.configure(ConfigParams.fromTuples([ &#39;connection.protocol&#39;, &#39;http&#39;, &#39;connection.">
-<meta itemprop="dateModified" content="2023-04-28T15:45:00+02:00" />
+<meta itemprop="dateModified" content="2023-04-29T17:59:15+02:00" />
 <meta itemprop="wordCount" content="79">
 <meta itemprop="keywords" content="" /><meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content=""/>

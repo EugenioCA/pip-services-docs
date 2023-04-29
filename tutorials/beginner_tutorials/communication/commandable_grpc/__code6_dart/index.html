@@ -23,11 +23,11 @@
 <meta property="og:type" content="article" />
 <meta property="og:url" content="/tutorials/beginner_tutorials/communication/commandable_grpc/__code6_dart/" /><meta property="article:section" content="tutorials" />
 
-<meta property="article:modified_time" content="2023-04-28T15:45:00+02:00" />
+<meta property="article:modified_time" content="2023-04-29T17:59:15+02:00" />
 
 <meta itemprop="name" content="">
 <meta itemprop="description" content="class MyDataCommandSet extends CommandSet { IMyDataController _controller; MyDataCommandSet(IMyDataController controller) : _controller = controller { addCommand(_makePageByFilterCommand()); addCommand(_makeGetOneByIdCommand()); addCommand(_makeCreateCommand()); addCommand(_makeUpdateCommand()); addCommand(_makeDeleteByIdCommand()); } ICommand _makePageByFilterCommand() { return Command( &#39;get_my_datas&#39;, ObjectSchema(true) .withOptionalProperty(&#39;filter&#39;, FilterParamsSchema()) .withOptionalProperty(&#39;paging&#39;, PagingParamsSchema()), (String? correlationId, Parameters args) { var filter = FilterParams.fromValue(args.get(&#39;filter&#39;)); var paging = PagingParams.fromValue(args.get(&#39;paging&#39;)); return _controller.GetPageByFilterAsync(correlationId, filter, paging); }); } ICommand _makeGetOneByIdCommand() { return Command(&#39;get_my_data_by_id&#39;, ObjectSchema(true).withRequiredProperty(&#39;my_data_id&#39;, TypeCode.String), (String? correlationId, Parameters args) { var id = args.getAsString(&#39;my_data_id&#39;); return _controller.GetOneByIdAsync(correlationId, id); }); } ICommand _makeCreateCommand() { return Command(&#39;create_my_data&#39;, ObjectSchema(true).">
-<meta itemprop="dateModified" content="2023-04-28T15:45:00+02:00" />
+<meta itemprop="dateModified" content="2023-04-29T17:59:15+02:00" />
 <meta itemprop="wordCount" content="137">
 <meta itemprop="keywords" content="" /><meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content=""/>

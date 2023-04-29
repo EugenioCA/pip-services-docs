@@ -24,12 +24,12 @@ import ( &#34;math&#34; cconfig &#34;github.com/pip-services3-gox/pip-services3-
 <meta property="og:type" content="article" />
 <meta property="og:url" content="/tutorials/beginner_tutorials/configuration/component_configuration/__code7_go/" /><meta property="article:section" content="tutorials" />
 
-<meta property="article:modified_time" content="2023-04-28T15:45:00+02:00" />
+<meta property="article:modified_time" content="2023-04-29T17:59:15+02:00" />
 
 <meta itemprop="name" content="">
 <meta itemprop="description" content="See: Commons module&rsquo;s
 import ( &#34;math&#34; cconfig &#34;github.com/pip-services3-gox/pip-services3-commons-gox/config&#34; cdata &#34;github.com/pip-services3-gox/pip-services3-commons-gox/data&#34; ) type DataController struct { _maxPageSize int } func NewDataController() *DataController { return &amp;DataController{ _maxPageSize: 5, } } func (c *DataController) Configure(ctx context.Context, config *cconfig.ConfigParams) { c._maxPageSize = config.GetAsIntegerWithDefault(&#34;max_page_size&#34;, c._maxPageSize) } func (c *DataController) GetData(ctx context.Context, correlationId string, filter *cdata.FilterParams, paging *cdata.PagingParams) (page *cdata.DataPage, err error) { *paging.Take = int64(math.Min(float64(*paging.Take), float64(c._maxPageSize))) // Get data using max page size constraint. 	return page, err } ">
-<meta itemprop="dateModified" content="2023-04-28T15:45:00+02:00" />
+<meta itemprop="dateModified" content="2023-04-29T17:59:15+02:00" />
 <meta itemprop="wordCount" content="73">
 <meta itemprop="keywords" content="" /><meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content=""/>

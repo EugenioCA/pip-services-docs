@@ -23,11 +23,11 @@
 <meta property="og:type" content="article" />
 <meta property="og:url" content="/tutorials/beginner_tutorials/messaging/messaging_basics/__code7_go/" /><meta property="article:section" content="tutorials" />
 
-<meta property="article:modified_time" content="2023-04-28T15:45:00+02:00" />
+<meta property="article:modified_time" content="2023-04-29T17:59:15+02:00" />
 
 <meta itemprop="name" content="">
 <meta itemprop="description" content="import ( &#34;context&#34; &#34;fmt&#34; &#34;time&#34; cqueues &#34;github.com/pip-services3-gox/pip-services3-messaging-gox/queues&#34; ) func main() { // Message queue 	messageQueue := cqueues.NewMemoryMessageQueue(&#34;my_queue&#34;) err := messageQueue.Open(context.Background(), &#34;123&#34;) if err != nil { panic(err) } // Listener 	go messageQueue.Listen(context.Background(), &#34;123&#34;, NewMyMessageReceiver()) // Send message 	err = messageQueue.Send(context.Background(), &#34;123&#34;, cqueues.NewMessageEnvelope(&#34;123&#34;, &#34;mymessage&#34;, []byte(&#34;ABC&#34;))) if err != nil { panic(err) } &lt;-time.After(100 * time.Millisecond) // Close message queue 	err = messageQueue.Close(context.Background(), &#34;123&#34;) if err != nil { panic(err) } } // Message receiver type MyMessageReceiver struct { } func NewMyMessageReceiver() *MyMessageReceiver { c := &amp;MyMessageReceiver{} return c } func (c *MyMessageReceiver) ReceiveMessage(ctx context.">
-<meta itemprop="dateModified" content="2023-04-28T15:45:00+02:00" />
+<meta itemprop="dateModified" content="2023-04-29T17:59:15+02:00" />
 <meta itemprop="wordCount" content="108">
 <meta itemprop="keywords" content="" /><meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content=""/>

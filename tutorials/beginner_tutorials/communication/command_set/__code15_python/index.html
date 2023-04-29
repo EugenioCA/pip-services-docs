@@ -23,11 +23,11 @@
 <meta property="og:type" content="article" />
 <meta property="og:url" content="/tutorials/beginner_tutorials/communication/command_set/__code15_python/" /><meta property="article:section" content="tutorials" />
 
-<meta property="article:modified_time" content="2023-04-28T15:45:00+02:00" />
+<meta property="article:modified_time" content="2023-04-29T17:59:15+02:00" />
 
 <meta itemprop="name" content="">
 <meta itemprop="description" content="from pip_services3_commons.commands import Command, CommandSet, ICommand, IEvent, Event, IEventListener # Step 1 - Create the command set with events class my_eventset(CommandSet): def __init__(self, controller): super(my_eventset, self).__init__() self.add_event(self._event1()) self.add_events([self._event2(), self._event3()]) self.add_listener(self._listener1()) def _event1(self): event = Event(&#34;event1&#34;) event.add_listener(MyListener()) return Event(&#34;event1&#34;) def _event2(self): event = Event(&#34;event2&#34;) event.add_listener(MyListener()) return Event(&#34;event2&#34;) def _event3(self): event = Event(&#34;event3&#34;) event.add_listener(MyListener()) return Event(&#34;event3&#34;) def _listener1(self): return MyListener() # Step 2 - Create a listener class MyListener(IEventListener): def on_event(self, correlation_id, event, args): print(&#34;Fired event with name &#34; &#43; event.">
-<meta itemprop="dateModified" content="2023-04-28T15:45:00+02:00" />
+<meta itemprop="dateModified" content="2023-04-29T17:59:15+02:00" />
 <meta itemprop="wordCount" content="157">
 <meta itemprop="keywords" content="" /><meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content=""/>

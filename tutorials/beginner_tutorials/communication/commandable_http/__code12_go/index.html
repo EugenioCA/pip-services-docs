@@ -23,11 +23,11 @@
 <meta property="og:type" content="article" />
 <meta property="og:url" content="/tutorials/beginner_tutorials/communication/commandable_http/__code12_go/" /><meta property="article:section" content="tutorials" />
 
-<meta property="article:modified_time" content="2023-04-28T15:45:00+02:00" />
+<meta property="article:modified_time" content="2023-04-29T17:59:15+02:00" />
 
 <meta itemprop="name" content="">
 <meta itemprop="description" content="import ( &#34;bytes&#34; &#34;encoding/json&#34; &#34;fmt&#34; &#34;io/ioutil&#34; &#34;net/http&#34; &#34;time&#34; ) postBody, _ := json.Marshal(map[string]string{ &#34;name&#34;: &#34;Peter&#34;, }) responseBody := bytes.NewBuffer(postBody) resp, _ := http.Post(&#34;http://localhost:8080/commandable_hello_friend/greeting&#34;, &#34;application/json&#34;, responseBody) defer resp.Body.Close() body, _ := ioutil.ReadAll(resp.Body) sb := string(body) fmt.Println(sb) // Returns &#39;&#34;Hello, Cosme !&#34;&#39; ">
-<meta itemprop="dateModified" content="2023-04-28T15:45:00+02:00" />
+<meta itemprop="dateModified" content="2023-04-29T17:59:15+02:00" />
 <meta itemprop="wordCount" content="40">
 <meta itemprop="keywords" content="" /><meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content=""/>

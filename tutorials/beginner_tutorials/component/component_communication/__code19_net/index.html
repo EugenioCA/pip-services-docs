@@ -24,12 +24,12 @@
 <meta property="og:type" content="article" />
 <meta property="og:url" content="/tutorials/beginner_tutorials/component/component_communication/__code19_net/" /><meta property="article:section" content="tutorials" />
 
-<meta property="article:modified_time" content="2023-04-28T15:45:00+02:00" />
+<meta property="article:modified_time" content="2023-04-29T17:59:15+02:00" />
 
 <meta itemprop="name" content="">
 <meta itemprop="description" content="See PrometheusMetricsService
 /// &lt;summary&gt;  /// Sets references to dependent components.  /// &lt;/summary&gt;  /// &lt;param name=&#34;references&#34;&gt;references to locate the component dependencies.&lt;/param&gt;  public override void SetReferences(IReferences references) { base.SetReferences(references); _cachedCounters = _dependencyResolver.GetOneOptional&lt;PrometheusCounters&gt;(&#34;prometheus-counters&#34;); var contextInfo = references.GetOneOptional&lt;ContextInfo&gt;( new Descriptor(&#34;pip-services3&#34;, &#34;context-info&#34;, &#34;default&#34;, &#34;*&#34;, &#34;1.0&#34;)); if (contextInfo != null &amp;&amp; string.IsNullOrEmpty(_source)) _source = contextInfo.Name; if (contextInfo != null &amp;&amp; string.IsNullOrEmpty(_instance)) _instance = contextInfo.ContextId; if (_cachedCounters == null) _cachedCounters = _dependencyResolver.GetOneOptional&lt;CachedCounters&gt;(&#34;cached-counters&#34;); } ">
-<meta itemprop="dateModified" content="2023-04-28T15:45:00+02:00" />
+<meta itemprop="dateModified" content="2023-04-29T17:59:15+02:00" />
 <meta itemprop="wordCount" content="66">
 <meta itemprop="keywords" content="" /><meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content=""/>

@@ -23,11 +23,11 @@
 <meta property="og:type" content="article" />
 <meta property="og:url" content="/tutorials/beginner_tutorials/communication/direct_client/__code5_net/" /><meta property="article:section" content="tutorials" />
 
-<meta property="article:modified_time" content="2023-04-28T15:45:00+02:00" />
+<meta property="article:modified_time" content="2023-04-29T17:59:15+02:00" />
 
 <meta itemprop="name" content="">
 <meta itemprop="description" content="using System; using PipServices3.Commons.Refer; using PipServices3.Commons.Config; using PipServices3.Rpc.Clients; namespace ExampleApp { class Program { static void Main(string[] args) { // Instantiation  var myController = new MyController(); // Instantiation  var client = new MyDirectClient(); // Reference setting  client.setReferences(References.FromTuples( new Descriptor(&#34;pip-services&#34;, &#34;controller&#34;, &#34;controller&#34;, &#34;default&#34;, &#34;1.0&#34;), myController)); client.myMethod(); } } class MyDirectClient: DirectClient&lt;MyController&gt; { public MyDirectClient() { _controller = null; _dependencyResolver.Put(&#34;controller&#34;, new Descriptor(&#34;pip-services&#34;, &#34;controller&#34;, &#34;*&#34;, &#34;*&#34;, &#34;1.0&#34;)); } public void setReferences(IReferences references) { this.">
-<meta itemprop="dateModified" content="2023-04-28T15:45:00+02:00" />
+<meta itemprop="dateModified" content="2023-04-29T17:59:15+02:00" />
 <meta itemprop="wordCount" content="109">
 <meta itemprop="keywords" content="" /><meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content=""/>

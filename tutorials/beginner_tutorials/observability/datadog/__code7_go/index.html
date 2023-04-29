@@ -23,11 +23,11 @@
 <meta property="og:type" content="article" />
 <meta property="og:url" content="/tutorials/beginner_tutorials/observability/datadog/__code7_go/" /><meta property="article:section" content="tutorials" />
 
-<meta property="article:modified_time" content="2023-04-28T15:45:00+02:00" />
+<meta property="article:modified_time" content="2023-04-29T17:59:15+02:00" />
 
 <meta itemprop="name" content="">
 <meta itemprop="description" content="import ( dlog &#34;github.com/pip-services3-gox/pip-services3-datadog-gox/log&#34; ) func NewMyComponentA(logger *dlog.DataDogLogger) *MyComponentA { c := &amp;MyComponentA{ consoleLog: true, logger: logger, } if c.consoleLog { logger.Info(context.Background(), &#34;123&#34;, &#34;MyComponentA has been created.&#34;) } return c } func (c *MyComponentA) MyMethod(ctx context.Context) { defer c.logger.Info(ctx, &#34;123&#34;, &#34;Finally reached.&#34;) if c.consoleLog { fmt.Println(&#34;Hola amigo&#34;) fmt.Println(&#34;Hola amigoBonjour mon ami&#34;) c.logger.Info(ctx, &#34;123&#34;, &#34;Greetings created.&#34;) } } ">
-<meta itemprop="dateModified" content="2023-04-28T15:45:00+02:00" />
+<meta itemprop="dateModified" content="2023-04-29T17:59:15+02:00" />
 <meta itemprop="wordCount" content="57">
 <meta itemprop="keywords" content="" /><meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content=""/>

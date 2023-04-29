@@ -23,11 +23,11 @@
 <meta property="og:type" content="article" />
 <meta property="og:url" content="/tutorials/beginner_tutorials/communication/commandable_grpc/__code8_python/" /><meta property="article:section" content="tutorials" />
 
-<meta property="article:modified_time" content="2023-04-28T15:45:00+02:00" />
+<meta property="article:modified_time" content="2023-04-29T17:59:15+02:00" />
 
 <meta itemprop="name" content="">
 <meta itemprop="description" content="import threading from typing import List, Optional from pip_services3_commons.commands import ICommandable, CommandSet from pip_services3_commons.data import FilterParams, PagingParams, DataPage, IdGenerator from data.MyData import MyData from logic.IMyDataController import IMyDataController from logic.MyDataCommandSet import MyDataCommandSet class MyDataController(IMyDataController, ICommandable): def __init__(self): self._lock = threading.Lock() self.__entities: List[MyData] = [] self.__command_set: MyDataCommandSet = None def get_command_set(self) -&gt; CommandSet: if self.__command_set is None: self.__command_set = MyDataCommandSet(self) return self.__command_set def get_page_by_filter(self, correlation_id: Optional[str], filter: FilterParams, paging: PagingParams) -&gt; DataPage: filter = filter if filter is not None else FilterParams() key = filter.">
-<meta itemprop="dateModified" content="2023-04-28T15:45:00+02:00" />
+<meta itemprop="dateModified" content="2023-04-29T17:59:15+02:00" />
 <meta itemprop="wordCount" content="240">
 <meta itemprop="keywords" content="" /><meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content=""/>

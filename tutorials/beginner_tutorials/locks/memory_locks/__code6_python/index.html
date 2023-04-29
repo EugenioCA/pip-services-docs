@@ -23,11 +23,11 @@
 <meta property="og:type" content="article" />
 <meta property="og:url" content="/tutorials/beginner_tutorials/locks/memory_locks/__code6_python/" /><meta property="article:section" content="tutorials" />
 
-<meta property="article:modified_time" content="2023-04-28T15:45:00+02:00" />
+<meta property="article:modified_time" content="2023-04-29T17:59:15+02:00" />
 
 <meta itemprop="name" content="">
 <meta itemprop="description" content="from pip_services3_commons.refer import Descriptor, References, IReferences, IReferenceable from pip_services3_components.cache import ICache, MemoryCache from pip_services3_components.lock.ILock import ILock from pip_services3_components.lock.MemoryLock import MemoryLock from pip_services3_commons.config import ConfigParams class MyComponent(IReferenceable): __cache: ICache __lock: ILock def set_references(self, references: IReferences): self.__cache = references.get_one_required(Descriptor(&#34;*&#34;, &#34;cache&#34;, &#34;*&#34;, &#34;*&#34;, &#34;1.0&#34;)) self.__lock = references.get_one_required(Descriptor(&#34;*&#34;, &#34;lock&#34;, &#34;*&#34;, &#34;*&#34;, &#34;1.0&#34;)) def store_result(self, correlation_id, param1): print(&#34;The stored value is &#34; &#43; param1) # Lock self.__lock.acquire_lock(correlation_id, &#34;mykey&#34;, 1000, 1000, ) config = ConfigParams.from_tuples(&#34;retry_timeout&#34;, 200) self.">
-<meta itemprop="dateModified" content="2023-04-28T15:45:00+02:00" />
+<meta itemprop="dateModified" content="2023-04-29T17:59:15+02:00" />
 <meta itemprop="wordCount" content="152">
 <meta itemprop="keywords" content="" /><meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content=""/>

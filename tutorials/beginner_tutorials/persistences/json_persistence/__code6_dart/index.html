@@ -23,11 +23,11 @@
 <meta property="og:type" content="article" />
 <meta property="og:url" content="/tutorials/beginner_tutorials/persistences/json_persistence/__code6_dart/" /><meta property="article:section" content="tutorials" />
 
-<meta property="article:modified_time" content="2023-04-28T15:45:00+02:00" />
+<meta property="article:modified_time" content="2023-04-29T17:59:15+02:00" />
 
 <meta itemprop="name" content="">
 <meta itemprop="description" content="import &#39;package:pip_services3_data/pip_services3_data.dart&#39;; // Custom json serializable data class MyData { String? key; String? value; MyData({this.key, this.value}); void fromJson(item) { key = item[&#39;key&#39;]; value = item[&#39;value&#39;]; } Map&lt;String, String?&gt; toJson() =&gt; {&#39;key&#39;: key, &#39;value&#39;: value}; } // Create the JSON persistence component var persister = JsonFilePersister&lt;MyData&gt;(&#39;./data.json&#39;); // Save data on the JSON persistence object await persister.save(&#39;123&#39;, &lt;MyData&gt;[ MyData(key: &#39;key1&#39;, value: &#39;value1&#39;), MyData(key: &#39;key2&#39;, value: &#39;value2&#39;) ]); // Read data from the JSON persistence object var items = await persister.">
-<meta itemprop="dateModified" content="2023-04-28T15:45:00+02:00" />
+<meta itemprop="dateModified" content="2023-04-29T17:59:15+02:00" />
 <meta itemprop="wordCount" content="79">
 <meta itemprop="keywords" content="" /><meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content=""/>

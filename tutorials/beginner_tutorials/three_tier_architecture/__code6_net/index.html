@@ -23,11 +23,11 @@
 <meta property="og:type" content="article" />
 <meta property="og:url" content="/tutorials/beginner_tutorials/three_tier_architecture/__code6_net/" /><meta property="article:section" content="tutorials" />
 
-<meta property="article:modified_time" content="2023-04-28T15:45:00+02:00" />
+<meta property="article:modified_time" content="2023-04-29T17:59:15+02:00" />
 
 <meta itemprop="name" content="">
 <meta itemprop="description" content="using System; using System.Runtime.Serialization; using System.Threading.Tasks; using PipServices3.Commons.Config; using PipServices3.Commons.Refer; using PipServices3.Commons.Data; using PipServices3.Rpc.Services; using Microsoft.AspNetCore.Http; using Microsoft.AspNetCore.Routing; public class HelloFriendRestService: RestService { protected HelloFriendController controller; public HelloFriendRestService() : base() { _baseRoute = &#34;/hello_friend&#34;; } public override void Configure(ConfigParams config) { base.Configure(config); } public override void SetReferences(IReferences references) { base.SetReferences(references); controller = references.GetOneRequired&lt;HelloFriendController&gt;(new Descriptor(&#34;hello-friend&#34;, &#34;controller&#34;, &#34;*&#34;, &#34;*&#34;, &#34;1.0&#34;)); } private async Task Greeting(HttpRequest req, HttpResponse res, RouteData routeData) { var result = await controller.">
-<meta itemprop="dateModified" content="2023-04-28T15:45:00+02:00" />
+<meta itemprop="dateModified" content="2023-04-29T17:59:15+02:00" />
 <meta itemprop="wordCount" content="137">
 <meta itemprop="keywords" content="" /><meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content=""/>

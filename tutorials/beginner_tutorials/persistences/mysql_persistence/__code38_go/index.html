@@ -23,11 +23,11 @@
 <meta property="og:type" content="article" />
 <meta property="og:url" content="/tutorials/beginner_tutorials/persistences/mysql_persistence/__code38_go/" /><meta property="article:section" content="tutorials" />
 
-<meta property="article:modified_time" content="2023-04-28T15:45:00+02:00" />
+<meta property="article:modified_time" content="2023-04-29T17:59:15+02:00" />
 
 <meta itemprop="name" content="">
 <meta itemprop="description" content="type MyMySqlPersistence struct { *mysqlpersist.IdentifiableJsonMysqlPersistence[MyData, string] } func NewMyMySqlPersistence() *MyMySqlPersistence { c := &amp;MyMySqlPersistence{} c.IdentifiableJsonMysqlPersistence = mysqlpersist.InheritIdentifiableJsonMysqlPersistence[MyData, string](c, &#34;mydata_json&#34;) return c } func (c *MyMySqlPersistence) DefineSchema() { c.ClearSchema() c.EnsureTable(&#34;&#34;, &#34;&#34;) c.EnsureSchema(&#34;ALTER TABLE `&#34; &#43; c.TableName &#43; &#34;` ADD `data_key` VARCHAR(50) AS (JSON_UNQUOTE(`data`-&gt;\&#34;$.key\&#34;))&#34;) c.EnsureIndex(c.TableName&#43;&#34;_json_key&#34;, map[string]string{&#34;data_key&#34;: &#34;1&#34;}, map[string]string{&#34;unique&#34;: &#34;true&#34;}) } func (c *MyMySqlPersistence) GetPageByFilter(ctx context.Context, correlationId string, filter string, paging cdata.PagingParams, sort string, selection string) (page cdata.DataPage[MyData], err error) { return c.MysqlPersistence.GetPageByFilter(ctx, correlationId, filter, paging, sort, selection) } func (c *MyMySqlPersistence) GetListByFilter(ctx context.">
-<meta itemprop="dateModified" content="2023-04-28T15:45:00+02:00" />
+<meta itemprop="dateModified" content="2023-04-29T17:59:15+02:00" />
 <meta itemprop="wordCount" content="154">
 <meta itemprop="keywords" content="" /><meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content=""/>

@@ -23,11 +23,11 @@
 <meta property="og:type" content="article" />
 <meta property="og:url" content="/tutorials/beginner_tutorials/messaging/mqtt/__code16_python/" /><meta property="article:section" content="tutorials" />
 
-<meta property="article:modified_time" content="2023-04-28T15:45:00+02:00" />
+<meta property="article:modified_time" content="2023-04-29T17:59:15+02:00" />
 
 <meta itemprop="name" content="">
 <meta itemprop="description" content="# Pre-requisites from pip_services3_mqtt.queues import MqttMessageQueue from pip_services3_commons.config import ConfigParams from pip_services3_messaging.queues import MessageEnvelope # Component creation and configuration queue = MqttMessageQueue() queue.configure(ConfigParams.from_tuples( &#34;topic&#34;, &#34;mytopic&#34;, # set topic &#39;connection.protocol&#39;, &#39;mqtt&#39;, &#34;connection.host&#34;, &#34;localhost&#34;, &#34;connection.port&#34;, 1883, &#39;options.autosubscribe&#39;, True, # autosubscription on the topic &#39;options.serialize_envelope&#39;, True # converts object into musquitto values  )) # Connection queue.open(&#34;123&#34;) # Send a message queue.send(&#34;123&#34;, MessageEnvelope(None, &#34;mymessage&#34;, &#34;ABC1234&#34;)) # Receive a message message = queue.receive(&#34;123&#34;, 10000) print(message.">
-<meta itemprop="dateModified" content="2023-04-28T15:45:00+02:00" />
+<meta itemprop="dateModified" content="2023-04-29T17:59:15+02:00" />
 <meta itemprop="wordCount" content="79">
 <meta itemprop="keywords" content="" /><meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content=""/>

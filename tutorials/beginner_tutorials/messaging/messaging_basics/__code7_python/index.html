@@ -23,11 +23,11 @@
 <meta property="og:type" content="article" />
 <meta property="og:url" content="/tutorials/beginner_tutorials/messaging/messaging_basics/__code7_python/" /><meta property="article:section" content="tutorials" />
 
-<meta property="article:modified_time" content="2023-04-28T15:45:00+02:00" />
+<meta property="article:modified_time" content="2023-04-29T17:59:15+02:00" />
 
 <meta itemprop="name" content="">
 <meta itemprop="description" content="# Pre-requisites import time from threading import Thread from pip_services3_messaging.queues import IMessageReceiver, MemoryMessageQueue, MessageEnvelope # Message receiver class MyMessageReceiver(IMessageReceiver): def receive_message(self, envelop, queue): print(&#34;Received message: &#34; &#43; envelop.get_message_as_string()) # Message queue messageQueue = MemoryMessageQueue() messageQueue.open(&#34;123&#34;) # Listener Thread(target=messageQueue.listen, args=(&#34;123&#34;, MyMessageReceiver()), daemon=True).start() # Send message messageQueue.send(&#34;123&#34;, MessageEnvelope(None, &#34;mymessage&#34;, &#34;ABC&#34;)) time.sleep(0.1) # wait message # Close message queue messageQueue.close(&#39;123&#39;) ">
-<meta itemprop="dateModified" content="2023-04-28T15:45:00+02:00" />
+<meta itemprop="dateModified" content="2023-04-29T17:59:15+02:00" />
 <meta itemprop="wordCount" content="57">
 <meta itemprop="keywords" content="" /><meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content=""/>

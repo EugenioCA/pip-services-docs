@@ -23,11 +23,11 @@
 <meta property="og:type" content="article" />
 <meta property="og:url" content="/tutorials/beginner_tutorials/building_blocks/persistence/__code3_node/" /><meta property="article:section" content="tutorials" />
 
-<meta property="article:modified_time" content="2023-04-28T15:45:00+02:00" />
+<meta property="article:modified_time" content="2023-04-29T17:59:15+02:00" />
 
 <meta itemprop="name" content="">
 <meta itemprop="description" content="import { IIdentifiable } from &#39;pip-services3-commons-nodex&#39;; import { DataPage, FilterParams, PagingParams } from &#39;pip-services3-commons-nodex&#39;; import { IdentifiablePostgresPersistence } from &#39;pip-services3-postgres-nodex&#39;; class MyIdentifiableObject implements IIdentifiable &lt;string&gt; { public id: string; public name: string; public value: string; } interface MyIdentifiablePersistence { getPageByFilter(correlationId: string, filter: FilterParams, paging: PagingParams): Promise&lt;DataPage&lt;MyIdentifiableObject&gt;&gt;; create(correlationId: string, item: MyIdentifiableObject): Promise&lt;MyIdentifiableObject&gt;; getOneById(correlationId: string, id: string): Promise&lt;MyIdentifiableObject&gt;; deleteById(correlationId: string, id: string): Promise&lt;MyIdentifiableObject&gt;; } class MyIdentifiablePostgreSqlPersistence extends IdentifiablePostgresPersistence&lt;MyIdentifiableObject, string&gt; implements MyIdentifiablePersistence { public constructor() { super(&#34;mycollection&#34;); } public composeFilter(filter: FilterParams): string { filter = filter ?">
-<meta itemprop="dateModified" content="2023-04-28T15:45:00+02:00" />
+<meta itemprop="dateModified" content="2023-04-29T17:59:15+02:00" />
 <meta itemprop="wordCount" content="154">
 <meta itemprop="keywords" content="" /><meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content=""/>

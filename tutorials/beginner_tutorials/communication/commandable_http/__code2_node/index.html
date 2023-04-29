@@ -23,11 +23,11 @@
 <meta property="og:type" content="article" />
 <meta property="og:url" content="/tutorials/beginner_tutorials/communication/commandable_http/__code2_node/" /><meta property="article:section" content="tutorials" />
 
-<meta property="article:modified_time" content="2023-04-28T15:45:00+02:00" />
+<meta property="article:modified_time" content="2023-04-29T17:59:15+02:00" />
 
 <meta itemprop="name" content="">
 <meta itemprop="description" content="import { Command, CommandSet, ICommand, ObjectSchema, Parameters, TypeCode } from &#34;pip-services3-commons-nodex&#34;; export class FriendsCommandSet extends CommandSet { private _controller: HelloFriendController; public constructor(controller: HelloFriendController) { super(); this._controller = controller; this.addCommand(this.makeGreeting()); } private makeGreeting(): ICommand { return new Command( &#39;greeting&#39;, new ObjectSchema(true).withRequiredProperty(&#39;name&#39;, TypeCode.String), async (correlationId: string, args: Parameters) =&gt; { let name = args.getAsString(&#34;name&#34;); let res = this._controller.greeting(name); return res; } ); } } ">
-<meta itemprop="dateModified" content="2023-04-28T15:45:00+02:00" />
+<meta itemprop="dateModified" content="2023-04-29T17:59:15+02:00" />
 <meta itemprop="wordCount" content="62">
 <meta itemprop="keywords" content="" /><meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content=""/>

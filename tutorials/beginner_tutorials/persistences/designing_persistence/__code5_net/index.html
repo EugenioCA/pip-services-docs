@@ -23,11 +23,11 @@
 <meta property="og:type" content="article" />
 <meta property="og:url" content="/tutorials/beginner_tutorials/persistences/designing_persistence/__code5_net/" /><meta property="article:section" content="tutorials" />
 
-<meta property="article:modified_time" content="2023-04-28T15:45:00+02:00" />
+<meta property="article:modified_time" content="2023-04-29T17:59:15+02:00" />
 
 <meta itemprop="name" content="">
 <meta itemprop="description" content="public class MyIdentifiablePostgresPersistence : IdentifiablePostgresPersistence&lt;MyData, string&gt;, IMyDataPersistence { public MyIdentifiablePostgresPersistence() : base(&#34;mydata&#34;) { } protected override void DefineSchema() { ClearSchema(); EnsureSchema($&#34;CREATE TABLE {_tableName} (id TEXT PRIMARY KEY, key TEXT, content TEXT)&#34;); EnsureIndex($&#34;{_tableName}_key&#34;, new Dictionary&lt;string, bool&gt; { { &#34;key&#34;, true } }, new PipServices3.Postgres.Persistence.IndexOptions { Unique = true }); } private static string ComposeFilter(FilterParams filter) { filter ??= new FilterParams(); var key = filter.GetAsNullableString(&#34;key&#34;); var content = filter.GetAsNullableString(&#34;content&#34;); var filterCondition = &#34;&#34;; if (key !">
-<meta itemprop="dateModified" content="2023-04-28T15:45:00+02:00" />
+<meta itemprop="dateModified" content="2023-04-29T17:59:15+02:00" />
 <meta itemprop="wordCount" content="188">
 <meta itemprop="keywords" content="" /><meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content=""/>

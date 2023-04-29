@@ -23,11 +23,11 @@
 <meta property="og:type" content="article" />
 <meta property="og:url" content="/tutorials/beginner_tutorials/persistences/cassandra/__code4_node/" /><meta property="article:section" content="tutorials" />
 
-<meta property="article:modified_time" content="2023-04-28T15:45:00+02:00" />
+<meta property="article:modified_time" content="2023-04-29T17:59:15+02:00" />
 
 <meta itemprop="name" content="">
 <meta itemprop="description" content="class MyCassandraPersistence extends CassandraPersistence&lt;MyData&gt; { public constructor() { super(&#34;my_data_table&#34;, &#34;mydata_keyspace&#34;); } protected defineSchema(): void { this.clearSchema(); this.ensureSchema(&#39;CREATE TABLE &#39; &#43; this.quotedTableName() &#43; &#39; (id TEXT PRIMARY KEY, name TEXT, description TEXT)&#39;); this.ensureIndex(&#39;name&#39;, { name: 1 }, { unique: true }); } protected filterCondition(filter: FilterParams):string{ let key = filter.getKeys()[0]; console.log(`key:\n ${JSON.stringify(key)}\n`); filter = filter || new FilterParams(); let keyValue = filter.getAsNullableString(key); console.log(`key:\n ${JSON.stringify(keyValue)}\n`); let filterCondition: string = null; if (keyValue) filterCondition = key &#43; &#34;=&#39;&#34; &#43; keyValue &#43; &#34;&#39;&#34;; console.">
-<meta itemprop="dateModified" content="2023-04-28T15:45:00+02:00" />
+<meta itemprop="dateModified" content="2023-04-29T17:59:15+02:00" />
 <meta itemprop="wordCount" content="84">
 <meta itemprop="keywords" content="" /><meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content=""/>

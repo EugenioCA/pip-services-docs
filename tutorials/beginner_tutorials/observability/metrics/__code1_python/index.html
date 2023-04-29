@@ -23,11 +23,11 @@
 <meta property="og:type" content="article" />
 <meta property="og:url" content="/tutorials/beginner_tutorials/observability/metrics/__code1_python/" /><meta property="article:section" content="tutorials" />
 
-<meta property="article:modified_time" content="2023-04-28T15:45:00+02:00" />
+<meta property="article:modified_time" content="2023-04-29T17:59:15+02:00" />
 
 <meta itemprop="name" content="">
 <meta itemprop="description" content="from pip_services3_components.count import ICounters class MyComponent: _console_log = True def __init__(self, counters: ICounters): self.counters = counters if self._console_log: print(&#34;MyComponent has been created.&#34;) def mymethod(self): self.counters.increment(&#34;mycomponent.mymethod.calls&#34;, 1) timing = self.counters.begin_timing(&#34;mycomponent.mymethod.exec_time&#34;) try: if self._console_log: print(&#34;Hola amigo&#34;) print(&#34;Bonjour mon ami&#34;) finally: timing.end_timing() self.counters.dump() ">
-<meta itemprop="dateModified" content="2023-04-28T15:45:00+02:00" />
+<meta itemprop="dateModified" content="2023-04-29T17:59:15+02:00" />
 <meta itemprop="wordCount" content="40">
 <meta itemprop="keywords" content="" /><meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content=""/>

@@ -23,11 +23,11 @@
 <meta property="og:type" content="article" />
 <meta property="og:url" content="/tutorials/beginner_tutorials/communication/connection_utils/__code8_dart/" /><meta property="article:section" content="tutorials" />
 
-<meta property="article:modified_time" content="2023-04-28T15:45:00+02:00" />
+<meta property="article:modified_time" content="2023-04-29T17:59:15+02:00" />
 
 <meta itemprop="name" content="">
 <meta itemprop="description" content="import &#39;package:mongo_dart/mongo_dart.dart&#39; as mongo; import &#39;package:pip_services3_commons/pip_services3_commons.dart&#39;; import &#39;package:pip_services3_components/pip_services3_components.dart&#39;; void main(List&lt;String&gt; argument) async { var options = ConfigParams.fromTuples([ &#39;host&#39;, &#39;localhost&#39;, &#39;port&#39;, &#39;,27017&#39;, &#39;username&#39;, &#39;user&#39;, &#39;password&#39;, &#39;pass123&#39;, &#39;protocol&#39;, &#39;mongodb&#39;, &#39;collection&#39;, &#39;my_db_name&#39; ]); // Create connection  var conn = MongoDbConnector(); conn.configure(options); await conn.open(null); await conn.close(null); } class MongoDbConnector implements IConfigurable, IOpenable { // The MongoDB database.  mongo.Db? _database; bool _secureMongo; ConfigParams? _config; String? databaseName; MongoDbConnector({bool secureMongo = false}) : _secureMongo = secureMongo; @override void configure(ConfigParams config) { _config = config; // if connection passed as uri  if (_config!">
-<meta itemprop="dateModified" content="2023-04-28T15:45:00+02:00" />
+<meta itemprop="dateModified" content="2023-04-29T17:59:15+02:00" />
 <meta itemprop="wordCount" content="272">
 <meta itemprop="keywords" content="" /><meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content=""/>
