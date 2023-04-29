@@ -23,11 +23,11 @@
 <meta property="og:type" content="article" />
 <meta property="og:url" content="/tutorials/beginner_tutorials/containers/google_cloud_platform/__code1_python/" /><meta property="article:section" content="tutorials" />
 
-<meta property="article:modified_time" content="2023-04-29T17:59:15+02:00" />
+<meta property="article:modified_time" content="2023-04-29T18:57:35+02:00" />
 
 <meta itemprop="name" content="">
 <meta itemprop="description" content="# Controller&#39;s descriptor is defined in the configuration file class MyCloudFunction(CloudFunction): def __init__(self): super().__init__(&#34;mygroup&#34;, &#34;MyGroup&#34;) self._controller: MyController = None self._config_path = &#39;./config.yaml&#39; self._factories.add(MyFactory()) def set_references(self, references: IReferences): super().set_references(references) self._controller = references.get_one_required(Descriptor(&#39;mygroup&#39;, &#39;controller&#39;, &#39;default&#39;, &#39;controller&#39;, &#39;*&#39;)) def __action(self, req: flask.Request): name = &#39;default name&#39; if req.is_json: name = req.json.get(&#34;name&#34;, name) return self._controller.greetings(name), 200 def register(self): self._register_action(&#34;greetings&#34;, None, self.__action) ">
-<meta itemprop="dateModified" content="2023-04-29T17:59:15+02:00" />
+<meta itemprop="dateModified" content="2023-04-29T18:57:35+02:00" />
 <meta itemprop="wordCount" content="57">
 <meta itemprop="keywords" content="" /><meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content=""/>

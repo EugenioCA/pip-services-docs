@@ -23,11 +23,11 @@
 <meta property="og:type" content="article" />
 <meta property="og:url" content="/tutorials/beginner_tutorials/observability/metrics/__code2_python/" /><meta property="article:section" content="tutorials" />
 
-<meta property="article:modified_time" content="2023-04-29T17:59:15+02:00" />
+<meta property="article:modified_time" content="2023-04-29T18:57:35+02:00" />
 
 <meta itemprop="name" content="">
 <meta itemprop="description" content="from pip_services3_components.count import CachedCounters class MyCachedCounters (CachedCounters): def _save(self, counters): print(&#34;Saving &#34; &#43; counters[0].name &#43; &#34; and &#34; &#43; counters[1].name) countersCached = MyCachedCounters() mycomponentCached = MyComponent(countersCached) count_exec = 2 for i in range(count_exec): mycomponentCached.mymethod() resultCached = countersCached.get_all() print(&#34;Metrics&#34;) for res in resultCached: print(&#34;Count: &#34; &#43; str(res.count)) print(&#34;Min: &#34; &#43; str(res.min)) print(&#34;Max: &#34; &#43; str(res.max)) print(&#34;Average: &#34; &#43; str(res.average)) print(&#34;Time: &#34; &#43; str(res.time)) print(&#34;Name: &#34; &#43; res.name) print(&#34;Type: &#34; &#43; str(res.type)) print(&#34;-----------------&#34;) ">
-<meta itemprop="dateModified" content="2023-04-29T17:59:15+02:00" />
+<meta itemprop="dateModified" content="2023-04-29T18:57:35+02:00" />
 <meta itemprop="wordCount" content="71">
 <meta itemprop="keywords" content="" /><meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content=""/>

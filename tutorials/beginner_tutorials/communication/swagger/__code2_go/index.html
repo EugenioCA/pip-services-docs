@@ -23,11 +23,11 @@
 <meta property="og:type" content="article" />
 <meta property="og:url" content="/tutorials/beginner_tutorials/communication/swagger/__code2_go/" /><meta property="article:section" content="tutorials" />
 
-<meta property="article:modified_time" content="2023-04-29T17:59:15+02:00" />
+<meta property="article:modified_time" content="2023-04-29T18:57:35+02:00" />
 
 <meta itemprop="name" content="">
 <meta itemprop="description" content="import ( &#34;context&#34; &#34;net/http&#34; &#34;os&#34; ccmd &#34;github.com/pip-services3-gox/pip-services3-commons-gox/commands&#34; cconf &#34;github.com/pip-services3-gox/pip-services3-commons-gox/config&#34; crefer &#34;github.com/pip-services3-gox/pip-services3-commons-gox/refer&#34; crun &#34;github.com/pip-services3-gox/pip-services3-commons-gox/run&#34; cvalid &#34;github.com/pip-services3-gox/pip-services3-commons-gox/validate&#34; cbuild &#34;github.com/pip-services3-gox/pip-services3-components-gox/build&#34; cproc &#34;github.com/pip-services3-gox/pip-services3-container-gox/container&#34; rbuild &#34;github.com/pip-services3-gox/pip-services3-rpc-gox/build&#34; rpcservices &#34;github.com/pip-services3-gox/pip-services3-rpc-gox/services&#34; cswagger &#34;github.com/pip-services3-gox/pip-services3-swagger-gox/build&#34; ) // REST service (Swagger UI from YAML file)  type HelloFriendRestService struct { *rpcservices.RestService _swaggerContent string _swaggerPath string _controller *HelloFriendController } func NewHelloFriendRestService() *HelloFriendRestService { c := &amp;HelloFriendRestService{} c.RestService = rpcservices.InheritRestService(c) c.BaseRoute = &#34;/hello_friend&#34; controllerDescriptor := crefer.NewDescriptor(&#34;hello-friend&#34;, &#34;controller&#34;, &#34;*&#34;, &#34;*&#34;, &#34;1.0&#34;) c.DependencyResolver.Put(context.Background(), &#34;controller&#34;, controllerDescriptor) return c } func (c *HelloFriendRestService) Configure(ctx context.">
-<meta itemprop="dateModified" content="2023-04-29T17:59:15+02:00" />
+<meta itemprop="dateModified" content="2023-04-29T18:57:35+02:00" />
 <meta itemprop="wordCount" content="174">
 <meta itemprop="keywords" content="" /><meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content=""/>

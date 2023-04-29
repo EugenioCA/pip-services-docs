@@ -23,11 +23,11 @@
 <meta property="og:type" content="article" />
 <meta property="og:url" content="/tutorials/beginner_tutorials/discovery_services/__code7_dart/" /><meta property="article:section" content="tutorials" />
 
-<meta property="article:modified_time" content="2023-04-29T17:59:15+02:00" />
+<meta property="article:modified_time" content="2023-04-29T18:57:35+02:00" />
 
 <meta itemprop="name" content="">
 <meta itemprop="description" content="// Pre-requisites import &#39;package:pip_services3_commons/pip_services3_commons.dart&#39;; import &#39;package:pip_services3_components/pip_services3_components.dart&#39;; void main(List&lt;String&gt; argument) async { // Defining the component  var config = ConfigParams.fromTuples([ &#39;connections.key1.host&#39;, &#39;10.1.1.100&#39;, &#39;connections.key1.port&#39;, &#39;8080&#39;, &#39;connections.key2.host&#39;, &#39;10.1.1.100&#39;, &#39;connections.key2.port&#39;, &#39;8082&#39; ]); var discovery = MemoryDiscovery(); discovery.configure(config); // Adding more parameters  await discovery.register(&#39;123&#39;, &#39;key3&#39;, ConnectionParams.fromTuples([ &#39;host&#39;, &#39;localhost&#39;, &#39;port&#39;, &#39;8000&#39; ])); // Returns {&#34;host&#34;: &#34;localhost&#34;, &#34;port&#34;: &#34;8000&#34;}  await discovery.register(&#39;123&#39;, &#39;key1&#39;, ConnectionParams.fromTuples([ &#39;param1&#39;, &#39;val1&#39;, &#39;param2&#39;, &#39;val2&#39; ])); // Resolving connections  print(await discovery.resolveOne(&#39;123&#39;, &#39;key1&#39;)); print(await discovery.">
-<meta itemprop="dateModified" content="2023-04-29T17:59:15+02:00" />
+<meta itemprop="dateModified" content="2023-04-29T18:57:35+02:00" />
 <meta itemprop="wordCount" content="81">
 <meta itemprop="keywords" content="" /><meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content=""/>

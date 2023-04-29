@@ -231863,22 +231863,22 @@
       <ul>
         <li>
           <ul>
-            <li><a href="#configuring-connectionsconfigurationconfiguring_connections"><a href="configuration/configuring_connections">Configuring connections</a></a></li>
-            <li><a href="#configuring-credentialsconfigurationconfiguring_credentials"><a href="configuration/configuring_credentials">Configuring credentials</a></a></li>
-            <li><a href="#connection-utilscommunicationconnection_utils"><a href="communication/connection_utils">Connection utils</a></a></li>
-            <li><a href="#data-conversiondata_handlingdata_conversion"><a href="data_handling/data_conversion">Data conversion</a></a></li>
-            <li><a href="#datadogobservabilitydatadog"><a href="observability/datadog">Datadog</a></a></li>
-            <li><a href="#deployment-time-configurationconfigurationdeployment_configuration"><a href="configuration/deployment_configuration">Deployment time configuration</a></a></li>
-            <li><a href="#designing-persistencepersistencesdesigning_persistence"><a href="persistences/designing_persistence">Designing persistence</a></a></li>
-            <li><a href="#discovery-servicesdiscovery_services"><a href="discovery_services">Discovery services</a></a></li>
-            <li><a href="#elasticsearchobservabilityelasticsearch"><a href="observability/elasticsearch">Elasticsearch</a></a></li>
-            <li><a href="#fluentdobservabilityfluentd"><a href="observability/fluentd">Fluentd</a></a></li>
-            <li><a href="#logginglogging"><a href="logging">Logging</a></a></li>
-            <li><a href="#metricsmetrics"><a href="metrics">Metrics</a></a></li>
-            <li><a href="#mongodb-persistencemongodb_persistence"><a href="mongodb_persistence">MongoDB persistence</a></a></li>
+            <li><a href="#toolkit-architecturetoolkit_architecture"><a href="toolkit_architecture">Toolkit Architecture</a></a></li>
+            <li><a href="#microservice-structuremicroservice_structure"><a href="microservice_structure">Microservice Structure</a></a></li>
+            <li><a href="#three-tier-architecturethree_tier_architecture"><a href="three_tier_architecture">Three Tier Architecture</a></a></li>
+            <li><a href="#building-blocksbuilding_blocks"><a href="building_blocks">Building Blocks</a></a></li>
+            <li><a href="#componentscomponent"><a href="component">Components</a></a></li>
+            <li><a href="#communicationcommunication"><a href="communication">Communication</a></a></li>
+            <li><a href="#persistencespersistences"><a href="persistences">Persistences</a></a></li>
+            <li><a href="#containerscontainers"><a href="containers">Containers</a></a></li>
+            <li><a href="#configurationconfiguration"><a href="configuration">Configuration</a></a></li>
+            <li><a href="#cachingcaching"><a href="caching">Caching</a></a></li>
+            <li><a href="#data-handling"><a href="">Data Handling</a></a></li>
+            <li><a href="#lockslocks"><a href="locks">Locks</a></a></li>
+            <li><a href="#observabilityobservability"><a href="observability">Observability</a></a></li>
+            <li><a href="#messagingmessaging"><a href="messaging">Messaging</a></a></li>
+            <li><a href="#discovery-servicesdiscovery_services"><a href="discovery_services">Discovery Services</a></a></li>
             <li><a href="#mustache-templatesmustache_templates"><a href="mustache_templates">Mustache Templates</a></a></li>
-            <li><a href="#prometheusprometheus"><a href="prometheus">Prometheus</a></a></li>
-            <li><a href="#randomnessrandomness"><a href="randomness">Randomness</a></a></li>
           </ul>
         </li>
       </ul>
@@ -231937,43 +231937,29 @@
         
 	
 	<hr>
-<h3 id="configuring-connectionsconfigurationconfiguring_connections"><a href="configuration/configuring_connections">Configuring connections</a></h3>
-<p>In this tutorial, you will learn how to configure connections with the ConnectionParams component and perform CRUD operations with them. First, we will see different ways to create connections, such as from a constructor, a tuple, a string, and a ConfigParams object. Then, we will see how to extract, modify and delete different fields in those connections.</p>
-<h3 id="configuring-credentialsconfigurationconfiguring_credentials"><a href="configuration/configuring_credentials">Configuring credentials</a></h3>
-<p>In this tutorial, you will understand how to operate with the CredentialParams component by performing CRUD operations. We will begin by learning to create an instance of this component using its constructor, a tuple, a string, and the ConfigParam class. Then, we will understand how to extract and update the values of credential parameters stored in the component, and delete those parameters.</p>
-<h3 id="connection-utilscommunicationconnection_utils"><a href="communication/connection_utils">Connection utils</a></h3>
-<p>In this tutorial, you will learn how to use a set of utilities offered by Pip.Services that can be used to simplify the handling of connections. We will start by explaining how to import these components. Then, we will see their syntax and how to use them. Finally, we will explore an example that illustrates the practical application of some of these utilities.</p>
-<h3 id="data-conversiondata_handlingdata_conversion"><a href="data_handling/data_conversion">Data conversion</a></h3>
-<p>This tutorial will help you to understand the different conversion components available in the Pip.Services toolkit, Commons module, convert library. The tutorial consists of a brief explanation of each class and its methods followed by a set of examples that show how to use each of them.</p>
-<h3 id="datadogobservabilitydatadog"><a href="observability/datadog">Datadog</a></h3>
-<p>How to send metrics and logs to Datadog.
-In this tutorial, you will learn how to send different metrics and logs to Datadog. For this, we will first create a class with a method that, once executed, sends metrics to Datadog via the DataDogCounters component. Then, we will modify this class and use it to send log information to Datadog via the DataDogLogger class.</p>
-<h3 id="deployment-time-configurationconfigurationdeployment_configuration"><a href="configuration/deployment_configuration">Deployment time configuration</a></h3>
-<p>How to set up and change your configurations at deployment time.
-In this tutorial, you will learn how to configure at deployment time an application based on Pip.Services components.</p>
-<h3 id="designing-persistencepersistencesdesigning_persistence"><a href="persistences/designing_persistence">Designing persistence</a></h3>
-<p>In this tutorial, you will understand how to design your persistence in such a way that your code benefits from one of the main features of Pip.Services, which is symmetric code implementation.
-In order to see this, we will create an example using two different databases (MySQL and PostgreSQL). Then, we will create a common set of instructions to manage CRUD operations and transfer data from one database into another.</p>
-<h3 id="discovery-servicesdiscovery_services"><a href="discovery_services">Discovery services</a></h3>
-<p>In this tutorial, you will learn how to create and operate a discovery service that stores connection parameters in memory. We will begin by explaining the necessary pre-requisites. Then, we will continue by showing how to create the service and add and extract connection parameters from it. We will finish with a comprehensive example that illustrates all the learned concepts.</p>
-<h3 id="elasticsearchobservabilityelasticsearch"><a href="observability/elasticsearch">Elasticsearch</a></h3>
-<p>In this tutorial you will learn how to work with the ElasticSearchLogger component, which is used to send logs to Elasticsearch. First, we will see the necessary pre-requisites. Then, we will continue by creating a custom component with an example method, running it and generating the logs. After this, we will verify that the messages reached Elasticsearch by using the Elasticvue online tool. Finally, we will improve our custom component by including several Pip.Services best practices.</p>
-<h3 id="fluentdobservabilityfluentd"><a href="observability/fluentd">Fluentd</a></h3>
-<p>In this tutorial, you will learn how to use the FluentdLogger component to send log messages to Fluentd. First, we will describe this component and understand its pre-requisites. Then, we will create a custom component with methods that generate log messages every time they are called, run it and see the messages received by Fluentd. Finally, we will combine the different code sections into one program and summarize what we have learned.</p>
-<h3 id="logginglogging"><a href="logging">Logging</a></h3>
-<p>In this tutorial, you will learn how to add logging capacity to a microservice. First, we will understand what logging consists of. Then, we will use the microservice we created in the &ldquo;Creating a component&rdquo; tutorial, replace the printed messages with logger messages and create an exception in our business process (my_task). After running the code, we will see the tagged messages from the logger.</p>
-<h3 id="metricsmetrics"><a href="metrics">Metrics</a></h3>
-<p>This tutorial will teach you how to create and manage performance metrics with Pip.Services components. First, we will learn how counters are defined in the toolkit and how to add them to a component. Then, we will see several options to manage the obtained performance metrics, such as storing them in memory, showing them on a console, sending them to external tools, and grouping them in composite counters. We will also study a dummy component used to simulate counters.</p>
-<h3 id="mongodb-persistencemongodb_persistence"><a href="mongodb_persistence">MongoDB persistence</a></h3>
-<p>Another frequent choice of persistence is Pip.Service&rsquo;s MongoDb persistence. This persistence stores data in MongoDB - a popular document-oriented database. The most basic implementation of this component is the MongoDbPersistence class defined in the MongoDb module. It is capable of storing a collection of documents, opening and closing connections, and performing a few simple CRUD operations.</p>
+<h3 id="toolkit-architecturetoolkit_architecture"><a href="toolkit_architecture">Toolkit Architecture</a></h3>
+<p>This tutorial shows the general structure of the Pip.Services toolkit.</p>
+<h3 id="microservice-structuremicroservice_structure"><a href="microservice_structure">Microservice Structure</a></h3>
+<p>This tutorial explains the basic structure of a microservice. However, the Pip.Services toolkit doesn’t impose any restrictions on developers when it comes to structuring a microservice - each developer is free to choose their own path.</p>
+<h3 id="three-tier-architecturethree_tier_architecture"><a href="three_tier_architecture">Three Tier Architecture</a></h3>
+<p>This tutorial teaches how to construct an application using Pip.Services components and having a three-tier structure.</p>
+<h3 id="building-blocksbuilding_blocks"><a href="building_blocks">Building Blocks</a></h3>
+<h3 id="componentscomponent"><a href="component">Components</a></h3>
+<h3 id="communicationcommunication"><a href="communication">Communication</a></h3>
+<h3 id="persistencespersistences"><a href="persistences">Persistences</a></h3>
+<h3 id="containerscontainers"><a href="containers">Containers</a></h3>
+<p>Containers have also gained popularity as a means of deploying and managing software applications in a lightweight and portable way.n this set of tutorials, we will explore the fundamentals of microservices and containers, and demonstrate how to create and manage these components</p>
+<h3 id="configurationconfiguration"><a href="configuration">Configuration</a></h3>
+<h3 id="cachingcaching"><a href="caching">Caching</a></h3>
+<p>A set of tutorials aimed at helping you understand different types of caching technologies, such as memory caching, Memcached and Redis.</p>
+<h3 id="data-handling"><a href="">Data Handling</a></h3>
+<h3 id="lockslocks"><a href="locks">Locks</a></h3>
+<p>These tutorials esplain how to create and manage memory locks and technologies such as Memcached and Redis.</p>
+<h3 id="observabilityobservability"><a href="observability">Observability</a></h3>
+<h3 id="messagingmessaging"><a href="messaging">Messaging</a></h3>
+<p>A group of tutorials that explain how to handle asynchronous communication with Pip.Services</p>
+<h3 id="discovery-servicesdiscovery_services"><a href="discovery_services">Discovery Services</a></h3>
 <h3 id="mustache-templatesmustache_templates"><a href="mustache_templates">Mustache Templates</a></h3>
-<p>How to use Mustache templates with PIP.Services.
-PIP.Services offers an implementation of a Mustache engine available in its Expressions module. This implementation of Mustache is enhanced with the addition of some helpers. In this tutorial, you will learn how to use the MustacheTemplate component, which can be used to evaluate Mustache templates.</p>
-<h3 id="prometheusprometheus"><a href="prometheus">Prometheus</a></h3>
-<p>In this tutorial, you will learn how to send different metrics to Prometheus. First, we will see how to do this via the Pushgateway. Then, we will understand how to show our metrics on a /metrics page. Finally, we will go through a set of different methods, which are useful to create different counters.</p>
-<h3 id="randomnessrandomness"><a href="randomness">Randomness</a></h3>
-<p>How to generate random values with the Commons' Random package.
-In this tutorial, we will learn how to use the Random package available in the Commons module. This package contains a set of classes and methods that can be used to generate different types of random values, such as Booleans, doubles, floats, and integers. It also offers methods to generate different types of texts such as names and surnames, and methods to randomly select an element from an array or text.</p>
 
         <div class="section-index">
     

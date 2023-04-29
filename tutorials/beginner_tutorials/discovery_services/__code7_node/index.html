@@ -23,11 +23,11 @@
 <meta property="og:type" content="article" />
 <meta property="og:url" content="/tutorials/beginner_tutorials/discovery_services/__code7_node/" /><meta property="article:section" content="tutorials" />
 
-<meta property="article:modified_time" content="2023-04-29T17:59:15+02:00" />
+<meta property="article:modified_time" content="2023-04-29T18:57:35+02:00" />
 
 <meta itemprop="name" content="">
 <meta itemprop="description" content="// Pre-requisites import { ConfigParams } from &#34;pip-services3-commons-nodex&#34;; import { ConnectionParams, MemoryDiscovery } from &#34;pip-services3-components-nodex&#34;; export async function main() { // Defining the component  let config = ConfigParams.fromTuples( &#34;connections.key1.host&#34;, &#34;10.1.1.100&#34;, &#34;connections.key1.port&#34;, &#34;8080&#34;, &#34;connections.key2.host&#34;, &#34;10.1.1.100&#34;, &#34;connections.key2.port&#34;, &#34;8082&#34; ); let discovery = new MemoryDiscovery(); discovery.configure(config); // Adding more parameters  await discovery.register(&#34;123&#34;, &#34;key1&#34;, ConnectionParams.fromTuples( &#34;param1&#34;, &#34;val1&#34;, &#34;param2&#34;, &#34;val2&#34; )); await discovery.register(&#34;123&#34;, &#34;key3&#34;, ConnectionParams.fromTuples( &#34;host&#34;, &#34;localhost&#34;, &#34;port&#34;, &#34;8000&#34; )); // Resolving connections  console.">
-<meta itemprop="dateModified" content="2023-04-29T17:59:15+02:00" />
+<meta itemprop="dateModified" content="2023-04-29T18:57:35+02:00" />
 <meta itemprop="wordCount" content="85">
 <meta itemprop="keywords" content="" /><meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content=""/>

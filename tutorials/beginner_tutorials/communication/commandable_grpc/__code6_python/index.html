@@ -23,11 +23,11 @@
 <meta property="og:type" content="article" />
 <meta property="og:url" content="/tutorials/beginner_tutorials/communication/commandable_grpc/__code6_python/" /><meta property="article:section" content="tutorials" />
 
-<meta property="article:modified_time" content="2023-04-29T17:59:15+02:00" />
+<meta property="article:modified_time" content="2023-04-29T18:57:35+02:00" />
 
 <meta itemprop="name" content="">
 <meta itemprop="description" content="from pip_services3_commons.commands.Command import Command from pip_services3_commons.commands.CommandSet import CommandSet from pip_services3_commons.commands.ICommand import ICommand from pip_services3_commons.convert.TypeCode import TypeCode from pip_services3_commons.data.FilterParams import FilterParams from pip_services3_commons.data.PagingParams import PagingParams from pip_services3_commons.data.DataPage import DataPage from pip_services3_commons.validate.FilterParamsSchema import FilterParamsSchema from pip_services3_commons.validate.ObjectSchema import ObjectSchema from pip_services3_commons.validate.PagingParamsSchema import PagingParamsSchema from data.MyData import MyData from data.MyDataSchema import MyDataSchema from logic import IMyDataController class MyDataCommandSet(CommandSet): def __init__(self, controller: IMyDataController): super().__init__() self.__controller = controller self.add_command(self._make_page_by_filter_command()) self.add_command(self._make_get_one_by_id_command()) self.add_command(self._make_create_command()) self.add_command(self._make_update_command()) self.add_command(self._make_delete_by_id_command()) def _make_page_by_filter_command(self) -&gt; ICommand: def handler(correlation_id, args): filter = FilterParams.">
-<meta itemprop="dateModified" content="2023-04-29T17:59:15+02:00" />
+<meta itemprop="dateModified" content="2023-04-29T18:57:35+02:00" />
 <meta itemprop="wordCount" content="195">
 <meta itemprop="keywords" content="" /><meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content=""/>

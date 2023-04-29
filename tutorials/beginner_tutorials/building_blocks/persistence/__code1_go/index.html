@@ -23,11 +23,11 @@
 <meta property="og:type" content="article" />
 <meta property="og:url" content="/tutorials/beginner_tutorials/building_blocks/persistence/__code1_go/" /><meta property="article:section" content="tutorials" />
 
-<meta property="article:modified_time" content="2023-04-29T17:59:15+02:00" />
+<meta property="article:modified_time" content="2023-04-29T18:57:35+02:00" />
 
 <meta itemprop="name" content="">
 <meta itemprop="description" content="import ( &#34;context&#34; &#34;strings&#34; persist &#34;github.com/pip-services3-gox/pip-services3-mongodb-gox/persistence&#34; &#34;go.mongodb.org/mongo-driver/bson&#34; ) type MyObject struct { Key string `bson:&#34;key&#34; json:&#34;key&#34;` Name string `bson:&#34;name&#34; json:&#34;name&#34;` } type MyMongoDbPersistence struct { *persist.MongoDbPersistence[MyObject] } func NewMyMongoDbPersistence() *MyMongoDbPersistence { c := &amp;MyMongoDbPersistence{} c.MongoDbPersistence = persist.InheritMongoDbPersistence[MyObject](c, &#34;mycollection&#34;) return c } func (c *MyMongoDbPersistence) GetByName(ctx context.Context, correlationId string, name string) (result MyObject, err error) { filterObj := bson.M{&#34;name&#34;: name} items, err := c.MongoDbPersistence.GetListByFilter(ctx, correlationId, filterObj, nil, nil) if err != nil { return result, err } if len(items) &gt; 0 { return items[0], nil } else { return result, nil } } func (c *MyMongoDbPersistence) CreateDefault(ctx context.">
-<meta itemprop="dateModified" content="2023-04-29T17:59:15+02:00" />
+<meta itemprop="dateModified" content="2023-04-29T18:57:35+02:00" />
 <meta itemprop="wordCount" content="202">
 <meta itemprop="keywords" content="" /><meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content=""/>

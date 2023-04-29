@@ -23,11 +23,11 @@
 <meta property="og:type" content="article" />
 <meta property="og:url" content="/tutorials/beginner_tutorials/containers/google_cloud_platform/__code15_python/" /><meta property="article:section" content="tutorials" />
 
-<meta property="article:modified_time" content="2023-04-29T17:59:15+02:00" />
+<meta property="article:modified_time" content="2023-04-29T18:57:35+02:00" />
 
 <meta itemprop="name" content="">
 <meta itemprop="description" content="class MyCloudService(CloudFunctionService): def __init__(self): super().__init__(&#39;mygroup&#39;) self._dependency_resolver.put(&#39;controller&#39;, Descriptor(&#39;mygroup&#39;, &#39;controller&#39;, &#39;default&#39;, &#39;controller&#39;, &#39;1.0&#39;)) self._controller: MyController = None self._headers = { &#39;Content-Type&#39;: &#39;application/json&#39; } def set_references(self, references: IReferences): super().set_references(references) self._controller = self._dependency_resolver.get_one_required(&#39;controller&#39;) def register(self): def handler(req: flask.Request): name = &#39;default name&#39; if req.is_json: name = req.json.get(&#39;name&#39;, name) res = self._controller.greeting(name) return res, 200 self._register_action( &#39;greetings&#39;, ObjectSchema(True).with_required_property(&#34;body&#34;, ObjectSchema().with_required_property(&#34;name&#34;, TypeCode.String)), handler ) ">
-<meta itemprop="dateModified" content="2023-04-29T17:59:15+02:00" />
+<meta itemprop="dateModified" content="2023-04-29T18:57:35+02:00" />
 <meta itemprop="wordCount" content="57">
 <meta itemprop="keywords" content="" /><meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content=""/>

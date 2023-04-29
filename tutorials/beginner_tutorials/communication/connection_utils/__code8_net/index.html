@@ -23,11 +23,11 @@
 <meta property="og:type" content="article" />
 <meta property="og:url" content="/tutorials/beginner_tutorials/communication/connection_utils/__code8_net/" /><meta property="article:section" content="tutorials" />
 
-<meta property="article:modified_time" content="2023-04-29T17:59:15+02:00" />
+<meta property="article:modified_time" content="2023-04-29T18:57:35+02:00" />
 
 <meta itemprop="name" content="">
 <meta itemprop="description" content="using System.Threading.Tasks; using MongoDB.Driver; using PipServices3.Commons.Config; using PipServices3.Commons.Run; using PipServices3.Components.Connect; namespace ExampleApp { class Program { static void Main(string[] args) { var options = ConfigParams.FromTuples( &#34;host&#34;, &#34;localhost&#34;, &#34;port&#34;, &#34;,27017&#34;, &#34;username&#34;, &#34;user&#34;, &#34;password&#34;, &#34;pass123&#34;, &#34;protocol&#34;, &#34;mongodb&#34;, &#34;collection&#34;, &#34;my_db_name&#34; ); // Create connection  var conn = new MongoDbConnector(); conn.Configure(options); conn.OpenAsync(null).Wait(); } } public class MongoDbConnector: IOpenable, IConfigurable { // The MongoDB connection object.  protected MongoClient _connection; /// The MongoDB database.  protected IMongoDatabase _database; /// &lt;/summary&gt;  protected string _databaseName; protected ConfigParams _config; private bool secureMongo = false; public MongoDbConnector(bool secureMongo = false) { this.">
-<meta itemprop="dateModified" content="2023-04-29T17:59:15+02:00" />
+<meta itemprop="dateModified" content="2023-04-29T18:57:35+02:00" />
 <meta itemprop="wordCount" content="208">
 <meta itemprop="keywords" content="" /><meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content=""/>

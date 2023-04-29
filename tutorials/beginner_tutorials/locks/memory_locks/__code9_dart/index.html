@@ -23,11 +23,11 @@
 <meta property="og:type" content="article" />
 <meta property="og:url" content="/tutorials/beginner_tutorials/locks/memory_locks/__code9_dart/" /><meta property="article:section" content="tutorials" />
 
-<meta property="article:modified_time" content="2023-04-29T17:59:15+02:00" />
+<meta property="article:modified_time" content="2023-04-29T18:57:35+02:00" />
 
 <meta itemprop="name" content="">
 <meta itemprop="description" content="import &#39;package:pip_services3_commons/pip_services3_commons.dart&#39;; import &#39;package:pip_services3_components/pip_services3_components.dart&#39;; class MyComponent implements IReferenceable { late ICache _cache; late MemoryLock _lock; @override void setReferences(IReferences references) { _cache = references.getOneRequired(Descriptor(&#39;*&#39;, &#39;cache&#39;, &#39;*&#39;, &#39;*&#39;, &#39;1.0&#39;)); _lock = references.getOneRequired(Descriptor(&#39;*&#39;, &#39;lock&#39;, &#39;*&#39;, &#39;*&#39;, &#39;1.0&#39;)); } Future&lt;void&gt; storeResult(String? correlationId, String param1) async { // Lock  await _lock.acquireLock(correlationId, &#39;mykey&#39;, 1000, 1000); var config = ConfigParams.fromTuples([&#39;retry_timeout&#39;, 200]); _lock.configure(config); // Do processing  // ...  print(&#39;The stored value is &#39; &#43; param1); // Store result to cache async  await _cache.">
-<meta itemprop="dateModified" content="2023-04-29T17:59:15+02:00" />
+<meta itemprop="dateModified" content="2023-04-29T18:57:35+02:00" />
 <meta itemprop="wordCount" content="159">
 <meta itemprop="keywords" content="" /><meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content=""/>

@@ -23,11 +23,11 @@
 <meta property="og:type" content="article" />
 <meta property="og:url" content="/tutorials/beginner_tutorials/three_tier_architecture/__code6_go/" /><meta property="article:section" content="tutorials" />
 
-<meta property="article:modified_time" content="2023-04-29T17:59:15+02:00" />
+<meta property="article:modified_time" content="2023-04-29T18:57:35+02:00" />
 
 <meta itemprop="name" content="">
 <meta itemprop="description" content="import ( &#34;context&#34; &#34;net/http&#34; cconf &#34;github.com/pip-services3-gox/pip-services3-commons-gox/config&#34; cref &#34;github.com/pip-services3-gox/pip-services3-commons-gox/refer&#34; cservices &#34;github.com/pip-services3-gox/pip-services3-rpc-gox/services&#34; ) type HelloFriendRestService struct { *cservices.RestService controller *HelloFriendController } func NewHelloFriendRestService() *HelloFriendRestService { c := &amp;HelloFriendRestService{} c.RestService = cservices.InheritRestService(c) c.BaseRoute = &#34;/hello_friend&#34; return c } func (c *HelloFriendRestService) Configure(ctx context.Context, config *cconf.ConfigParams) { c.RestService.Configure(ctx, config) } func (c *HelloFriendRestService) SetReferences(ctx context.Context, references cref.IReferences) { c.RestService.SetReferences(ctx, references) res, err := references.GetOneRequired(cref.NewDescriptor(&#34;hello-friend&#34;, &#34;controller&#34;, &#34;*&#34;, &#34;*&#34;, &#34;1.0&#34;)) if err != nil { panic(err) } c.">
-<meta itemprop="dateModified" content="2023-04-29T17:59:15+02:00" />
+<meta itemprop="dateModified" content="2023-04-29T18:57:35+02:00" />
 <meta itemprop="wordCount" content="129">
 <meta itemprop="keywords" content="" /><meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content=""/>

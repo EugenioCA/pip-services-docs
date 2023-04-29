@@ -23,11 +23,11 @@
 <meta property="og:type" content="article" />
 <meta property="og:url" content="/tutorials/beginner_tutorials/observability/datadog/__code10_net/" /><meta property="article:section" content="tutorials" />
 
-<meta property="article:modified_time" content="2023-04-29T17:59:15+02:00" />
+<meta property="article:modified_time" content="2023-04-29T18:57:35+02:00" />
 
 <meta itemprop="name" content="">
 <meta itemprop="description" content="using System; using System.Threading.Tasks; using PipServices3.Commons.Config; using PipServices3.Commons.Run; using PipServices3.DataDog.Log; public class MyComponentA: IConfigurable, IOpenable { private bool dataDogLog = true; protected DataDogLogger logger; public MyComponentA(DataDogLogger logger) { this.logger = logger; if (dataDogLog) logger.Info(&#34;123&#34;, &#34;MyComponentA has been created.&#34;); } public void Configure(ConfigParams config) { logger.Configure(config); } public DataDogLogger GetCounters() { return logger; } public bool IsOpen() { return logger.IsOpen(); } public async Task OpenAsync(string correlationId) { await logger.OpenAsync(correlationId); } public async Task CloseAsync(string correlationId) { await logger.">
-<meta itemprop="dateModified" content="2023-04-29T17:59:15+02:00" />
+<meta itemprop="dateModified" content="2023-04-29T18:57:35+02:00" />
 <meta itemprop="wordCount" content="105">
 <meta itemprop="keywords" content="" /><meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content=""/>

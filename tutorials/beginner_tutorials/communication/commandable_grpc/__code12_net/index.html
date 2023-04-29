@@ -23,11 +23,11 @@
 <meta property="og:type" content="article" />
 <meta property="og:url" content="/tutorials/beginner_tutorials/communication/commandable_grpc/__code12_net/" /><meta property="article:section" content="tutorials" />
 
-<meta property="article:modified_time" content="2023-04-29T17:59:15+02:00" />
+<meta property="article:modified_time" content="2023-04-29T18:57:35+02:00" />
 
 <meta itemprop="name" content="">
 <meta itemprop="description" content="using PipServices3.Commons.Commands; using PipServices3.Commons.Data; using PipServices3.Commons.Refer; using PipServices3.Grpc.Clients; public class MyCommandableGrpcClient : CommandableGrpcClient, IMyDataClient { public MyCommandableGrpcClient() : base(&#34;mydata&#34;) { } public Task&lt;DataPage&lt;MyData&gt;&gt; GetMyDatasAsync(string correlationId, FilterParams filter, PagingParams paging) { filter = filter ?? new FilterParams(); paging = paging ?? new PagingParams(); var requestEntity = new { correlationId=correlationId, filter=filter, paging= paging, }; return CallCommandAsync&lt;DataPage&lt;MyData&gt;&gt;(&#34;get_my_datas&#34;, correlationId, requestEntity); } public Task&lt;MyData&gt; GetMyDataByIdAsync(string correlationId, string id) { var requestEntity = new { correlationId = correlationId, my_data_id=id }; return CallCommandAsync&lt;MyData&gt;(&#34;get_my_data_by_id&#34;, correlationId, requestEntity); } public Task&lt;MyData&gt; CreateMyDataAsync(string correlationId, MyData entity) { var requestEntity = new { correlationId = correlationId, my_data =entity }; return CallCommandAsync&lt;MyData&gt;(&#34;create_my_data&#34;, correlationId, requestEntity); } public Task&lt;MyData&gt; DeleteMyDataAsync(string correlationId, string id) { var requestEntity = new { correlationId = correlationId, my_data_id =id }; return CallCommandAsync&lt;MyData&gt;(&#34;delete_my_data&#34;, correlationId, requestEntity); } public Task&lt;MyData&gt; UpdateMyDataAsync(string correlationId, MyData entity) { var requestEntity = new { correlationId= correlationId, my_data=entity }; return CallCommandAsync&lt;MyData&gt;(&#34;update_my_data&#34;, correlationId, requestEntity); } } ">
-<meta itemprop="dateModified" content="2023-04-29T17:59:15+02:00" />
+<meta itemprop="dateModified" content="2023-04-29T18:57:35+02:00" />
 <meta itemprop="wordCount" content="147">
 <meta itemprop="keywords" content="" /><meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content=""/>
