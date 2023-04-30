@@ -23,11 +23,11 @@
 <meta property="og:type" content="article" />
 <meta property="og:url" content="/tutorials/beginner_tutorials/communication/commandable_grpc/__code14_python/" /><meta property="article:section" content="tutorials" />
 
-<meta property="article:modified_time" content="2023-04-29T22:57:39+02:00" />
+<meta property="article:modified_time" content="2023-04-30T15:18:11+02:00" />
 
 <meta itemprop="name" content="">
 <meta itemprop="description" content="from pip_services3_commons.config import ConfigParams from pip_services3_commons.refer import References from clients.IMyDataClient import IMyDataClient from clients.MyCommandableGrpcClient import MyCommandableGrpcClient from data.MyData import MyData correlation_id = &#39;example&#39; # create client grpc_config = ConfigParams.from_tuples( &#39;connection.protocol&#39;, &#39;http&#39;, &#39;connection.host&#39;, &#39;localhost&#39;, &#39;connection.port&#39;, 8090 ) grpcClient = MyCommandableGrpcClient() grpcClient.configure(grpc_config) grpcClient.set_references(References()) grpcClient.open(correlation_id) # simple data data1: MyData = MyData(&#39;1&#39;, &#39;0005&#39;, &#39;any content 1&#39;) data2: MyData = MyData(&#39;2&#39;, &#39;0010&#39;, &#39;any content 2&#39;) # using the client res = grpcClient.create_my_data(correlation_id, data1) assert res.">
-<meta itemprop="dateModified" content="2023-04-29T22:57:39+02:00" />
+<meta itemprop="dateModified" content="2023-04-30T15:18:11+02:00" />
 <meta itemprop="wordCount" content="106">
 <meta itemprop="keywords" content="" /><meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content=""/>

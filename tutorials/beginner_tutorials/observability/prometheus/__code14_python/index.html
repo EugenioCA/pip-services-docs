@@ -23,11 +23,11 @@
 <meta property="og:type" content="article" />
 <meta property="og:url" content="/tutorials/beginner_tutorials/observability/prometheus/__code14_python/" /><meta property="article:section" content="tutorials" />
 
-<meta property="article:modified_time" content="2023-04-29T22:57:39+02:00" />
+<meta property="article:modified_time" content="2023-04-30T15:18:11+02:00" />
 
 <meta itemprop="name" content="">
 <meta itemprop="description" content="from pip_services3_commons.config import ConfigParams from pip_services3_commons.refer import Descriptor, References, IReferences from pip_services3_components.info import ContextInfo from pip_services3_prometheus.count import PrometheusCounters from pip_services3_prometheus.services import PrometheusMetricsService from pip_services3_commons.refer import IReferenceable class MyComponentA(IReferenceable): console_log: bool = True # console log flag def __init__(self): self._counters: PrometheusCounters = None if self.console_log: print(&#34;MyComponentA has been created.&#34;) # Added references for getting counters def set_references(self, references: IReferences): self._counters = references.get_one_required( Descriptor(&#34;*&#34;, &#34;counters&#34;, &#34;*&#34;, &#34;*&#34;, &#34;*&#34;) ) def mymethod(self): # Count the number of calls to this method self.">
-<meta itemprop="dateModified" content="2023-04-29T22:57:39+02:00" />
+<meta itemprop="dateModified" content="2023-04-30T15:18:11+02:00" />
 <meta itemprop="wordCount" content="251">
 <meta itemprop="keywords" content="" /><meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content=""/>

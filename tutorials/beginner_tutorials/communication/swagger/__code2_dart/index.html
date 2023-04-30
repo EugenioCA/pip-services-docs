@@ -23,11 +23,11 @@
 <meta property="og:type" content="article" />
 <meta property="og:url" content="/tutorials/beginner_tutorials/communication/swagger/__code2_dart/" /><meta property="article:section" content="tutorials" />
 
-<meta property="article:modified_time" content="2023-04-29T22:57:39+02:00" />
+<meta property="article:modified_time" content="2023-04-30T15:18:11+02:00" />
 
 <meta itemprop="name" content="">
 <meta itemprop="description" content="import &#39;dart:async&#39;; import &#39;package:pip_services3_commons/pip_services3_commons.dart&#39;; import &#39;package:pip_services3_rpc/pip_services3_rpc.dart&#39;; import &#39;package:shelf/shelf.dart&#39;; import &#39;package:shelf_router/shelf_router.dart&#39;; class HelloFriendRestService extends RestService { HelloFriendController? _controller; String? _swaggerContent; String? _swaggerPath; HelloFriendRestService() : super() { baseRoute = &#39;/hello_friend&#39;; var controllerDescriptor = Descriptor(&#39;hello-friend&#39;, &#39;controller&#39;, &#39;*&#39;, &#39;*&#39;, &#39;1.0&#39;); dependencyResolver.put(&#39;controller&#39;, controllerDescriptor); } @override void configure(ConfigParams config) { super.configure(config); // swagger  _swaggerContent = config.getAsNullableString(&#34;swagger.content&#34;); _swaggerPath = config.getAsNullableString(&#34;swagger.path&#34;); } @override void setReferences(IReferences references) { super.setReferences(references); _controller = dependencyResolver.getOneRequired&lt;HelloFriendController&gt;(&#39;controller&#39;); } @override void register() { registerRoute(&#39;get&#39;, &#39;/greeting&#39;, null, _greeting); // swagger  if (_swaggerContent !">
-<meta itemprop="dateModified" content="2023-04-29T22:57:39+02:00" />
+<meta itemprop="dateModified" content="2023-04-30T15:18:11+02:00" />
 <meta itemprop="wordCount" content="106">
 <meta itemprop="keywords" content="" /><meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content=""/>

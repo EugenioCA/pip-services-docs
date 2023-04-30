@@ -23,11 +23,11 @@
 <meta property="og:type" content="article" />
 <meta property="og:url" content="/tutorials/beginner_tutorials/locks/memory_locks/__code6_go/" /><meta property="article:section" content="tutorials" />
 
-<meta property="article:modified_time" content="2023-04-29T22:57:39+02:00" />
+<meta property="article:modified_time" content="2023-04-30T15:18:11+02:00" />
 
 <meta itemprop="name" content="">
 <meta itemprop="description" content="import ( &#34;context&#34; &#34;fmt&#34; cconf &#34;github.com/pip-services3-gox/pip-services3-commons-gox/config&#34; crefer &#34;github.com/pip-services3-gox/pip-services3-commons-gox/refer&#34; ccache &#34;github.com/pip-services3-gox/pip-services3-components-gox/cache&#34; clock &#34;github.com/pip-services3-gox/pip-services3-components-gox/lock&#34; ) type MyComponent struct { cache ccache.ICache[any] lock clock.MemoryLock } func (c *MyComponent) SetReferences(ctx context.Context, references crefer.IReferences) { res, descrErr := references.GetOneRequired(crefer.NewDescriptor(&#34;*&#34;, &#34;cache&#34;, &#34;*&#34;, &#34;*&#34;, &#34;1.0&#34;)) if descrErr != nil { panic(descrErr) } c.cache = res.(ccache.ICache[any]) res, descrErr = references.GetOneRequired(crefer.NewDescriptor(&#34;*&#34;, &#34;lock&#34;, &#34;*&#34;, &#34;*&#34;, &#34;1.0&#34;)) if descrErr != nil { panic(descrErr) } c.lock = res.(clock.MemoryLock) } func (c *MyComponent) StoreResult(ctx context.">
-<meta itemprop="dateModified" content="2023-04-29T22:57:39+02:00" />
+<meta itemprop="dateModified" content="2023-04-30T15:18:11+02:00" />
 <meta itemprop="wordCount" content="218">
 <meta itemprop="keywords" content="" /><meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content=""/>

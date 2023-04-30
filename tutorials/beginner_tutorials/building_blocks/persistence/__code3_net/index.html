@@ -23,11 +23,11 @@
 <meta property="og:type" content="article" />
 <meta property="og:url" content="/tutorials/beginner_tutorials/building_blocks/persistence/__code3_net/" /><meta property="article:section" content="tutorials" />
 
-<meta property="article:modified_time" content="2023-04-29T22:57:39+02:00" />
+<meta property="article:modified_time" content="2023-04-30T15:18:11+02:00" />
 
 <meta itemprop="name" content="">
 <meta itemprop="description" content="using MongoDB.Bson.Serialization.Attributes; using System.Runtime.Serialization; using System.Threading.Tasks; using PipServices3.Commons.Data; using PipServices3.Postgres.Persistence; using System.Collections.Generic; class MyIdentifiableObject : IIdentifiable&lt;string&gt; { [BsonElement(&#34;id&#34;)] [DataMember(Name = &#34;id&#34;)] public string Id { get; set; } [BsonElement(&#34;key&#34;)] [DataMember(Name = &#34;key&#34;)] public string Key { get; set; } [BsonElement(&#34;name&#34;)] [DataMember(Name = &#34;name&#34;)] public string Name { get; set; } } interface MyIdentifiablePersistence { Task&lt;DataPage&lt;MyIdentifiableObject&gt;&gt; GetPageByFilterAsync(string correlationId, FilterParams filter, PagingParams paging); Task&lt;MyIdentifiableObject&gt; CreateAsync(string correlationId, MyIdentifiableObject item); Task&lt;MyIdentifiableObject&gt; GetOneByIdAsync(string correlationId, string id); Task&lt;MyIdentifiableObject&gt; DeleteByIdAsync(string correlationId, string id); } class MyMongoDbPersistence : IdentifiablePostgresPersistence&lt;MyIdentifiableObject, string&gt;, MyIdentifiablePersistence { public MyMongoDbPersistence() : base(&#34;mycollection&#34;) { } private string composeFilter(FilterParams filter) { filter = filter ?">
-<meta itemprop="dateModified" content="2023-04-29T22:57:39+02:00" />
+<meta itemprop="dateModified" content="2023-04-30T15:18:11+02:00" />
 <meta itemprop="wordCount" content="161">
 <meta itemprop="keywords" content="" /><meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content=""/>

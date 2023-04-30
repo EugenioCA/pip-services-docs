@@ -23,11 +23,11 @@
 <meta property="og:type" content="article" />
 <meta property="og:url" content="/tutorials/beginner_tutorials/communication/swagger/__code11_python/" /><meta property="article:section" content="tutorials" />
 
-<meta property="article:modified_time" content="2023-04-29T22:57:39+02:00" />
+<meta property="article:modified_time" content="2023-04-30T15:18:11+02:00" />
 
 <meta itemprop="name" content="">
 <meta itemprop="description" content="from pip_services3_commons.refer import Descriptor from pip_services3_commons.validate import Schema from pip_services3_rpc.services import RestService import bottle # REST service (Swagger UI from YAML file) class HelloFriendRestService(RestService): def __init__(self): super(HelloFriendRestService, self).__init__() self._base_route = &#34;/hello_friend&#34; ControllerDescriptor = Descriptor(&#39;hello-friend&#39;, &#39;controller&#39;, &#39;*&#39;, &#39;*&#39;, &#39;1.0&#39;) self._dependency_resolver.put(&#39;controller&#39;, ControllerDescriptor) self._controller = None # Swagger self._swagger_content = None self._swagger_path = None def configure(self, config): super().configure(config) # Swagger self._swagger_content = config.get_as_nullable_string(&#34;swagger.content&#34;) self._swagger_path = config.get_as_nullable_string(&#39;swagger.path&#39;) def set_references(self, references): super(HelloFriendRestService, self).set_references(references) self._controller = self.">
-<meta itemprop="dateModified" content="2023-04-29T22:57:39+02:00" />
+<meta itemprop="dateModified" content="2023-04-30T15:18:11+02:00" />
 <meta itemprop="wordCount" content="419">
 <meta itemprop="keywords" content="" /><meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content=""/>

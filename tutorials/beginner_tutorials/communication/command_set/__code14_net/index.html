@@ -23,11 +23,11 @@
 <meta property="og:type" content="article" />
 <meta property="og:url" content="/tutorials/beginner_tutorials/communication/command_set/__code14_net/" /><meta property="article:section" content="tutorials" />
 
-<meta property="article:modified_time" content="2023-04-29T22:57:39+02:00" />
+<meta property="article:modified_time" content="2023-04-30T15:18:11+02:00" />
 
 <meta itemprop="name" content="">
 <meta itemprop="description" content="using System; using System.Collections.Generic; using PipServices3.Commons.Commands; using PipServices3.Commons.Run; namespace ExampleApp { class Program { static void Main(string[] args) { var mySet = new MyCommandSet(); mySet.ExecuteAsync(null, &#34;command1&#34;, null).Wait(); mySet.ExecuteAsync(null, &#34;command2&#34;, null).Wait(); mySet.ExecuteAsync(null, &#34;command3&#34;, null).Wait(); mySet.ExecuteAsync(null, &#34;command1B&#34;, null).Wait(); } } public class MyCommandSetB : CommandSet { public MyCommandSetB() : base() { AddCommand(Command1B()); } private ICommand Command1B() { return new Command(&#34;command1B&#34;, null, async (string correlationId, Parameters args) =&gt; { Console.WriteLine(&#34;command 1B&#34;); return null; } ); } } public class MyCommandSet : CommandSet { private CommandSet _commandSet = new MyCommandSetB(); public MyCommandSet() : base() { AddCommand(Command1()); AddCommandSet(_commandSet); AddCommands(new List&lt;ICommand&gt; { Command2(), Command3() }); } private ICommand Command1() { return new Command(&#34;command1&#34;, null, async (string correlationId, Parameters args) =&gt; { Console.">
-<meta itemprop="dateModified" content="2023-04-29T22:57:39+02:00" />
+<meta itemprop="dateModified" content="2023-04-30T15:18:11+02:00" />
 <meta itemprop="wordCount" content="177">
 <meta itemprop="keywords" content="" /><meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content=""/>

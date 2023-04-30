@@ -23,11 +23,11 @@
 <meta property="og:type" content="article" />
 <meta property="og:url" content="/tutorials/beginner_tutorials/communication/rest_client/__code1_net/" /><meta property="article:section" content="tutorials" />
 
-<meta property="article:modified_time" content="2023-04-29T22:57:39+02:00" />
+<meta property="article:modified_time" content="2023-04-30T15:18:11+02:00" />
 
 <meta itemprop="name" content="">
 <meta itemprop="description" content="using PipServices3.Commons.Config; using PipServices3.Rpc.Services; class MyRestService : RestService { public MyRestService(): base() { _baseRoute = &#34;/my_service&#34;; } // GET  private async Task MyPageGet(HttpRequest request, HttpResponse response, RouteData routeData) { var name = routeData.Values[&#34;name&#34;].ToString(); var message = request.Query.TryGetValue(&#34;message&#34;, out StringValues sortValues) ? sortValues.ToString() : string.Empty; var res = message &#43; &#34;, &#34; &#43; name; await this.SendResultAsync(response, res); } // HEAD  private async Task MyPageHead(HttpRequest request, HttpResponse response, RouteData routeData) { await this.">
-<meta itemprop="dateModified" content="2023-04-29T22:57:39+02:00" />
+<meta itemprop="dateModified" content="2023-04-30T15:18:11+02:00" />
 <meta itemprop="wordCount" content="222">
 <meta itemprop="keywords" content="" /><meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content=""/>

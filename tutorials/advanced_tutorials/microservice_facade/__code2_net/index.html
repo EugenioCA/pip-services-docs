@@ -26,14 +26,14 @@
 <meta property="og:type" content="article" />
 <meta property="og:url" content="/tutorials/advanced_tutorials/microservice_facade/__code2_net/" /><meta property="article:section" content="tutorials" />
 
-<meta property="article:modified_time" content="2023-04-29T22:57:39+02:00" />
+<meta property="article:modified_time" content="2023-04-30T15:18:11+02:00" />
 
 <meta itemprop="name" content="">
 <meta itemprop="description" content="Create a Service.csproj, Client.csproj and Process.csproj files at the /src/service, /src/client and /src/process folders with the following content to configure dependencies and project parameters:
 /src/service/service.csproj
 &lt;Project Sdk=&#34;Microsoft.NET.Sdk&#34;&gt; &lt;PropertyGroup&gt; &lt;TargetFrameworks&gt;netstandard2.1;net5.0&lt;/TargetFrameworks&gt; &lt;AssemblyName&gt;Pip.Services.SampleFacade.Service&lt;/AssemblyName&gt; &lt;RootNamespace&gt;Pip.Services.SampleFacade&lt;/RootNamespace&gt; &lt;Version&gt;1.0.0&lt;/Version&gt; &lt;/PropertyGroup&gt; &lt;ItemGroup&gt; &lt;Compile Remove=&#34;Data.cs&#34; /&gt; &lt;/ItemGroup&gt; &lt;ItemGroup&gt; &lt;PackageReference Include=&#34;PipServices3.Commons&#34; Version=&#34;3.3.0&#34; /&gt; &lt;PackageReference Include=&#34;PipServices3.Container&#34; Version=&#34;3.2.0&#34; /&gt; &lt;PackageReference Include=&#34;PipServices3.Rpc&#34; Version=&#34;3.5.2&#34; /&gt; &lt;/ItemGroup&gt; &lt;ItemGroup&gt; &lt;ProjectReference Include=&#34;..\Client\Client.csproj&#34; /&gt; &lt;/ItemGroup&gt; &lt;/Project&gt; /src/client/client.csproj
 &lt;Project Sdk=&#34;Microsoft.NET.Sdk&#34;&gt; &lt;PropertyGroup&gt; &lt;TargetFrameworks&gt;netstandard2.1;net5.0&lt;/TargetFrameworks&gt; &lt;AssemblyName&gt;Pip.Services.SampleFacade.Client&lt;/AssemblyName&gt; &lt;RootNamespace&gt;Pip.Services.SampleFacade&lt;/RootNamespace&gt; &lt;Version&gt;1.0.0&lt;/Version&gt; &lt;/PropertyGroup&gt; &lt;ItemGroup&gt; &lt;PackageReference Include=&#34;PipServices3.Commons&#34; Version=&#34;3.">
-<meta itemprop="dateModified" content="2023-04-29T22:57:39+02:00" />
+<meta itemprop="dateModified" content="2023-04-30T15:18:11+02:00" />
 <meta itemprop="wordCount" content="88">
 <meta itemprop="keywords" content="" /><meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content=""/>

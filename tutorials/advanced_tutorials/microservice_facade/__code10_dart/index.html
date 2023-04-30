@@ -24,12 +24,12 @@ import &#39;dart:convert&#39;; import &#39;package:http/http.dart&#39; as http; 
 <meta property="og:type" content="article" />
 <meta property="og:url" content="/tutorials/advanced_tutorials/microservice_facade/__code10_dart/" /><meta property="article:section" content="tutorials" />
 
-<meta property="article:modified_time" content="2023-04-29T22:57:39+02:00" />
+<meta property="article:modified_time" content="2023-04-30T15:18:11+02:00" />
 
 <meta itemprop="name" content="">
 <meta itemprop="description" content="/test/fixture/TestRestClient.dart
 import &#39;dart:convert&#39;; import &#39;package:http/http.dart&#39; as http; class TestRestClient { final _rest = http.Client(); var baseUrl = &#39;http://localhost:3000&#39;; TestRestClient([String? baseUrl]) { baseUrl = baseUrl ?? &#39;http://localhost:3000&#39;; } Future get(String path) async { return await _rest.get(Uri.parse(baseUrl &#43; path)); } Future head(String path) async { return await _rest.head(Uri.parse(baseUrl &#43; path)); } Future post(String path, dynamic params) async { return await _rest.post(Uri.parse(baseUrl &#43; path), headers: {&#39;Content-Type&#39;: &#39;application/json&#39;}, body: jsonEncode(params)); } Future put(String path, dynamic params) async { return await _rest.">
-<meta itemprop="dateModified" content="2023-04-29T22:57:39+02:00" />
+<meta itemprop="dateModified" content="2023-04-30T15:18:11+02:00" />
 <meta itemprop="wordCount" content="195">
 <meta itemprop="keywords" content="" /><meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content=""/>

@@ -23,11 +23,11 @@
 <meta property="og:type" content="article" />
 <meta property="og:url" content="/tutorials/beginner_tutorials/observability/metrics/__code3_node/" /><meta property="article:section" content="tutorials" />
 
-<meta property="article:modified_time" content="2023-04-29T22:57:39+02:00" />
+<meta property="article:modified_time" content="2023-04-30T15:18:11+02:00" />
 
 <meta itemprop="name" content="">
 <meta itemprop="description" content="import { Descriptor, References } from &#34;pip-services3-commons-nodex&#34;; import { CachedCounters, ConsoleLogger, Counter, ICounters, LogCounters } from &#34;pip-services3-components-nodex&#34;; export async function main() { let counters = new LogCounters(); counters.setReferences(References.fromTuples( new Descriptor(&#34;pip-services&#34;, &#34;logger&#34;, &#34;console&#34;, &#34;default&#34;, &#34;1.0&#34;), new ConsoleLogger())) let mycomponentLog = new MyComponent(counters); let countExec = 2; for (let i = 0; i &lt; countExec; i&#43;&#43;) { mycomponentLog.mymethod(); } let resultLog = counters.getAll(); console.log(&#34;Metrics&#34;); for (let res of resultLog) { console.log(&#34;Count: &#34; &#43; res.">
-<meta itemprop="dateModified" content="2023-04-29T22:57:39+02:00" />
+<meta itemprop="dateModified" content="2023-04-30T15:18:11+02:00" />
 <meta itemprop="wordCount" content="99">
 <meta itemprop="keywords" content="" /><meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content=""/>

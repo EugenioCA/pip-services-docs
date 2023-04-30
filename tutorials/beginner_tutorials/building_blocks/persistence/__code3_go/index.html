@@ -23,11 +23,11 @@
 <meta property="og:type" content="article" />
 <meta property="og:url" content="/tutorials/beginner_tutorials/building_blocks/persistence/__code3_go/" /><meta property="article:section" content="tutorials" />
 
-<meta property="article:modified_time" content="2023-04-29T22:57:39+02:00" />
+<meta property="article:modified_time" content="2023-04-30T15:18:11+02:00" />
 
 <meta itemprop="name" content="">
 <meta itemprop="description" content="import ( &#34;context&#34; &#34;strings&#34; &#34;github.com/pip-services3-gox/pip-services3-commons-gox/data&#34; &#34;github.com/pip-services3-gox/pip-services3-postgres-gox/persistence&#34; ) type MyIdentifiableObject struct { Id string `bson:&#34;id&#34; json:&#34;id&#34;` Name string `bson:&#34;name&#34; json:&#34;name&#34;` Value string `bson:&#34;value&#34; json:&#34;value&#34;` } func (c *MyIdentifiableObject) GetId() string { return c.Id } type MyIdentifiablePersistence interface { GetPageByFilter(correlationId string, filter data.FilterParams, paging data.PagingParams) (data.DataPage[MyIdentifiableObject], error) Create(correlationId string, item MyIdentifiableObject) (MyIdentifiableObject, error) GetOneById(correlationId string, id string) (MyIdentifiableObject, error) DeleteById(correlationId string, id string) (MyIdentifiableObject, error) } type MyIdentifiablePostgreSqlPersistence struct { *persistence.IdentifiablePostgresPersistence[MyIdentifiableObject, string] } func NewMyIdentifiablePostgreSqlPersistence() *MyIdentifiablePostgreSqlPersistence { c := &amp;MyIdentifiablePostgreSqlPersistence{} c.">
-<meta itemprop="dateModified" content="2023-04-29T22:57:39+02:00" />
+<meta itemprop="dateModified" content="2023-04-30T15:18:11+02:00" />
 <meta itemprop="wordCount" content="171">
 <meta itemprop="keywords" content="" /><meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content=""/>

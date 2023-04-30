@@ -23,11 +23,11 @@
 <meta property="og:type" content="article" />
 <meta property="og:url" content="/tutorials/beginner_tutorials/building_blocks/persistence/__code1_python/" /><meta property="article:section" content="tutorials" />
 
-<meta property="article:modified_time" content="2023-04-29T22:57:39+02:00" />
+<meta property="article:modified_time" content="2023-04-30T15:18:11+02:00" />
 
 <meta itemprop="name" content="">
 <meta itemprop="description" content="from pip_services3_mongodb.persistence import MongoDbPersistence class MyObject: def __init__(self, key: str = None, name: str = None): self.name = key self.content = name class MyMongoDbPersistence(MongoDbPersistence): def __init__(self): super(MyMongoDbPersistence, self).__init__(&#39;mycollection&#39;) def get_by_name(self, correlation_id: str, name: str) -&gt; MyObject: criteria = {&#39;name&#39;: name} res = self.get_list_by_filter(correlation_id, criteria, None, None) return None if len(res) &lt; 0 else res[0] def create_default(self, correlation_id: str, name: str) -&gt; MyObject: name = name or &#39;unknown&#39; key = name.lower().replace(&#34; #$%^&amp;&#34;, &#34;_&#34;) item = MyObject(key, name) result = self.">
-<meta itemprop="dateModified" content="2023-04-29T22:57:39+02:00" />
+<meta itemprop="dateModified" content="2023-04-30T15:18:11+02:00" />
 <meta itemprop="wordCount" content="100">
 <meta itemprop="keywords" content="" /><meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content=""/>

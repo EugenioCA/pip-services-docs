@@ -23,11 +23,11 @@
 <meta property="og:type" content="article" />
 <meta property="og:url" content="/tutorials/beginner_tutorials/communication/commandable_http/__code14_dart/" /><meta property="article:section" content="tutorials" />
 
-<meta property="article:modified_time" content="2023-04-29T22:57:39+02:00" />
+<meta property="article:modified_time" content="2023-04-30T15:18:11+02:00" />
 
 <meta itemprop="name" content="">
 <meta itemprop="description" content="import &#39;package:pip_services3_commons/pip_services3_commons.dart&#39;; import &#39;package:pip_services3_rpc/pip_services3_rpc.dart&#39;; export async function main() { var client = MyCommandableHttpClient(&#39;commandable_hello_friend&#39;); client.configure(ConfigParams.fromTuples([ &#39;connection.protocol&#39;, &#39;http&#39;, &#39;connection.host&#39;, &#39;localhost&#39;, &#39;connection.port&#39;, 8080 ])); await client.open(null); var data = await client.greeting(&#39;123&#39;); // Returns &#39;Hello, Peter !&#39;  print(data); } class MyCommandableHttpClient extends CommandableHttpClient { MyCommandableHttpClient(String baseRoute) : super(baseRoute); Future&lt;String&gt; greeting(String correlationId) async { return await callCommand(&#39;greeting&#39;, correlationId, {&#39;name&#39;: &#39;Peter&#39;}); } } ">
-<meta itemprop="dateModified" content="2023-04-29T22:57:39+02:00" />
+<meta itemprop="dateModified" content="2023-04-30T15:18:11+02:00" />
 <meta itemprop="wordCount" content="57">
 <meta itemprop="keywords" content="" /><meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content=""/>

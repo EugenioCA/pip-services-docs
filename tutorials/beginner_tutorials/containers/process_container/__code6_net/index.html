@@ -23,11 +23,11 @@
 <meta property="og:type" content="article" />
 <meta property="og:url" content="/tutorials/beginner_tutorials/containers/process_container/__code6_net/" /><meta property="article:section" content="tutorials" />
 
-<meta property="article:modified_time" content="2023-04-29T22:57:39+02:00" />
+<meta property="article:modified_time" content="2023-04-30T15:18:11+02:00" />
 
 <meta itemprop="name" content="">
 <meta itemprop="description" content="using System; using System.Threading.Tasks; using PipServices3.Commons.Refer; using PipServices3.Commons.Run; using PipServices3.Commons.Config; using PipServices3.Components.Build; using PipServices3.Container; namespace ExampleApp { class Program { static void Main(string[] args) { try { var task = (new MyProcess()).RunAsync(args); task.Wait(); } catch (Exception ex) { Console.Error.WriteLine(ex); } } } public class MyProcess: ProcessContainer { public MyProcess(): base(&#34;myservice&#34;, &#34;My service running as a process&#34;) { _configPath = &#34;../../../config.yaml&#34;; _factories.Add(new MyFactory()); } } public class MyFactory : Factory { public MyFactory(): base() { RegisterAsType(new Descriptor(&#34;myservice&#34;, &#34;MyComponentA&#34;, &#34;*&#34;, &#34;*&#34;, &#34;1.">
-<meta itemprop="dateModified" content="2023-04-29T22:57:39+02:00" />
+<meta itemprop="dateModified" content="2023-04-30T15:18:11+02:00" />
 <meta itemprop="wordCount" content="180">
 <meta itemprop="keywords" content="" /><meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content=""/>

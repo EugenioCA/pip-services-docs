@@ -23,11 +23,11 @@
 <meta property="og:type" content="article" />
 <meta property="og:url" content="/tutorials/beginner_tutorials/three_tier_architecture/__code6_node/" /><meta property="article:section" content="tutorials" />
 
-<meta property="article:modified_time" content="2023-04-29T22:57:39+02:00" />
+<meta property="article:modified_time" content="2023-04-30T15:18:11+02:00" />
 
 <meta itemprop="name" content="">
 <meta itemprop="description" content="import { ConfigParams, Descriptor, IReferences, IStringIdentifiable } from &#34;pip-services3-commons-nodex&#34;; import { RestService } from &#34;pip-services3-rpc-nodex&#34;; export class HelloFriendRestService extends RestService { protected controller: HelloFriendController; public constructor() { super() this._baseRoute = &#34;/hello_friend&#34;; } public configure(config: ConfigParams): void { super.configure(config); } public setReferences(references: IReferences): void { super.setReferences(references); this.configure = references.getOneRequired(new Descriptor(&#34;hello-friend&#34;, &#34;controller&#34;, &#34;*&#34;, &#34;*&#34;, &#34;1.0&#34;)); } private async greeting(req: any, res: any): Promise&lt;void&gt; { let result = await this.controller.greeting(); await this.sendResult(req, res, result); } private async create(req: any, res: any): Promise&lt;void&gt; { let correlationId = this.">
-<meta itemprop="dateModified" content="2023-04-29T22:57:39+02:00" />
+<meta itemprop="dateModified" content="2023-04-30T15:18:11+02:00" />
 <meta itemprop="wordCount" content="108">
 <meta itemprop="keywords" content="" /><meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content=""/>

@@ -23,11 +23,11 @@
 <meta property="og:type" content="article" />
 <meta property="og:url" content="/tutorials/beginner_tutorials/communication/commandable_http/__code2_go/" /><meta property="article:section" content="tutorials" />
 
-<meta property="article:modified_time" content="2023-04-29T22:57:39+02:00" />
+<meta property="article:modified_time" content="2023-04-30T15:18:11+02:00" />
 
 <meta itemprop="name" content="">
 <meta itemprop="description" content="import ( &#34;context&#34; ccomand &#34;github.com/pip-services3-gox/pip-services3-commons-gox/commands&#34; cconv &#34;github.com/pip-services3-gox/pip-services3-commons-gox/convert&#34; crun &#34;github.com/pip-services3-gox/pip-services3-commons-gox/run&#34; cvalid &#34;github.com/pip-services3-gox/pip-services3-commons-gox/validate&#34; ) type FriendsCommandSet struct { *ccomand.CommandSet controller HelloFriendController } func NewFriendsCommandSet(controller HelloFriendController) *FriendsCommandSet { c := FriendsCommandSet{} c.controller = controller c.CommandSet = ccomand.NewCommandSet() c.AddCommand(c.makeGreeting()) return &amp;c } func (c *FriendsCommandSet) makeGreeting() ccomand.ICommand { return ccomand.NewCommand( &#34;greeting&#34;, cvalid.NewObjectSchema(). WithRequiredProperty(&#34;name&#34;, cconv.String), func(ctx context.Context, correlationId string, args *crun.Parameters) (result interface{}, err error) { name := args.GetAsString(&#34;name&#34;) return c.controller.Greeting(name), nil }, ) } ">
-<meta itemprop="dateModified" content="2023-04-29T22:57:39+02:00" />
+<meta itemprop="dateModified" content="2023-04-30T15:18:11+02:00" />
 <meta itemprop="wordCount" content="70">
 <meta itemprop="keywords" content="" /><meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content=""/>

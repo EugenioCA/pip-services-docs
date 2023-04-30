@@ -23,11 +23,11 @@
 <meta property="og:type" content="article" />
 <meta property="og:url" content="/tutorials/beginner_tutorials/communication/commandable_http/__code12_node/" /><meta property="article:section" content="tutorials" />
 
-<meta property="article:modified_time" content="2023-04-29T22:57:39+02:00" />
+<meta property="article:modified_time" content="2023-04-30T15:18:11+02:00" />
 
 <meta itemprop="name" content="">
 <meta itemprop="description" content="const restify = require(&#39;restify-clients&#39;); export async function main() { let url = &#39;http://localhost:8080&#39;; let rest = restify.createJsonClient({ url: url, version: &#39;*&#39; }); let data = await new Promise&lt;string&gt;((resolve, reject) =&gt; { rest.post(&#39;/commandable_hello_friend/greeting&#39;, {name: &#34;Peter&#34;}, (err, req, res, data) =&gt; { if (err != null) { reject(err); return; } resolve(data); }); }); console.log(data); } ">
-<meta itemprop="dateModified" content="2023-04-29T22:57:39+02:00" />
+<meta itemprop="dateModified" content="2023-04-30T15:18:11+02:00" />
 <meta itemprop="wordCount" content="53">
 <meta itemprop="keywords" content="" /><meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content=""/>
