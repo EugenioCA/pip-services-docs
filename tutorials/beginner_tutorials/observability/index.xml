@@ -7629,14 +7629,14 @@ After these changes, our component section will look like this:&lt;/p&gt;
 
 
 
-&lt;a class=&#34;btn btn-link&#34; id=&#34;btn-collapse-1723501746994307562&#34; style=&#34;border: none;text-decoration:underline;&#34;  type=&#34;button&#34;
-    data-toggle=&#34;collapse&#34; data-target=&#34;#collapse-1723501746994307562&#34; aria-expanded=&#34;false&#34; aria-controls=&#34;collapse-1723501746994307562&#34;&gt;
+&lt;a class=&#34;btn btn-link&#34; id=&#34;btn-collapse-1723588112309732887&#34; style=&#34;border: none;text-decoration:underline;&#34;  type=&#34;button&#34;
+    data-toggle=&#34;collapse&#34; data-target=&#34;#collapse-1723588112309732887&#34; aria-expanded=&#34;false&#34; aria-controls=&#34;collapse-1723588112309732887&#34;&gt;
     &lt;h4&gt;Code Example
-        &lt;i id=&#34;collapse-1723501746994307562-arrow&#34; class=&#34;pl-2 fas fa-caret-down&#34;&gt;&lt;/i&gt;
+        &lt;i id=&#34;collapse-1723588112309732887-arrow&#34; class=&#34;pl-2 fas fa-caret-down&#34;&gt;&lt;/i&gt;
     &lt;/h4&gt;
 &lt;/a&gt;
 
-&lt;div class=&#34;collapse pt-1&#34; id=&#34;collapse-1723501746994307562&#34;&gt;
+&lt;div class=&#34;collapse pt-1&#34; id=&#34;collapse-1723588112309732887&#34;&gt;
     
         
             
@@ -7760,10 +7760,10 @@ After these changes, our component section will look like this:&lt;/p&gt;
 
 
 &lt;script type=&#34;text/javascript&#34;&gt;
-    document.getElementById(&#34;btn-collapse-1723501746994307562&#34;).addEventListener(&#39;click&#39;, changeArrow);
+    document.getElementById(&#34;btn-collapse-1723588112309732887&#34;).addEventListener(&#39;click&#39;, changeArrow);
 
     function changeArrow(e) {
-        let arrow = document.getElementById(&#34;collapse-1723501746994307562-arrow&#34;)
+        let arrow = document.getElementById(&#34;collapse-1723588112309732887-arrow&#34;)
         if (arrow.classList.contains(&#34;fa-caret-up&#34;)) {
             arrow.classList.replace(&#34;fa-caret-up&#34;, &#34;fa-caret-down&#34;)
         } else {
@@ -7783,14 +7783,14 @@ After these changes, our component section will look like this:&lt;/p&gt;
 
 
 
-&lt;a class=&#34;btn btn-link&#34; id=&#34;btn-collapse-1723501746997751973&#34; style=&#34;border: none;text-decoration:underline;&#34;  type=&#34;button&#34;
-    data-toggle=&#34;collapse&#34; data-target=&#34;#collapse-1723501746997751973&#34; aria-expanded=&#34;false&#34; aria-controls=&#34;collapse-1723501746997751973&#34;&gt;
+&lt;a class=&#34;btn btn-link&#34; id=&#34;btn-collapse-1723588112313080164&#34; style=&#34;border: none;text-decoration:underline;&#34;  type=&#34;button&#34;
+    data-toggle=&#34;collapse&#34; data-target=&#34;#collapse-1723588112313080164&#34; aria-expanded=&#34;false&#34; aria-controls=&#34;collapse-1723588112313080164&#34;&gt;
     &lt;h4&gt;Code Example
-        &lt;i id=&#34;collapse-1723501746997751973-arrow&#34; class=&#34;pl-2 fas fa-caret-down&#34;&gt;&lt;/i&gt;
+        &lt;i id=&#34;collapse-1723588112313080164-arrow&#34; class=&#34;pl-2 fas fa-caret-down&#34;&gt;&lt;/i&gt;
     &lt;/h4&gt;
 &lt;/a&gt;
 
-&lt;div class=&#34;collapse pt-1&#34; id=&#34;collapse-1723501746997751973&#34;&gt;
+&lt;div class=&#34;collapse pt-1&#34; id=&#34;collapse-1723588112313080164&#34;&gt;
     
         
             
@@ -7920,10 +7920,10 @@ After these changes, our component section will look like this:&lt;/p&gt;
 
 
 &lt;script type=&#34;text/javascript&#34;&gt;
-    document.getElementById(&#34;btn-collapse-1723501746997751973&#34;).addEventListener(&#39;click&#39;, changeArrow);
+    document.getElementById(&#34;btn-collapse-1723588112313080164&#34;).addEventListener(&#39;click&#39;, changeArrow);
 
     function changeArrow(e) {
-        let arrow = document.getElementById(&#34;collapse-1723501746997751973-arrow&#34;)
+        let arrow = document.getElementById(&#34;collapse-1723588112313080164-arrow&#34;)
         if (arrow.classList.contains(&#34;fa-caret-up&#34;)) {
             arrow.classList.replace(&#34;fa-caret-up&#34;, &#34;fa-caret-down&#34;)
         } else {
@@ -7943,14 +7943,14 @@ After these changes, our component section will look like this:&lt;/p&gt;
 
 
 
-&lt;a class=&#34;btn btn-link&#34; id=&#34;btn-collapse-1723501747002536833&#34; style=&#34;border: none;text-decoration:underline;&#34;  type=&#34;button&#34;
-    data-toggle=&#34;collapse&#34; data-target=&#34;#collapse-1723501747002536833&#34; aria-expanded=&#34;false&#34; aria-controls=&#34;collapse-1723501747002536833&#34;&gt;
+&lt;a class=&#34;btn btn-link&#34; id=&#34;btn-collapse-1723588112317287977&#34; style=&#34;border: none;text-decoration:underline;&#34;  type=&#34;button&#34;
+    data-toggle=&#34;collapse&#34; data-target=&#34;#collapse-1723588112317287977&#34; aria-expanded=&#34;false&#34; aria-controls=&#34;collapse-1723588112317287977&#34;&gt;
     &lt;h4&gt;Code Example
-        &lt;i id=&#34;collapse-1723501747002536833-arrow&#34; class=&#34;pl-2 fas fa-caret-down&#34;&gt;&lt;/i&gt;
+        &lt;i id=&#34;collapse-1723588112317287977-arrow&#34; class=&#34;pl-2 fas fa-caret-down&#34;&gt;&lt;/i&gt;
     &lt;/h4&gt;
 &lt;/a&gt;
 
-&lt;div class=&#34;collapse pt-1&#34; id=&#34;collapse-1723501747002536833&#34;&gt;
+&lt;div class=&#34;collapse pt-1&#34; id=&#34;collapse-1723588112317287977&#34;&gt;
     
         
             
@@ -8110,10 +8110,10 @@ After these changes, our component section will look like this:&lt;/p&gt;
 
 
 &lt;script type=&#34;text/javascript&#34;&gt;
-    document.getElementById(&#34;btn-collapse-1723501747002536833&#34;).addEventListener(&#39;click&#39;, changeArrow);
+    document.getElementById(&#34;btn-collapse-1723588112317287977&#34;).addEventListener(&#39;click&#39;, changeArrow);
 
     function changeArrow(e) {
-        let arrow = document.getElementById(&#34;collapse-1723501747002536833-arrow&#34;)
+        let arrow = document.getElementById(&#34;collapse-1723588112317287977-arrow&#34;)
         if (arrow.classList.contains(&#34;fa-caret-up&#34;)) {
             arrow.classList.replace(&#34;fa-caret-up&#34;, &#34;fa-caret-down&#34;)
         } else {
@@ -8133,14 +8133,14 @@ After these changes, our component section will look like this:&lt;/p&gt;
 
 
 
-&lt;a class=&#34;btn btn-link&#34; id=&#34;btn-collapse-1723501747006634798&#34; style=&#34;border: none;text-decoration:underline;&#34;  type=&#34;button&#34;
-    data-toggle=&#34;collapse&#34; data-target=&#34;#collapse-1723501747006634798&#34; aria-expanded=&#34;false&#34; aria-controls=&#34;collapse-1723501747006634798&#34;&gt;
+&lt;a class=&#34;btn btn-link&#34; id=&#34;btn-collapse-1723588112321422824&#34; style=&#34;border: none;text-decoration:underline;&#34;  type=&#34;button&#34;
+    data-toggle=&#34;collapse&#34; data-target=&#34;#collapse-1723588112321422824&#34; aria-expanded=&#34;false&#34; aria-controls=&#34;collapse-1723588112321422824&#34;&gt;
     &lt;h4&gt;Code Example
-        &lt;i id=&#34;collapse-1723501747006634798-arrow&#34; class=&#34;pl-2 fas fa-caret-down&#34;&gt;&lt;/i&gt;
+        &lt;i id=&#34;collapse-1723588112321422824-arrow&#34; class=&#34;pl-2 fas fa-caret-down&#34;&gt;&lt;/i&gt;
     &lt;/h4&gt;
 &lt;/a&gt;
 
-&lt;div class=&#34;collapse pt-1&#34; id=&#34;collapse-1723501747006634798&#34;&gt;
+&lt;div class=&#34;collapse pt-1&#34; id=&#34;collapse-1723588112321422824&#34;&gt;
     
         
             
@@ -8294,10 +8294,10 @@ After these changes, our component section will look like this:&lt;/p&gt;
 
 
 &lt;script type=&#34;text/javascript&#34;&gt;
-    document.getElementById(&#34;btn-collapse-1723501747006634798&#34;).addEventListener(&#39;click&#39;, changeArrow);
+    document.getElementById(&#34;btn-collapse-1723588112321422824&#34;).addEventListener(&#39;click&#39;, changeArrow);
 
     function changeArrow(e) {
-        let arrow = document.getElementById(&#34;collapse-1723501747006634798-arrow&#34;)
+        let arrow = document.getElementById(&#34;collapse-1723588112321422824-arrow&#34;)
         if (arrow.classList.contains(&#34;fa-caret-up&#34;)) {
             arrow.classList.replace(&#34;fa-caret-up&#34;, &#34;fa-caret-down&#34;)
         } else {
@@ -8317,14 +8317,14 @@ After these changes, our component section will look like this:&lt;/p&gt;
 
 
 
-&lt;a class=&#34;btn btn-link&#34; id=&#34;btn-collapse-1723501747009996233&#34; style=&#34;border: none;text-decoration:underline;&#34;  type=&#34;button&#34;
-    data-toggle=&#34;collapse&#34; data-target=&#34;#collapse-1723501747009996233&#34; aria-expanded=&#34;false&#34; aria-controls=&#34;collapse-1723501747009996233&#34;&gt;
+&lt;a class=&#34;btn btn-link&#34; id=&#34;btn-collapse-1723588112324796712&#34; style=&#34;border: none;text-decoration:underline;&#34;  type=&#34;button&#34;
+    data-toggle=&#34;collapse&#34; data-target=&#34;#collapse-1723588112324796712&#34; aria-expanded=&#34;false&#34; aria-controls=&#34;collapse-1723588112324796712&#34;&gt;
     &lt;h4&gt;Code Example
-        &lt;i id=&#34;collapse-1723501747009996233-arrow&#34; class=&#34;pl-2 fas fa-caret-down&#34;&gt;&lt;/i&gt;
+        &lt;i id=&#34;collapse-1723588112324796712-arrow&#34; class=&#34;pl-2 fas fa-caret-down&#34;&gt;&lt;/i&gt;
     &lt;/h4&gt;
 &lt;/a&gt;
 
-&lt;div class=&#34;collapse pt-1&#34; id=&#34;collapse-1723501747009996233&#34;&gt;
+&lt;div class=&#34;collapse pt-1&#34; id=&#34;collapse-1723588112324796712&#34;&gt;
     
         
             
@@ -8454,10 +8454,10 @@ After these changes, our component section will look like this:&lt;/p&gt;
 
 
 &lt;script type=&#34;text/javascript&#34;&gt;
-    document.getElementById(&#34;btn-collapse-1723501747009996233&#34;).addEventListener(&#39;click&#39;, changeArrow);
+    document.getElementById(&#34;btn-collapse-1723588112324796712&#34;).addEventListener(&#39;click&#39;, changeArrow);
 
     function changeArrow(e) {
-        let arrow = document.getElementById(&#34;collapse-1723501747009996233-arrow&#34;)
+        let arrow = document.getElementById(&#34;collapse-1723588112324796712-arrow&#34;)
         if (arrow.classList.contains(&#34;fa-caret-up&#34;)) {
             arrow.classList.replace(&#34;fa-caret-up&#34;, &#34;fa-caret-down&#34;)
         } else {
@@ -12357,14 +12357,14 @@ After these changes, our component section will look like this:&lt;/p&gt;
 
 
 
-&lt;a class=&#34;btn btn-link&#34; id=&#34;btn-collapse-1723501748034694238&#34; style=&#34;border: none;text-decoration:underline;&#34;  type=&#34;button&#34;
-    data-toggle=&#34;collapse&#34; data-target=&#34;#collapse-1723501748034694238&#34; aria-expanded=&#34;false&#34; aria-controls=&#34;collapse-1723501748034694238&#34;&gt;
+&lt;a class=&#34;btn btn-link&#34; id=&#34;btn-collapse-1723588113349316747&#34; style=&#34;border: none;text-decoration:underline;&#34;  type=&#34;button&#34;
+    data-toggle=&#34;collapse&#34; data-target=&#34;#collapse-1723588113349316747&#34; aria-expanded=&#34;false&#34; aria-controls=&#34;collapse-1723588113349316747&#34;&gt;
     &lt;h4&gt;Code Example
-        &lt;i id=&#34;collapse-1723501748034694238-arrow&#34; class=&#34;pl-2 fas fa-caret-down&#34;&gt;&lt;/i&gt;
+        &lt;i id=&#34;collapse-1723588113349316747-arrow&#34; class=&#34;pl-2 fas fa-caret-down&#34;&gt;&lt;/i&gt;
     &lt;/h4&gt;
 &lt;/a&gt;
 
-&lt;div class=&#34;collapse pt-1&#34; id=&#34;collapse-1723501748034694238&#34;&gt;
+&lt;div class=&#34;collapse pt-1&#34; id=&#34;collapse-1723588113349316747&#34;&gt;
     
         
             
@@ -12479,10 +12479,10 @@ After these changes, our component section will look like this:&lt;/p&gt;
 
 
 &lt;script type=&#34;text/javascript&#34;&gt;
-    document.getElementById(&#34;btn-collapse-1723501748034694238&#34;).addEventListener(&#39;click&#39;, changeArrow);
+    document.getElementById(&#34;btn-collapse-1723588113349316747&#34;).addEventListener(&#39;click&#39;, changeArrow);
 
     function changeArrow(e) {
-        let arrow = document.getElementById(&#34;collapse-1723501748034694238-arrow&#34;)
+        let arrow = document.getElementById(&#34;collapse-1723588113349316747-arrow&#34;)
         if (arrow.classList.contains(&#34;fa-caret-up&#34;)) {
             arrow.classList.replace(&#34;fa-caret-up&#34;, &#34;fa-caret-down&#34;)
         } else {
@@ -12502,14 +12502,14 @@ After these changes, our component section will look like this:&lt;/p&gt;
 
 
 
-&lt;a class=&#34;btn btn-link&#34; id=&#34;btn-collapse-1723501748046377688&#34; style=&#34;border: none;text-decoration:underline;&#34;  type=&#34;button&#34;
-    data-toggle=&#34;collapse&#34; data-target=&#34;#collapse-1723501748046377688&#34; aria-expanded=&#34;false&#34; aria-controls=&#34;collapse-1723501748046377688&#34;&gt;
+&lt;a class=&#34;btn btn-link&#34; id=&#34;btn-collapse-1723588113360994832&#34; style=&#34;border: none;text-decoration:underline;&#34;  type=&#34;button&#34;
+    data-toggle=&#34;collapse&#34; data-target=&#34;#collapse-1723588113360994832&#34; aria-expanded=&#34;false&#34; aria-controls=&#34;collapse-1723588113360994832&#34;&gt;
     &lt;h4&gt;Code Example
-        &lt;i id=&#34;collapse-1723501748046377688-arrow&#34; class=&#34;pl-2 fas fa-caret-down&#34;&gt;&lt;/i&gt;
+        &lt;i id=&#34;collapse-1723588113360994832-arrow&#34; class=&#34;pl-2 fas fa-caret-down&#34;&gt;&lt;/i&gt;
     &lt;/h4&gt;
 &lt;/a&gt;
 
-&lt;div class=&#34;collapse pt-1&#34; id=&#34;collapse-1723501748046377688&#34;&gt;
+&lt;div class=&#34;collapse pt-1&#34; id=&#34;collapse-1723588113360994832&#34;&gt;
     
         
             
@@ -12642,10 +12642,10 @@ After these changes, our component section will look like this:&lt;/p&gt;
 
 
 &lt;script type=&#34;text/javascript&#34;&gt;
-    document.getElementById(&#34;btn-collapse-1723501748046377688&#34;).addEventListener(&#39;click&#39;, changeArrow);
+    document.getElementById(&#34;btn-collapse-1723588113360994832&#34;).addEventListener(&#39;click&#39;, changeArrow);
 
     function changeArrow(e) {
-        let arrow = document.getElementById(&#34;collapse-1723501748046377688-arrow&#34;)
+        let arrow = document.getElementById(&#34;collapse-1723588113360994832-arrow&#34;)
         if (arrow.classList.contains(&#34;fa-caret-up&#34;)) {
             arrow.classList.replace(&#34;fa-caret-up&#34;, &#34;fa-caret-down&#34;)
         } else {
@@ -12665,14 +12665,14 @@ After these changes, our component section will look like this:&lt;/p&gt;
 
 
 
-&lt;a class=&#34;btn btn-link&#34; id=&#34;btn-collapse-1723501748056882771&#34; style=&#34;border: none;text-decoration:underline;&#34;  type=&#34;button&#34;
-    data-toggle=&#34;collapse&#34; data-target=&#34;#collapse-1723501748056882771&#34; aria-expanded=&#34;false&#34; aria-controls=&#34;collapse-1723501748056882771&#34;&gt;
+&lt;a class=&#34;btn btn-link&#34; id=&#34;btn-collapse-1723588113370810822&#34; style=&#34;border: none;text-decoration:underline;&#34;  type=&#34;button&#34;
+    data-toggle=&#34;collapse&#34; data-target=&#34;#collapse-1723588113370810822&#34; aria-expanded=&#34;false&#34; aria-controls=&#34;collapse-1723588113370810822&#34;&gt;
     &lt;h4&gt;Code Example
-        &lt;i id=&#34;collapse-1723501748056882771-arrow&#34; class=&#34;pl-2 fas fa-caret-down&#34;&gt;&lt;/i&gt;
+        &lt;i id=&#34;collapse-1723588113370810822-arrow&#34; class=&#34;pl-2 fas fa-caret-down&#34;&gt;&lt;/i&gt;
     &lt;/h4&gt;
 &lt;/a&gt;
 
-&lt;div class=&#34;collapse pt-1&#34; id=&#34;collapse-1723501748056882771&#34;&gt;
+&lt;div class=&#34;collapse pt-1&#34; id=&#34;collapse-1723588113370810822&#34;&gt;
     
         
             
@@ -12822,10 +12822,10 @@ After these changes, our component section will look like this:&lt;/p&gt;
 
 
 &lt;script type=&#34;text/javascript&#34;&gt;
-    document.getElementById(&#34;btn-collapse-1723501748056882771&#34;).addEventListener(&#39;click&#39;, changeArrow);
+    document.getElementById(&#34;btn-collapse-1723588113370810822&#34;).addEventListener(&#39;click&#39;, changeArrow);
 
     function changeArrow(e) {
-        let arrow = document.getElementById(&#34;collapse-1723501748056882771-arrow&#34;)
+        let arrow = document.getElementById(&#34;collapse-1723588113370810822-arrow&#34;)
         if (arrow.classList.contains(&#34;fa-caret-up&#34;)) {
             arrow.classList.replace(&#34;fa-caret-up&#34;, &#34;fa-caret-down&#34;)
         } else {
@@ -12845,14 +12845,14 @@ After these changes, our component section will look like this:&lt;/p&gt;
 
 
 
-&lt;a class=&#34;btn btn-link&#34; id=&#34;btn-collapse-1723501748063656836&#34; style=&#34;border: none;text-decoration:underline;&#34;  type=&#34;button&#34;
-    data-toggle=&#34;collapse&#34; data-target=&#34;#collapse-1723501748063656836&#34; aria-expanded=&#34;false&#34; aria-controls=&#34;collapse-1723501748063656836&#34;&gt;
+&lt;a class=&#34;btn btn-link&#34; id=&#34;btn-collapse-1723588113377413114&#34; style=&#34;border: none;text-decoration:underline;&#34;  type=&#34;button&#34;
+    data-toggle=&#34;collapse&#34; data-target=&#34;#collapse-1723588113377413114&#34; aria-expanded=&#34;false&#34; aria-controls=&#34;collapse-1723588113377413114&#34;&gt;
     &lt;h4&gt;Code Example
-        &lt;i id=&#34;collapse-1723501748063656836-arrow&#34; class=&#34;pl-2 fas fa-caret-down&#34;&gt;&lt;/i&gt;
+        &lt;i id=&#34;collapse-1723588113377413114-arrow&#34; class=&#34;pl-2 fas fa-caret-down&#34;&gt;&lt;/i&gt;
     &lt;/h4&gt;
 &lt;/a&gt;
 
-&lt;div class=&#34;collapse pt-1&#34; id=&#34;collapse-1723501748063656836&#34;&gt;
+&lt;div class=&#34;collapse pt-1&#34; id=&#34;collapse-1723588113377413114&#34;&gt;
     
         
             
@@ -12977,10 +12977,10 @@ After these changes, our component section will look like this:&lt;/p&gt;
 
 
 &lt;script type=&#34;text/javascript&#34;&gt;
-    document.getElementById(&#34;btn-collapse-1723501748063656836&#34;).addEventListener(&#39;click&#39;, changeArrow);
+    document.getElementById(&#34;btn-collapse-1723588113377413114&#34;).addEventListener(&#39;click&#39;, changeArrow);
 
     function changeArrow(e) {
-        let arrow = document.getElementById(&#34;collapse-1723501748063656836-arrow&#34;)
+        let arrow = document.getElementById(&#34;collapse-1723588113377413114-arrow&#34;)
         if (arrow.classList.contains(&#34;fa-caret-up&#34;)) {
             arrow.classList.replace(&#34;fa-caret-up&#34;, &#34;fa-caret-down&#34;)
         } else {
@@ -13000,14 +13000,14 @@ After these changes, our component section will look like this:&lt;/p&gt;
 
 
 
-&lt;a class=&#34;btn btn-link&#34; id=&#34;btn-collapse-1723501748073132030&#34; style=&#34;border: none;text-decoration:underline;&#34;  type=&#34;button&#34;
-    data-toggle=&#34;collapse&#34; data-target=&#34;#collapse-1723501748073132030&#34; aria-expanded=&#34;false&#34; aria-controls=&#34;collapse-1723501748073132030&#34;&gt;
+&lt;a class=&#34;btn btn-link&#34; id=&#34;btn-collapse-1723588113386739030&#34; style=&#34;border: none;text-decoration:underline;&#34;  type=&#34;button&#34;
+    data-toggle=&#34;collapse&#34; data-target=&#34;#collapse-1723588113386739030&#34; aria-expanded=&#34;false&#34; aria-controls=&#34;collapse-1723588113386739030&#34;&gt;
     &lt;h4&gt;Code Example
-        &lt;i id=&#34;collapse-1723501748073132030-arrow&#34; class=&#34;pl-2 fas fa-caret-down&#34;&gt;&lt;/i&gt;
+        &lt;i id=&#34;collapse-1723588113386739030-arrow&#34; class=&#34;pl-2 fas fa-caret-down&#34;&gt;&lt;/i&gt;
     &lt;/h4&gt;
 &lt;/a&gt;
 
-&lt;div class=&#34;collapse pt-1&#34; id=&#34;collapse-1723501748073132030&#34;&gt;
+&lt;div class=&#34;collapse pt-1&#34; id=&#34;collapse-1723588113386739030&#34;&gt;
     
         
             
@@ -13124,10 +13124,10 @@ After these changes, our component section will look like this:&lt;/p&gt;
 
 
 &lt;script type=&#34;text/javascript&#34;&gt;
-    document.getElementById(&#34;btn-collapse-1723501748073132030&#34;).addEventListener(&#39;click&#39;, changeArrow);
+    document.getElementById(&#34;btn-collapse-1723588113386739030&#34;).addEventListener(&#39;click&#39;, changeArrow);
 
     function changeArrow(e) {
-        let arrow = document.getElementById(&#34;collapse-1723501748073132030-arrow&#34;)
+        let arrow = document.getElementById(&#34;collapse-1723588113386739030-arrow&#34;)
         if (arrow.classList.contains(&#34;fa-caret-up&#34;)) {
             arrow.classList.replace(&#34;fa-caret-up&#34;, &#34;fa-caret-down&#34;)
         } else {
