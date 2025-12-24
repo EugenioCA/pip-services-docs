@@ -2609,14 +2609,14 @@
 
 
 
-&lt;a class=&#34;btn btn-link&#34; id=&#34;btn-collapse-1766529134084478457&#34; style=&#34;border: none;text-decoration:underline;&#34;  type=&#34;button&#34;
-    data-toggle=&#34;collapse&#34; data-target=&#34;#collapse-1766529134084478457&#34; aria-expanded=&#34;false&#34; aria-controls=&#34;collapse-1766529134084478457&#34;&gt;
+&lt;a class=&#34;btn btn-link&#34; id=&#34;btn-collapse-1766615556804191081&#34; style=&#34;border: none;text-decoration:underline;&#34;  type=&#34;button&#34;
+    data-toggle=&#34;collapse&#34; data-target=&#34;#collapse-1766615556804191081&#34; aria-expanded=&#34;false&#34; aria-controls=&#34;collapse-1766615556804191081&#34;&gt;
     &lt;h4&gt;Code Example
-        &lt;i id=&#34;collapse-1766529134084478457-arrow&#34; class=&#34;pl-2 fas fa-caret-down&#34;&gt;&lt;/i&gt;
+        &lt;i id=&#34;collapse-1766615556804191081-arrow&#34; class=&#34;pl-2 fas fa-caret-down&#34;&gt;&lt;/i&gt;
     &lt;/h4&gt;
 &lt;/a&gt;
 
-&lt;div class=&#34;collapse pt-1&#34; id=&#34;collapse-1766529134084478457&#34;&gt;
+&lt;div class=&#34;collapse pt-1&#34; id=&#34;collapse-1766615556804191081&#34;&gt;
     
         
             
@@ -2680,10 +2680,10 @@
 
 
 &lt;script type=&#34;text/javascript&#34;&gt;
-    document.getElementById(&#34;btn-collapse-1766529134084478457&#34;).addEventListener(&#39;click&#39;, changeArrow);
+    document.getElementById(&#34;btn-collapse-1766615556804191081&#34;).addEventListener(&#39;click&#39;, changeArrow);
 
     function changeArrow(e) {
-        let arrow = document.getElementById(&#34;collapse-1766529134084478457-arrow&#34;)
+        let arrow = document.getElementById(&#34;collapse-1766615556804191081-arrow&#34;)
         if (arrow.classList.contains(&#34;fa-caret-up&#34;)) {
             arrow.classList.replace(&#34;fa-caret-up&#34;, &#34;fa-caret-down&#34;)
         } else {
@@ -2712,14 +2712,14 @@
 
 
 
-&lt;a class=&#34;btn btn-link&#34; id=&#34;btn-collapse-1766529134088093281&#34; style=&#34;border: none;text-decoration:underline;&#34;  type=&#34;button&#34;
-    data-toggle=&#34;collapse&#34; data-target=&#34;#collapse-1766529134088093281&#34; aria-expanded=&#34;false&#34; aria-controls=&#34;collapse-1766529134088093281&#34;&gt;
+&lt;a class=&#34;btn btn-link&#34; id=&#34;btn-collapse-1766615556807953138&#34; style=&#34;border: none;text-decoration:underline;&#34;  type=&#34;button&#34;
+    data-toggle=&#34;collapse&#34; data-target=&#34;#collapse-1766615556807953138&#34; aria-expanded=&#34;false&#34; aria-controls=&#34;collapse-1766615556807953138&#34;&gt;
     &lt;h4&gt;Code Example
-        &lt;i id=&#34;collapse-1766529134088093281-arrow&#34; class=&#34;pl-2 fas fa-caret-down&#34;&gt;&lt;/i&gt;
+        &lt;i id=&#34;collapse-1766615556807953138-arrow&#34; class=&#34;pl-2 fas fa-caret-down&#34;&gt;&lt;/i&gt;
     &lt;/h4&gt;
 &lt;/a&gt;
 
-&lt;div class=&#34;collapse pt-1&#34; id=&#34;collapse-1766529134088093281&#34;&gt;
+&lt;div class=&#34;collapse pt-1&#34; id=&#34;collapse-1766615556807953138&#34;&gt;
     
         
             
@@ -2792,10 +2792,10 @@
 
 
 &lt;script type=&#34;text/javascript&#34;&gt;
-    document.getElementById(&#34;btn-collapse-1766529134088093281&#34;).addEventListener(&#39;click&#39;, changeArrow);
+    document.getElementById(&#34;btn-collapse-1766615556807953138&#34;).addEventListener(&#39;click&#39;, changeArrow);
 
     function changeArrow(e) {
-        let arrow = document.getElementById(&#34;collapse-1766529134088093281-arrow&#34;)
+        let arrow = document.getElementById(&#34;collapse-1766615556807953138-arrow&#34;)
         if (arrow.classList.contains(&#34;fa-caret-up&#34;)) {
             arrow.classList.replace(&#34;fa-caret-up&#34;, &#34;fa-caret-down&#34;)
         } else {
@@ -2815,14 +2815,14 @@
 
 
 
-&lt;a class=&#34;btn btn-link&#34; id=&#34;btn-collapse-1766529134097763604&#34; style=&#34;border: none;text-decoration:underline;&#34;  type=&#34;button&#34;
-    data-toggle=&#34;collapse&#34; data-target=&#34;#collapse-1766529134097763604&#34; aria-expanded=&#34;false&#34; aria-controls=&#34;collapse-1766529134097763604&#34;&gt;
+&lt;a class=&#34;btn btn-link&#34; id=&#34;btn-collapse-1766615556817606746&#34; style=&#34;border: none;text-decoration:underline;&#34;  type=&#34;button&#34;
+    data-toggle=&#34;collapse&#34; data-target=&#34;#collapse-1766615556817606746&#34; aria-expanded=&#34;false&#34; aria-controls=&#34;collapse-1766615556817606746&#34;&gt;
     &lt;h4&gt;Code Example
-        &lt;i id=&#34;collapse-1766529134097763604-arrow&#34; class=&#34;pl-2 fas fa-caret-down&#34;&gt;&lt;/i&gt;
+        &lt;i id=&#34;collapse-1766615556817606746-arrow&#34; class=&#34;pl-2 fas fa-caret-down&#34;&gt;&lt;/i&gt;
     &lt;/h4&gt;
 &lt;/a&gt;
 
-&lt;div class=&#34;collapse pt-1&#34; id=&#34;collapse-1766529134097763604&#34;&gt;
+&lt;div class=&#34;collapse pt-1&#34; id=&#34;collapse-1766615556817606746&#34;&gt;
     
         
             
@@ -2902,10 +2902,10 @@
 
 
 &lt;script type=&#34;text/javascript&#34;&gt;
-    document.getElementById(&#34;btn-collapse-1766529134097763604&#34;).addEventListener(&#39;click&#39;, changeArrow);
+    document.getElementById(&#34;btn-collapse-1766615556817606746&#34;).addEventListener(&#39;click&#39;, changeArrow);
 
     function changeArrow(e) {
-        let arrow = document.getElementById(&#34;collapse-1766529134097763604-arrow&#34;)
+        let arrow = document.getElementById(&#34;collapse-1766615556817606746-arrow&#34;)
         if (arrow.classList.contains(&#34;fa-caret-up&#34;)) {
             arrow.classList.replace(&#34;fa-caret-up&#34;, &#34;fa-caret-down&#34;)
         } else {
@@ -2925,14 +2925,14 @@
 
 
 
-&lt;a class=&#34;btn btn-link&#34; id=&#34;btn-collapse-1766529134102957832&#34; style=&#34;border: none;text-decoration:underline;&#34;  type=&#34;button&#34;
-    data-toggle=&#34;collapse&#34; data-target=&#34;#collapse-1766529134102957832&#34; aria-expanded=&#34;false&#34; aria-controls=&#34;collapse-1766529134102957832&#34;&gt;
+&lt;a class=&#34;btn btn-link&#34; id=&#34;btn-collapse-1766615556823199339&#34; style=&#34;border: none;text-decoration:underline;&#34;  type=&#34;button&#34;
+    data-toggle=&#34;collapse&#34; data-target=&#34;#collapse-1766615556823199339&#34; aria-expanded=&#34;false&#34; aria-controls=&#34;collapse-1766615556823199339&#34;&gt;
     &lt;h4&gt;Code Example
-        &lt;i id=&#34;collapse-1766529134102957832-arrow&#34; class=&#34;pl-2 fas fa-caret-down&#34;&gt;&lt;/i&gt;
+        &lt;i id=&#34;collapse-1766615556823199339-arrow&#34; class=&#34;pl-2 fas fa-caret-down&#34;&gt;&lt;/i&gt;
     &lt;/h4&gt;
 &lt;/a&gt;
 
-&lt;div class=&#34;collapse pt-1&#34; id=&#34;collapse-1766529134102957832&#34;&gt;
+&lt;div class=&#34;collapse pt-1&#34; id=&#34;collapse-1766615556823199339&#34;&gt;
     
         
             
@@ -3020,10 +3020,10 @@
 
 
 &lt;script type=&#34;text/javascript&#34;&gt;
-    document.getElementById(&#34;btn-collapse-1766529134102957832&#34;).addEventListener(&#39;click&#39;, changeArrow);
+    document.getElementById(&#34;btn-collapse-1766615556823199339&#34;).addEventListener(&#39;click&#39;, changeArrow);
 
     function changeArrow(e) {
-        let arrow = document.getElementById(&#34;collapse-1766529134102957832-arrow&#34;)
+        let arrow = document.getElementById(&#34;collapse-1766615556823199339-arrow&#34;)
         if (arrow.classList.contains(&#34;fa-caret-up&#34;)) {
             arrow.classList.replace(&#34;fa-caret-up&#34;, &#34;fa-caret-down&#34;)
         } else {
@@ -3043,14 +3043,14 @@
 
 
 
-&lt;a class=&#34;btn btn-link&#34; id=&#34;btn-collapse-1766529134106475834&#34; style=&#34;border: none;text-decoration:underline;&#34;  type=&#34;button&#34;
-    data-toggle=&#34;collapse&#34; data-target=&#34;#collapse-1766529134106475834&#34; aria-expanded=&#34;false&#34; aria-controls=&#34;collapse-1766529134106475834&#34;&gt;
+&lt;a class=&#34;btn btn-link&#34; id=&#34;btn-collapse-1766615556826945576&#34; style=&#34;border: none;text-decoration:underline;&#34;  type=&#34;button&#34;
+    data-toggle=&#34;collapse&#34; data-target=&#34;#collapse-1766615556826945576&#34; aria-expanded=&#34;false&#34; aria-controls=&#34;collapse-1766615556826945576&#34;&gt;
     &lt;h4&gt;Code Example
-        &lt;i id=&#34;collapse-1766529134106475834-arrow&#34; class=&#34;pl-2 fas fa-caret-down&#34;&gt;&lt;/i&gt;
+        &lt;i id=&#34;collapse-1766615556826945576-arrow&#34; class=&#34;pl-2 fas fa-caret-down&#34;&gt;&lt;/i&gt;
     &lt;/h4&gt;
 &lt;/a&gt;
 
-&lt;div class=&#34;collapse pt-1&#34; id=&#34;collapse-1766529134106475834&#34;&gt;
+&lt;div class=&#34;collapse pt-1&#34; id=&#34;collapse-1766615556826945576&#34;&gt;
     
         
             
@@ -3123,10 +3123,10 @@
 
 
 &lt;script type=&#34;text/javascript&#34;&gt;
-    document.getElementById(&#34;btn-collapse-1766529134106475834&#34;).addEventListener(&#39;click&#39;, changeArrow);
+    document.getElementById(&#34;btn-collapse-1766615556826945576&#34;).addEventListener(&#39;click&#39;, changeArrow);
 
     function changeArrow(e) {
-        let arrow = document.getElementById(&#34;collapse-1766529134106475834-arrow&#34;)
+        let arrow = document.getElementById(&#34;collapse-1766615556826945576-arrow&#34;)
         if (arrow.classList.contains(&#34;fa-caret-up&#34;)) {
             arrow.classList.replace(&#34;fa-caret-up&#34;, &#34;fa-caret-down&#34;)
         } else {
@@ -3146,14 +3146,14 @@
 
 
 
-&lt;a class=&#34;btn btn-link&#34; id=&#34;btn-collapse-1766529134113010370&#34; style=&#34;border: none;text-decoration:underline;&#34;  type=&#34;button&#34;
-    data-toggle=&#34;collapse&#34; data-target=&#34;#collapse-1766529134113010370&#34; aria-expanded=&#34;false&#34; aria-controls=&#34;collapse-1766529134113010370&#34;&gt;
+&lt;a class=&#34;btn btn-link&#34; id=&#34;btn-collapse-1766615556833652087&#34; style=&#34;border: none;text-decoration:underline;&#34;  type=&#34;button&#34;
+    data-toggle=&#34;collapse&#34; data-target=&#34;#collapse-1766615556833652087&#34; aria-expanded=&#34;false&#34; aria-controls=&#34;collapse-1766615556833652087&#34;&gt;
     &lt;h4&gt;Code Example
-        &lt;i id=&#34;collapse-1766529134113010370-arrow&#34; class=&#34;pl-2 fas fa-caret-down&#34;&gt;&lt;/i&gt;
+        &lt;i id=&#34;collapse-1766615556833652087-arrow&#34; class=&#34;pl-2 fas fa-caret-down&#34;&gt;&lt;/i&gt;
     &lt;/h4&gt;
 &lt;/a&gt;
 
-&lt;div class=&#34;collapse pt-1&#34; id=&#34;collapse-1766529134113010370&#34;&gt;
+&lt;div class=&#34;collapse pt-1&#34; id=&#34;collapse-1766615556833652087&#34;&gt;
     
         
             
@@ -3226,10 +3226,10 @@
 
 
 &lt;script type=&#34;text/javascript&#34;&gt;
-    document.getElementById(&#34;btn-collapse-1766529134113010370&#34;).addEventListener(&#39;click&#39;, changeArrow);
+    document.getElementById(&#34;btn-collapse-1766615556833652087&#34;).addEventListener(&#39;click&#39;, changeArrow);
 
     function changeArrow(e) {
-        let arrow = document.getElementById(&#34;collapse-1766529134113010370-arrow&#34;)
+        let arrow = document.getElementById(&#34;collapse-1766615556833652087-arrow&#34;)
         if (arrow.classList.contains(&#34;fa-caret-up&#34;)) {
             arrow.classList.replace(&#34;fa-caret-up&#34;, &#34;fa-caret-down&#34;)
         } else {
@@ -8596,14 +8596,14 @@ Finally, it provides a full version of the service and client and a summary of w
 
 
 
-&lt;a class=&#34;btn btn-link&#34; id=&#34;btn-collapse-1766529134592111103&#34; style=&#34;border: none;text-decoration:underline;&#34;  type=&#34;button&#34;
-    data-toggle=&#34;collapse&#34; data-target=&#34;#collapse-1766529134592111103&#34; aria-expanded=&#34;false&#34; aria-controls=&#34;collapse-1766529134592111103&#34;&gt;
+&lt;a class=&#34;btn btn-link&#34; id=&#34;btn-collapse-1766615557272760278&#34; style=&#34;border: none;text-decoration:underline;&#34;  type=&#34;button&#34;
+    data-toggle=&#34;collapse&#34; data-target=&#34;#collapse-1766615557272760278&#34; aria-expanded=&#34;false&#34; aria-controls=&#34;collapse-1766615557272760278&#34;&gt;
     &lt;h4&gt;Code Example
-        &lt;i id=&#34;collapse-1766529134592111103-arrow&#34; class=&#34;pl-2 fas fa-caret-down&#34;&gt;&lt;/i&gt;
+        &lt;i id=&#34;collapse-1766615557272760278-arrow&#34; class=&#34;pl-2 fas fa-caret-down&#34;&gt;&lt;/i&gt;
     &lt;/h4&gt;
 &lt;/a&gt;
 
-&lt;div class=&#34;collapse pt-1&#34; id=&#34;collapse-1766529134592111103&#34;&gt;
+&lt;div class=&#34;collapse pt-1&#34; id=&#34;collapse-1766615557272760278&#34;&gt;
     
         
             
@@ -8733,10 +8733,10 @@ Finally, it provides a full version of the service and client and a summary of w
 
 
 &lt;script type=&#34;text/javascript&#34;&gt;
-    document.getElementById(&#34;btn-collapse-1766529134592111103&#34;).addEventListener(&#39;click&#39;, changeArrow);
+    document.getElementById(&#34;btn-collapse-1766615557272760278&#34;).addEventListener(&#39;click&#39;, changeArrow);
 
     function changeArrow(e) {
-        let arrow = document.getElementById(&#34;collapse-1766529134592111103-arrow&#34;)
+        let arrow = document.getElementById(&#34;collapse-1766615557272760278-arrow&#34;)
         if (arrow.classList.contains(&#34;fa-caret-up&#34;)) {
             arrow.classList.replace(&#34;fa-caret-up&#34;, &#34;fa-caret-down&#34;)
         } else {
@@ -8756,14 +8756,14 @@ Finally, it provides a full version of the service and client and a summary of w
 
 
 
-&lt;a class=&#34;btn btn-link&#34; id=&#34;btn-collapse-1766529134603446081&#34; style=&#34;border: none;text-decoration:underline;&#34;  type=&#34;button&#34;
-    data-toggle=&#34;collapse&#34; data-target=&#34;#collapse-1766529134603446081&#34; aria-expanded=&#34;false&#34; aria-controls=&#34;collapse-1766529134603446081&#34;&gt;
+&lt;a class=&#34;btn btn-link&#34; id=&#34;btn-collapse-1766615557284229245&#34; style=&#34;border: none;text-decoration:underline;&#34;  type=&#34;button&#34;
+    data-toggle=&#34;collapse&#34; data-target=&#34;#collapse-1766615557284229245&#34; aria-expanded=&#34;false&#34; aria-controls=&#34;collapse-1766615557284229245&#34;&gt;
     &lt;h4&gt;Code Example
-        &lt;i id=&#34;collapse-1766529134603446081-arrow&#34; class=&#34;pl-2 fas fa-caret-down&#34;&gt;&lt;/i&gt;
+        &lt;i id=&#34;collapse-1766615557284229245-arrow&#34; class=&#34;pl-2 fas fa-caret-down&#34;&gt;&lt;/i&gt;
     &lt;/h4&gt;
 &lt;/a&gt;
 
-&lt;div class=&#34;collapse pt-1&#34; id=&#34;collapse-1766529134603446081&#34;&gt;
+&lt;div class=&#34;collapse pt-1&#34; id=&#34;collapse-1766615557284229245&#34;&gt;
     
         
             
@@ -8907,10 +8907,10 @@ Finally, it provides a full version of the service and client and a summary of w
 
 
 &lt;script type=&#34;text/javascript&#34;&gt;
-    document.getElementById(&#34;btn-collapse-1766529134603446081&#34;).addEventListener(&#39;click&#39;, changeArrow);
+    document.getElementById(&#34;btn-collapse-1766615557284229245&#34;).addEventListener(&#39;click&#39;, changeArrow);
 
     function changeArrow(e) {
-        let arrow = document.getElementById(&#34;collapse-1766529134603446081-arrow&#34;)
+        let arrow = document.getElementById(&#34;collapse-1766615557284229245-arrow&#34;)
         if (arrow.classList.contains(&#34;fa-caret-up&#34;)) {
             arrow.classList.replace(&#34;fa-caret-up&#34;, &#34;fa-caret-down&#34;)
         } else {
@@ -8930,14 +8930,14 @@ Finally, it provides a full version of the service and client and a summary of w
 
 
 
-&lt;a class=&#34;btn btn-link&#34; id=&#34;btn-collapse-1766529134612579159&#34; style=&#34;border: none;text-decoration:underline;&#34;  type=&#34;button&#34;
-    data-toggle=&#34;collapse&#34; data-target=&#34;#collapse-1766529134612579159&#34; aria-expanded=&#34;false&#34; aria-controls=&#34;collapse-1766529134612579159&#34;&gt;
+&lt;a class=&#34;btn btn-link&#34; id=&#34;btn-collapse-1766615557293440648&#34; style=&#34;border: none;text-decoration:underline;&#34;  type=&#34;button&#34;
+    data-toggle=&#34;collapse&#34; data-target=&#34;#collapse-1766615557293440648&#34; aria-expanded=&#34;false&#34; aria-controls=&#34;collapse-1766615557293440648&#34;&gt;
     &lt;h4&gt;Code Example
-        &lt;i id=&#34;collapse-1766529134612579159-arrow&#34; class=&#34;pl-2 fas fa-caret-down&#34;&gt;&lt;/i&gt;
+        &lt;i id=&#34;collapse-1766615557293440648-arrow&#34; class=&#34;pl-2 fas fa-caret-down&#34;&gt;&lt;/i&gt;
     &lt;/h4&gt;
 &lt;/a&gt;
 
-&lt;div class=&#34;collapse pt-1&#34; id=&#34;collapse-1766529134612579159&#34;&gt;
+&lt;div class=&#34;collapse pt-1&#34; id=&#34;collapse-1766615557293440648&#34;&gt;
     
         
             
@@ -9088,10 +9088,10 @@ Finally, it provides a full version of the service and client and a summary of w
 
 
 &lt;script type=&#34;text/javascript&#34;&gt;
-    document.getElementById(&#34;btn-collapse-1766529134612579159&#34;).addEventListener(&#39;click&#39;, changeArrow);
+    document.getElementById(&#34;btn-collapse-1766615557293440648&#34;).addEventListener(&#39;click&#39;, changeArrow);
 
     function changeArrow(e) {
-        let arrow = document.getElementById(&#34;collapse-1766529134612579159-arrow&#34;)
+        let arrow = document.getElementById(&#34;collapse-1766615557293440648-arrow&#34;)
         if (arrow.classList.contains(&#34;fa-caret-up&#34;)) {
             arrow.classList.replace(&#34;fa-caret-up&#34;, &#34;fa-caret-down&#34;)
         } else {
@@ -9111,14 +9111,14 @@ Finally, it provides a full version of the service and client and a summary of w
 
 
 
-&lt;a class=&#34;btn btn-link&#34; id=&#34;btn-collapse-1766529134618895857&#34; style=&#34;border: none;text-decoration:underline;&#34;  type=&#34;button&#34;
-    data-toggle=&#34;collapse&#34; data-target=&#34;#collapse-1766529134618895857&#34; aria-expanded=&#34;false&#34; aria-controls=&#34;collapse-1766529134618895857&#34;&gt;
+&lt;a class=&#34;btn btn-link&#34; id=&#34;btn-collapse-1766615557299870260&#34; style=&#34;border: none;text-decoration:underline;&#34;  type=&#34;button&#34;
+    data-toggle=&#34;collapse&#34; data-target=&#34;#collapse-1766615557299870260&#34; aria-expanded=&#34;false&#34; aria-controls=&#34;collapse-1766615557299870260&#34;&gt;
     &lt;h4&gt;Code Example
-        &lt;i id=&#34;collapse-1766529134618895857-arrow&#34; class=&#34;pl-2 fas fa-caret-down&#34;&gt;&lt;/i&gt;
+        &lt;i id=&#34;collapse-1766615557299870260-arrow&#34; class=&#34;pl-2 fas fa-caret-down&#34;&gt;&lt;/i&gt;
     &lt;/h4&gt;
 &lt;/a&gt;
 
-&lt;div class=&#34;collapse pt-1&#34; id=&#34;collapse-1766529134618895857&#34;&gt;
+&lt;div class=&#34;collapse pt-1&#34; id=&#34;collapse-1766615557299870260&#34;&gt;
     
         
             
@@ -9238,10 +9238,10 @@ Finally, it provides a full version of the service and client and a summary of w
 
 
 &lt;script type=&#34;text/javascript&#34;&gt;
-    document.getElementById(&#34;btn-collapse-1766529134618895857&#34;).addEventListener(&#39;click&#39;, changeArrow);
+    document.getElementById(&#34;btn-collapse-1766615557299870260&#34;).addEventListener(&#39;click&#39;, changeArrow);
 
     function changeArrow(e) {
-        let arrow = document.getElementById(&#34;collapse-1766529134618895857-arrow&#34;)
+        let arrow = document.getElementById(&#34;collapse-1766615557299870260-arrow&#34;)
         if (arrow.classList.contains(&#34;fa-caret-up&#34;)) {
             arrow.classList.replace(&#34;fa-caret-up&#34;, &#34;fa-caret-down&#34;)
         } else {
@@ -9261,14 +9261,14 @@ Finally, it provides a full version of the service and client and a summary of w
 
 
 
-&lt;a class=&#34;btn btn-link&#34; id=&#34;btn-collapse-1766529134630292641&#34; style=&#34;border: none;text-decoration:underline;&#34;  type=&#34;button&#34;
-    data-toggle=&#34;collapse&#34; data-target=&#34;#collapse-1766529134630292641&#34; aria-expanded=&#34;false&#34; aria-controls=&#34;collapse-1766529134630292641&#34;&gt;
+&lt;a class=&#34;btn btn-link&#34; id=&#34;btn-collapse-1766615557311411950&#34; style=&#34;border: none;text-decoration:underline;&#34;  type=&#34;button&#34;
+    data-toggle=&#34;collapse&#34; data-target=&#34;#collapse-1766615557311411950&#34; aria-expanded=&#34;false&#34; aria-controls=&#34;collapse-1766615557311411950&#34;&gt;
     &lt;h4&gt;Code Example
-        &lt;i id=&#34;collapse-1766529134630292641-arrow&#34; class=&#34;pl-2 fas fa-caret-down&#34;&gt;&lt;/i&gt;
+        &lt;i id=&#34;collapse-1766615557311411950-arrow&#34; class=&#34;pl-2 fas fa-caret-down&#34;&gt;&lt;/i&gt;
     &lt;/h4&gt;
 &lt;/a&gt;
 
-&lt;div class=&#34;collapse pt-1&#34; id=&#34;collapse-1766529134630292641&#34;&gt;
+&lt;div class=&#34;collapse pt-1&#34; id=&#34;collapse-1766615557311411950&#34;&gt;
     
         
             
@@ -9395,10 +9395,10 @@ Finally, it provides a full version of the service and client and a summary of w
 
 
 &lt;script type=&#34;text/javascript&#34;&gt;
-    document.getElementById(&#34;btn-collapse-1766529134630292641&#34;).addEventListener(&#39;click&#39;, changeArrow);
+    document.getElementById(&#34;btn-collapse-1766615557311411950&#34;).addEventListener(&#39;click&#39;, changeArrow);
 
     function changeArrow(e) {
-        let arrow = document.getElementById(&#34;collapse-1766529134630292641-arrow&#34;)
+        let arrow = document.getElementById(&#34;collapse-1766615557311411950-arrow&#34;)
         if (arrow.classList.contains(&#34;fa-caret-up&#34;)) {
             arrow.classList.replace(&#34;fa-caret-up&#34;, &#34;fa-caret-down&#34;)
         } else {
@@ -9425,14 +9425,14 @@ Finally, it provides a full version of the service and client and a summary of w
     
 
 
-&lt;a class=&#34;btn btn-link&#34; id=&#34;btn-collapse-1766529134630386577&#34; style=&#34;border: none;text-decoration:underline;&#34;  type=&#34;button&#34;
-    data-toggle=&#34;collapse&#34; data-target=&#34;#collapse-1766529134630386577&#34; aria-expanded=&#34;false&#34; aria-controls=&#34;collapse-1766529134630386577&#34;&gt;
+&lt;a class=&#34;btn btn-link&#34; id=&#34;btn-collapse-1766615557311484005&#34; style=&#34;border: none;text-decoration:underline;&#34;  type=&#34;button&#34;
+    data-toggle=&#34;collapse&#34; data-target=&#34;#collapse-1766615557311484005&#34; aria-expanded=&#34;false&#34; aria-controls=&#34;collapse-1766615557311484005&#34;&gt;
     &lt;h4&gt;Code Example
-        &lt;i id=&#34;collapse-1766529134630386577-arrow&#34; class=&#34;pl-2 fas fa-caret-down&#34;&gt;&lt;/i&gt;
+        &lt;i id=&#34;collapse-1766615557311484005-arrow&#34; class=&#34;pl-2 fas fa-caret-down&#34;&gt;&lt;/i&gt;
     &lt;/h4&gt;
 &lt;/a&gt;
 
-&lt;div class=&#34;collapse pt-1&#34; id=&#34;collapse-1766529134630386577&#34;&gt;
+&lt;div class=&#34;collapse pt-1&#34; id=&#34;collapse-1766615557311484005&#34;&gt;
     
         
             &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-yml&#34; data-lang=&#34;yml&#34;&gt;&lt;span style=&#34;color:#111&#34;&gt;---&lt;/span&gt;
@@ -9483,10 +9483,10 @@ Finally, it provides a full version of the service and client and a summary of w
 
 
 &lt;script type=&#34;text/javascript&#34;&gt;
-    document.getElementById(&#34;btn-collapse-1766529134630386577&#34;).addEventListener(&#39;click&#39;, changeArrow);
+    document.getElementById(&#34;btn-collapse-1766615557311484005&#34;).addEventListener(&#39;click&#39;, changeArrow);
 
     function changeArrow(e) {
-        let arrow = document.getElementById(&#34;collapse-1766529134630386577-arrow&#34;)
+        let arrow = document.getElementById(&#34;collapse-1766615557311484005-arrow&#34;)
         if (arrow.classList.contains(&#34;fa-caret-up&#34;)) {
             arrow.classList.replace(&#34;fa-caret-up&#34;, &#34;fa-caret-down&#34;)
         } else {
@@ -9504,14 +9504,14 @@ Finally, it provides a full version of the service and client and a summary of w
 
 
 
-&lt;a class=&#34;btn btn-link&#34; id=&#34;btn-collapse-1766529134640547627&#34; style=&#34;border: none;text-decoration:underline;&#34;  type=&#34;button&#34;
-    data-toggle=&#34;collapse&#34; data-target=&#34;#collapse-1766529134640547627&#34; aria-expanded=&#34;false&#34; aria-controls=&#34;collapse-1766529134640547627&#34;&gt;
+&lt;a class=&#34;btn btn-link&#34; id=&#34;btn-collapse-1766615557321697189&#34; style=&#34;border: none;text-decoration:underline;&#34;  type=&#34;button&#34;
+    data-toggle=&#34;collapse&#34; data-target=&#34;#collapse-1766615557321697189&#34; aria-expanded=&#34;false&#34; aria-controls=&#34;collapse-1766615557321697189&#34;&gt;
     &lt;h4&gt;Code Example
-        &lt;i id=&#34;collapse-1766529134640547627-arrow&#34; class=&#34;pl-2 fas fa-caret-down&#34;&gt;&lt;/i&gt;
+        &lt;i id=&#34;collapse-1766615557321697189-arrow&#34; class=&#34;pl-2 fas fa-caret-down&#34;&gt;&lt;/i&gt;
     &lt;/h4&gt;
 &lt;/a&gt;
 
-&lt;div class=&#34;collapse pt-1&#34; id=&#34;collapse-1766529134640547627&#34;&gt;
+&lt;div class=&#34;collapse pt-1&#34; id=&#34;collapse-1766615557321697189&#34;&gt;
     
         
             
@@ -9561,10 +9561,10 @@ Finally, it provides a full version of the service and client and a summary of w
 
 
 &lt;script type=&#34;text/javascript&#34;&gt;
-    document.getElementById(&#34;btn-collapse-1766529134640547627&#34;).addEventListener(&#39;click&#39;, changeArrow);
+    document.getElementById(&#34;btn-collapse-1766615557321697189&#34;).addEventListener(&#39;click&#39;, changeArrow);
 
     function changeArrow(e) {
-        let arrow = document.getElementById(&#34;collapse-1766529134640547627-arrow&#34;)
+        let arrow = document.getElementById(&#34;collapse-1766615557321697189-arrow&#34;)
         if (arrow.classList.contains(&#34;fa-caret-up&#34;)) {
             arrow.classList.replace(&#34;fa-caret-up&#34;, &#34;fa-caret-down&#34;)
         } else {
@@ -9584,14 +9584,14 @@ Finally, it provides a full version of the service and client and a summary of w
 
 
 
-&lt;a class=&#34;btn btn-link&#34; id=&#34;btn-collapse-1766529134648870730&#34; style=&#34;border: none;text-decoration:underline;&#34;  type=&#34;button&#34;
-    data-toggle=&#34;collapse&#34; data-target=&#34;#collapse-1766529134648870730&#34; aria-expanded=&#34;false&#34; aria-controls=&#34;collapse-1766529134648870730&#34;&gt;
+&lt;a class=&#34;btn btn-link&#34; id=&#34;btn-collapse-1766615557329867480&#34; style=&#34;border: none;text-decoration:underline;&#34;  type=&#34;button&#34;
+    data-toggle=&#34;collapse&#34; data-target=&#34;#collapse-1766615557329867480&#34; aria-expanded=&#34;false&#34; aria-controls=&#34;collapse-1766615557329867480&#34;&gt;
     &lt;h4&gt;Code Example
-        &lt;i id=&#34;collapse-1766529134648870730-arrow&#34; class=&#34;pl-2 fas fa-caret-down&#34;&gt;&lt;/i&gt;
+        &lt;i id=&#34;collapse-1766615557329867480-arrow&#34; class=&#34;pl-2 fas fa-caret-down&#34;&gt;&lt;/i&gt;
     &lt;/h4&gt;
 &lt;/a&gt;
 
-&lt;div class=&#34;collapse pt-1&#34; id=&#34;collapse-1766529134648870730&#34;&gt;
+&lt;div class=&#34;collapse pt-1&#34; id=&#34;collapse-1766615557329867480&#34;&gt;
     
         
             
@@ -9646,10 +9646,10 @@ Finally, it provides a full version of the service and client and a summary of w
 
 
 &lt;script type=&#34;text/javascript&#34;&gt;
-    document.getElementById(&#34;btn-collapse-1766529134648870730&#34;).addEventListener(&#39;click&#39;, changeArrow);
+    document.getElementById(&#34;btn-collapse-1766615557329867480&#34;).addEventListener(&#39;click&#39;, changeArrow);
 
     function changeArrow(e) {
-        let arrow = document.getElementById(&#34;collapse-1766529134648870730-arrow&#34;)
+        let arrow = document.getElementById(&#34;collapse-1766615557329867480-arrow&#34;)
         if (arrow.classList.contains(&#34;fa-caret-up&#34;)) {
             arrow.classList.replace(&#34;fa-caret-up&#34;, &#34;fa-caret-down&#34;)
         } else {
@@ -9669,14 +9669,14 @@ Finally, it provides a full version of the service and client and a summary of w
 
 
 
-&lt;a class=&#34;btn btn-link&#34; id=&#34;btn-collapse-1766529134652801134&#34; style=&#34;border: none;text-decoration:underline;&#34;  type=&#34;button&#34;
-    data-toggle=&#34;collapse&#34; data-target=&#34;#collapse-1766529134652801134&#34; aria-expanded=&#34;false&#34; aria-controls=&#34;collapse-1766529134652801134&#34;&gt;
+&lt;a class=&#34;btn btn-link&#34; id=&#34;btn-collapse-1766615557333831815&#34; style=&#34;border: none;text-decoration:underline;&#34;  type=&#34;button&#34;
+    data-toggle=&#34;collapse&#34; data-target=&#34;#collapse-1766615557333831815&#34; aria-expanded=&#34;false&#34; aria-controls=&#34;collapse-1766615557333831815&#34;&gt;
     &lt;h4&gt;Code Example
-        &lt;i id=&#34;collapse-1766529134652801134-arrow&#34; class=&#34;pl-2 fas fa-caret-down&#34;&gt;&lt;/i&gt;
+        &lt;i id=&#34;collapse-1766615557333831815-arrow&#34; class=&#34;pl-2 fas fa-caret-down&#34;&gt;&lt;/i&gt;
     &lt;/h4&gt;
 &lt;/a&gt;
 
-&lt;div class=&#34;collapse pt-1&#34; id=&#34;collapse-1766529134652801134&#34;&gt;
+&lt;div class=&#34;collapse pt-1&#34; id=&#34;collapse-1766615557333831815&#34;&gt;
     
         
             
@@ -9743,10 +9743,10 @@ Finally, it provides a full version of the service and client and a summary of w
 
 
 &lt;script type=&#34;text/javascript&#34;&gt;
-    document.getElementById(&#34;btn-collapse-1766529134652801134&#34;).addEventListener(&#39;click&#39;, changeArrow);
+    document.getElementById(&#34;btn-collapse-1766615557333831815&#34;).addEventListener(&#39;click&#39;, changeArrow);
 
     function changeArrow(e) {
-        let arrow = document.getElementById(&#34;collapse-1766529134652801134-arrow&#34;)
+        let arrow = document.getElementById(&#34;collapse-1766615557333831815-arrow&#34;)
         if (arrow.classList.contains(&#34;fa-caret-up&#34;)) {
             arrow.classList.replace(&#34;fa-caret-up&#34;, &#34;fa-caret-down&#34;)
         } else {
@@ -9766,14 +9766,14 @@ Finally, it provides a full version of the service and client and a summary of w
 
 
 
-&lt;a class=&#34;btn btn-link&#34; id=&#34;btn-collapse-1766529134654729221&#34; style=&#34;border: none;text-decoration:underline;&#34;  type=&#34;button&#34;
-    data-toggle=&#34;collapse&#34; data-target=&#34;#collapse-1766529134654729221&#34; aria-expanded=&#34;false&#34; aria-controls=&#34;collapse-1766529134654729221&#34;&gt;
+&lt;a class=&#34;btn btn-link&#34; id=&#34;btn-collapse-1766615557335706943&#34; style=&#34;border: none;text-decoration:underline;&#34;  type=&#34;button&#34;
+    data-toggle=&#34;collapse&#34; data-target=&#34;#collapse-1766615557335706943&#34; aria-expanded=&#34;false&#34; aria-controls=&#34;collapse-1766615557335706943&#34;&gt;
     &lt;h4&gt;Code Example
-        &lt;i id=&#34;collapse-1766529134654729221-arrow&#34; class=&#34;pl-2 fas fa-caret-down&#34;&gt;&lt;/i&gt;
+        &lt;i id=&#34;collapse-1766615557335706943-arrow&#34; class=&#34;pl-2 fas fa-caret-down&#34;&gt;&lt;/i&gt;
     &lt;/h4&gt;
 &lt;/a&gt;
 
-&lt;div class=&#34;collapse pt-1&#34; id=&#34;collapse-1766529134654729221&#34;&gt;
+&lt;div class=&#34;collapse pt-1&#34; id=&#34;collapse-1766615557335706943&#34;&gt;
     
         
             
@@ -9821,10 +9821,10 @@ Finally, it provides a full version of the service and client and a summary of w
 
 
 &lt;script type=&#34;text/javascript&#34;&gt;
-    document.getElementById(&#34;btn-collapse-1766529134654729221&#34;).addEventListener(&#39;click&#39;, changeArrow);
+    document.getElementById(&#34;btn-collapse-1766615557335706943&#34;).addEventListener(&#39;click&#39;, changeArrow);
 
     function changeArrow(e) {
-        let arrow = document.getElementById(&#34;collapse-1766529134654729221-arrow&#34;)
+        let arrow = document.getElementById(&#34;collapse-1766615557335706943-arrow&#34;)
         if (arrow.classList.contains(&#34;fa-caret-up&#34;)) {
             arrow.classList.replace(&#34;fa-caret-up&#34;, &#34;fa-caret-down&#34;)
         } else {
@@ -9844,14 +9844,14 @@ Finally, it provides a full version of the service and client and a summary of w
 
 
 
-&lt;a class=&#34;btn btn-link&#34; id=&#34;btn-collapse-1766529134656978239&#34; style=&#34;border: none;text-decoration:underline;&#34;  type=&#34;button&#34;
-    data-toggle=&#34;collapse&#34; data-target=&#34;#collapse-1766529134656978239&#34; aria-expanded=&#34;false&#34; aria-controls=&#34;collapse-1766529134656978239&#34;&gt;
+&lt;a class=&#34;btn btn-link&#34; id=&#34;btn-collapse-1766615557337893812&#34; style=&#34;border: none;text-decoration:underline;&#34;  type=&#34;button&#34;
+    data-toggle=&#34;collapse&#34; data-target=&#34;#collapse-1766615557337893812&#34; aria-expanded=&#34;false&#34; aria-controls=&#34;collapse-1766615557337893812&#34;&gt;
     &lt;h4&gt;Code Example
-        &lt;i id=&#34;collapse-1766529134656978239-arrow&#34; class=&#34;pl-2 fas fa-caret-down&#34;&gt;&lt;/i&gt;
+        &lt;i id=&#34;collapse-1766615557337893812-arrow&#34; class=&#34;pl-2 fas fa-caret-down&#34;&gt;&lt;/i&gt;
     &lt;/h4&gt;
 &lt;/a&gt;
 
-&lt;div class=&#34;collapse pt-1&#34; id=&#34;collapse-1766529134656978239&#34;&gt;
+&lt;div class=&#34;collapse pt-1&#34; id=&#34;collapse-1766615557337893812&#34;&gt;
     
         
             
@@ -9888,10 +9888,10 @@ Finally, it provides a full version of the service and client and a summary of w
 
 
 &lt;script type=&#34;text/javascript&#34;&gt;
-    document.getElementById(&#34;btn-collapse-1766529134656978239&#34;).addEventListener(&#39;click&#39;, changeArrow);
+    document.getElementById(&#34;btn-collapse-1766615557337893812&#34;).addEventListener(&#39;click&#39;, changeArrow);
 
     function changeArrow(e) {
-        let arrow = document.getElementById(&#34;collapse-1766529134656978239-arrow&#34;)
+        let arrow = document.getElementById(&#34;collapse-1766615557337893812-arrow&#34;)
         if (arrow.classList.contains(&#34;fa-caret-up&#34;)) {
             arrow.classList.replace(&#34;fa-caret-up&#34;, &#34;fa-caret-down&#34;)
         } else {
@@ -10985,14 +10985,14 @@ Finally, it provides a full version of the service and client and a summary of w
 
 
 
-&lt;a class=&#34;btn btn-link&#34; id=&#34;btn-collapse-1766529134537387125&#34; style=&#34;border: none;text-decoration:underline;&#34;  type=&#34;button&#34;
-    data-toggle=&#34;collapse&#34; data-target=&#34;#collapse-1766529134537387125&#34; aria-expanded=&#34;false&#34; aria-controls=&#34;collapse-1766529134537387125&#34;&gt;
+&lt;a class=&#34;btn btn-link&#34; id=&#34;btn-collapse-1766615557349190945&#34; style=&#34;border: none;text-decoration:underline;&#34;  type=&#34;button&#34;
+    data-toggle=&#34;collapse&#34; data-target=&#34;#collapse-1766615557349190945&#34; aria-expanded=&#34;false&#34; aria-controls=&#34;collapse-1766615557349190945&#34;&gt;
     &lt;h4&gt;Code Example
-        &lt;i id=&#34;collapse-1766529134537387125-arrow&#34; class=&#34;pl-2 fas fa-caret-down&#34;&gt;&lt;/i&gt;
+        &lt;i id=&#34;collapse-1766615557349190945-arrow&#34; class=&#34;pl-2 fas fa-caret-down&#34;&gt;&lt;/i&gt;
     &lt;/h4&gt;
 &lt;/a&gt;
 
-&lt;div class=&#34;collapse pt-1&#34; id=&#34;collapse-1766529134537387125&#34;&gt;
+&lt;div class=&#34;collapse pt-1&#34; id=&#34;collapse-1766615557349190945&#34;&gt;
     
         
             
@@ -11138,10 +11138,10 @@ Finally, it provides a full version of the service and client and a summary of w
 
 
 &lt;script type=&#34;text/javascript&#34;&gt;
-    document.getElementById(&#34;btn-collapse-1766529134537387125&#34;).addEventListener(&#39;click&#39;, changeArrow);
+    document.getElementById(&#34;btn-collapse-1766615557349190945&#34;).addEventListener(&#39;click&#39;, changeArrow);
 
     function changeArrow(e) {
-        let arrow = document.getElementById(&#34;collapse-1766529134537387125-arrow&#34;)
+        let arrow = document.getElementById(&#34;collapse-1766615557349190945-arrow&#34;)
         if (arrow.classList.contains(&#34;fa-caret-up&#34;)) {
             arrow.classList.replace(&#34;fa-caret-up&#34;, &#34;fa-caret-down&#34;)
         } else {
@@ -11161,14 +11161,14 @@ Finally, it provides a full version of the service and client and a summary of w
 
 
 
-&lt;a class=&#34;btn btn-link&#34; id=&#34;btn-collapse-1766529134548526487&#34; style=&#34;border: none;text-decoration:underline;&#34;  type=&#34;button&#34;
-    data-toggle=&#34;collapse&#34; data-target=&#34;#collapse-1766529134548526487&#34; aria-expanded=&#34;false&#34; aria-controls=&#34;collapse-1766529134548526487&#34;&gt;
+&lt;a class=&#34;btn btn-link&#34; id=&#34;btn-collapse-1766615557360743225&#34; style=&#34;border: none;text-decoration:underline;&#34;  type=&#34;button&#34;
+    data-toggle=&#34;collapse&#34; data-target=&#34;#collapse-1766615557360743225&#34; aria-expanded=&#34;false&#34; aria-controls=&#34;collapse-1766615557360743225&#34;&gt;
     &lt;h4&gt;Code Example
-        &lt;i id=&#34;collapse-1766529134548526487-arrow&#34; class=&#34;pl-2 fas fa-caret-down&#34;&gt;&lt;/i&gt;
+        &lt;i id=&#34;collapse-1766615557360743225-arrow&#34; class=&#34;pl-2 fas fa-caret-down&#34;&gt;&lt;/i&gt;
     &lt;/h4&gt;
 &lt;/a&gt;
 
-&lt;div class=&#34;collapse pt-1&#34; id=&#34;collapse-1766529134548526487&#34;&gt;
+&lt;div class=&#34;collapse pt-1&#34; id=&#34;collapse-1766615557360743225&#34;&gt;
     
         
             
@@ -11287,10 +11287,10 @@ Finally, it provides a full version of the service and client and a summary of w
 
 
 &lt;script type=&#34;text/javascript&#34;&gt;
-    document.getElementById(&#34;btn-collapse-1766529134548526487&#34;).addEventListener(&#39;click&#39;, changeArrow);
+    document.getElementById(&#34;btn-collapse-1766615557360743225&#34;).addEventListener(&#39;click&#39;, changeArrow);
 
     function changeArrow(e) {
-        let arrow = document.getElementById(&#34;collapse-1766529134548526487-arrow&#34;)
+        let arrow = document.getElementById(&#34;collapse-1766615557360743225-arrow&#34;)
         if (arrow.classList.contains(&#34;fa-caret-up&#34;)) {
             arrow.classList.replace(&#34;fa-caret-up&#34;, &#34;fa-caret-down&#34;)
         } else {
@@ -11310,14 +11310,14 @@ Finally, it provides a full version of the service and client and a summary of w
 
 
 
-&lt;a class=&#34;btn btn-link&#34; id=&#34;btn-collapse-1766529134559763632&#34; style=&#34;border: none;text-decoration:underline;&#34;  type=&#34;button&#34;
-    data-toggle=&#34;collapse&#34; data-target=&#34;#collapse-1766529134559763632&#34; aria-expanded=&#34;false&#34; aria-controls=&#34;collapse-1766529134559763632&#34;&gt;
+&lt;a class=&#34;btn btn-link&#34; id=&#34;btn-collapse-1766615557372039702&#34; style=&#34;border: none;text-decoration:underline;&#34;  type=&#34;button&#34;
+    data-toggle=&#34;collapse&#34; data-target=&#34;#collapse-1766615557372039702&#34; aria-expanded=&#34;false&#34; aria-controls=&#34;collapse-1766615557372039702&#34;&gt;
     &lt;h4&gt;Code Example
-        &lt;i id=&#34;collapse-1766529134559763632-arrow&#34; class=&#34;pl-2 fas fa-caret-down&#34;&gt;&lt;/i&gt;
+        &lt;i id=&#34;collapse-1766615557372039702-arrow&#34; class=&#34;pl-2 fas fa-caret-down&#34;&gt;&lt;/i&gt;
     &lt;/h4&gt;
 &lt;/a&gt;
 
-&lt;div class=&#34;collapse pt-1&#34; id=&#34;collapse-1766529134559763632&#34;&gt;
+&lt;div class=&#34;collapse pt-1&#34; id=&#34;collapse-1766615557372039702&#34;&gt;
     
         
             
@@ -11479,10 +11479,10 @@ Finally, it provides a full version of the service and client and a summary of w
 
 
 &lt;script type=&#34;text/javascript&#34;&gt;
-    document.getElementById(&#34;btn-collapse-1766529134559763632&#34;).addEventListener(&#39;click&#39;, changeArrow);
+    document.getElementById(&#34;btn-collapse-1766615557372039702&#34;).addEventListener(&#39;click&#39;, changeArrow);
 
     function changeArrow(e) {
-        let arrow = document.getElementById(&#34;collapse-1766529134559763632-arrow&#34;)
+        let arrow = document.getElementById(&#34;collapse-1766615557372039702-arrow&#34;)
         if (arrow.classList.contains(&#34;fa-caret-up&#34;)) {
             arrow.classList.replace(&#34;fa-caret-up&#34;, &#34;fa-caret-down&#34;)
         } else {
@@ -11502,14 +11502,14 @@ Finally, it provides a full version of the service and client and a summary of w
 
 
 
-&lt;a class=&#34;btn btn-link&#34; id=&#34;btn-collapse-1766529134569245571&#34; style=&#34;border: none;text-decoration:underline;&#34;  type=&#34;button&#34;
-    data-toggle=&#34;collapse&#34; data-target=&#34;#collapse-1766529134569245571&#34; aria-expanded=&#34;false&#34; aria-controls=&#34;collapse-1766529134569245571&#34;&gt;
+&lt;a class=&#34;btn btn-link&#34; id=&#34;btn-collapse-1766615557381175326&#34; style=&#34;border: none;text-decoration:underline;&#34;  type=&#34;button&#34;
+    data-toggle=&#34;collapse&#34; data-target=&#34;#collapse-1766615557381175326&#34; aria-expanded=&#34;false&#34; aria-controls=&#34;collapse-1766615557381175326&#34;&gt;
     &lt;h4&gt;Code Example
-        &lt;i id=&#34;collapse-1766529134569245571-arrow&#34; class=&#34;pl-2 fas fa-caret-down&#34;&gt;&lt;/i&gt;
+        &lt;i id=&#34;collapse-1766615557381175326-arrow&#34; class=&#34;pl-2 fas fa-caret-down&#34;&gt;&lt;/i&gt;
     &lt;/h4&gt;
 &lt;/a&gt;
 
-&lt;div class=&#34;collapse pt-1&#34; id=&#34;collapse-1766529134569245571&#34;&gt;
+&lt;div class=&#34;collapse pt-1&#34; id=&#34;collapse-1766615557381175326&#34;&gt;
     
         
             
@@ -11654,10 +11654,10 @@ Finally, it provides a full version of the service and client and a summary of w
 
 
 &lt;script type=&#34;text/javascript&#34;&gt;
-    document.getElementById(&#34;btn-collapse-1766529134569245571&#34;).addEventListener(&#39;click&#39;, changeArrow);
+    document.getElementById(&#34;btn-collapse-1766615557381175326&#34;).addEventListener(&#39;click&#39;, changeArrow);
 
     function changeArrow(e) {
-        let arrow = document.getElementById(&#34;collapse-1766529134569245571-arrow&#34;)
+        let arrow = document.getElementById(&#34;collapse-1766615557381175326-arrow&#34;)
         if (arrow.classList.contains(&#34;fa-caret-up&#34;)) {
             arrow.classList.replace(&#34;fa-caret-up&#34;, &#34;fa-caret-down&#34;)
         } else {
@@ -11677,14 +11677,14 @@ Finally, it provides a full version of the service and client and a summary of w
 
 
 
-&lt;a class=&#34;btn btn-link&#34; id=&#34;btn-collapse-1766529134578758520&#34; style=&#34;border: none;text-decoration:underline;&#34;  type=&#34;button&#34;
-    data-toggle=&#34;collapse&#34; data-target=&#34;#collapse-1766529134578758520&#34; aria-expanded=&#34;false&#34; aria-controls=&#34;collapse-1766529134578758520&#34;&gt;
+&lt;a class=&#34;btn btn-link&#34; id=&#34;btn-collapse-1766615557386553929&#34; style=&#34;border: none;text-decoration:underline;&#34;  type=&#34;button&#34;
+    data-toggle=&#34;collapse&#34; data-target=&#34;#collapse-1766615557386553929&#34; aria-expanded=&#34;false&#34; aria-controls=&#34;collapse-1766615557386553929&#34;&gt;
     &lt;h4&gt;Code Example
-        &lt;i id=&#34;collapse-1766529134578758520-arrow&#34; class=&#34;pl-2 fas fa-caret-down&#34;&gt;&lt;/i&gt;
+        &lt;i id=&#34;collapse-1766615557386553929-arrow&#34; class=&#34;pl-2 fas fa-caret-down&#34;&gt;&lt;/i&gt;
     &lt;/h4&gt;
 &lt;/a&gt;
 
-&lt;div class=&#34;collapse pt-1&#34; id=&#34;collapse-1766529134578758520&#34;&gt;
+&lt;div class=&#34;collapse pt-1&#34; id=&#34;collapse-1766615557386553929&#34;&gt;
     
         
             
@@ -11768,10 +11768,10 @@ Finally, it provides a full version of the service and client and a summary of w
 
 
 &lt;script type=&#34;text/javascript&#34;&gt;
-    document.getElementById(&#34;btn-collapse-1766529134578758520&#34;).addEventListener(&#39;click&#39;, changeArrow);
+    document.getElementById(&#34;btn-collapse-1766615557386553929&#34;).addEventListener(&#39;click&#39;, changeArrow);
 
     function changeArrow(e) {
-        let arrow = document.getElementById(&#34;collapse-1766529134578758520-arrow&#34;)
+        let arrow = document.getElementById(&#34;collapse-1766615557386553929-arrow&#34;)
         if (arrow.classList.contains(&#34;fa-caret-up&#34;)) {
             arrow.classList.replace(&#34;fa-caret-up&#34;, &#34;fa-caret-down&#34;)
         } else {
@@ -15663,14 +15663,14 @@ b.	SummatorStub&lt;/li&gt;
 
 
 
-&lt;a class=&#34;btn btn-link&#34; id=&#34;btn-collapse-1766529136152680807&#34; style=&#34;border: none;text-decoration:underline;&#34;  type=&#34;button&#34;
-    data-toggle=&#34;collapse&#34; data-target=&#34;#collapse-1766529136152680807&#34; aria-expanded=&#34;false&#34; aria-controls=&#34;collapse-1766529136152680807&#34;&gt;
+&lt;a class=&#34;btn btn-link&#34; id=&#34;btn-collapse-1766615558960824951&#34; style=&#34;border: none;text-decoration:underline;&#34;  type=&#34;button&#34;
+    data-toggle=&#34;collapse&#34; data-target=&#34;#collapse-1766615558960824951&#34; aria-expanded=&#34;false&#34; aria-controls=&#34;collapse-1766615558960824951&#34;&gt;
     &lt;h4&gt;Code Example
-        &lt;i id=&#34;collapse-1766529136152680807-arrow&#34; class=&#34;pl-2 fas fa-caret-down&#34;&gt;&lt;/i&gt;
+        &lt;i id=&#34;collapse-1766615558960824951-arrow&#34; class=&#34;pl-2 fas fa-caret-down&#34;&gt;&lt;/i&gt;
     &lt;/h4&gt;
 &lt;/a&gt;
 
-&lt;div class=&#34;collapse pt-1&#34; id=&#34;collapse-1766529136152680807&#34;&gt;
+&lt;div class=&#34;collapse pt-1&#34; id=&#34;collapse-1766615558960824951&#34;&gt;
     
         
             
@@ -16045,10 +16045,10 @@ b.	SummatorStub&lt;/li&gt;
 
 
 &lt;script type=&#34;text/javascript&#34;&gt;
-    document.getElementById(&#34;btn-collapse-1766529136152680807&#34;).addEventListener(&#39;click&#39;, changeArrow);
+    document.getElementById(&#34;btn-collapse-1766615558960824951&#34;).addEventListener(&#39;click&#39;, changeArrow);
 
     function changeArrow(e) {
-        let arrow = document.getElementById(&#34;collapse-1766529136152680807-arrow&#34;)
+        let arrow = document.getElementById(&#34;collapse-1766615558960824951-arrow&#34;)
         if (arrow.classList.contains(&#34;fa-caret-up&#34;)) {
             arrow.classList.replace(&#34;fa-caret-up&#34;, &#34;fa-caret-down&#34;)
         } else {
@@ -16075,14 +16075,14 @@ b.	SummatorStub&lt;/li&gt;
 
 
 
-&lt;a class=&#34;btn btn-link&#34; id=&#34;btn-collapse-1766529136176296532&#34; style=&#34;border: none;text-decoration:underline;&#34;  type=&#34;button&#34;
-    data-toggle=&#34;collapse&#34; data-target=&#34;#collapse-1766529136176296532&#34; aria-expanded=&#34;false&#34; aria-controls=&#34;collapse-1766529136176296532&#34;&gt;
+&lt;a class=&#34;btn btn-link&#34; id=&#34;btn-collapse-1766615558985187095&#34; style=&#34;border: none;text-decoration:underline;&#34;  type=&#34;button&#34;
+    data-toggle=&#34;collapse&#34; data-target=&#34;#collapse-1766615558985187095&#34; aria-expanded=&#34;false&#34; aria-controls=&#34;collapse-1766615558985187095&#34;&gt;
     &lt;h4&gt;Code Example
-        &lt;i id=&#34;collapse-1766529136176296532-arrow&#34; class=&#34;pl-2 fas fa-caret-down&#34;&gt;&lt;/i&gt;
+        &lt;i id=&#34;collapse-1766615558985187095-arrow&#34; class=&#34;pl-2 fas fa-caret-down&#34;&gt;&lt;/i&gt;
     &lt;/h4&gt;
 &lt;/a&gt;
 
-&lt;div class=&#34;collapse pt-1&#34; id=&#34;collapse-1766529136176296532&#34;&gt;
+&lt;div class=&#34;collapse pt-1&#34; id=&#34;collapse-1766615558985187095&#34;&gt;
     
         
             
@@ -16432,10 +16432,10 @@ b.	SummatorStub&lt;/li&gt;
 
 
 &lt;script type=&#34;text/javascript&#34;&gt;
-    document.getElementById(&#34;btn-collapse-1766529136176296532&#34;).addEventListener(&#39;click&#39;, changeArrow);
+    document.getElementById(&#34;btn-collapse-1766615558985187095&#34;).addEventListener(&#39;click&#39;, changeArrow);
 
     function changeArrow(e) {
-        let arrow = document.getElementById(&#34;collapse-1766529136176296532-arrow&#34;)
+        let arrow = document.getElementById(&#34;collapse-1766615558985187095-arrow&#34;)
         if (arrow.classList.contains(&#34;fa-caret-up&#34;)) {
             arrow.classList.replace(&#34;fa-caret-up&#34;, &#34;fa-caret-down&#34;)
         } else {
@@ -16462,14 +16462,14 @@ b.	SummatorStub&lt;/li&gt;
 
 
 
-&lt;a class=&#34;btn btn-link&#34; id=&#34;btn-collapse-1766529136184689184&#34; style=&#34;border: none;text-decoration:underline;&#34;  type=&#34;button&#34;
-    data-toggle=&#34;collapse&#34; data-target=&#34;#collapse-1766529136184689184&#34; aria-expanded=&#34;false&#34; aria-controls=&#34;collapse-1766529136184689184&#34;&gt;
+&lt;a class=&#34;btn btn-link&#34; id=&#34;btn-collapse-1766615558993986981&#34; style=&#34;border: none;text-decoration:underline;&#34;  type=&#34;button&#34;
+    data-toggle=&#34;collapse&#34; data-target=&#34;#collapse-1766615558993986981&#34; aria-expanded=&#34;false&#34; aria-controls=&#34;collapse-1766615558993986981&#34;&gt;
     &lt;h4&gt;Code Example
-        &lt;i id=&#34;collapse-1766529136184689184-arrow&#34; class=&#34;pl-2 fas fa-caret-down&#34;&gt;&lt;/i&gt;
+        &lt;i id=&#34;collapse-1766615558993986981-arrow&#34; class=&#34;pl-2 fas fa-caret-down&#34;&gt;&lt;/i&gt;
     &lt;/h4&gt;
 &lt;/a&gt;
 
-&lt;div class=&#34;collapse pt-1&#34; id=&#34;collapse-1766529136184689184&#34;&gt;
+&lt;div class=&#34;collapse pt-1&#34; id=&#34;collapse-1766615558993986981&#34;&gt;
     
         
             
@@ -16592,10 +16592,10 @@ b.	SummatorStub&lt;/li&gt;
 
 
 &lt;script type=&#34;text/javascript&#34;&gt;
-    document.getElementById(&#34;btn-collapse-1766529136184689184&#34;).addEventListener(&#39;click&#39;, changeArrow);
+    document.getElementById(&#34;btn-collapse-1766615558993986981&#34;).addEventListener(&#39;click&#39;, changeArrow);
 
     function changeArrow(e) {
-        let arrow = document.getElementById(&#34;collapse-1766529136184689184-arrow&#34;)
+        let arrow = document.getElementById(&#34;collapse-1766615558993986981-arrow&#34;)
         if (arrow.classList.contains(&#34;fa-caret-up&#34;)) {
             arrow.classList.replace(&#34;fa-caret-up&#34;, &#34;fa-caret-down&#34;)
         } else {
@@ -16622,14 +16622,14 @@ b.	SummatorStub&lt;/li&gt;
 
 
 
-&lt;a class=&#34;btn btn-link&#34; id=&#34;btn-collapse-1766529136200112170&#34; style=&#34;border: none;text-decoration:underline;&#34;  type=&#34;button&#34;
-    data-toggle=&#34;collapse&#34; data-target=&#34;#collapse-1766529136200112170&#34; aria-expanded=&#34;false&#34; aria-controls=&#34;collapse-1766529136200112170&#34;&gt;
+&lt;a class=&#34;btn btn-link&#34; id=&#34;btn-collapse-1766615559009956981&#34; style=&#34;border: none;text-decoration:underline;&#34;  type=&#34;button&#34;
+    data-toggle=&#34;collapse&#34; data-target=&#34;#collapse-1766615559009956981&#34; aria-expanded=&#34;false&#34; aria-controls=&#34;collapse-1766615559009956981&#34;&gt;
     &lt;h4&gt;Code Example
-        &lt;i id=&#34;collapse-1766529136200112170-arrow&#34; class=&#34;pl-2 fas fa-caret-down&#34;&gt;&lt;/i&gt;
+        &lt;i id=&#34;collapse-1766615559009956981-arrow&#34; class=&#34;pl-2 fas fa-caret-down&#34;&gt;&lt;/i&gt;
     &lt;/h4&gt;
 &lt;/a&gt;
 
-&lt;div class=&#34;collapse pt-1&#34; id=&#34;collapse-1766529136200112170&#34;&gt;
+&lt;div class=&#34;collapse pt-1&#34; id=&#34;collapse-1766615559009956981&#34;&gt;
     
         
             
@@ -16769,10 +16769,10 @@ b.	SummatorStub&lt;/li&gt;
 
 
 &lt;script type=&#34;text/javascript&#34;&gt;
-    document.getElementById(&#34;btn-collapse-1766529136200112170&#34;).addEventListener(&#39;click&#39;, changeArrow);
+    document.getElementById(&#34;btn-collapse-1766615559009956981&#34;).addEventListener(&#39;click&#39;, changeArrow);
 
     function changeArrow(e) {
-        let arrow = document.getElementById(&#34;collapse-1766529136200112170-arrow&#34;)
+        let arrow = document.getElementById(&#34;collapse-1766615559009956981-arrow&#34;)
         if (arrow.classList.contains(&#34;fa-caret-up&#34;)) {
             arrow.classList.replace(&#34;fa-caret-up&#34;, &#34;fa-caret-down&#34;)
         } else {
@@ -16792,14 +16792,14 @@ b.	SummatorStub&lt;/li&gt;
 
 
 
-&lt;a class=&#34;btn btn-link&#34; id=&#34;btn-collapse-1766529136200608529&#34; style=&#34;border: none;text-decoration:underline;&#34;  type=&#34;button&#34;
-    data-toggle=&#34;collapse&#34; data-target=&#34;#collapse-1766529136200608529&#34; aria-expanded=&#34;false&#34; aria-controls=&#34;collapse-1766529136200608529&#34;&gt;
+&lt;a class=&#34;btn btn-link&#34; id=&#34;btn-collapse-1766615559010570485&#34; style=&#34;border: none;text-decoration:underline;&#34;  type=&#34;button&#34;
+    data-toggle=&#34;collapse&#34; data-target=&#34;#collapse-1766615559010570485&#34; aria-expanded=&#34;false&#34; aria-controls=&#34;collapse-1766615559010570485&#34;&gt;
     &lt;h4&gt;Code Example
-        &lt;i id=&#34;collapse-1766529136200608529-arrow&#34; class=&#34;pl-2 fas fa-caret-down&#34;&gt;&lt;/i&gt;
+        &lt;i id=&#34;collapse-1766615559010570485-arrow&#34; class=&#34;pl-2 fas fa-caret-down&#34;&gt;&lt;/i&gt;
     &lt;/h4&gt;
 &lt;/a&gt;
 
-&lt;div class=&#34;collapse pt-1&#34; id=&#34;collapse-1766529136200608529&#34;&gt;
+&lt;div class=&#34;collapse pt-1&#34; id=&#34;collapse-1766615559010570485&#34;&gt;
     
         
             
@@ -16826,10 +16826,10 @@ b.	SummatorStub&lt;/li&gt;
 
 
 &lt;script type=&#34;text/javascript&#34;&gt;
-    document.getElementById(&#34;btn-collapse-1766529136200608529&#34;).addEventListener(&#39;click&#39;, changeArrow);
+    document.getElementById(&#34;btn-collapse-1766615559010570485&#34;).addEventListener(&#39;click&#39;, changeArrow);
 
     function changeArrow(e) {
-        let arrow = document.getElementById(&#34;collapse-1766529136200608529-arrow&#34;)
+        let arrow = document.getElementById(&#34;collapse-1766615559010570485-arrow&#34;)
         if (arrow.classList.contains(&#34;fa-caret-up&#34;)) {
             arrow.classList.replace(&#34;fa-caret-up&#34;, &#34;fa-caret-down&#34;)
         } else {
@@ -16856,14 +16856,14 @@ b.	SummatorStub&lt;/li&gt;
 
 
 
-&lt;a class=&#34;btn btn-link&#34; id=&#34;btn-collapse-1766529136206413981&#34; style=&#34;border: none;text-decoration:underline;&#34;  type=&#34;button&#34;
-    data-toggle=&#34;collapse&#34; data-target=&#34;#collapse-1766529136206413981&#34; aria-expanded=&#34;false&#34; aria-controls=&#34;collapse-1766529136206413981&#34;&gt;
+&lt;a class=&#34;btn btn-link&#34; id=&#34;btn-collapse-1766615559016685051&#34; style=&#34;border: none;text-decoration:underline;&#34;  type=&#34;button&#34;
+    data-toggle=&#34;collapse&#34; data-target=&#34;#collapse-1766615559016685051&#34; aria-expanded=&#34;false&#34; aria-controls=&#34;collapse-1766615559016685051&#34;&gt;
     &lt;h4&gt;Code Example
-        &lt;i id=&#34;collapse-1766529136206413981-arrow&#34; class=&#34;pl-2 fas fa-caret-down&#34;&gt;&lt;/i&gt;
+        &lt;i id=&#34;collapse-1766615559016685051-arrow&#34; class=&#34;pl-2 fas fa-caret-down&#34;&gt;&lt;/i&gt;
     &lt;/h4&gt;
 &lt;/a&gt;
 
-&lt;div class=&#34;collapse pt-1&#34; id=&#34;collapse-1766529136206413981&#34;&gt;
+&lt;div class=&#34;collapse pt-1&#34; id=&#34;collapse-1766615559016685051&#34;&gt;
     
         
             
@@ -16934,10 +16934,10 @@ b.	SummatorStub&lt;/li&gt;
 
 
 &lt;script type=&#34;text/javascript&#34;&gt;
-    document.getElementById(&#34;btn-collapse-1766529136206413981&#34;).addEventListener(&#39;click&#39;, changeArrow);
+    document.getElementById(&#34;btn-collapse-1766615559016685051&#34;).addEventListener(&#39;click&#39;, changeArrow);
 
     function changeArrow(e) {
-        let arrow = document.getElementById(&#34;collapse-1766529136206413981-arrow&#34;)
+        let arrow = document.getElementById(&#34;collapse-1766615559016685051-arrow&#34;)
         if (arrow.classList.contains(&#34;fa-caret-up&#34;)) {
             arrow.classList.replace(&#34;fa-caret-up&#34;, &#34;fa-caret-down&#34;)
         } else {
@@ -16972,14 +16972,14 @@ b.	SummatorStub&lt;/li&gt;
 
 
 
-&lt;a class=&#34;btn btn-link&#34; id=&#34;btn-collapse-1766529136209613036&#34; style=&#34;border: none;text-decoration:underline;&#34;  type=&#34;button&#34;
-    data-toggle=&#34;collapse&#34; data-target=&#34;#collapse-1766529136209613036&#34; aria-expanded=&#34;false&#34; aria-controls=&#34;collapse-1766529136209613036&#34;&gt;
+&lt;a class=&#34;btn btn-link&#34; id=&#34;btn-collapse-1766615559020002820&#34; style=&#34;border: none;text-decoration:underline;&#34;  type=&#34;button&#34;
+    data-toggle=&#34;collapse&#34; data-target=&#34;#collapse-1766615559020002820&#34; aria-expanded=&#34;false&#34; aria-controls=&#34;collapse-1766615559020002820&#34;&gt;
     &lt;h4&gt;Code Example
-        &lt;i id=&#34;collapse-1766529136209613036-arrow&#34; class=&#34;pl-2 fas fa-caret-down&#34;&gt;&lt;/i&gt;
+        &lt;i id=&#34;collapse-1766615559020002820-arrow&#34; class=&#34;pl-2 fas fa-caret-down&#34;&gt;&lt;/i&gt;
     &lt;/h4&gt;
 &lt;/a&gt;
 
-&lt;div class=&#34;collapse pt-1&#34; id=&#34;collapse-1766529136209613036&#34;&gt;
+&lt;div class=&#34;collapse pt-1&#34; id=&#34;collapse-1766615559020002820&#34;&gt;
     
         
             
@@ -17045,10 +17045,10 @@ b.	SummatorStub&lt;/li&gt;
 
 
 &lt;script type=&#34;text/javascript&#34;&gt;
-    document.getElementById(&#34;btn-collapse-1766529136209613036&#34;).addEventListener(&#39;click&#39;, changeArrow);
+    document.getElementById(&#34;btn-collapse-1766615559020002820&#34;).addEventListener(&#39;click&#39;, changeArrow);
 
     function changeArrow(e) {
-        let arrow = document.getElementById(&#34;collapse-1766529136209613036-arrow&#34;)
+        let arrow = document.getElementById(&#34;collapse-1766615559020002820-arrow&#34;)
         if (arrow.classList.contains(&#34;fa-caret-up&#34;)) {
             arrow.classList.replace(&#34;fa-caret-up&#34;, &#34;fa-caret-down&#34;)
         } else {
@@ -17075,14 +17075,14 @@ b.	SummatorStub&lt;/li&gt;
 
 
 
-&lt;a class=&#34;btn btn-link&#34; id=&#34;btn-collapse-1766529136223927639&#34; style=&#34;border: none;text-decoration:underline;&#34;  type=&#34;button&#34;
-    data-toggle=&#34;collapse&#34; data-target=&#34;#collapse-1766529136223927639&#34; aria-expanded=&#34;false&#34; aria-controls=&#34;collapse-1766529136223927639&#34;&gt;
+&lt;a class=&#34;btn btn-link&#34; id=&#34;btn-collapse-1766615559034475217&#34; style=&#34;border: none;text-decoration:underline;&#34;  type=&#34;button&#34;
+    data-toggle=&#34;collapse&#34; data-target=&#34;#collapse-1766615559034475217&#34; aria-expanded=&#34;false&#34; aria-controls=&#34;collapse-1766615559034475217&#34;&gt;
     &lt;h4&gt;Code Example
-        &lt;i id=&#34;collapse-1766529136223927639-arrow&#34; class=&#34;pl-2 fas fa-caret-down&#34;&gt;&lt;/i&gt;
+        &lt;i id=&#34;collapse-1766615559034475217-arrow&#34; class=&#34;pl-2 fas fa-caret-down&#34;&gt;&lt;/i&gt;
     &lt;/h4&gt;
 &lt;/a&gt;
 
-&lt;div class=&#34;collapse pt-1&#34; id=&#34;collapse-1766529136223927639&#34;&gt;
+&lt;div class=&#34;collapse pt-1&#34; id=&#34;collapse-1766615559034475217&#34;&gt;
     
         
             
@@ -17209,10 +17209,10 @@ b.	SummatorStub&lt;/li&gt;
 
 
 &lt;script type=&#34;text/javascript&#34;&gt;
-    document.getElementById(&#34;btn-collapse-1766529136223927639&#34;).addEventListener(&#39;click&#39;, changeArrow);
+    document.getElementById(&#34;btn-collapse-1766615559034475217&#34;).addEventListener(&#39;click&#39;, changeArrow);
 
     function changeArrow(e) {
-        let arrow = document.getElementById(&#34;collapse-1766529136223927639-arrow&#34;)
+        let arrow = document.getElementById(&#34;collapse-1766615559034475217-arrow&#34;)
         if (arrow.classList.contains(&#34;fa-caret-up&#34;)) {
             arrow.classList.replace(&#34;fa-caret-up&#34;, &#34;fa-caret-down&#34;)
         } else {
@@ -17239,14 +17239,14 @@ b.	SummatorStub&lt;/li&gt;
 
 
 
-&lt;a class=&#34;btn btn-link&#34; id=&#34;btn-collapse-1766529136245225447&#34; style=&#34;border: none;text-decoration:underline;&#34;  type=&#34;button&#34;
-    data-toggle=&#34;collapse&#34; data-target=&#34;#collapse-1766529136245225447&#34; aria-expanded=&#34;false&#34; aria-controls=&#34;collapse-1766529136245225447&#34;&gt;
+&lt;a class=&#34;btn btn-link&#34; id=&#34;btn-collapse-1766615559056026829&#34; style=&#34;border: none;text-decoration:underline;&#34;  type=&#34;button&#34;
+    data-toggle=&#34;collapse&#34; data-target=&#34;#collapse-1766615559056026829&#34; aria-expanded=&#34;false&#34; aria-controls=&#34;collapse-1766615559056026829&#34;&gt;
     &lt;h4&gt;Code Example
-        &lt;i id=&#34;collapse-1766529136245225447-arrow&#34; class=&#34;pl-2 fas fa-caret-down&#34;&gt;&lt;/i&gt;
+        &lt;i id=&#34;collapse-1766615559056026829-arrow&#34; class=&#34;pl-2 fas fa-caret-down&#34;&gt;&lt;/i&gt;
     &lt;/h4&gt;
 &lt;/a&gt;
 
-&lt;div class=&#34;collapse pt-1&#34; id=&#34;collapse-1766529136245225447&#34;&gt;
+&lt;div class=&#34;collapse pt-1&#34; id=&#34;collapse-1766615559056026829&#34;&gt;
     
         
             
@@ -17486,10 +17486,10 @@ b.	SummatorStub&lt;/li&gt;
 
 
 &lt;script type=&#34;text/javascript&#34;&gt;
-    document.getElementById(&#34;btn-collapse-1766529136245225447&#34;).addEventListener(&#39;click&#39;, changeArrow);
+    document.getElementById(&#34;btn-collapse-1766615559056026829&#34;).addEventListener(&#39;click&#39;, changeArrow);
 
     function changeArrow(e) {
-        let arrow = document.getElementById(&#34;collapse-1766529136245225447-arrow&#34;)
+        let arrow = document.getElementById(&#34;collapse-1766615559056026829-arrow&#34;)
         if (arrow.classList.contains(&#34;fa-caret-up&#34;)) {
             arrow.classList.replace(&#34;fa-caret-up&#34;, &#34;fa-caret-down&#34;)
         } else {
@@ -17515,14 +17515,14 @@ b.	SummatorStub&lt;/li&gt;
 
 
 
-&lt;a class=&#34;btn btn-link&#34; id=&#34;btn-collapse-1766529136250402062&#34; style=&#34;border: none;text-decoration:underline;&#34;  type=&#34;button&#34;
-    data-toggle=&#34;collapse&#34; data-target=&#34;#collapse-1766529136250402062&#34; aria-expanded=&#34;false&#34; aria-controls=&#34;collapse-1766529136250402062&#34;&gt;
+&lt;a class=&#34;btn btn-link&#34; id=&#34;btn-collapse-1766615559061257466&#34; style=&#34;border: none;text-decoration:underline;&#34;  type=&#34;button&#34;
+    data-toggle=&#34;collapse&#34; data-target=&#34;#collapse-1766615559061257466&#34; aria-expanded=&#34;false&#34; aria-controls=&#34;collapse-1766615559061257466&#34;&gt;
     &lt;h4&gt;Code Example
-        &lt;i id=&#34;collapse-1766529136250402062-arrow&#34; class=&#34;pl-2 fas fa-caret-down&#34;&gt;&lt;/i&gt;
+        &lt;i id=&#34;collapse-1766615559061257466-arrow&#34; class=&#34;pl-2 fas fa-caret-down&#34;&gt;&lt;/i&gt;
     &lt;/h4&gt;
 &lt;/a&gt;
 
-&lt;div class=&#34;collapse pt-1&#34; id=&#34;collapse-1766529136250402062&#34;&gt;
+&lt;div class=&#34;collapse pt-1&#34; id=&#34;collapse-1766615559061257466&#34;&gt;
     
         
             
@@ -17596,10 +17596,10 @@ b.	SummatorStub&lt;/li&gt;
 
 
 &lt;script type=&#34;text/javascript&#34;&gt;
-    document.getElementById(&#34;btn-collapse-1766529136250402062&#34;).addEventListener(&#39;click&#39;, changeArrow);
+    document.getElementById(&#34;btn-collapse-1766615559061257466&#34;).addEventListener(&#39;click&#39;, changeArrow);
 
     function changeArrow(e) {
-        let arrow = document.getElementById(&#34;collapse-1766529136250402062-arrow&#34;)
+        let arrow = document.getElementById(&#34;collapse-1766615559061257466-arrow&#34;)
         if (arrow.classList.contains(&#34;fa-caret-up&#34;)) {
             arrow.classList.replace(&#34;fa-caret-up&#34;, &#34;fa-caret-down&#34;)
         } else {
@@ -17619,14 +17619,14 @@ b.	SummatorStub&lt;/li&gt;
 
 
 
-&lt;a class=&#34;btn btn-link&#34; id=&#34;btn-collapse-1766529136255402478&#34; style=&#34;border: none;text-decoration:underline;&#34;  type=&#34;button&#34;
-    data-toggle=&#34;collapse&#34; data-target=&#34;#collapse-1766529136255402478&#34; aria-expanded=&#34;false&#34; aria-controls=&#34;collapse-1766529136255402478&#34;&gt;
+&lt;a class=&#34;btn btn-link&#34; id=&#34;btn-collapse-1766615559066407533&#34; style=&#34;border: none;text-decoration:underline;&#34;  type=&#34;button&#34;
+    data-toggle=&#34;collapse&#34; data-target=&#34;#collapse-1766615559066407533&#34; aria-expanded=&#34;false&#34; aria-controls=&#34;collapse-1766615559066407533&#34;&gt;
     &lt;h4&gt;Code Example
-        &lt;i id=&#34;collapse-1766529136255402478-arrow&#34; class=&#34;pl-2 fas fa-caret-down&#34;&gt;&lt;/i&gt;
+        &lt;i id=&#34;collapse-1766615559066407533-arrow&#34; class=&#34;pl-2 fas fa-caret-down&#34;&gt;&lt;/i&gt;
     &lt;/h4&gt;
 &lt;/a&gt;
 
-&lt;div class=&#34;collapse pt-1&#34; id=&#34;collapse-1766529136255402478&#34;&gt;
+&lt;div class=&#34;collapse pt-1&#34; id=&#34;collapse-1766615559066407533&#34;&gt;
     
         
             
@@ -17700,10 +17700,10 @@ b.	SummatorStub&lt;/li&gt;
 
 
 &lt;script type=&#34;text/javascript&#34;&gt;
-    document.getElementById(&#34;btn-collapse-1766529136255402478&#34;).addEventListener(&#39;click&#39;, changeArrow);
+    document.getElementById(&#34;btn-collapse-1766615559066407533&#34;).addEventListener(&#39;click&#39;, changeArrow);
 
     function changeArrow(e) {
-        let arrow = document.getElementById(&#34;collapse-1766529136255402478-arrow&#34;)
+        let arrow = document.getElementById(&#34;collapse-1766615559066407533-arrow&#34;)
         if (arrow.classList.contains(&#34;fa-caret-up&#34;)) {
             arrow.classList.replace(&#34;fa-caret-up&#34;, &#34;fa-caret-down&#34;)
         } else {
@@ -17730,14 +17730,14 @@ b.	SummatorStub&lt;/li&gt;
 
 
 
-&lt;a class=&#34;btn btn-link&#34; id=&#34;btn-collapse-1766529136262406162&#34; style=&#34;border: none;text-decoration:underline;&#34;  type=&#34;button&#34;
-    data-toggle=&#34;collapse&#34; data-target=&#34;#collapse-1766529136262406162&#34; aria-expanded=&#34;false&#34; aria-controls=&#34;collapse-1766529136262406162&#34;&gt;
+&lt;a class=&#34;btn btn-link&#34; id=&#34;btn-collapse-1766615559073703553&#34; style=&#34;border: none;text-decoration:underline;&#34;  type=&#34;button&#34;
+    data-toggle=&#34;collapse&#34; data-target=&#34;#collapse-1766615559073703553&#34; aria-expanded=&#34;false&#34; aria-controls=&#34;collapse-1766615559073703553&#34;&gt;
     &lt;h4&gt;Code Example
-        &lt;i id=&#34;collapse-1766529136262406162-arrow&#34; class=&#34;pl-2 fas fa-caret-down&#34;&gt;&lt;/i&gt;
+        &lt;i id=&#34;collapse-1766615559073703553-arrow&#34; class=&#34;pl-2 fas fa-caret-down&#34;&gt;&lt;/i&gt;
     &lt;/h4&gt;
 &lt;/a&gt;
 
-&lt;div class=&#34;collapse pt-1&#34; id=&#34;collapse-1766529136262406162&#34;&gt;
+&lt;div class=&#34;collapse pt-1&#34; id=&#34;collapse-1766615559073703553&#34;&gt;
     
         
             
@@ -17826,10 +17826,10 @@ b.	SummatorStub&lt;/li&gt;
 
 
 &lt;script type=&#34;text/javascript&#34;&gt;
-    document.getElementById(&#34;btn-collapse-1766529136262406162&#34;).addEventListener(&#39;click&#39;, changeArrow);
+    document.getElementById(&#34;btn-collapse-1766615559073703553&#34;).addEventListener(&#39;click&#39;, changeArrow);
 
     function changeArrow(e) {
-        let arrow = document.getElementById(&#34;collapse-1766529136262406162-arrow&#34;)
+        let arrow = document.getElementById(&#34;collapse-1766615559073703553-arrow&#34;)
         if (arrow.classList.contains(&#34;fa-caret-up&#34;)) {
             arrow.classList.replace(&#34;fa-caret-up&#34;, &#34;fa-caret-down&#34;)
         } else {
@@ -23110,14 +23110,14 @@ b.	SummatorStub&lt;/li&gt;
 
 
 
-&lt;a class=&#34;btn btn-link&#34; id=&#34;btn-collapse-1766529137060479379&#34; style=&#34;border: none;text-decoration:underline;&#34;  type=&#34;button&#34;
-    data-toggle=&#34;collapse&#34; data-target=&#34;#collapse-1766529137060479379&#34; aria-expanded=&#34;false&#34; aria-controls=&#34;collapse-1766529137060479379&#34;&gt;
+&lt;a class=&#34;btn btn-link&#34; id=&#34;btn-collapse-1766615559788018927&#34; style=&#34;border: none;text-decoration:underline;&#34;  type=&#34;button&#34;
+    data-toggle=&#34;collapse&#34; data-target=&#34;#collapse-1766615559788018927&#34; aria-expanded=&#34;false&#34; aria-controls=&#34;collapse-1766615559788018927&#34;&gt;
     &lt;h4&gt;Code Example
-        &lt;i id=&#34;collapse-1766529137060479379-arrow&#34; class=&#34;pl-2 fas fa-caret-down&#34;&gt;&lt;/i&gt;
+        &lt;i id=&#34;collapse-1766615559788018927-arrow&#34; class=&#34;pl-2 fas fa-caret-down&#34;&gt;&lt;/i&gt;
     &lt;/h4&gt;
 &lt;/a&gt;
 
-&lt;div class=&#34;collapse pt-1&#34; id=&#34;collapse-1766529137060479379&#34;&gt;
+&lt;div class=&#34;collapse pt-1&#34; id=&#34;collapse-1766615559788018927&#34;&gt;
     
         
             
@@ -23347,10 +23347,10 @@ b.	SummatorStub&lt;/li&gt;
 
 
 &lt;script type=&#34;text/javascript&#34;&gt;
-    document.getElementById(&#34;btn-collapse-1766529137060479379&#34;).addEventListener(&#39;click&#39;, changeArrow);
+    document.getElementById(&#34;btn-collapse-1766615559788018927&#34;).addEventListener(&#39;click&#39;, changeArrow);
 
     function changeArrow(e) {
-        let arrow = document.getElementById(&#34;collapse-1766529137060479379-arrow&#34;)
+        let arrow = document.getElementById(&#34;collapse-1766615559788018927-arrow&#34;)
         if (arrow.classList.contains(&#34;fa-caret-up&#34;)) {
             arrow.classList.replace(&#34;fa-caret-up&#34;, &#34;fa-caret-down&#34;)
         } else {
@@ -23370,14 +23370,14 @@ b.	SummatorStub&lt;/li&gt;
 
 
 
-&lt;a class=&#34;btn btn-link&#34; id=&#34;btn-collapse-1766529137077466542&#34; style=&#34;border: none;text-decoration:underline;&#34;  type=&#34;button&#34;
-    data-toggle=&#34;collapse&#34; data-target=&#34;#collapse-1766529137077466542&#34; aria-expanded=&#34;false&#34; aria-controls=&#34;collapse-1766529137077466542&#34;&gt;
+&lt;a class=&#34;btn btn-link&#34; id=&#34;btn-collapse-1766615559805640668&#34; style=&#34;border: none;text-decoration:underline;&#34;  type=&#34;button&#34;
+    data-toggle=&#34;collapse&#34; data-target=&#34;#collapse-1766615559805640668&#34; aria-expanded=&#34;false&#34; aria-controls=&#34;collapse-1766615559805640668&#34;&gt;
     &lt;h4&gt;Code Example
-        &lt;i id=&#34;collapse-1766529137077466542-arrow&#34; class=&#34;pl-2 fas fa-caret-down&#34;&gt;&lt;/i&gt;
+        &lt;i id=&#34;collapse-1766615559805640668-arrow&#34; class=&#34;pl-2 fas fa-caret-down&#34;&gt;&lt;/i&gt;
     &lt;/h4&gt;
 &lt;/a&gt;
 
-&lt;div class=&#34;collapse pt-1&#34; id=&#34;collapse-1766529137077466542&#34;&gt;
+&lt;div class=&#34;collapse pt-1&#34; id=&#34;collapse-1766615559805640668&#34;&gt;
     
         
             
@@ -23638,10 +23638,10 @@ b.	SummatorStub&lt;/li&gt;
 
 
 &lt;script type=&#34;text/javascript&#34;&gt;
-    document.getElementById(&#34;btn-collapse-1766529137077466542&#34;).addEventListener(&#39;click&#39;, changeArrow);
+    document.getElementById(&#34;btn-collapse-1766615559805640668&#34;).addEventListener(&#39;click&#39;, changeArrow);
 
     function changeArrow(e) {
-        let arrow = document.getElementById(&#34;collapse-1766529137077466542-arrow&#34;)
+        let arrow = document.getElementById(&#34;collapse-1766615559805640668-arrow&#34;)
         if (arrow.classList.contains(&#34;fa-caret-up&#34;)) {
             arrow.classList.replace(&#34;fa-caret-up&#34;, &#34;fa-caret-down&#34;)
         } else {
@@ -23661,14 +23661,14 @@ b.	SummatorStub&lt;/li&gt;
 
 
 
-&lt;a class=&#34;btn btn-link&#34; id=&#34;btn-collapse-1766529137097941110&#34; style=&#34;border: none;text-decoration:underline;&#34;  type=&#34;button&#34;
-    data-toggle=&#34;collapse&#34; data-target=&#34;#collapse-1766529137097941110&#34; aria-expanded=&#34;false&#34; aria-controls=&#34;collapse-1766529137097941110&#34;&gt;
+&lt;a class=&#34;btn btn-link&#34; id=&#34;btn-collapse-1766615559827083137&#34; style=&#34;border: none;text-decoration:underline;&#34;  type=&#34;button&#34;
+    data-toggle=&#34;collapse&#34; data-target=&#34;#collapse-1766615559827083137&#34; aria-expanded=&#34;false&#34; aria-controls=&#34;collapse-1766615559827083137&#34;&gt;
     &lt;h4&gt;Code Example
-        &lt;i id=&#34;collapse-1766529137097941110-arrow&#34; class=&#34;pl-2 fas fa-caret-down&#34;&gt;&lt;/i&gt;
+        &lt;i id=&#34;collapse-1766615559827083137-arrow&#34; class=&#34;pl-2 fas fa-caret-down&#34;&gt;&lt;/i&gt;
     &lt;/h4&gt;
 &lt;/a&gt;
 
-&lt;div class=&#34;collapse pt-1&#34; id=&#34;collapse-1766529137097941110&#34;&gt;
+&lt;div class=&#34;collapse pt-1&#34; id=&#34;collapse-1766615559827083137&#34;&gt;
     
         
             
@@ -23936,10 +23936,10 @@ b.	SummatorStub&lt;/li&gt;
 
 
 &lt;script type=&#34;text/javascript&#34;&gt;
-    document.getElementById(&#34;btn-collapse-1766529137097941110&#34;).addEventListener(&#39;click&#39;, changeArrow);
+    document.getElementById(&#34;btn-collapse-1766615559827083137&#34;).addEventListener(&#39;click&#39;, changeArrow);
 
     function changeArrow(e) {
-        let arrow = document.getElementById(&#34;collapse-1766529137097941110-arrow&#34;)
+        let arrow = document.getElementById(&#34;collapse-1766615559827083137-arrow&#34;)
         if (arrow.classList.contains(&#34;fa-caret-up&#34;)) {
             arrow.classList.replace(&#34;fa-caret-up&#34;, &#34;fa-caret-down&#34;)
         } else {
@@ -23959,14 +23959,14 @@ b.	SummatorStub&lt;/li&gt;
 
 
 
-&lt;a class=&#34;btn btn-link&#34; id=&#34;btn-collapse-1766529137111517912&#34; style=&#34;border: none;text-decoration:underline;&#34;  type=&#34;button&#34;
-    data-toggle=&#34;collapse&#34; data-target=&#34;#collapse-1766529137111517912&#34; aria-expanded=&#34;false&#34; aria-controls=&#34;collapse-1766529137111517912&#34;&gt;
+&lt;a class=&#34;btn btn-link&#34; id=&#34;btn-collapse-1766615559841417075&#34; style=&#34;border: none;text-decoration:underline;&#34;  type=&#34;button&#34;
+    data-toggle=&#34;collapse&#34; data-target=&#34;#collapse-1766615559841417075&#34; aria-expanded=&#34;false&#34; aria-controls=&#34;collapse-1766615559841417075&#34;&gt;
     &lt;h4&gt;Code Example
-        &lt;i id=&#34;collapse-1766529137111517912-arrow&#34; class=&#34;pl-2 fas fa-caret-down&#34;&gt;&lt;/i&gt;
+        &lt;i id=&#34;collapse-1766615559841417075-arrow&#34; class=&#34;pl-2 fas fa-caret-down&#34;&gt;&lt;/i&gt;
     &lt;/h4&gt;
 &lt;/a&gt;
 
-&lt;div class=&#34;collapse pt-1&#34; id=&#34;collapse-1766529137111517912&#34;&gt;
+&lt;div class=&#34;collapse pt-1&#34; id=&#34;collapse-1766615559841417075&#34;&gt;
     
         
             
@@ -24193,10 +24193,10 @@ b.	SummatorStub&lt;/li&gt;
 
 
 &lt;script type=&#34;text/javascript&#34;&gt;
-    document.getElementById(&#34;btn-collapse-1766529137111517912&#34;).addEventListener(&#39;click&#39;, changeArrow);
+    document.getElementById(&#34;btn-collapse-1766615559841417075&#34;).addEventListener(&#39;click&#39;, changeArrow);
 
     function changeArrow(e) {
-        let arrow = document.getElementById(&#34;collapse-1766529137111517912-arrow&#34;)
+        let arrow = document.getElementById(&#34;collapse-1766615559841417075-arrow&#34;)
         if (arrow.classList.contains(&#34;fa-caret-up&#34;)) {
             arrow.classList.replace(&#34;fa-caret-up&#34;, &#34;fa-caret-down&#34;)
         } else {
@@ -24216,14 +24216,14 @@ b.	SummatorStub&lt;/li&gt;
 
 
 
-&lt;a class=&#34;btn btn-link&#34; id=&#34;btn-collapse-1766529137135333581&#34; style=&#34;border: none;text-decoration:underline;&#34;  type=&#34;button&#34;
-    data-toggle=&#34;collapse&#34; data-target=&#34;#collapse-1766529137135333581&#34; aria-expanded=&#34;false&#34; aria-controls=&#34;collapse-1766529137135333581&#34;&gt;
+&lt;a class=&#34;btn btn-link&#34; id=&#34;btn-collapse-1766615559866374140&#34; style=&#34;border: none;text-decoration:underline;&#34;  type=&#34;button&#34;
+    data-toggle=&#34;collapse&#34; data-target=&#34;#collapse-1766615559866374140&#34; aria-expanded=&#34;false&#34; aria-controls=&#34;collapse-1766615559866374140&#34;&gt;
     &lt;h4&gt;Code Example
-        &lt;i id=&#34;collapse-1766529137135333581-arrow&#34; class=&#34;pl-2 fas fa-caret-down&#34;&gt;&lt;/i&gt;
+        &lt;i id=&#34;collapse-1766615559866374140-arrow&#34; class=&#34;pl-2 fas fa-caret-down&#34;&gt;&lt;/i&gt;
     &lt;/h4&gt;
 &lt;/a&gt;
 
-&lt;div class=&#34;collapse pt-1&#34; id=&#34;collapse-1766529137135333581&#34;&gt;
+&lt;div class=&#34;collapse pt-1&#34; id=&#34;collapse-1766615559866374140&#34;&gt;
     
         
             
@@ -24440,10 +24440,10 @@ b.	SummatorStub&lt;/li&gt;
 
 
 &lt;script type=&#34;text/javascript&#34;&gt;
-    document.getElementById(&#34;btn-collapse-1766529137135333581&#34;).addEventListener(&#39;click&#39;, changeArrow);
+    document.getElementById(&#34;btn-collapse-1766615559866374140&#34;).addEventListener(&#39;click&#39;, changeArrow);
 
     function changeArrow(e) {
-        let arrow = document.getElementById(&#34;collapse-1766529137135333581-arrow&#34;)
+        let arrow = document.getElementById(&#34;collapse-1766615559866374140-arrow&#34;)
         if (arrow.classList.contains(&#34;fa-caret-up&#34;)) {
             arrow.classList.replace(&#34;fa-caret-up&#34;, &#34;fa-caret-down&#34;)
         } else {
@@ -24472,14 +24472,14 @@ b.	SummatorStub&lt;/li&gt;
 
 
 
-&lt;a class=&#34;btn btn-link&#34; id=&#34;btn-collapse-1766529137136855799&#34; style=&#34;border: none;text-decoration:underline;&#34;  type=&#34;button&#34;
-    data-toggle=&#34;collapse&#34; data-target=&#34;#collapse-1766529137136855799&#34; aria-expanded=&#34;false&#34; aria-controls=&#34;collapse-1766529137136855799&#34;&gt;
+&lt;a class=&#34;btn btn-link&#34; id=&#34;btn-collapse-1766615559868108795&#34; style=&#34;border: none;text-decoration:underline;&#34;  type=&#34;button&#34;
+    data-toggle=&#34;collapse&#34; data-target=&#34;#collapse-1766615559868108795&#34; aria-expanded=&#34;false&#34; aria-controls=&#34;collapse-1766615559868108795&#34;&gt;
     &lt;h4&gt;Code Example
-        &lt;i id=&#34;collapse-1766529137136855799-arrow&#34; class=&#34;pl-2 fas fa-caret-down&#34;&gt;&lt;/i&gt;
+        &lt;i id=&#34;collapse-1766615559868108795-arrow&#34; class=&#34;pl-2 fas fa-caret-down&#34;&gt;&lt;/i&gt;
     &lt;/h4&gt;
 &lt;/a&gt;
 
-&lt;div class=&#34;collapse pt-1&#34; id=&#34;collapse-1766529137136855799&#34;&gt;
+&lt;div class=&#34;collapse pt-1&#34; id=&#34;collapse-1766615559868108795&#34;&gt;
     
         
             
@@ -24553,10 +24553,10 @@ b.	SummatorStub&lt;/li&gt;
 
 
 &lt;script type=&#34;text/javascript&#34;&gt;
-    document.getElementById(&#34;btn-collapse-1766529137136855799&#34;).addEventListener(&#39;click&#39;, changeArrow);
+    document.getElementById(&#34;btn-collapse-1766615559868108795&#34;).addEventListener(&#39;click&#39;, changeArrow);
 
     function changeArrow(e) {
-        let arrow = document.getElementById(&#34;collapse-1766529137136855799-arrow&#34;)
+        let arrow = document.getElementById(&#34;collapse-1766615559868108795-arrow&#34;)
         if (arrow.classList.contains(&#34;fa-caret-up&#34;)) {
             arrow.classList.replace(&#34;fa-caret-up&#34;, &#34;fa-caret-down&#34;)
         } else {
@@ -24576,14 +24576,14 @@ b.	SummatorStub&lt;/li&gt;
 
 
 
-&lt;a class=&#34;btn btn-link&#34; id=&#34;btn-collapse-1766529137138296875&#34; style=&#34;border: none;text-decoration:underline;&#34;  type=&#34;button&#34;
-    data-toggle=&#34;collapse&#34; data-target=&#34;#collapse-1766529137138296875&#34; aria-expanded=&#34;false&#34; aria-controls=&#34;collapse-1766529137138296875&#34;&gt;
+&lt;a class=&#34;btn btn-link&#34; id=&#34;btn-collapse-1766615559869662574&#34; style=&#34;border: none;text-decoration:underline;&#34;  type=&#34;button&#34;
+    data-toggle=&#34;collapse&#34; data-target=&#34;#collapse-1766615559869662574&#34; aria-expanded=&#34;false&#34; aria-controls=&#34;collapse-1766615559869662574&#34;&gt;
     &lt;h4&gt;Code Example
-        &lt;i id=&#34;collapse-1766529137138296875-arrow&#34; class=&#34;pl-2 fas fa-caret-down&#34;&gt;&lt;/i&gt;
+        &lt;i id=&#34;collapse-1766615559869662574-arrow&#34; class=&#34;pl-2 fas fa-caret-down&#34;&gt;&lt;/i&gt;
     &lt;/h4&gt;
 &lt;/a&gt;
 
-&lt;div class=&#34;collapse pt-1&#34; id=&#34;collapse-1766529137138296875&#34;&gt;
+&lt;div class=&#34;collapse pt-1&#34; id=&#34;collapse-1766615559869662574&#34;&gt;
     
         
             
@@ -24657,10 +24657,10 @@ b.	SummatorStub&lt;/li&gt;
 
 
 &lt;script type=&#34;text/javascript&#34;&gt;
-    document.getElementById(&#34;btn-collapse-1766529137138296875&#34;).addEventListener(&#39;click&#39;, changeArrow);
+    document.getElementById(&#34;btn-collapse-1766615559869662574&#34;).addEventListener(&#39;click&#39;, changeArrow);
 
     function changeArrow(e) {
-        let arrow = document.getElementById(&#34;collapse-1766529137138296875-arrow&#34;)
+        let arrow = document.getElementById(&#34;collapse-1766615559869662574-arrow&#34;)
         if (arrow.classList.contains(&#34;fa-caret-up&#34;)) {
             arrow.classList.replace(&#34;fa-caret-up&#34;, &#34;fa-caret-down&#34;)
         } else {
@@ -24680,14 +24680,14 @@ b.	SummatorStub&lt;/li&gt;
 
 
 
-&lt;a class=&#34;btn btn-link&#34; id=&#34;btn-collapse-1766529137139738943&#34; style=&#34;border: none;text-decoration:underline;&#34;  type=&#34;button&#34;
-    data-toggle=&#34;collapse&#34; data-target=&#34;#collapse-1766529137139738943&#34; aria-expanded=&#34;false&#34; aria-controls=&#34;collapse-1766529137139738943&#34;&gt;
+&lt;a class=&#34;btn btn-link&#34; id=&#34;btn-collapse-1766615559871527062&#34; style=&#34;border: none;text-decoration:underline;&#34;  type=&#34;button&#34;
+    data-toggle=&#34;collapse&#34; data-target=&#34;#collapse-1766615559871527062&#34; aria-expanded=&#34;false&#34; aria-controls=&#34;collapse-1766615559871527062&#34;&gt;
     &lt;h4&gt;Code Example
-        &lt;i id=&#34;collapse-1766529137139738943-arrow&#34; class=&#34;pl-2 fas fa-caret-down&#34;&gt;&lt;/i&gt;
+        &lt;i id=&#34;collapse-1766615559871527062-arrow&#34; class=&#34;pl-2 fas fa-caret-down&#34;&gt;&lt;/i&gt;
     &lt;/h4&gt;
 &lt;/a&gt;
 
-&lt;div class=&#34;collapse pt-1&#34; id=&#34;collapse-1766529137139738943&#34;&gt;
+&lt;div class=&#34;collapse pt-1&#34; id=&#34;collapse-1766615559871527062&#34;&gt;
     
         
             
@@ -24761,10 +24761,10 @@ b.	SummatorStub&lt;/li&gt;
 
 
 &lt;script type=&#34;text/javascript&#34;&gt;
-    document.getElementById(&#34;btn-collapse-1766529137139738943&#34;).addEventListener(&#39;click&#39;, changeArrow);
+    document.getElementById(&#34;btn-collapse-1766615559871527062&#34;).addEventListener(&#39;click&#39;, changeArrow);
 
     function changeArrow(e) {
-        let arrow = document.getElementById(&#34;collapse-1766529137139738943-arrow&#34;)
+        let arrow = document.getElementById(&#34;collapse-1766615559871527062-arrow&#34;)
         if (arrow.classList.contains(&#34;fa-caret-up&#34;)) {
             arrow.classList.replace(&#34;fa-caret-up&#34;, &#34;fa-caret-down&#34;)
         } else {
@@ -24784,14 +24784,14 @@ b.	SummatorStub&lt;/li&gt;
 
 
 
-&lt;a class=&#34;btn btn-link&#34; id=&#34;btn-collapse-1766529137141147088&#34; style=&#34;border: none;text-decoration:underline;&#34;  type=&#34;button&#34;
-    data-toggle=&#34;collapse&#34; data-target=&#34;#collapse-1766529137141147088&#34; aria-expanded=&#34;false&#34; aria-controls=&#34;collapse-1766529137141147088&#34;&gt;
+&lt;a class=&#34;btn btn-link&#34; id=&#34;btn-collapse-1766615559873076332&#34; style=&#34;border: none;text-decoration:underline;&#34;  type=&#34;button&#34;
+    data-toggle=&#34;collapse&#34; data-target=&#34;#collapse-1766615559873076332&#34; aria-expanded=&#34;false&#34; aria-controls=&#34;collapse-1766615559873076332&#34;&gt;
     &lt;h4&gt;Code Example
-        &lt;i id=&#34;collapse-1766529137141147088-arrow&#34; class=&#34;pl-2 fas fa-caret-down&#34;&gt;&lt;/i&gt;
+        &lt;i id=&#34;collapse-1766615559873076332-arrow&#34; class=&#34;pl-2 fas fa-caret-down&#34;&gt;&lt;/i&gt;
     &lt;/h4&gt;
 &lt;/a&gt;
 
-&lt;div class=&#34;collapse pt-1&#34; id=&#34;collapse-1766529137141147088&#34;&gt;
+&lt;div class=&#34;collapse pt-1&#34; id=&#34;collapse-1766615559873076332&#34;&gt;
     
         
             
@@ -24865,10 +24865,10 @@ b.	SummatorStub&lt;/li&gt;
 
 
 &lt;script type=&#34;text/javascript&#34;&gt;
-    document.getElementById(&#34;btn-collapse-1766529137141147088&#34;).addEventListener(&#39;click&#39;, changeArrow);
+    document.getElementById(&#34;btn-collapse-1766615559873076332&#34;).addEventListener(&#39;click&#39;, changeArrow);
 
     function changeArrow(e) {
-        let arrow = document.getElementById(&#34;collapse-1766529137141147088-arrow&#34;)
+        let arrow = document.getElementById(&#34;collapse-1766615559873076332-arrow&#34;)
         if (arrow.classList.contains(&#34;fa-caret-up&#34;)) {
             arrow.classList.replace(&#34;fa-caret-up&#34;, &#34;fa-caret-down&#34;)
         } else {
@@ -24888,14 +24888,14 @@ b.	SummatorStub&lt;/li&gt;
 
 
 
-&lt;a class=&#34;btn btn-link&#34; id=&#34;btn-collapse-1766529137142598644&#34; style=&#34;border: none;text-decoration:underline;&#34;  type=&#34;button&#34;
-    data-toggle=&#34;collapse&#34; data-target=&#34;#collapse-1766529137142598644&#34; aria-expanded=&#34;false&#34; aria-controls=&#34;collapse-1766529137142598644&#34;&gt;
+&lt;a class=&#34;btn btn-link&#34; id=&#34;btn-collapse-1766615559875021199&#34; style=&#34;border: none;text-decoration:underline;&#34;  type=&#34;button&#34;
+    data-toggle=&#34;collapse&#34; data-target=&#34;#collapse-1766615559875021199&#34; aria-expanded=&#34;false&#34; aria-controls=&#34;collapse-1766615559875021199&#34;&gt;
     &lt;h4&gt;Code Example
-        &lt;i id=&#34;collapse-1766529137142598644-arrow&#34; class=&#34;pl-2 fas fa-caret-down&#34;&gt;&lt;/i&gt;
+        &lt;i id=&#34;collapse-1766615559875021199-arrow&#34; class=&#34;pl-2 fas fa-caret-down&#34;&gt;&lt;/i&gt;
     &lt;/h4&gt;
 &lt;/a&gt;
 
-&lt;div class=&#34;collapse pt-1&#34; id=&#34;collapse-1766529137142598644&#34;&gt;
+&lt;div class=&#34;collapse pt-1&#34; id=&#34;collapse-1766615559875021199&#34;&gt;
     
         
             
@@ -24969,10 +24969,10 @@ b.	SummatorStub&lt;/li&gt;
 
 
 &lt;script type=&#34;text/javascript&#34;&gt;
-    document.getElementById(&#34;btn-collapse-1766529137142598644&#34;).addEventListener(&#39;click&#39;, changeArrow);
+    document.getElementById(&#34;btn-collapse-1766615559875021199&#34;).addEventListener(&#39;click&#39;, changeArrow);
 
     function changeArrow(e) {
-        let arrow = document.getElementById(&#34;collapse-1766529137142598644-arrow&#34;)
+        let arrow = document.getElementById(&#34;collapse-1766615559875021199-arrow&#34;)
         if (arrow.classList.contains(&#34;fa-caret-up&#34;)) {
             arrow.classList.replace(&#34;fa-caret-up&#34;, &#34;fa-caret-down&#34;)
         } else {
