@@ -2179,14 +2179,14 @@ The core of the toolkit is shown in green. It consists of two modules, both of w
 
 
 
-&lt;a class=&#34;btn btn-link&#34; id=&#34;btn-collapse-1784762066840041838&#34; style=&#34;border: none;text-decoration:underline;&#34;  type=&#34;button&#34;
-    data-toggle=&#34;collapse&#34; data-target=&#34;#collapse-1784762066840041838&#34; aria-expanded=&#34;false&#34; aria-controls=&#34;collapse-1784762066840041838&#34;&gt;
+&lt;a class=&#34;btn btn-link&#34; id=&#34;btn-collapse-1784848087445706575&#34; style=&#34;border: none;text-decoration:underline;&#34;  type=&#34;button&#34;
+    data-toggle=&#34;collapse&#34; data-target=&#34;#collapse-1784848087445706575&#34; aria-expanded=&#34;false&#34; aria-controls=&#34;collapse-1784848087445706575&#34;&gt;
     &lt;h4&gt;Code Example
-        &lt;i id=&#34;collapse-1784762066840041838-arrow&#34; class=&#34;pl-2 fas fa-caret-down&#34;&gt;&lt;/i&gt;
+        &lt;i id=&#34;collapse-1784848087445706575-arrow&#34; class=&#34;pl-2 fas fa-caret-down&#34;&gt;&lt;/i&gt;
     &lt;/h4&gt;
 &lt;/a&gt;
 
-&lt;div class=&#34;collapse pt-1&#34; id=&#34;collapse-1784762066840041838&#34;&gt;
+&lt;div class=&#34;collapse pt-1&#34; id=&#34;collapse-1784848087445706575&#34;&gt;
     
         
             
@@ -2359,10 +2359,10 @@ The core of the toolkit is shown in green. It consists of two modules, both of w
 
 
 &lt;script type=&#34;text/javascript&#34;&gt;
-    document.getElementById(&#34;btn-collapse-1784762066840041838&#34;).addEventListener(&#39;click&#39;, changeArrow);
+    document.getElementById(&#34;btn-collapse-1784848087445706575&#34;).addEventListener(&#39;click&#39;, changeArrow);
 
     function changeArrow(e) {
-        let arrow = document.getElementById(&#34;collapse-1784762066840041838-arrow&#34;)
+        let arrow = document.getElementById(&#34;collapse-1784848087445706575-arrow&#34;)
         if (arrow.classList.contains(&#34;fa-caret-up&#34;)) {
             arrow.classList.replace(&#34;fa-caret-up&#34;, &#34;fa-caret-down&#34;)
         } else {
@@ -2382,14 +2382,14 @@ The core of the toolkit is shown in green. It consists of two modules, both of w
 
 
 
-&lt;a class=&#34;btn btn-link&#34; id=&#34;btn-collapse-1784762066856446642&#34; style=&#34;border: none;text-decoration:underline;&#34;  type=&#34;button&#34;
-    data-toggle=&#34;collapse&#34; data-target=&#34;#collapse-1784762066856446642&#34; aria-expanded=&#34;false&#34; aria-controls=&#34;collapse-1784762066856446642&#34;&gt;
+&lt;a class=&#34;btn btn-link&#34; id=&#34;btn-collapse-1784848087462165672&#34; style=&#34;border: none;text-decoration:underline;&#34;  type=&#34;button&#34;
+    data-toggle=&#34;collapse&#34; data-target=&#34;#collapse-1784848087462165672&#34; aria-expanded=&#34;false&#34; aria-controls=&#34;collapse-1784848087462165672&#34;&gt;
     &lt;h4&gt;Code Example
-        &lt;i id=&#34;collapse-1784762066856446642-arrow&#34; class=&#34;pl-2 fas fa-caret-down&#34;&gt;&lt;/i&gt;
+        &lt;i id=&#34;collapse-1784848087462165672-arrow&#34; class=&#34;pl-2 fas fa-caret-down&#34;&gt;&lt;/i&gt;
     &lt;/h4&gt;
 &lt;/a&gt;
 
-&lt;div class=&#34;collapse pt-1&#34; id=&#34;collapse-1784762066856446642&#34;&gt;
+&lt;div class=&#34;collapse pt-1&#34; id=&#34;collapse-1784848087462165672&#34;&gt;
     
         
             
@@ -2601,10 +2601,10 @@ The core of the toolkit is shown in green. It consists of two modules, both of w
 
 
 &lt;script type=&#34;text/javascript&#34;&gt;
-    document.getElementById(&#34;btn-collapse-1784762066856446642&#34;).addEventListener(&#39;click&#39;, changeArrow);
+    document.getElementById(&#34;btn-collapse-1784848087462165672&#34;).addEventListener(&#39;click&#39;, changeArrow);
 
     function changeArrow(e) {
-        let arrow = document.getElementById(&#34;collapse-1784762066856446642-arrow&#34;)
+        let arrow = document.getElementById(&#34;collapse-1784848087462165672-arrow&#34;)
         if (arrow.classList.contains(&#34;fa-caret-up&#34;)) {
             arrow.classList.replace(&#34;fa-caret-up&#34;, &#34;fa-caret-down&#34;)
         } else {
@@ -2624,14 +2624,14 @@ The core of the toolkit is shown in green. It consists of two modules, both of w
 
 
 
-&lt;a class=&#34;btn btn-link&#34; id=&#34;btn-collapse-1784762066875193185&#34; style=&#34;border: none;text-decoration:underline;&#34;  type=&#34;button&#34;
-    data-toggle=&#34;collapse&#34; data-target=&#34;#collapse-1784762066875193185&#34; aria-expanded=&#34;false&#34; aria-controls=&#34;collapse-1784762066875193185&#34;&gt;
+&lt;a class=&#34;btn btn-link&#34; id=&#34;btn-collapse-1784848087480854441&#34; style=&#34;border: none;text-decoration:underline;&#34;  type=&#34;button&#34;
+    data-toggle=&#34;collapse&#34; data-target=&#34;#collapse-1784848087480854441&#34; aria-expanded=&#34;false&#34; aria-controls=&#34;collapse-1784848087480854441&#34;&gt;
     &lt;h4&gt;Code Example
-        &lt;i id=&#34;collapse-1784762066875193185-arrow&#34; class=&#34;pl-2 fas fa-caret-down&#34;&gt;&lt;/i&gt;
+        &lt;i id=&#34;collapse-1784848087480854441-arrow&#34; class=&#34;pl-2 fas fa-caret-down&#34;&gt;&lt;/i&gt;
     &lt;/h4&gt;
 &lt;/a&gt;
 
-&lt;div class=&#34;collapse pt-1&#34; id=&#34;collapse-1784762066875193185&#34;&gt;
+&lt;div class=&#34;collapse pt-1&#34; id=&#34;collapse-1784848087480854441&#34;&gt;
     
         
             
@@ -2849,10 +2849,10 @@ The core of the toolkit is shown in green. It consists of two modules, both of w
 
 
 &lt;script type=&#34;text/javascript&#34;&gt;
-    document.getElementById(&#34;btn-collapse-1784762066875193185&#34;).addEventListener(&#39;click&#39;, changeArrow);
+    document.getElementById(&#34;btn-collapse-1784848087480854441&#34;).addEventListener(&#39;click&#39;, changeArrow);
 
     function changeArrow(e) {
-        let arrow = document.getElementById(&#34;collapse-1784762066875193185-arrow&#34;)
+        let arrow = document.getElementById(&#34;collapse-1784848087480854441-arrow&#34;)
         if (arrow.classList.contains(&#34;fa-caret-up&#34;)) {
             arrow.classList.replace(&#34;fa-caret-up&#34;, &#34;fa-caret-down&#34;)
         } else {
@@ -2880,14 +2880,14 @@ The core of the toolkit is shown in green. It consists of two modules, both of w
 
 
 
-&lt;a class=&#34;btn btn-link&#34; id=&#34;btn-collapse-1784762066896930390&#34; style=&#34;border: none;text-decoration:underline;&#34;  type=&#34;button&#34;
-    data-toggle=&#34;collapse&#34; data-target=&#34;#collapse-1784762066896930390&#34; aria-expanded=&#34;false&#34; aria-controls=&#34;collapse-1784762066896930390&#34;&gt;
+&lt;a class=&#34;btn btn-link&#34; id=&#34;btn-collapse-1784848087502574154&#34; style=&#34;border: none;text-decoration:underline;&#34;  type=&#34;button&#34;
+    data-toggle=&#34;collapse&#34; data-target=&#34;#collapse-1784848087502574154&#34; aria-expanded=&#34;false&#34; aria-controls=&#34;collapse-1784848087502574154&#34;&gt;
     &lt;h4&gt;Code Example
-        &lt;i id=&#34;collapse-1784762066896930390-arrow&#34; class=&#34;pl-2 fas fa-caret-down&#34;&gt;&lt;/i&gt;
+        &lt;i id=&#34;collapse-1784848087502574154-arrow&#34; class=&#34;pl-2 fas fa-caret-down&#34;&gt;&lt;/i&gt;
     &lt;/h4&gt;
 &lt;/a&gt;
 
-&lt;div class=&#34;collapse pt-1&#34; id=&#34;collapse-1784762066896930390&#34;&gt;
+&lt;div class=&#34;collapse pt-1&#34; id=&#34;collapse-1784848087502574154&#34;&gt;
     
         
             
@@ -3065,10 +3065,10 @@ The core of the toolkit is shown in green. It consists of two modules, both of w
 
 
 &lt;script type=&#34;text/javascript&#34;&gt;
-    document.getElementById(&#34;btn-collapse-1784762066896930390&#34;).addEventListener(&#39;click&#39;, changeArrow);
+    document.getElementById(&#34;btn-collapse-1784848087502574154&#34;).addEventListener(&#39;click&#39;, changeArrow);
 
     function changeArrow(e) {
-        let arrow = document.getElementById(&#34;collapse-1784762066896930390-arrow&#34;)
+        let arrow = document.getElementById(&#34;collapse-1784848087502574154-arrow&#34;)
         if (arrow.classList.contains(&#34;fa-caret-up&#34;)) {
             arrow.classList.replace(&#34;fa-caret-up&#34;, &#34;fa-caret-down&#34;)
         } else {
@@ -4171,14 +4171,14 @@ In this tutorial you will learn how to create yml configuration files. First, we
 
 
 
-&lt;a class=&#34;btn btn-link&#34; id=&#34;btn-collapse-1784762055675231188&#34; style=&#34;border: none;text-decoration:underline;&#34;  type=&#34;button&#34;
-    data-toggle=&#34;collapse&#34; data-target=&#34;#collapse-1784762055675231188&#34; aria-expanded=&#34;false&#34; aria-controls=&#34;collapse-1784762055675231188&#34;&gt;
+&lt;a class=&#34;btn btn-link&#34; id=&#34;btn-collapse-1784848076278905758&#34; style=&#34;border: none;text-decoration:underline;&#34;  type=&#34;button&#34;
+    data-toggle=&#34;collapse&#34; data-target=&#34;#collapse-1784848076278905758&#34; aria-expanded=&#34;false&#34; aria-controls=&#34;collapse-1784848076278905758&#34;&gt;
     &lt;h4&gt;Code Example
-        &lt;i id=&#34;collapse-1784762055675231188-arrow&#34; class=&#34;pl-2 fas fa-caret-down&#34;&gt;&lt;/i&gt;
+        &lt;i id=&#34;collapse-1784848076278905758-arrow&#34; class=&#34;pl-2 fas fa-caret-down&#34;&gt;&lt;/i&gt;
     &lt;/h4&gt;
 &lt;/a&gt;
 
-&lt;div class=&#34;collapse pt-1&#34; id=&#34;collapse-1784762055675231188&#34;&gt;
+&lt;div class=&#34;collapse pt-1&#34; id=&#34;collapse-1784848076278905758&#34;&gt;
     
         
             
@@ -4233,10 +4233,10 @@ In this tutorial you will learn how to create yml configuration files. First, we
 
 
 &lt;script type=&#34;text/javascript&#34;&gt;
-    document.getElementById(&#34;btn-collapse-1784762055675231188&#34;).addEventListener(&#39;click&#39;, changeArrow);
+    document.getElementById(&#34;btn-collapse-1784848076278905758&#34;).addEventListener(&#39;click&#39;, changeArrow);
 
     function changeArrow(e) {
-        let arrow = document.getElementById(&#34;collapse-1784762055675231188-arrow&#34;)
+        let arrow = document.getElementById(&#34;collapse-1784848076278905758-arrow&#34;)
         if (arrow.classList.contains(&#34;fa-caret-up&#34;)) {
             arrow.classList.replace(&#34;fa-caret-up&#34;, &#34;fa-caret-down&#34;)
         } else {
@@ -4256,14 +4256,14 @@ In this tutorial you will learn how to create yml configuration files. First, we
 
 
 
-&lt;a class=&#34;btn btn-link&#34; id=&#34;btn-collapse-1784762055684216143&#34; style=&#34;border: none;text-decoration:underline;&#34;  type=&#34;button&#34;
-    data-toggle=&#34;collapse&#34; data-target=&#34;#collapse-1784762055684216143&#34; aria-expanded=&#34;false&#34; aria-controls=&#34;collapse-1784762055684216143&#34;&gt;
+&lt;a class=&#34;btn btn-link&#34; id=&#34;btn-collapse-1784848076288030593&#34; style=&#34;border: none;text-decoration:underline;&#34;  type=&#34;button&#34;
+    data-toggle=&#34;collapse&#34; data-target=&#34;#collapse-1784848076288030593&#34; aria-expanded=&#34;false&#34; aria-controls=&#34;collapse-1784848076288030593&#34;&gt;
     &lt;h4&gt;Code Example
-        &lt;i id=&#34;collapse-1784762055684216143-arrow&#34; class=&#34;pl-2 fas fa-caret-down&#34;&gt;&lt;/i&gt;
+        &lt;i id=&#34;collapse-1784848076288030593-arrow&#34; class=&#34;pl-2 fas fa-caret-down&#34;&gt;&lt;/i&gt;
     &lt;/h4&gt;
 &lt;/a&gt;
 
-&lt;div class=&#34;collapse pt-1&#34; id=&#34;collapse-1784762055684216143&#34;&gt;
+&lt;div class=&#34;collapse pt-1&#34; id=&#34;collapse-1784848076288030593&#34;&gt;
     
         
             
@@ -4327,10 +4327,10 @@ In this tutorial you will learn how to create yml configuration files. First, we
 
 
 &lt;script type=&#34;text/javascript&#34;&gt;
-    document.getElementById(&#34;btn-collapse-1784762055684216143&#34;).addEventListener(&#39;click&#39;, changeArrow);
+    document.getElementById(&#34;btn-collapse-1784848076288030593&#34;).addEventListener(&#39;click&#39;, changeArrow);
 
     function changeArrow(e) {
-        let arrow = document.getElementById(&#34;collapse-1784762055684216143-arrow&#34;)
+        let arrow = document.getElementById(&#34;collapse-1784848076288030593-arrow&#34;)
         if (arrow.classList.contains(&#34;fa-caret-up&#34;)) {
             arrow.classList.replace(&#34;fa-caret-up&#34;, &#34;fa-caret-down&#34;)
         } else {
@@ -4350,14 +4350,14 @@ In this tutorial you will learn how to create yml configuration files. First, we
 
 
 
-&lt;a class=&#34;btn btn-link&#34; id=&#34;btn-collapse-1784762055687415613&#34; style=&#34;border: none;text-decoration:underline;&#34;  type=&#34;button&#34;
-    data-toggle=&#34;collapse&#34; data-target=&#34;#collapse-1784762055687415613&#34; aria-expanded=&#34;false&#34; aria-controls=&#34;collapse-1784762055687415613&#34;&gt;
+&lt;a class=&#34;btn btn-link&#34; id=&#34;btn-collapse-1784848076291236125&#34; style=&#34;border: none;text-decoration:underline;&#34;  type=&#34;button&#34;
+    data-toggle=&#34;collapse&#34; data-target=&#34;#collapse-1784848076291236125&#34; aria-expanded=&#34;false&#34; aria-controls=&#34;collapse-1784848076291236125&#34;&gt;
     &lt;h4&gt;Code Example
-        &lt;i id=&#34;collapse-1784762055687415613-arrow&#34; class=&#34;pl-2 fas fa-caret-down&#34;&gt;&lt;/i&gt;
+        &lt;i id=&#34;collapse-1784848076291236125-arrow&#34; class=&#34;pl-2 fas fa-caret-down&#34;&gt;&lt;/i&gt;
     &lt;/h4&gt;
 &lt;/a&gt;
 
-&lt;div class=&#34;collapse pt-1&#34; id=&#34;collapse-1784762055687415613&#34;&gt;
+&lt;div class=&#34;collapse pt-1&#34; id=&#34;collapse-1784848076291236125&#34;&gt;
     
         
             
@@ -4423,10 +4423,10 @@ In this tutorial you will learn how to create yml configuration files. First, we
 
 
 &lt;script type=&#34;text/javascript&#34;&gt;
-    document.getElementById(&#34;btn-collapse-1784762055687415613&#34;).addEventListener(&#39;click&#39;, changeArrow);
+    document.getElementById(&#34;btn-collapse-1784848076291236125&#34;).addEventListener(&#39;click&#39;, changeArrow);
 
     function changeArrow(e) {
-        let arrow = document.getElementById(&#34;collapse-1784762055687415613-arrow&#34;)
+        let arrow = document.getElementById(&#34;collapse-1784848076291236125-arrow&#34;)
         if (arrow.classList.contains(&#34;fa-caret-up&#34;)) {
             arrow.classList.replace(&#34;fa-caret-up&#34;, &#34;fa-caret-down&#34;)
         } else {
@@ -4446,14 +4446,14 @@ In this tutorial you will learn how to create yml configuration files. First, we
 
 
 
-&lt;a class=&#34;btn btn-link&#34; id=&#34;btn-collapse-1784762055690074735&#34; style=&#34;border: none;text-decoration:underline;&#34;  type=&#34;button&#34;
-    data-toggle=&#34;collapse&#34; data-target=&#34;#collapse-1784762055690074735&#34; aria-expanded=&#34;false&#34; aria-controls=&#34;collapse-1784762055690074735&#34;&gt;
+&lt;a class=&#34;btn btn-link&#34; id=&#34;btn-collapse-1784848076293898639&#34; style=&#34;border: none;text-decoration:underline;&#34;  type=&#34;button&#34;
+    data-toggle=&#34;collapse&#34; data-target=&#34;#collapse-1784848076293898639&#34; aria-expanded=&#34;false&#34; aria-controls=&#34;collapse-1784848076293898639&#34;&gt;
     &lt;h4&gt;Code Example
-        &lt;i id=&#34;collapse-1784762055690074735-arrow&#34; class=&#34;pl-2 fas fa-caret-down&#34;&gt;&lt;/i&gt;
+        &lt;i id=&#34;collapse-1784848076293898639-arrow&#34; class=&#34;pl-2 fas fa-caret-down&#34;&gt;&lt;/i&gt;
     &lt;/h4&gt;
 &lt;/a&gt;
 
-&lt;div class=&#34;collapse pt-1&#34; id=&#34;collapse-1784762055690074735&#34;&gt;
+&lt;div class=&#34;collapse pt-1&#34; id=&#34;collapse-1784848076293898639&#34;&gt;
     
         
             
@@ -4508,10 +4508,10 @@ In this tutorial you will learn how to create yml configuration files. First, we
 
 
 &lt;script type=&#34;text/javascript&#34;&gt;
-    document.getElementById(&#34;btn-collapse-1784762055690074735&#34;).addEventListener(&#39;click&#39;, changeArrow);
+    document.getElementById(&#34;btn-collapse-1784848076293898639&#34;).addEventListener(&#39;click&#39;, changeArrow);
 
     function changeArrow(e) {
-        let arrow = document.getElementById(&#34;collapse-1784762055690074735-arrow&#34;)
+        let arrow = document.getElementById(&#34;collapse-1784848076293898639-arrow&#34;)
         if (arrow.classList.contains(&#34;fa-caret-up&#34;)) {
             arrow.classList.replace(&#34;fa-caret-up&#34;, &#34;fa-caret-down&#34;)
         } else {
@@ -4531,14 +4531,14 @@ In this tutorial you will learn how to create yml configuration files. First, we
 
 
 
-&lt;a class=&#34;btn btn-link&#34; id=&#34;btn-collapse-1784762055693977096&#34; style=&#34;border: none;text-decoration:underline;&#34;  type=&#34;button&#34;
-    data-toggle=&#34;collapse&#34; data-target=&#34;#collapse-1784762055693977096&#34; aria-expanded=&#34;false&#34; aria-controls=&#34;collapse-1784762055693977096&#34;&gt;
+&lt;a class=&#34;btn btn-link&#34; id=&#34;btn-collapse-1784848076297754301&#34; style=&#34;border: none;text-decoration:underline;&#34;  type=&#34;button&#34;
+    data-toggle=&#34;collapse&#34; data-target=&#34;#collapse-1784848076297754301&#34; aria-expanded=&#34;false&#34; aria-controls=&#34;collapse-1784848076297754301&#34;&gt;
     &lt;h4&gt;Code Example
-        &lt;i id=&#34;collapse-1784762055693977096-arrow&#34; class=&#34;pl-2 fas fa-caret-down&#34;&gt;&lt;/i&gt;
+        &lt;i id=&#34;collapse-1784848076297754301-arrow&#34; class=&#34;pl-2 fas fa-caret-down&#34;&gt;&lt;/i&gt;
     &lt;/h4&gt;
 &lt;/a&gt;
 
-&lt;div class=&#34;collapse pt-1&#34; id=&#34;collapse-1784762055693977096&#34;&gt;
+&lt;div class=&#34;collapse pt-1&#34; id=&#34;collapse-1784848076297754301&#34;&gt;
     
         
             
@@ -4590,10 +4590,10 @@ In this tutorial you will learn how to create yml configuration files. First, we
 
 
 &lt;script type=&#34;text/javascript&#34;&gt;
-    document.getElementById(&#34;btn-collapse-1784762055693977096&#34;).addEventListener(&#39;click&#39;, changeArrow);
+    document.getElementById(&#34;btn-collapse-1784848076297754301&#34;).addEventListener(&#39;click&#39;, changeArrow);
 
     function changeArrow(e) {
-        let arrow = document.getElementById(&#34;collapse-1784762055693977096-arrow&#34;)
+        let arrow = document.getElementById(&#34;collapse-1784848076297754301-arrow&#34;)
         if (arrow.classList.contains(&#34;fa-caret-up&#34;)) {
             arrow.classList.replace(&#34;fa-caret-up&#34;, &#34;fa-caret-down&#34;)
         } else {
